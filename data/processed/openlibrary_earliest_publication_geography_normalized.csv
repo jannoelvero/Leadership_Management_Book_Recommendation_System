@@ -1,0 +1,946 @@
+book_id,earliest_observed_year,earliest_year_edition_records,earliest_country_codes,earliest_country_code_count,earliest_publication_places,earliest_publication_place_count,earliest_publishers,earliest_publisher_count,earliest_geography_status,resolved_marc_labels,normalized_parent_countries,normalized_country_count,unresolved_geo_codes,has_unresolved_geo_evidence,normalized_geography_status
+BOOK00001,1989,1,[],0,[],0,['Cedar Fort'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00002,1981,2,"['xxk', 'nju']",2,"['London', 'Englewood Cliffs, N.J']",2,"['Prentice-Hall International', 'Prentice-Hall']",2,multiple_country_evidence,"['United Kingdom', 'New Jersey']","['United Kingdom', 'United States']",2,[],False,multi_country_evidence
+BOOK00003,1977,1,['io'],1,['Bogor'],1,['Politeia'],1,single_country_evidence,['Indonesia'],['Indonesia'],1,[],False,single_country_evidence
+BOOK00004,1967,1,['ilu'],1,['Chicago'],1,['Moody Press'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00005,1997,1,['cau'],1,"['Thousand Oaks, Calif']",1,['Sage Publications'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00006,1998,1,['tnu'],1,"['Nashville, Tenn']",1,['Thomas Nelson Publishers'],1,single_country_evidence,['Tennessee'],['United States'],1,[],False,single_country_evidence
+BOOK00007,2000,1,[],0,[],0,"['Sage Publications, Inc']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00008,1985,1,['nyu'],1,"['New York', 'London']",2,"['Free Press', 'Collier Macmillan']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00009,2018,6,"['meu', 'nyu']",2,[],0,"['Pan Macmillan', 'Flatiron Books', 'PAN MACMILLAN']",3,multiple_country_evidence,"['Maine', 'New York (State)']",['United States'],1,[],False,multi_code_same_country
+BOOK00010,2000,2,[],0,[],0,"['Berrett-Koehler Publishers, Incorporated', 'Berrett-Koehler Publishers', 'Berrett-Koehler']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00011,2013,5,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00012,1993,1,['ilu'],1,"['Homewood, IL']",1,['Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00013,1992,1,['nyu'],1,['New York'],1,['Warner Books'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00014,1978,2,"['nyu', 'xxu']",2,['New York'],1,"['Harper & Row', 'Harper and Row']",2,multiple_country_evidence,"['New York (State)', 'United States']",['United States'],1,[],False,multi_code_same_country
+BOOK00015,2000,1,[],0,[],0,['South-Western Educational Publishing'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00016,1987,3,"['cau', 'xxu']",2,['San Francisco'],1,['Jossey-Bass'],1,multiple_country_evidence,"['California', 'United States']",['United States'],1,[],False,multi_code_same_country
+BOOK00017,1991,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00018,2012,1,['nyu'],1,['New York'],1,['McGraw-Hill Irwin'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00019,2018,6,['miu'],1,"['Farmington Hills, MI', 'New York, USA', 'New York']",3,"['Simon & Schuster Audio', 'Penguin Books, Limited', 'Viking', 'Thorndike Press', 'Simon & Schuster']",5,single_country_evidence,['Michigan'],['United States'],1,[],False,single_country_evidence
+BOOK00020,1991,1,['ilu'],1,"['Prospect Heights, Ill']",1,['Waveland Press'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00021,2005,2,[],0,[],0,"['Taylor & Francis Group', 'Lawrence Erlbaum Associates, Inc.']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00022,2007,1,['nyu'],1,['New York'],1,['Collins'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00023,1989,1,['nyu'],1,"['New York, NY']",1,['AMACOM'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00024,2003,2,[],0,[],0,"['Atlantic Books', 'Atlantic Monthly Press', 'Grove/Atlantic, Incorporated']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00025,2002,3,"['ch', 'nyu']",2,"['Taibei Shi', 'New York']",2,"['Da kuai wen hua', 'Talk Miramax Books', 'Hyperion']",3,multiple_country_evidence,"['China (Republic : 1949- )', 'New York (State)']","['Taiwan', 'United States']",2,[],False,multi_country_evidence
+BOOK00026,2005,1,[],0,[],0,"['Lawrence Erlbaum Associates, Inc.']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00027,2002,2,['cau'],1,['San Francisco'],1,['Jossey-Bass'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00028,1985,3,['gau'],1,"['Atlanta, Ga']",1,"['Bantam Books', 'Humanics Ltd Partners', 'Humanics New Age']",3,single_country_evidence,['Georgia'],['United States'],1,[],False,single_country_evidence
+BOOK00029,2000,6,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00030,1991,1,['cau'],1,['San Francisco'],1,['Jossey-Bass'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00031,2005,2,[],0,[],0,['McGraw-Hill'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00032,2000,2,['nyu'],1,['New York'],1,['Free Press'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00033,2000,1,[],0,[],0,['Allyn & Bacon'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00034,2007,3,[],0,[],0,"['SAGE Publications, Incorporated', 'Sage Publications Ltd', 'Sage Publications', 'SAGE']",4,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00035,2020,4,[],0,[],0,"[""St. Martin's Press"", 'Macmillan Audio', 'Pan Macmillan']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00036,2022,5,[],0,[],0,"['Penguin Publishing Group', 'Penguin Books, Limited', 'Penguin Audio']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00037,1994,1,['cau'],1,['Thousand Oaks'],1,['Sage Publications'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00038,2011,1,[],0,[],0,"['SAGE Publications, Incorporated']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00039,1950,1,[],0,[],0,"['Wiley & Sons, Limited, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00040,2010,7,['enk'],1,['Amsterdam'],1,"['Routledge', 'Taylor & Francis Group', 'Butterworth-Heinemann']",3,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00041,2008,5,['cau'],1,"['Los Angeles, CA']",1,"['CQ Press', 'SAGE Publications, Incorporated', 'Sage Publications Ltd', 'Sage Publications']",4,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00042,1985,3,"['xx', 'cau']",2,"['USA', 'San Francisco']",2,"['Jossey-Bass', 'Jossey-Bass Publishers']",2,multiple_country_evidence,"['No place, unknown, or undetermined', 'California']",['United States'],1,['xx'],True,single_country_with_unresolved_code
+BOOK00043,1985,2,"['ch', 'nyu']",2,"['Taibei Shi', 'New York']",2,"['Chang he chu ban she', 'Morrow']",2,multiple_country_evidence,"['China (Republic : 1949- )', 'New York (State)']","['Taiwan', 'United States']",2,[],False,multi_country_evidence
+BOOK00044,1987,1,['iau'],1,"['Dubuque, Iowa']",1,['W.C. Brown Publishers'],1,single_country_evidence,['Iowa'],['United States'],1,[],False,single_country_evidence
+BOOK00045,1989,1,[],0,[],0,['Currency'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00046,1983,1,['cau'],1,"['Novato, CA']",1,['Presidio Press'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00047,1998,4,[],0,[],0,"['HarperCollins Publishers', 'Harpercollins Canada']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00048,2002,1,['txu'],1,"['Dallas, Tex']",1,['CornerStone Leadership Institute'],1,single_country_evidence,['Texas'],['United States'],1,[],False,single_country_evidence
+BOOK00049,1999,1,['inu'],1,"['Foster City, CA']",1,['IDG Books Worldwide'],1,single_country_evidence,['Indiana'],['United States'],1,[],False,single_country_evidence
+BOOK00050,2010,1,['cau'],1,['Thousand Oaks'],1,['Sage Publications'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00051,1987,1,['ilu'],1,"['Glenview, Ill']",1,"['Scott, Foresman']",1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00052,1990,1,['cau'],1,"['Palo Alto, Calif']",1,['Consulting Psychologists Press'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00053,2010,1,[],0,[],0,"['SAGE Publications, Incorporated']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00054,2004,2,[],0,[],0,['Lawrence Erlbaum'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00055,2010,1,['nyu'],1,['New York'],1,['Routledge'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00056,2018,6,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00057,2008,2,['vau'],1,"['Alexandria, Va']",1,['ASTD Press'],1,single_country_evidence,['Virginia'],['United States'],1,[],False,single_country_evidence
+BOOK00058,2008,1,['ne'],1,"['Amsterdam', 'London']",2,['Butterworth-Heinemann'],1,single_country_evidence,['Netherlands'],['Netherlands'],1,[],False,single_country_evidence
+BOOK00059,2003,1,[],0,[],0,['Jossey-Bass'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00060,2015,5,['nyu'],1,['New York'],1,"['Taylor & Francis Group', 'Routledge']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00061,1999,1,['cau'],1,"['Thousand Oaks, Calif']",1,['Sage Publications'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00062,1995,2,['oru'],1,"['Eugene, Or', 'Eugene, Ore']",2,"['ERIC Clearinghouse on Educational Management, University of Oregon']",1,single_country_evidence,['Oregon'],['United States'],1,[],False,single_country_evidence
+BOOK00063,2014,1,[],0,[],0,['Hayden-McNeil Publishing'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00064,1988,1,['cou'],1,"['Colorado Springs, Colo']",1,"['NavPress', 'Navpress Publishing Group']",2,single_country_evidence,['Colorado'],['United States'],1,[],False,single_country_evidence
+BOOK00065,2013,4,[],0,[],0,"['Wiley & Sons, Incorporated, John', 'Jossey-Bass']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00066,2008,3,['nyu'],1,"['Armonk, N.Y']",1,"['Taylor & Francis Group', 'M.E. Sharpe', 'Routledge']",3,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00067,2017,4,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00068,2010,2,['cau'],1,['San Francisco'],1,"['Jossey-Bass, a Wiley Imprint', 'Jossey-Bass']",2,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00069,2000,1,[],0,[],0,['Great Potential Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00070,2010,1,[],0,[],0,['Palgrave Macmillan'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00071,2009,2,['mau'],1,"['Malden, MA']",1,"['Wiley & Sons, Incorporated, John', 'Wiley-Blackwell', 'Wiley-Interscience']",3,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00072,2015,2,[],0,[],0,"['Elgar Publishing Limited, Edward']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00073,2019,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00074,2001,3,[],0,[],0,"['Taylor & Francis Group', 'Lawrence Erlbaum']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00075,2018,2,[],0,[],0,"['Kogan Page, Limited', 'Kogan Page']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00076,2015,6,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00077,2012,3,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00078,2003,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00079,2012,5,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00080,2011,1,['cau'],1,['San Francisco'],1,['Jossey-Bass'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00081,2001,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00082,2021,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00083,2011,1,['cau'],1,['Thousand Oaks'],1,['SAGE Publications'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00084,2009,1,[],0,[],0,['Global Disciples'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00085,2014,4,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00086,1995,1,[],0,[],0,['Chartered Institute of Personnel & Development'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00087,1994,1,['txu'],1,"['Austin, Tex']",1,['Eakin Press'],1,single_country_evidence,['Texas'],['United States'],1,[],False,single_country_evidence
+BOOK00088,1996,2,['msu'],1,"['Jackson, Miss']",1,['Phi Theta Kappa International Honor Society'],1,single_country_evidence,['Mississippi'],['United States'],1,[],False,single_country_evidence
+BOOK00089,2004,2,[],0,[],0,"['Wiley & Sons, Incorporated, John', 'Center for Creative Leadership']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00090,2002,3,['cau'],1,"['Thousand Oaks, Calif']",1,['Corwin Press'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00091,2009,2,['nyu'],1,['New York'],1,"['AMACOM', 'American Management Association']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00092,2008,3,['enk'],1,"['London : New York, NY']",1,['Routledge'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00093,2011,3,[],0,[],0,['Upper Room Books'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00094,2007,2,[],0,[],0,"['SAGE Publications, Incorporated', 'Sage Publications Ltd']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00095,2007,3,['cau'],1,"['San Francisco, CA']",1,"['Pfeiffer', 'Wiley-Interscience']",2,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00096,1980,1,['xx'],1,['Muqdisho'],1,['Somali Institute of Development Administration & Management'],1,single_country_evidence,"['No place, unknown, or undetermined']",[],0,['xx'],True,unresolved_only
+BOOK00097,2017,6,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00098,2007,1,['mbc'],1,['Winnipeg'],1,['Canadian Defence Academy Press'],1,single_country_evidence,['Manitoba'],['Canada'],1,[],False,single_country_evidence
+BOOK00099,1972,1,['nju'],1,"['Secaucus, N.J']",1,['Citadel Press'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00100,1991,3,"['vau', 'enk']",2,"['Arlington, Va', 'Cambridge, Mass']",2,"['Blackwell Publishers', 'Cason Hall', 'Blackwell Business', 'Cason Hall/Blackwellk']",4,multiple_country_evidence,"['Virginia', 'England']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00101,1953,3,"['xxu', 'xx', 'xxk']",3,"['New York', 'London']",2,"['Harper & Row', 'Harper', 'Harper and Row']",3,multiple_country_evidence,"['United States', 'No place, unknown, or undetermined', 'United Kingdom']","['United States', 'United Kingdom']",2,['xx'],True,multi_country_with_unresolved_code
+BOOK00102,2010,6,['nyu'],1,['San Diego'],1,"['Taylor & Francis Group', 'Elsevier Science']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00103,1940,1,['nyu'],1,['New York'],1,['Bureau of business practice'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00104,1967,7,"['xxk', 'enk', 'nyu']",3,"['London', 'New York', 'New York, NY']",3,"['Harper & Row', 'HARPER & ROW', 'HarperCollins Publishers', 'Harpercollins Publisher', 'Heinemann']",5,multiple_country_evidence,"['United Kingdom', 'England', 'New York (State)']","['United Kingdom', 'United States']",2,[],False,multi_country_evidence
+BOOK00105,2004,1,[],0,[],0,['Allyn & Bacon'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00106,2014,4,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00107,2012,1,['vtu'],1,"['Burlington, VT']",1,['Gower'],1,single_country_evidence,['Vermont'],['United States'],1,[],False,single_country_evidence
+BOOK00108,2020,2,[],0,[],0,"['Executive Leadership Council, The']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00109,1949,2,[],0,[],0,['Harvard University Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00110,1969,3,['inu'],1,['Indianapolis'],1,"['Bobbs-Merrill', 'Bobbs-Merrill Co']",2,single_country_evidence,['Indiana'],['United States'],1,[],False,single_country_evidence
+BOOK00111,1970,3,[],0,[],0,['Rand McNally'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00112,1956,1,['dcu'],1,['Washington'],1,['George Wasington University Book Store'],1,single_country_evidence,['District of Columbia'],['United States'],1,[],False,single_country_evidence
+BOOK00113,1950,2,"['xxk', 'nyu']",2,['New York'],1,['McGraw-Hill'],1,multiple_country_evidence,"['United Kingdom', 'New York (State)']","['United Kingdom', 'United States']",2,[],False,multi_country_evidence
+BOOK00114,1949,1,['mau'],1,['Cambridge'],1,['Harvard University Press'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00115,1969,2,['pau'],1,"['Wayne, Pa']",1,['[Management Development Institute'],1,single_country_evidence,['Pennsylvania'],['United States'],1,[],False,single_country_evidence
+BOOK00116,1990,1,['xx'],1,[],0,[],0,single_country_evidence,"['No place, unknown, or undetermined']",[],0,['xx'],True,unresolved_only
+BOOK00117,2015,2,[],0,[],0,['CreateSpace Independent Publishing Platform'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00118,1964,1,['xx'],1,[],0,"['College of Commerce and Administration, Ohio State University']",1,single_country_evidence,"['No place, unknown, or undetermined']",[],0,['xx'],True,unresolved_only
+BOOK00119,1991,1,['pau'],1,"['Pittsburgh, Pa']",1,['University of Pittsburgh Press'],1,single_country_evidence,['Pennsylvania'],['United States'],1,[],False,single_country_evidence
+BOOK00120,2014,1,['xna'],1,"['North Sydney, N.S.W']",1,['Armstrong!'],1,single_country_evidence,['New South Wales'],['Australia'],1,[],False,single_country_evidence
+BOOK00121,1960,1,['dcu'],1,['Washington'],1,['University Press'],1,single_country_evidence,['District of Columbia'],['United States'],1,[],False,single_country_evidence
+BOOK00122,2024,1,[],0,[],0,['On Executive Leadership'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00124,1971,1,['xxk'],1,['London'],1,['Intertext Training Services Ltd'],1,single_country_evidence,['United Kingdom'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00125,2010,1,[],0,[],0,['Routledge'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00126,2000,1,['txu'],1,"['Houston, TX']",1,['Cashman Dudley'],1,single_country_evidence,['Texas'],['United States'],1,[],False,single_country_evidence
+BOOK00127,1991,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00128,1996,1,[],0,[],0,['Wisdom Publishing Co'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00129,1990,1,[],0,[],0,"['Stipes Publishing, LLC']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00130,2004,1,[],0,[],0,['Palgrave Macmillan'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00131,2013,6,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00132,1981,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice-Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00133,1949,1,[],0,[],0,['Harvard University Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00134,1996,2,"['dcu', 'vau']",2,"['[Washington, D.C.?]', 'Alexandria, Va']",2,['U.S. Army Research Institute for the Behavioral and Social Sciences'],1,multiple_country_evidence,"['District of Columbia', 'Virginia']",['United States'],1,[],False,multi_code_same_country
+BOOK00135,1970,1,['ilu'],1,['Chicago'],1,['Rand McNally'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00136,2020,2,[],0,[],0,['Xlibris Corporation LLC'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00137,1990,1,['nyu'],1,"['New York, NY']",1,"['National Institute of Business Management, Inc.']",1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00138,1966,1,['ohu'],1,['Columbus]'],1,"['College of Commerce and Administration, Ohio State University']",1,single_country_evidence,['Ohio'],['United States'],1,[],False,single_country_evidence
+BOOK00139,1983,1,['nyu'],1,['New York'],1,"['Graduate School of Business, Columbia University']",1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00140,1929,1,['xx'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,"['No place, unknown, or undetermined']",[],0,['xx'],True,unresolved_only
+BOOK00141,1988,1,[],0,[],0,[],0,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00142,1963,1,[],0,[],0,[],0,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00143,2004,1,[],0,[],0,"[""Equipper's Press International""]",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00144,1950,1,[],0,[],0,['McGraw-Hill'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00145,2009,1,['nyu'],1,"['[Washington, D.C.]', 'New York']",2,"['U.S. Army', 'Pearson Custom Pub.']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00146,1999,6,['xxk'],1,[],0,['Essential Learning Systems'],1,single_country_evidence,['United Kingdom'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00147,1961,2,['pau'],1,['Philadelphia'],1,['W.B. Saunders Co.'],1,single_country_evidence,['Pennsylvania'],['United States'],1,[],False,single_country_evidence
+BOOK00148,2009,1,['mau'],1,"['Amherst, MA']",1,['HRD Press'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00149,1998,2,"['vtu', 'enk']",2,"['Brookfield, Vt', 'Aldershot']",2,['Gower'],1,multiple_country_evidence,"['Vermont', 'England']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00150,2003,1,[],0,[],0,['Recorded Books'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00151,2016,1,[],0,[],0,"['Jones & Bartlett Learning, LLC']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00152,1997,1,['ilu'],1,['Chicago'],1,['Moody Press'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00153,1993,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00154,2002,2,[],0,[],0,"['BPI (India) PVT Ltd', 'Int. Cengage Business Press']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00155,2009,3,['mau'],1,"['Boston, MA']",1,"['Course Technology', 'Delmar Cengage Learning']",2,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00156,1996,1,['cou'],1,"['Durango, CO']",1,['International LearningWorks'],1,single_country_evidence,['Colorado'],['United States'],1,[],False,single_country_evidence
+BOOK00157,2018,1,[],0,[],0,['Knowledge Resources'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00158,1992,1,['cau'],1,"['San Diego, CA']",1,['Pfeiffer'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00159,2013,4,['nju'],1,"['Hoboken, N.J']",1,"['Wiley & Sons, Incorporated, John', 'Jossey-Bass']",2,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00160,2019,4,[],0,[],0,"['Stylus Publishing, LLC']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00161,2014,1,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00162,2008,1,[],0,[],0,"['Evangel Publishing House, Nairobi']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00163,2011,1,[],0,[],0,"['Kogan Page, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00164,1997,1,['pau'],1,"['Lancaster, Pa']",1,['Technomic Pub. Co.'],1,single_country_evidence,['Pennsylvania'],['United States'],1,[],False,single_country_evidence
+BOOK00165,2017,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00166,2000,1,[],0,[],0,['Management Books 2000 Ltd'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00167,1900,1,[],0,[],0,['Portfolio Penguin'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00168,2012,2,[],0,[],0,"['iUniverse', 'iUniverse.com']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00169,2004,1,['cau'],1,"['Palo Alto, Calif']",1,['Davies-Black Pub.'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00170,1992,2,[],0,[],0,['McGraw-Hill Education'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00171,1996,2,['ctu'],1,"['Greenwich, Conn']",1,['JAI Press'],1,single_country_evidence,['Connecticut'],['United States'],1,[],False,single_country_evidence
+BOOK00172,2024,2,[],0,[],0,['Productivity Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00173,1992,1,['xxu'],1,"['San Diego, Calif']",1,['Pfeiffer'],1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00174,2014,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00175,2016,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00176,2008,1,['pau'],1,['Hershey PA'],1,['Information Science Reference'],1,single_country_evidence,['Pennsylvania'],['United States'],1,[],False,single_country_evidence
+BOOK00177,2009,2,[],0,[],0,['Institution of Engineering & Technology'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00178,2013,5,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00179,2013,1,[],0,[],0,['Independent Publisher'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00180,2008,1,['dcu'],1,"['[Washington, D.C.]', '[Boston, Mass.]']",2,"['U.S. Army', 'Pearson Custom Publishing']",2,single_country_evidence,['District of Columbia'],['United States'],1,[],False,single_country_evidence
+BOOK00181,1998,1,[],0,[],0,['Rowman & Littlefield Education'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00182,1996,1,['ko'],1,['Sŏul-si'],1,['Hanʾguk Nŭngnyul Hyŏphoe'],1,single_country_evidence,['Korea (South)'],['South Korea'],1,[],False,single_country_evidence
+BOOK00183,2005,1,[],0,[],0,"['Sage Publications, Inc']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00184,2002,1,[],0,[],0,['Jossey-Bass'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00185,1970,2,['mou'],1,['Saint Louis'],1,['Mosby'],1,single_country_evidence,['Missouri'],['United States'],1,[],False,single_country_evidence
+BOOK00186,1994,1,['nz'],1,"['Wellington, NZ']",1,['Champagne Consultants'],1,single_country_evidence,['New Zealand'],['New Zealand'],1,[],False,single_country_evidence
+BOOK00187,2011,1,[],0,[],0,['CreateSpace Independent Publishing Platform'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00188,2007,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00189,2015,4,['nyu'],1,[],0,"['Penguin Books, Limited', 'Penguin Group USA', 'Penguin Audio', 'Portfolio/Penguin']",4,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00190,2014,1,[],0,[],0,"['Taylor & Francis Group', 'Routledge, Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00191,2005,1,[],0,[],0,['LeaderTreks'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00192,1994,1,['ilu'],1,"['Rockford, IL']",1,['Spring Brook Press'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00193,1997,2,[],0,[],0,"['Lea', 'Lawrence Erlbaum Associates']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00194,2003,2,[],0,[],0,['Quality Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00195,2012,3,['nyu'],1,['New York'],1,"['Routledge', 'Taylor & Francis Group']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00196,1991,1,['ilu'],1,"['Downers Grove, Ill']",1,['InterVarsity Press'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00197,2018,4,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00198,2017,1,[],0,[],0,['North Atlantic Books'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00199,2015,3,[],0,[],0,"['Lang AG International Academic Publishers, Peter']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00200,2013,6,['enk'],1,"['Hove, East Sussex', 'New York']",2,"['Routledge', 'Taylor & Francis Group']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00201,2010,1,['gau'],1,"['Macon, Ga']",1,['Smyth & Helwys Pub.'],1,single_country_evidence,['Georgia'],['United States'],1,[],False,single_country_evidence
+BOOK00202,1986,1,['xxu'],1,"['Alexandria, Va. ((1009 Duke St., Alexandria 22314))']",1,['Miles River Press'],1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00203,1998,1,['vau'],1,"['Alexandria, Va']",1,['Miles River Press'],1,single_country_evidence,['Virginia'],['United States'],1,[],False,single_country_evidence
+BOOK00204,1989,1,['xxk'],1,[],0,['Prentice Hall'],1,single_country_evidence,['United Kingdom'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00205,2021,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00206,2020,3,[],0,[],0,['Emerald Publishing Limited'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00207,2023,4,[],0,[],0,['IGI Global'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00208,2017,2,['nju'],1,[],0,['Red Wheel/Weiser'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00209,2008,9,"['nyu', 'nju']",2,"['New York', 'Hoboken, N.J']",2,"['Wiley & Sons, Incorporated, John', 'Brilliance Audio on MP3-CD', 'Brilliance Audio Unabridged Lib Ed', 'Brilliance Audio on CD Unabridged Lib Ed', 'Wiley', 'John Wiley & Sons, Ltd.', 'Brilliance Audio on MP3-CD Lib Ed', 'John Wiley & Sons, Inc.', 'Brilliance Audio on CD Unabridged']",9,multiple_country_evidence,"['New York (State)', 'New Jersey']",['United States'],1,[],False,multi_code_same_country
+BOOK00210,2011,2,['vtu'],1,"['Woodstock, VT']",1,"['LongHill Partners, Incorporated', 'SkyLight Paths Pub.']",2,single_country_evidence,['Vermont'],['United States'],1,[],False,single_country_evidence
+BOOK00211,1995,1,['ilu'],1,"['Chicago, Ill']",1,['American Hospital Association'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00212,2024,3,[],0,[],0,['Emerald Publishing Limited'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00213,1992,1,['mau'],1,"['Amherst, Mass']",1,['Human Resource Development Press'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00214,2005,1,[],0,[],0,['Cosimo Books'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00215,1999,1,[],0,[],0,['Blackhall Publishing Ltd'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00216,2014,1,[],0,[],0,['Authors Place Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00217,2021,3,[],0,[],0,"['Scribe Media', 'Lioncrest Publishing']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00218,2021,1,[],0,[],0,"['Springer International Publishing AG', 'MOXIC', 'Palgrave Macmillan']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00219,2002,1,[],0,[],0,['Society for Promoting Christian'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00220,2005,1,['ug'],1,"['Kampala', 'Oxford, U.K']",2,"['Fountain Publishers', 'Distributed in Europe, North America, and Australia by African Books Collective']",2,single_country_evidence,['Uganda'],['Uganda'],1,[],False,single_country_evidence
+BOOK00221,2010,2,['aru'],1,['Little Rock'],1,"['Dobbs Leadership', 'Parkhurst Brothers, Inc.']",2,single_country_evidence,['Arkansas'],['United States'],1,[],False,single_country_evidence
+BOOK00222,2008,1,['nyu'],1,"['New York, NY']",1,['Girl Scouts of the USA'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00223,2014,3,[],0,[],0,['BRILL'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00224,2004,1,[],0,[],0,"['Berrett-Koehler Publishers, Incorporated']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00225,2017,4,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00226,2015,1,['nyu'],1,"['Maryknoll, New York']",1,['Orbis Books'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00227,2025,5,[],0,[],0,['IGI Global Scientific Publishing'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00228,2024,1,[],0,[],0,"['iUniverse, Incorporated']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00229,1996,1,['tnu'],1,"['Nashville, Tenn']",1,['Broadman & Holman'],1,single_country_evidence,['Tennessee'],['United States'],1,[],False,single_country_evidence
+BOOK00230,1989,2,['dcu'],1,"['Washington, D.C']",1,"['Community College Press, American Association of Community and Junior Colleges', 'National Center for Higher Education']",2,single_country_evidence,['District of Columbia'],['United States'],1,[],False,single_country_evidence
+BOOK00231,2024,2,[],0,[],0,['Palmetto Publishing'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00232,2018,5,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00233,2025,3,[],0,[],0,['USA Book Services'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00234,1977,1,['nyu'],1,['New York'],1,['Paulist Press'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00235,2008,1,['inu'],1,"['Westfield, Ind']",1,['Greenleaf Center for Servant Leadership'],1,single_country_evidence,['Indiana'],['United States'],1,[],False,single_country_evidence
+BOOK00236,1998,4,['cau'],1,"['San Francisco, Calif']",1,"['Berrett-Koehler Publishers, Incorporated', 'Berrett-Koehler Publishers']",2,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00238,2004,1,['us'],1,"['St. Louis, MO']",1,['Chalice Press'],1,single_country_evidence,[],[],0,['us'],True,unresolved_only
+BOOK00239,2013,1,[],0,[],0,['Inspect & Adapt Ltd'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00240,2009,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00241,2009,1,['nyu'],1,['New York'],1,['Paulist Press'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00242,2008,1,['inu'],1,"['Hammond, IN']",1,['Hyles Publications'],1,single_country_evidence,['Indiana'],['United States'],1,[],False,single_country_evidence
+BOOK00243,1995,1,['nyu'],1,['New York'],1,['J. Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00244,1987,1,['txu'],1,"['Waco, Tex']",1,['Word Books'],1,single_country_evidence,['Texas'],['United States'],1,[],False,single_country_evidence
+BOOK00245,1977,1,[],0,[],0,['Paulist Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00246,2010,1,['enk'],1,"['Houndmills, Basingstoke, Hampshire', 'New York']",2,['Palgrave Macmillan'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00247,1998,1,['ksu'],1,"['[Kirksville, MO']",1,['National Fraternity of the Secular Franciscan Order-USA]'],1,single_country_evidence,['Kansas'],['United States'],1,[],False,single_country_evidence
+BOOK00248,2001,1,[],0,[],0,['Wiley'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00249,2018,2,[],0,[],0,"['ReadHowYouWant', 'Berrett-Koehler Publishers']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00250,2019,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00251,2001,1,['mou'],1,"['St. Louis, MO']",1,['Concordia Pub. House'],1,single_country_evidence,['Missouri'],['United States'],1,[],False,single_country_evidence
+BOOK00252,2011,1,['mdu'],1,"['Lanham, Md']",1,['Rowman & Littlefield Education'],1,single_country_evidence,['Maryland'],['United States'],1,[],False,single_country_evidence
+BOOK00253,2008,1,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00254,2002,1,[],0,[],0,['Paternoster Pub'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00255,2004,1,[],0,[],0,['Berrett-Koehler Publishers'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00256,2006,1,[],0,[],0,['Sounds True'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00257,1990,2,[],0,[],0,"['Welch Publishing', 'Welch Publishing Company Inc.']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00258,2022,5,[],0,[],0,['IGI Global'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00259,2022,2,[],0,[],0,['Proisle Publishing.com'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00260,2017,1,[],0,[],0,['Christian Medical & Dental Associations'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00261,2020,1,[],0,[],0,"['Rowman & Littlefield Publishers, Incorporated']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00262,2010,2,['mau'],1,"['Sudbury, MA']",1,"['Jones & Bartlett Learning, LLC', 'Jones and Bartlett', 'Jones and Bartlett Publishers']",3,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00263,2008,1,['enk'],1,"['Gloucestershire, UK']",1,['Management Books 2000 Ltd'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00264,2018,1,[],0,[],0,['CreateSpace Independent Publishing Platform'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00265,2018,4,[],0,[],0,['Rutgers University Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00266,2022,2,[],0,[],0,"['Trilogy Christian Publishing, Inc.']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00267,1998,2,['cau'],1,"['Rocklin, Calif']",1,"['Prima Pub.', 'Crown Business']",2,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00268,2002,1,[],0,[],0,['New Hope Publishers (AL)'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00269,2011,3,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00270,2008,2,[],0,[],0,['Rowman & Littlefield Education'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00271,2021,2,[],0,[],0,['PageTurner: Press & Media'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00272,2015,2,[],0,[],0,"['Springer', 'Springer International Publishing AG']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00273,2017,1,[],0,[],0,['CreateSpace Independent Publishing Platform'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00274,2018,4,[],0,[],0,['IGI Global'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00275,2011,1,['nyu'],1,['New York'],1,['Paulist Press'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00276,2010,1,[],0,[],0,['CreateSpace Independent Publishing Platform'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00277,2013,2,['gw'],1,['Stuttgart'],1,"['Kohlhammer Verlag', 'Verlag W. Kohlhammer']",2,single_country_evidence,['Germany'],['Germany'],1,[],False,single_country_evidence
+BOOK00278,2019,2,[],0,[],0,"['Outskirts Press, Incorporated']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00279,2015,3,[],0,[],0,"['Palgrave Macmillan Limited', 'Palgrave Macmillan']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00280,2004,1,['miu'],1,"['Nashville, TN']",1,['LifeWay Press'],1,single_country_evidence,['Michigan'],['United States'],1,[],False,single_country_evidence
+BOOK00281,1973,1,['fr'],1,['Paris'],1,['Publi-Union'],1,single_country_evidence,['France'],['France'],1,[],False,single_country_evidence
+BOOK00282,1945,1,[],0,[],0,['managing the digital firm'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00283,2016,1,[],0,[],0,['Pearson Education'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00284,1994,1,['enk'],1,"['Englewood Cliffs, N.J', 'London']",2,"['Prentice Hall', 'Prentice-Hall International']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00285,1999,1,['nju'],1,"['Upper Saddle River, N.J']",1,['Prentice Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00286,1953,1,['ilu'],1,"['Homewood, Ill']",1,['R. D. Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00287,1969,2,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00288,1978,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice-Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00289,1993,9,"['nyu', 'onc', 'enk']",3,"['New York, USA', 'New York', 'Toronto', 'London']",4,"['Kiepenheuer & Witsch', 'Trafalgar Square', 'Random House Audio', 'Books On Tape', 'Knopf', 'Alfred A. Knopf, Inc.', 'Published by Random House Large Print in association with Knopf', 'Viking', 'Hodder & Stoughton']",9,multiple_country_evidence,"['New York (State)', 'Ontario', 'England']","['United States', 'Canada', 'United Kingdom']",3,[],False,multi_country_evidence
+BOOK00290,1992,2,[],0,[],0,['McGraw Hill Higher Education'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00291,1984,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice-Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00292,1983,1,['nyu'],1,['New York'],1,['Random House'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00293,1977,1,['ilu'],1,"['Hinsdale, Ill']",1,['Dryden Press'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00294,1990,1,['mau'],1,['Boston'],1,['Allyn and Bacon'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00295,2020,1,[],0,[],0,"['Kadavy, Inc.']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00296,1983,1,['mau'],1,"['Reading, Mass']",1,['Addison-Wesley Pub. Co.'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00297,1954,5,['nyu'],1,['New York'],1,"['Harper & Brothers Publishers, New York, NY, U.S.A.', 'Harper']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00298,1994,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00299,1968,1,['enk'],1,['London'],1,['Gower P.'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00300,1978,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice-Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00301,1911,5,"['nyu', 'xxk']",2,"['Mineola, N.Y', 'New York', 'London']",3,"['Dover Publications', 'Harper', 'Harper & Brothers']",3,multiple_country_evidence,"['New York (State)', 'United Kingdom']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00302,1969,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice-Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00303,1992,1,['ilu'],1,"['Homewood, IL']",1,['Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00304,1984,1,['txu'],1,"['Plano, Tex']",1,['Business Publications'],1,single_country_evidence,['Texas'],['United States'],1,[],False,single_country_evidence
+BOOK00305,1987,1,['mau'],1,"['Reading, Mass']",1,['Addison-Wesley'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00306,1998,1,['mau'],1,"['Boston, Mass']",1,['Irwin/McGraw-Hill'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00307,1984,2,"['xxk', 'ilu']",2,"['Glenview, Ill', 'London']",2,"['Scott, Foresman']",1,multiple_country_evidence,"['United Kingdom', 'Illinois']","['United Kingdom', 'United States']",2,[],False,multi_country_evidence
+BOOK00308,1974,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00309,1996,2,"['pau', 'xxu']",2,"['Upper Darby, PA', 'Upper Darby, Pa']",2,['Project Management Institute'],1,multiple_country_evidence,"['Pennsylvania', 'United States']",['United States'],1,[],False,multi_code_same_country
+BOOK00310,1983,1,['ilu'],1,"['Homewood, Ill']",1,['Dow Jones-Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00311,1984,1,['nyu'],1,['New York'],1,['Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00312,1982,1,['ilu'],1,"['Homewood, Ill']",1,['R.D. Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00313,2000,1,[],0,[],0,['Mcgraw-Hill College'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00314,2002,1,['xxu'],1,"['New York, N.Y', 'London']",2,['McGraw-Hill/Irwin'],1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00315,1981,1,[],0,[],0,['Blanchard-Johnson Publishers'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00316,1989,1,['ilu'],1,"['Homewood, IL']",1,"['BPI, Irwin']",1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00317,1978,1,['ilu'],1,"['Hinsdale, Ill']",1,['Dryden Press'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00318,1971,2,['nju'],1,"['Englewood Cliffs, N.J']",1,"['Pearson Education, Limited', 'Prentice-Hall']",2,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00319,1990,1,['ilu'],1,"['Homewood, IL']",1,['Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00320,1979,1,['nyu'],1,['New York'],1,['Macmillan'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00321,2019,2,[],0,['New Delhi'],1,"['Sultan chand and sons', 'Sultan Chand & Sons']",2,place_only_evidence,[],[],0,[],False,no_code_evidence
+BOOK00322,1983,1,['iau'],1,"['Dubuque, Iowa']",1,['W.C. Brown Co.'],1,single_country_evidence,['Iowa'],['United States'],1,[],False,single_country_evidence
+BOOK00323,1955,2,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00324,2004,1,[],0,[],0,['Mcgraw-Hill College'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00325,2008,3,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00326,1985,2,"['xxu', 'ilu']",2,['Chicago'],1,['Dryden Press'],1,multiple_country_evidence,"['United States', 'Illinois']",['United States'],1,[],False,multi_code_same_country
+BOOK00327,1982,1,['nyu'],1,['New York'],1,['Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00328,1989,1,['mau'],1,"['Boston, MA']",1,['Houghton Mifflin Co.'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00329,1983,1,['ohu'],1,['Cincinnati'],1,['South-Western Pub. Co.'],1,single_country_evidence,['Ohio'],['United States'],1,[],False,single_country_evidence
+BOOK00330,2003,1,['nju'],1,"['Hoboken, N.J']",1,['Wiley'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00331,1987,1,['cau'],1,['San Francisco'],1,['Jossey-Bass'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00332,1984,1,['nyu'],1,"['New York, N.Y']",1,['Warner Books'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00333,1989,6,['nyu'],1,"['New York', 'New York, NY', 'New York, USA']",3,"['Simon and Schuster', 'Simon & Schuster', 'Simon & Schuster Audio']",3,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00334,2017,1,[],0,[],0,"['Kogan Page, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00335,2018,1,[],0,[],0,['Red Globe Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00336,2005,2,['enk'],1,['London'],1,"['Chartered Institute of Personnel & Development', 'CIPD']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00337,1985,3,"['xxu', 'ohu']",2,['Cincinnati'],1,['South-Western Pub. Co.'],1,multiple_country_evidence,"['United States', 'Ohio']",['United States'],1,[],False,multi_code_same_country
+BOOK00338,2007,1,['enk'],1,"['Abingdon, Oxon', 'New York, NY']",2,['Routledge'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00339,2015,1,[],0,[],0,"['Kogan Page, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00340,2006,5,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00341,2024,1,[],0,[],0,['Springer International Publishing AG'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00342,2010,7,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00343,2022,3,[],0,[],0,"['Kogan Page, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00344,2016,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00345,2003,1,[],0,[],0,['Palgrave Macmillan'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00346,2003,1,['enk'],1,['London'],1,['Chartered Institute of Personnel and Development'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00348,2008,4,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00349,2008,4,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00350,2012,1,['ohu'],1,"['Mason, OH']",1,['South-Western/Cengage Learning'],1,single_country_evidence,['Ohio'],['United States'],1,[],False,single_country_evidence
+BOOK00351,1900,1,['enk'],1,"['London', 'New York']",2,['Thomas Nelson and sons'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00352,1986,1,[],0,[],0,['John Wiley & Sons Inc'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00353,2013,5,['enk'],1,"['London', 'New York']",2,"['Taylor & Francis Group', 'Routledge']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00354,2014,2,[],0,[],0,"['Kogan Page, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00355,1984,3,['xx'],1,['London'],1,"['Business Books', 'Business Bks.']",2,single_country_evidence,"['No place, unknown, or undetermined']",[],0,['xx'],True,unresolved_only
+BOOK00356,2022,1,[],0,[],0,['Swift'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00357,1998,1,['at'],1,['Melbourne'],1,"['Lothian Publishing Co.,Australia']",1,single_country_evidence,['Australia'],['Australia'],1,[],False,single_country_evidence
+BOOK00358,2010,2,[],0,[],0,"['HarperCollins Publishers Limited', 'HarperCollins Publishers']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00359,1993,1,['enk'],1,['Alresford'],1,['Management Pocketbooks'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00360,2015,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00361,2011,1,[],0,[],0,"['Kogan Page, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00362,2017,2,[],0,[],0,['Troubador Publishing Limited'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00363,1997,1,['enk'],1,['London'],1,['Thorogood'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00364,1978,1,['nyu'],1,['New York'],1,['Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00365,2019,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00366,1989,2,['xxk'],1,['London'],1,"['HMSO', 'Audit Commission']",2,single_country_evidence,['United Kingdom'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00367,2018,3,[],0,[],0,"['DEG Press', 'De Gruyter, Inc.']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00368,2024,1,[],0,[],0,['Practical Inspiration Publishing'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00369,2013,3,[],0,[],0,"['Hodder & Stoughton', 'Hodder Education Group', 'Teach Yourself']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00370,2013,3,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00371,1998,1,[],0,[],0,['South-Western Educational Publishing'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00372,2021,1,[],0,[],0,"['Lulu Press, Inc.']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00373,2013,1,[],0,[],0,['CreateSpace Independent Publishing Platform'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00374,1973,1,['xx'],1,['New York'],1,['Harper & Row'],1,single_country_evidence,"['No place, unknown, or undetermined']",[],0,['xx'],True,unresolved_only
+BOOK00375,2023,1,[],0,[],0,['IntechOpen'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00376,2011,1,['enk'],1,"['London', 'Philadelphia']",2,['Kogan Page'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00377,2018,1,[],0,[],0,['CreateSpace Independent Publishing Platform'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00378,2003,2,[],0,[],0,['Xlibris Corporation'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00379,2000,1,[],0,[],0,['Beekman Books Inc'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00380,2001,3,['dcu'],1,"['Washington, DC', 'Bogor, Indonesia']",2,"['RFF Press', 'Resources for the Future', 'Center for International Forestry Research']",3,single_country_evidence,['District of Columbia'],['United States'],1,[],False,single_country_evidence
+BOOK00381,1995,3,['mnu'],1,['Minneapolis/St. Paul'],1,['West Pub. Co.'],1,single_country_evidence,['Minnesota'],['United States'],1,[],False,single_country_evidence
+BOOK00382,2012,1,[],0,[],0,['Mcgrawhill Education Europe'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00383,1984,1,['mau'],1,['Boston'],1,['Pitman'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00384,1994,1,[],0,[],0,['Prentice-Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00385,2001,1,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00386,1984,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice/Hall International'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00387,2007,1,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00388,2013,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00389,1988,1,['nyu'],1,['New York'],1,"['Random House, Business Division']",1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00390,1992,3,['xxu'],1,['Boston'],1,"['Houghton Mifflin (Academic)', 'Houghton Mifflin']",2,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00391,1987,1,['xxk'],1,"['Columbus, Ohio', 'London']",2,['Merrill'],1,single_country_evidence,['United Kingdom'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00392,2007,1,[],0,[],0,"['Brand: McGraw Hill Higher Education', 'Mcgraw Hill Higher Education']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00393,2005,2,['mau'],1,"['Boston, Mass']",1,"['McGraw-Hill Companies', 'McGraw-Hill']",2,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00394,2000,1,[],0,[],0,['Wiley'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00395,2001,1,['nyu'],1,['New York'],1,['John Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00396,1985,2,"['nyu', 'xxk']",2,"['New York', 'Singapore']",2,"['McGraw-Hill', 'McGraw-Hill Book Co.']",2,multiple_country_evidence,"['New York (State)', 'United Kingdom']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00397,1995,1,['mau'],1,"['Cambridge, Mass']",1,['Harvard University Press'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00398,2004,1,[],0,[],0,['J. L. Van Schaik'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00399,2002,2,[],0,[],0,['Palgrave Macmillan'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00400,2013,1,[],0,[],0,['Cengage Learning'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00401,2020,5,[],0,[],0,['Academic Media Solutions'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00402,2002,1,[],0,[],0,['Blackwell Publishers'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00403,2003,1,['mau'],1,['Boston'],1,['Butterworth-Heineman'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00404,1996,2,"['enk', 'nyu']",2,"['New York', 'London']",2,['McGraw-Hill'],1,multiple_country_evidence,"['England', 'New York (State)']","['United Kingdom', 'United States']",2,[],False,multi_country_evidence
+BOOK00405,2011,2,['nyu'],1,"['New York, NY']",1,['Routledge'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00406,2005,1,[],0,[],0,['CENGAGE Lrng Business Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00407,2003,1,[],0,[],0,['M.E. Sharpe'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00408,1998,1,['nju'],1,"['Upper Saddle River, N.J']",1,['Prentice Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00409,2004,1,[],0,[],0,['South-Western College Pub'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00410,1998,2,"['nyu', 'enk']",2,"['New York', 'London']",2,"['Free Press', 'Prentice Hall']",2,multiple_country_evidence,"['New York (State)', 'England']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00411,2006,2,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00412,2012,1,[],0,[],0,['McGraw-Hill/Irwin'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00413,2008,1,[],0,[],0,"['Oxford University Press, USA']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00414,2003,1,[],0,[],0,['M.E. Sharpe'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00415,2011,1,['nju'],1,"['Upper Saddle River, N.J']",1,['Prentice Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00416,2014,5,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00417,2001,1,['nju'],1,"['Upper Saddle River, N.J']",1,['Prentice Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00418,1986,1,['txu'],1,"['Plano, Tex']",1,['Business Publications'],1,single_country_evidence,['Texas'],['United States'],1,[],False,single_country_evidence
+BOOK00419,2010,1,[],0,[],0,['Cambridge University Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00420,2003,1,[],0,[],0,['Spiro Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00421,2003,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00422,2005,1,[],0,[],0,"['Oxford University Press, USA', 'Oxford University Press']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00423,2008,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00424,2003,1,[],0,[],0,['Prosci Research'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00425,2004,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00426,2000,1,[],0,[],0,['Management Books 2000 Ltd'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00427,2010,1,['gw'],1,"['Berlin', 'Heidelberg']",2,['Springer'],1,single_country_evidence,['Germany'],['Germany'],1,[],False,single_country_evidence
+BOOK00428,2004,2,['nyu'],1,"['London', 'New York']",2,"['Taylor & Francis Inc', 'Routledge']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00429,2000,1,['enk'],1,"['Aldershot, Hampshire, England', 'Brookfield, Vt']",2,['Gower'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00430,2004,3,[],0,[],0,"['Kogan Page, Limited', 'Kogan Page']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00431,2020,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00432,2014,1,[],0,[],0,['Campus Verlag GmbH'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00433,2008,1,['enk'],1,"['London', 'Philadelphia']",2,['Kogan Page'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00434,2014,2,[],0,[],0,"['Palgrave', 'Palgrave Macmillan']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00435,2014,1,[],0,[],0,['Vivid Publishing'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00436,2015,1,['enk'],1,[],0,['Kogan Page'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00437,1993,1,['ilu'],1,"['Homewood, IL']",1,['IRWIN'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00438,2003,1,[],0,[],0,['Prosci Research'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00439,2014,1,[],0,[],0,['Happy Melly Express'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00440,1992,1,['enk'],1,['London'],1,['P. Chapman Pub.'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00441,2008,2,[],0,['Ottawa'],1,[],0,place_only_evidence,[],[],0,[],False,no_code_evidence
+BOOK00442,2022,5,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00443,2017,1,[],0,[],0,"[""O'Reilly Media""]",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00444,2014,3,[],0,[],0,"['Kogan Page, Limited', 'Kogan Page']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00445,2014,2,[],0,[],0,"['Kogan Page, Limited', 'Kogan Page']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00446,2004,7,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00447,2001,1,['cau'],1,['San Francisco'],1,['Jossey-Bass/Pfeiffer'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00448,1992,2,['enk'],1,['London'],1,"['Trans-Atlantic Publications', 'Pitman']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00449,2003,2,['gw'],1,"['Berlin', 'New York']",2,['Springer'],1,single_country_evidence,['Germany'],['Germany'],1,[],False,single_country_evidence
+BOOK00450,2017,2,[],0,[],0,"['Taylor & Francis Group', 'Productivity Press']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00451,2010,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00452,2016,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00453,2010,6,['flu'],1,['Boca Raton'],1,"['Taylor & Francis Group', 'Taylor & Francis']",2,single_country_evidence,['Florida'],['United States'],1,[],False,single_country_evidence
+BOOK00454,2007,1,['nyu'],1,['New York'],1,['ASME Press'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00455,2010,1,[],0,[],0,['Palgrave Macmillan'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00456,2011,1,['enk'],1,"['London', 'Philadelphia']",2,['Kogan Page'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00457,2009,1,['cau'],1,['Los Angeles'],1,"['SAGE', 'SAGE Publications Ltd', 'Sage Publications Ltd']",3,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00458,1995,1,[],0,[],0,['CIMA Publishing'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00459,1997,1,['enk'],1,"['Chichester, West Sussex, England', 'New York']",2,['Wiley'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00460,2023,5,[],0,[],0,['IGI Global'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00461,2003,1,[],0,[],0,['Deutscher Universitätsverlag'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00462,2017,4,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00463,2002,1,['inu'],1,"['Indianapolis, IN']",1,['Alpha'],1,single_country_evidence,['Indiana'],['United States'],1,[],False,single_country_evidence
+BOOK00464,2019,6,[],0,[],0,"['Taylor & Francis Group', 'CRC Press']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00465,2016,2,[],0,[],0,"['Kogan Page, Limited', 'Kogan Page']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00466,1999,1,[],0,[],0,['Penguin Random House'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00467,1996,2,['mau'],1,"['Boston, Mass', 'Boston']",2,['Harvard Business School Press'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00468,2020,6,[],0,[],0,"['Productivity Press', 'CRC Press']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00469,2007,2,['nyu'],1,['London'],1,"['Kogan Page', 'Kogan Page Publishers']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00470,2019,4,[],0,[],0,['BCS Learning & Development Limited'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00471,2010,13,"['quc', 'nyu']",2,"['Montréal', 'New York', 'London']",3,"['Éditions Transcontinental', 'Ebury Publishing', 'Crown Business', 'Random House Audio', 'Riemann I.Bertelsmann Vlg', 'Crown Currency', 'Crown Business of the Crown Publishing Group, a division of Random House, Inc.', 'Vermilion', 'Crown Publishing Group']",9,multiple_country_evidence,"['Québec (Province)', 'New York (State)']","['Canada', 'United States']",2,[],False,multi_country_evidence
+BOOK00472,1978,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice-Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00473,1973,2,"['xx', 'ilu']",2,"['Homewood, Ill']",1,"['Irwin', 'R. D. Irwin']",2,multiple_country_evidence,"['No place, unknown, or undetermined', 'Illinois']",['United States'],1,['xx'],True,single_country_with_unresolved_code
+BOOK00474,1981,1,['nyu'],1,['New York'],1,"['McGraw-Hill', 'McGraw-Hill Inc.,US']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00475,2004,3,['onc'],1,"['Toronto', 'Montréal']",2,"['McGraw-Hill Ryerson', 'Mcgraw-Hill College', 'McGraw Hill Higher Education']",3,single_country_evidence,['Ontario'],['Canada'],1,[],False,single_country_evidence
+BOOK00476,1977,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00477,1982,1,['ilu'],1,"['Homewood, Ill']",1,['R.D. Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00478,1980,2,"['ilu', 'xx']",2,"['Hinsdale, Ill', 'Toronto']",2,"['Dryden Press', 'The Dryden Press']",2,multiple_country_evidence,"['Illinois', 'No place, unknown, or undetermined']",['United States'],1,['xx'],True,single_country_with_unresolved_code
+BOOK00479,2001,1,[],0,[],0,['South-Western College Pub'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00480,1999,1,['nyu'],1,['New York'],1,['John Wiley & Sons'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00481,2001,2,[],0,[],0,['McGraw-Hill School Education'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00482,2005,1,['nju'],1,"['Hoboken, NJ']",1,['Wiley'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00483,2004,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00484,1993,1,[],0,[],0,['Prentice Hall College Div'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00485,1999,1,[],0,[],0,['Prentice Hall College Div'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00486,2013,1,[],0,[],0,"['Pearson', 'Prentice Hall']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00487,1997,2,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00488,2004,1,[],0,[],0,['OUP India'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00489,1975,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00490,2015,5,[],0,[],0,"['Pearson Education, Limited', 'Pearson']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00491,2004,1,[],0,[],0,['Prentice-Hall of India Pvt.Ltd'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00492,1985,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00493,1999,1,['xxu'],1,"['Upper Saddle River, N.J']",1,['Prentice Hall'],1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00494,1980,1,['nyu'],1,['New York'],1,['Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00495,2005,2,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00496,1979,1,['enk'],1,['London'],1,"['Holt, Rinehart and Winston', 'Holt, R & W']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00497,1999,1,['ilu'],1,['Boston'],1,['Irwin McGraw-Hill'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00498,2004,1,['xxu'],1,"['Upper Saddle River, N.J']",1,['Pearson/Prentice Hall'],1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00499,1992,2,"['nyu', 'enk']",2,"['New York', 'Maidenhead']",2,['McGraw-Hill'],1,multiple_country_evidence,"['New York (State)', 'England']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00500,2005,1,[],0,[],0,"['Taylor & Francis Group', 'Elsevier Butterworth-Heinemann']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00501,1981,1,['xxu'],1,"['Plano, Tex']",1,['Business Publications'],1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00502,1999,1,['nju'],1,"['Upper Saddle River, N.J']",1,['Prentice Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00503,1980,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice-Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00504,2005,1,[],0,[],0,['Pearson Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00505,2003,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00506,1996,1,['xxk'],1,['London'],1,['Thames Valley University'],1,single_country_evidence,['United Kingdom'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00507,2017,1,[],0,[],0,['Pearson'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00508,2012,1,[],0,[],0,['Pearson'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00509,2007,2,['nyu'],1,"['New York, N.Y', 'London']",2,"['mcgraw', 'McGraw-Hill']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00510,2018,1,[],0,[],0,['Pearson Education Australia'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00511,1979,1,['nyu'],1,['New York'],1,['Random House'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00512,1988,1,['xxu'],1,"['Boston, Mass']",1,['Allyn & Bacon'],1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00513,2000,1,['enk'],1,['Basingstoke'],1,['Macmillan'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00514,1998,1,['nyu'],1,['New York'],1,['Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00515,2015,1,[],0,[],0,['Pearson Canada'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00516,2017,3,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00517,2006,4,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00518,2004,1,[],0,[],0,['McGraw Hil'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00519,2008,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00520,1996,2,[],0,[],0,"['Pearson Education, Limited', 'Trans-Atlantic Publications']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00521,1979,1,['nyu'],1,['New York'],1,['Van Nostrand Reinhold'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00522,1999,1,['enk'],1,['London'],1,['McGraw-Hill'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00523,1985,1,['nyu'],1,['New York'],1,['Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00524,2011,1,['nyu'],1,"['New York, USA']",1,['McGraw-Hill Irwin'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00525,2021,1,[],0,[],0,['Booksmith Publishing LLC'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00526,1999,1,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00527,1999,1,[],0,[],0,['Course Technology'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00528,2005,7,['enk'],1,"['London', 'New York']",2,"['Routledge', 'Taylor & Francis Group', 'Taylor & Francis']",3,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00529,2017,4,[],0,"['Newtown Square, USA']",1,['Project Management Institute'],1,place_only_evidence,[],[],0,[],False,no_code_evidence
+BOOK00530,2012,5,[],0,[],0,"['Wiley & Sons Canada, Limited, John', 'Wiley & Sons, Incorporated, John', 'John Wiley & Sons']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00531,2015,2,[],0,[],0,"['BenBella Books', 'Franklin Covey Co.']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00532,2006,4,[],0,[],0,"['Prentice Hall Professional Technical Reference', 'Prentice Hall']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00533,2003,2,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00534,1993,1,[],0,['New Delhi'],1,"['Macmillan Publishers India Limited, 2/10 Ansari Road, Daryaganj, New Delhi - 110002']",1,place_only_evidence,[],[],0,[],False,no_code_evidence
+BOOK00535,2002,2,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00536,1999,2,"['ohu', 'xxu']",2,"['Cincinnati', 'Cincinnati,Ohio']",2,"['South-Western College Pub.', 'South-Western College Publishing']",2,multiple_country_evidence,"['Ohio', 'United States']",['United States'],1,[],False,multi_code_same_country
+BOOK00537,1994,2,"['xxu', 'nju']",2,"['Englewood Cliffs, N.J', 'Englewood Cliffs, NJ']",2,"['Prentice-Hall International', 'Prentice Hall']",2,multiple_country_evidence,"['United States', 'New Jersey']",['United States'],1,[],False,multi_code_same_country
+BOOK00538,2002,1,[],0,[],0,['Wiley'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00539,2008,1,['xx'],1,['[Place of publication not identified]'],1,['South-Western'],1,single_country_evidence,"['No place, unknown, or undetermined']",[],0,['xx'],True,unresolved_only
+BOOK00540,2007,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00541,2022,2,[],0,[],0,['Project Management Institute'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00542,2005,1,[],0,[],0,['Wiley'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00543,2018,1,[],0,[],0,['Oxford University Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00544,2013,1,[],0,[],0,['Burke Publishing'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00545,2000,2,[],0,[],0,['Irwin McGraw-Hill'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00546,2000,1,[],0,[],0,['Wiley'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00547,2011,1,['cau'],1,['San Francisco'],1,['Kirshner Pub.'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00548,2002,3,[],0,[],0,"['Irwin/McGraw-Hill', 'McGraw-Hill Education', 'McGraw-Hill/Irwin']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00549,2012,1,[],0,[],0,['South-Western College Pub'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00550,1999,2,['nyu'],1,['New York'],1,"['Wiley', 'J. Wiley']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00551,2012,2,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00552,2002,2,[],0,[],0,['McGraw-Hill'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00553,2011,2,['flu'],1,['Boca Raton'],1,"['Taylor & Francis Group', 'Francis & Taylor/CRC Press']",2,single_country_evidence,['Florida'],['United States'],1,[],False,single_country_evidence
+BOOK00554,2011,2,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00555,2006,2,[],0,[],0,['McGraw-Hill Professional'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00556,2013,2,[],0,[],0,"['McGraw-Hill Education', 'McGraw-Hill Australia']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00557,2004,1,[],0,[],0,['Microsoft Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00558,2005,3,"['cc', 'cau']",2,"['Beijing', 'Sebastopol, CA']",2,"[""O'Reilly Media, Incorporated"", ""O'Reilly""]",2,multiple_country_evidence,"['China', 'California']","['China', 'United States']",2,[],False,multi_country_evidence
+BOOK00559,2000,1,['pau'],1,"['Newtown Square, Penn., USA']",1,['Project Management Institute'],1,single_country_evidence,['Pennsylvania'],['United States'],1,[],False,single_country_evidence
+BOOK00560,1997,2,['nyu'],1,['New York'],1,"['Dorset House Publishing Company, Incorporated', 'Dorset House Pub.']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00561,2012,1,[],0,[],0,"['Que Publishing', 'imusti']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00562,1987,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00563,2000,1,['flu'],1,['Boca Raton'],1,['Auerbach'],1,single_country_evidence,['Florida'],['United States'],1,[],False,single_country_evidence
+BOOK00564,2000,1,[],0,[],0,['For Dummies'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00565,2008,4,[],0,[],0,"[""O'Reilly Media, Incorporated"", ""O'Reilly Media, Inc.""]",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00566,1994,1,['enk'],1,['London'],1,['Kogan Page'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00567,2014,2,[],0,[],0,"['Kogan Page, Limited', 'Kogan Page Ltd']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00568,2014,1,[],0,[],0,['Performance Management Publications'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00569,2008,7,['enk'],1,"['Abingdon [England]', 'New York, NY']",2,"['Taylor & Francis Group', 'Routledge']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00570,2005,1,['nju'],1,"['Upper Saddle River, NJ']",1,['Pearson Education'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00571,2018,1,['nju'],1,[],0,['Wiley'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00572,2008,1,['enk'],1,"['Houndmills, Basinstoke, Hampshire', 'New York']",2,['Palgrave Macmillan'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00573,2005,1,['enk'],1,['London'],1,"['Chartered Institute of Personnel and Development', 'Institute of Personnel and Development']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00574,2011,3,['nju'],1,"['Hoboken, NJ']",1,"['Wiley & Sons, Incorporated, John', 'Wiley']",2,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00575,2018,5,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00576,2008,1,['enk'],1,"['Oxford', 'New York']",2,"['Oxford Univ Press', 'Oxford University Press']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00577,2010,1,['nyu'],1,"['New York, NY']",1,"['Taylor & Francis Group', 'Routledge/Taylor & Francis Group']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00578,2016,2,[],0,[],0,"['SAGE Publications India Pvt, Ltd.']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00579,1996,1,[],0,[],0,"['FPMI Communications, Inc']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00580,2022,2,[],0,[],0,['BPP Learning Media'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00581,2014,2,[],0,[],0,"['Kogan Page, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00582,2013,6,[],0,[],0,"['Wiley & Sons, Limited, John', 'Wiley & Sons, Incorporated, John', 'John Wiley & Sons', 'John Wiley & Sons, Inc.']",4,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00583,2009,2,"['nyu', 'enk']",2,['London'],1,"['Kogan Page Publishers', 'Kogan Page']",2,multiple_country_evidence,"['New York (State)', 'England']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00584,2020,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00585,2004,1,['enk'],1,"['Oxford', 'Burlington, Mass']",2,['Elsevier Butterworth-Heinemann'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00586,2000,1,['flu'],1,"['Boca Raton, Fl']",1,['CRC Press'],1,single_country_evidence,['Florida'],['United States'],1,[],False,single_country_evidence
+BOOK00587,1999,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00588,2017,2,[],0,[],0,['BPP Learning Media'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00589,1986,1,['oru'],1,"['Portland, Or']",1,['Meramorphosus Press'],1,single_country_evidence,['Oregon'],['United States'],1,[],False,single_country_evidence
+BOOK00590,2014,6,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00591,2015,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00592,2013,1,[],0,[],0,"['Kogan Page, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00593,2012,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00594,2006,3,['mau'],1,"['Boston, Mass']",1,['Harvard Business School Press'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00595,2017,1,['mau'],1,[],0,['Harvard Business Review Press'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00596,2006,1,[],0,[],0,['Kogan Page Ltd'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00597,2012,6,['xx'],1,['Hoboken'],1,"['Taylor & Francis Group', 'Taylor & Francis']",2,single_country_evidence,"['No place, unknown, or undetermined']",[],0,['xx'],True,unresolved_only
+BOOK00598,2009,1,['nyu'],1,"['New York, NY']",1,['Routledge'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00599,2007,1,['enk'],1,"['Abingdon [England]', 'New York, NY']",2,['Routledge'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00600,2015,1,[],0,[],0,['BPP Learning Media'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00601,2017,2,[],0,[],0,['BPP Learning Media'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00602,2006,4,"['nju', 'nyu']",2,"['Hoboken, N.J', 'New York']",2,"['Wiley & Sons, Incorporated, John', 'J. Wiley', 'Wiley', 'John Wiley & Sons, Ltd.']",4,multiple_country_evidence,"['New Jersey', 'New York (State)']",['United States'],1,[],False,multi_code_same_country
+BOOK00603,1983,1,['wau'],1,"['Bellevue, Washington']",1,"['Precision Models, Inc.']",1,single_country_evidence,['Washington (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00604,2024,1,[],0,[],0,['BPP Learning Media'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00605,2019,3,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00606,2006,1,[],0,[],0,['Kaplan Publishing Foulks Lynch'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00607,2004,3,['nyu'],1,['New York'],1,"['Wiley & Sons, Incorporated, John', 'John Wiley & Sons, Ltd.', 'Wiley']",3,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00608,2012,7,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00609,1989,1,[],0,[],0,['Performance Management Publications'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00610,2003,1,[],0,[],0,['Teach Yourself'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00611,2010,4,[],0,[],0,"['Wiley & Sons, Incorporated, John', 'Wiley & Sons, Limited, John']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00612,2004,1,['ilu'],1,"['Chicago, Ill']",1,['CCH'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00613,1997,1,['flu'],1,"['Boca Raton, Fla']",1,['St. Lucie Press'],1,single_country_evidence,['Florida'],['United States'],1,[],False,single_country_evidence
+BOOK00614,2003,4,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00615,1992,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00616,1999,2,['ohu'],1,"['Cincinnati, Ohio']",1,"['South-Western College Pub.', 'Thomson South-Western']",2,single_country_evidence,['Ohio'],['United States'],1,[],False,single_country_evidence
+BOOK00617,2005,1,['nju'],1,"['Hoboken, NJ']",1,['Wiley'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00618,1999,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00619,2008,3,['nju'],1,"['Hoboken, NJ']",1,"['Wiley & Sons, Incorporated, John', 'Wiley', 'John Wiley & Sons']",3,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00620,1994,1,['enk'],1,"['Houndmills, Basingstoke, Hampshire']",1,['Macmillan'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00621,1986,1,['mau'],1,['Boston'],1,['Houghton Mifflin Co.'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00622,2003,2,['nju'],1,"['Upper Saddle River, N.J']",1,"['Prentice Hall', 'Pearson College Div']",2,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00623,1987,1,['ilu'],1,"['Homewood, Ill']",1,['Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00624,1992,1,['ilu'],1,"['Homewood, IL']",1,['Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00625,2005,1,[],0,[],0,['South-Western College Pub'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00626,2005,2,['nju'],1,"['Upper Saddle River, N.J']",1,['Pearson/Prentice Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00627,2019,1,[],0,[],0,"['Nelson Education Limited', 'Nelson College Indigenous', 'Nelson Cengage Adapted']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00628,2018,1,[],0,[],0,"['Oxford University Press', 'Oxford University Press, USA']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00629,1995,1,['at'],1,['Brisbane'],1,['Wiley'],1,single_country_evidence,['Australia'],['Australia'],1,[],False,single_country_evidence
+BOOK00630,1998,2,[],0,[],0,['Harcourt Brace College Publishers'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00631,2007,1,['ph'],1,['Quezon City'],1,['C & E Pub.'],1,single_country_evidence,['Philippines'],['Philippines'],1,[],False,single_country_evidence
+BOOK00632,1994,1,['nyu'],1,['New York'],1,['John Wiley & Sons'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00633,2008,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00634,1990,2,"['mau', 'xxk']",2,['Boston'],1,"['Houghton Mifflin Co.', 'Houghton Mifflin']",2,multiple_country_evidence,"['Massachusetts', 'United Kingdom']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00635,2013,1,[],0,[],0,"['SAGE Publications, Incorporated']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00636,2012,1,[],0,[],0,['McGraw-Hill India'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00637,2000,1,['mau'],1,['Boston'],1,['Irwin/McGraw-Hill'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00638,1981,2,['ph'],1,"['Manila', 'Manila, Philippines']",2,"['Rex book store in Manila', 'Rex Book Store']",2,single_country_evidence,['Philippines'],['Philippines'],1,[],False,single_country_evidence
+BOOK00639,1974,1,['xxk'],1,['London'],1,['Macdonald and Evans'],1,single_country_evidence,['United Kingdom'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00640,2009,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00641,2009,1,['enk'],1,"['London', 'Philadelphia']",2,['Kogan Page'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00642,2006,1,[],0,[],0,['McGraw Hill Higher Education'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00643,2014,3,[],0,[],0,"['SAGE Publications, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00644,2001,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00645,2015,1,[],0,[],0,['Generic'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00646,2000,1,['enk'],1,['London'],1,['Kogan Page'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00647,2013,1,['enk'],1,"['Houndmills, Basingstoke, Hampshire', 'New York']",2,['Palgrave Macmillan'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00648,1999,1,[],0,[],0,['Kogan Page'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00649,1994,1,['mnu'],1,['Minneapolis'],1,['West Pub. Co.'],1,single_country_evidence,['Minnesota'],['United States'],1,[],False,single_country_evidence
+BOOK00650,1999,2,[],0,[],0,['Mcgraw-Hill College'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00651,2006,1,[],0,[],0,['South-Western College Pub'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00652,2006,1,['ii'],1,['New-Delhi'],1,['Prentice-Hall of india Prt. Ltd.'],1,single_country_evidence,['India'],['India'],1,[],False,single_country_evidence
+BOOK00653,2014,3,[],0,[],0,"['SAGE Publications, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00654,2013,1,[],0,[],0,['Mc Graw Hill India'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00655,1994,2,['ilu'],1,"['Burr Ridge, Ill']",1,"['Irwin', 'Richard D Irwin']",2,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00656,2011,2,[],0,[],0,"['McGraw-Hill Education', 'McGraw-Hill']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00657,2011,2,[],0,[],0,"['SAGE Publications, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00658,2011,1,[],0,[],0,['FlatWorld'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00659,2008,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00660,1979,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice-Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00661,1973,2,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00662,1984,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice-Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00663,1989,1,['ilu'],1,"['Homewood, Ill']",1,"['Irwin', 'Irwin Professional Publishing']",2,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00664,1976,1,['mnu'],1,['St. Paul'],1,['West Pub. Co.'],1,single_country_evidence,['Minnesota'],['United States'],1,[],False,single_country_evidence
+BOOK00665,2000,2,['mau'],1,['Boston'],1,"['Mcgraw-Hill College', 'Irwin/McGraw-Hill']",2,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00666,1986,1,['mau'],1,"['Boston, Mass']",1,['Kent Pub. Co.'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00667,1993,1,['enk'],1,['London'],1,['McGraw-Hill'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00668,1971,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00669,1987,1,['txu'],1,"['Plano, Tex']",1,"['Business Publications, Inc.']",1,single_country_evidence,['Texas'],['United States'],1,[],False,single_country_evidence
+BOOK00670,1982,2,"['nyu', 'xxk']",2,"['New York', 'Chichester']",2,['Wiley'],1,multiple_country_evidence,"['New York (State)', 'United Kingdom']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00671,2009,1,['mau'],1,['Boston'],1,['McGraw-Hill/Irwin'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00672,1997,3,"['nyu', 'xxu']",2,['New York'],1,"['Horizon Pubs & Distributors Inc', 'Wiley', 'John Wiley & Sons Inc.']",3,multiple_country_evidence,"['New York (State)', 'United States']",['United States'],1,[],False,multi_code_same_country
+BOOK00673,1994,1,['xxk'],1,['St. Paul (MN)'],1,['West Publishing Company'],1,single_country_evidence,['United Kingdom'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00674,2015,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00675,1981,2,"['cau', 'ilu']",2,"['Santa Monica, Calif', 'Glenview, Ill']",2,"['Goodyear Pub. Co.', 'Scott, Foresman']",2,multiple_country_evidence,"['California', 'Illinois']",['United States'],1,[],False,multi_code_same_country
+BOOK00676,2002,1,['nju'],1,"['Upper Saddle River, N.J']",1,['Prentice Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00677,1981,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice-Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00678,2006,1,[],0,[],0,['McGraw-Hill/Irwin'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00679,2003,1,['mau'],1,['Boston'],1,['McGraw-Hill/Irwin'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00680,1986,1,['mnu'],1,"['St. Paul, MN']",1,['West Pub. Co.'],1,single_country_evidence,['Minnesota'],['United States'],1,[],False,single_country_evidence
+BOOK00681,2013,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00682,1989,1,['mau'],1,['Boston'],1,['Houghton Mifflin Co.'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00683,2013,1,['nyu'],1,"['New York, NY']",1,['McGraw-Hill Irwin'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00684,2001,3,['nju'],1,"['Upper Saddle River, N.J']",1,['Prentice Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00685,1996,2,"['nju', 'enk']",2,"['Upper Saddle River, N.J']",1,['Prentice Hall'],1,multiple_country_evidence,"['New Jersey', 'England']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00686,1997,1,[],0,[],0,['McGraw-Hill Education (ISE Editions)'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00687,2009,1,[],0,[],0,"['Jones & Bartlett Learning, LLC']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00688,1986,1,['mau'],1,['Boston'],1,['Houghton Mifflin Co.'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00689,1990,2,['ilu'],1,['Chicago'],1,"['Harcourt Brace College Publishers', 'Dryden Press']",2,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00690,1997,1,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00691,2010,1,['mau'],1,['Boston'],1,['McGraw-Hill/Irwin'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00692,2008,2,['nyu'],1,"['New York, NY']",1,['Psychology Press'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00693,2002,1,[],0,[],0,['South-Western'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00694,2000,2,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00695,2012,2,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00696,2015,1,[],0,[],0,"['SAGE Publications, Inc']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00697,1974,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00698,1991,2,['xxk'],1,"['Boston, Mass']",1,"['P.W.S.-Kent Publishing Co.,U.S.', 'PWS-Kent Publishing Co.']",2,single_country_evidence,['United Kingdom'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00699,2001,6,[],0,[],0,"['Taylor & Francis Group', 'Lawrence Erlbaum']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00700,2007,1,[],0,[],0,"['Pearson Education, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00701,2010,1,[],0,[],0,['McGraw-Hill/Irwin'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00702,1986,1,['mau'],1,['Boston'],1,"['Pitman', 'Pitman Publishing']",2,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00703,1998,2,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00704,2014,2,[],0,[],0,"['Mcgraw-Hill', 'McGraw-Hill Education']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00705,1994,2,"['xxu', 'mnu']",2,['Minneapolis'],1,"['West', 'West Pub. Co.']",2,multiple_country_evidence,"['United States', 'Minnesota']",['United States'],1,[],False,multi_code_same_country
+BOOK00706,2013,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00707,1997,2,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00708,1994,1,['ilu'],1,"['Burr Ridge, Ill']",1,['Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00709,2020,3,[],0,[],0,"['Simon & Schuster Audio and Blackstone Publishing', 'Simon & Schuster Audio', 'Gallery Books']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00710,2003,2,['inu'],1,"['Indianapolis, Ind']",1,"['New Riders Press', 'New Riders Pub.']",2,single_country_evidence,['Indiana'],['United States'],1,[],False,single_country_evidence
+BOOK00711,1984,1,['nyu'],1,['New York'],1,['Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00712,1985,1,['enk'],1,"['Oxford, [Oxfordshire]', 'New York, NY, USA']",2,['B. Blackwell'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00713,2008,1,[],0,[],0,['Cambridge University Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00715,1989,1,['enk'],1,['London'],1,['Thames and Hudson'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00716,2007,1,[],0,[],0,['Butterworth-Heinemann'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00717,2016,2,[],0,[],0,"['Deep Strategy', 'Hamilton Helmer']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00718,2009,1,[],0,[],0,['Cambridge University Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00719,2001,1,['enk'],1,"['Oxford', 'Boston']",2,['Butterworth-Heinemann'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00720,2003,1,[],0,[],0,['Profile Books Limited'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00721,1993,1,['nhu'],1,"['Portsmouth, NH']",1,['Heinemann'],1,single_country_evidence,['New Hampshire'],['United States'],1,[],False,single_country_evidence
+BOOK00722,1997,2,[],0,[],0,['McGraw-Hill Companies'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00723,2015,6,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00724,2017,1,[],0,[],0,['CreateSpace Independent Publishing Platform'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00725,2013,7,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00726,2002,1,['enk'],1,"['Oxford', 'Boston']",2,['Butterworth-Heinemann'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00727,2001,2,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00728,1997,2,['enk'],1,"['London', 'Boston']",2,"['International Thomson Business Press', 'International Thomson Publishing Services Ltd']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00729,1995,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00730,2008,1,[],0,[],0,['McGraw Hill Higher Education'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00731,2014,1,[],0,[],0,['Oxford University Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00732,1985,1,['mau'],1,['Boston'],1,['Houghton Mifflin'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00733,2022,5,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00734,1998,1,[],0,[],0,['Viking'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00735,1991,1,[],0,[],0,['Prentice Hall College Div'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00736,2007,2,['mau'],1,['Boston'],1,"['Harvard Business School Press', 'Harvard Business School Pub.', 'Harvard Business School Pub. Corporation']",3,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00737,2003,2,['enk'],1,['London'],1,"['Profile', 'Bloomberg Press']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00738,2001,1,[],0,[],0,['Wiley'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00739,2007,1,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00740,2022,2,[],0,[],0,"['Elgar Publishing Limited, Edward']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00741,2019,6,[],0,[],0,"['Taylor & Francis Group', 'CRC Press']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00742,2021,2,[],0,[],0,"['Scribe Media', 'Lioncrest Publishing']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00743,2014,2,[],0,[],0,"['Wiley & Sons, Limited, John', 'Wiley']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00744,2012,1,['ohu'],1,"['Mason, OH']",1,"['South-Western Cengage Learning', 'Cengage Learning', 'South-Western College Pub']",3,single_country_evidence,['Ohio'],['United States'],1,[],False,single_country_evidence
+BOOK00745,2024,2,[],0,[],0,"['SAGE Publications, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00746,1965,6,"['xx', 'xxk', 'xxu', 'nyu']",4,"['New York', 'London']",2,['McGraw-Hill'],1,multiple_country_evidence,"['No place, unknown, or undetermined', 'United Kingdom', 'United States', 'New York (State)']","['United Kingdom', 'United States']",2,['xx'],True,multi_country_with_unresolved_code
+BOOK00747,2003,7,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00748,1998,1,[],0,[],0,['Rockport Pub'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00749,2003,1,['xxu'],1,"['Boston', 'London']",2,['McGraw-Hill'],1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00750,2002,1,['enk'],1,['Oxford'],1,['Butterworth-Heinemann'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00751,2016,1,[],0,[],0,"['Jones & Bartlett Learning, LLC']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00752,2006,4,[],0,[],0,"['Auerbach Publishers, Incorporated']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00753,1993,1,['enk'],1,['Huntingdon'],1,['Elm'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00754,2011,1,['nyu'],1,['New York'],1,['Palgrave Macmillan'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00755,2021,1,[],0,[],0,"[""O'Reilly Media, Incorporated""]",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00756,2016,1,[],0,[],0,['Bookboon'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00757,2022,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00758,1998,1,['nyu'],1,['New York'],1,['John Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00759,1999,3,[],0,[],0,['John Wiley & Sons Inc'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00760,1991,1,[],0,[],0,['West Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00761,1970,1,['nyu'],1,['New York'],1,"['Harcourt, Brace & World']",1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00762,1975,2,['mau'],1,['Boston'],1,['Houghton Mifflin'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00763,1986,1,['nyu'],1,['New York'],1,['Wiley'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00764,1947,1,['nyu'],1,['New York'],1,['Macmillan Co.'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00765,1991,1,['mau'],1,['Boston'],1,['Houghton Mifflin Co.'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00766,2014,1,[],0,[],0,['Cengage Learning'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00767,1999,3,[],0,[],0,"['Taylor & Francis Group', 'Lawrence Erlbaum']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00768,1964,2,['xxu'],1,"['Boston, (Mass.)']",1,['Allyn and Bacon'],1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00769,1993,2,"['nyu', 'pau']",2,"['New York', 'Philadelphia']",2,"['McGraw-Hill', 'Temple University Press']",2,multiple_country_evidence,"['New York (State)', 'Pennsylvania']",['United States'],1,[],False,multi_code_same_country
+BOOK00770,1995,3,"['nyu', 'enk', 'xxk']",3,"['New York', 'Chichester']",2,['Wiley'],1,multiple_country_evidence,"['New York (State)', 'England', 'United Kingdom']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00771,1976,1,['vau'],1,"['Reston, Va']",1,['Reston Pub. Co.'],1,single_country_evidence,['Virginia'],['United States'],1,[],False,single_country_evidence
+BOOK00772,1957,4,"['xxu', 'ilu']",2,"['Homewood (Illinois)', 'Homewood, IL', 'Homewood, Ill']",3,"['R.D. Irwin', 'Richard D. Irwin', 'Irwin']",3,multiple_country_evidence,"['United States', 'Illinois']",['United States'],1,[],False,multi_code_same_country
+BOOK00773,2012,1,['nyu'],1,['New York'],1,"['W.W. Norton & Co.', 'W. W. Norton & Company']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00774,1988,1,['nju'],1,"['Hillsdale, N.J']",1,['L. Erlbaum Associates'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00775,1976,1,['mnu'],1,['St. Paul'],1,['West Pub. Co.'],1,single_country_evidence,['Minnesota'],['United States'],1,[],False,single_country_evidence
+BOOK00776,1961,1,['cau'],1,['San Francisco'],1,['Wadsworth Pub. Co.'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00777,2005,1,[],0,[],0,['South-Western College Pub'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00778,2008,3,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00779,1977,1,['nyu'],1,['New York'],1,['Free Press'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00780,1999,1,['cau'],1,"['Pacific Grove, CA']",1,['Duxbury Press'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00781,2008,1,['enk'],1,['Chichester'],1,"['John Wiley', 'Wiley']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00782,1994,2,['nyu'],1,"['New York', 'Toronto']",2,"['Simon & Schuster, Limited', 'Free Press', 'Maxwell Macmillan Canada', 'Maxwell Macmillan International']",4,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00783,2020,2,[],0,[],0,"['SAGE Publications, Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00784,2007,2,[],0,[],0,['McGraw-Hill/Irwin'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00785,1979,2,[],0,[],0,['Free Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00786,2022,2,[],0,[],0,"['eCampusOntario Open Authoring Platform', 'Pressbooks']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00787,1982,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00788,2003,1,[],0,[],0,['Cengage Delmar Learning'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00789,2020,1,[],0,[],0,['Sourcebooks'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00790,1995,1,['ilu'],1,['Chicago'],1,['Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00791,2009,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00792,2019,1,[],0,[],0,"['Little, Brown Book Group Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00793,2010,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00794,2011,1,['ohu'],1,"['Mason, OH']",1,['South-Western Cengage'],1,single_country_evidence,['Ohio'],['United States'],1,[],False,single_country_evidence
+BOOK00795,2017,1,[],0,[],0,['Red Globe Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00796,1998,1,[],0,[],0,['Island Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00797,1991,1,['cau'],1,"['Los Altos, Calif']",1,['Crisp Publications'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00798,1954,1,['nyu'],1,['New York'],1,['Prentice-Hall'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00799,1998,1,['cau'],1,"['Pacific Grove, CA']",1,['Brooks/Cole'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00800,2019,1,[],0,[],0,['CENGAGE LEARNING'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00801,2010,1,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00802,2005,2,[],0,[],0,"['Wiley & Sons, Incorporated, John']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00803,2010,2,"['nyu', 'enk']",2,"['London', 'Philadelphia']",2,"['Kogan Page Publishers', 'Kogan Page']",2,multiple_country_evidence,"['New York (State)', 'England']","['United States', 'United Kingdom']",2,[],False,multi_country_evidence
+BOOK00804,1976,1,['txu'],1,['Dallas'],1,['Business Publications'],1,single_country_evidence,['Texas'],['United States'],1,[],False,single_country_evidence
+BOOK00805,1982,1,['xxu'],1,['St. Paul'],1,['West Publishing'],1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00806,2010,5,"['enk', 'pau', 'nyu']",3,"['London', 'Philadelphia, PA', 'Philadelphia']",3,"['Kogan Page, Limited', 'KoganPage', 'Kogan Page Limited', 'Kogan Page Publishers']",4,multiple_country_evidence,"['England', 'Pennsylvania', 'New York (State)']","['United Kingdom', 'United States']",2,[],False,multi_country_evidence
+BOOK00807,1972,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00808,1978,1,['ohu'],1,"['Columbus, Ohio']",1,['Merrill'],1,single_country_evidence,['Ohio'],['United States'],1,[],False,single_country_evidence
+BOOK00809,1999,2,['cau'],1,"['Del Mar, CA']",1,"['Jouvence', 'PuddleDancer Press']",2,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00810,1991,1,['mau'],1,"['Austin, Tex']",1,['Pro-Ed'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00811,1995,1,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00812,2000,4,[],0,[],0,"['Osborne Publishing', 'Mcgraw-Hill College']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00813,1994,1,['ilu'],1,"['Burr Ridge, Ill']",1,['Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00814,1959,2,['nyu'],1,['New York'],1,"['McGraw-hill Book Company, Inc.', 'McGraw-Hill']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00815,2000,1,['cau'],1,"['Mountain View, Calif']",1,['Mayfield Pub.'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00816,2007,2,['sa'],1,"['Cape Town, South Africa']",1,['Juta'],1,single_country_evidence,['South Africa'],['South Africa'],1,[],False,single_country_evidence
+BOOK00817,2011,1,[],0,[],0,['Oxford University Press India'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00818,1974,1,['cau'],1,['San Francisco'],1,['Rinehart Press'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00819,1988,1,['nju'],1,"['Englewood Cliffs, N.J']",1,['Prentice Hall'],1,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00820,1972,3,"['xxk', 'nyu']",2,"['London', 'New  York']",2,"['Oxf.U.P.(N.Y.)', 'OxfordUniversity Press', 'Oxford University Press']",3,multiple_country_evidence,"['United Kingdom', 'New York (State)']","['United Kingdom', 'United States']",2,[],False,multi_country_evidence
+BOOK00821,1974,1,['nyu'],1,['New York'],1,['Random House'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00822,1993,1,[],0,[],0,['Wadsworth Publishing Company'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00823,1986,1,['nyu'],1,['New York'],1,['Random House'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00824,1991,1,['cau'],1,"['Belmont, Calif']",1,['Wadsworth Pub.'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00825,1983,2,"['xxk', 'enk']",2,['London'],1,['Verso'],1,multiple_country_evidence,"['United Kingdom', 'England']",['United Kingdom'],1,[],False,multi_code_same_country
+BOOK00826,1991,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00827,1954,3,"['xx', 'nyu']",2,['New York'],1,['Prentice-Hall'],1,multiple_country_evidence,"['No place, unknown, or undetermined', 'New York (State)']",['United States'],1,['xx'],True,single_country_with_unresolved_code
+BOOK00828,1980,1,['nyu'],1,['New York'],1,"['Holt, Rinehart, and Winston']",1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00829,1988,1,['cau'],1,"['Belmont, Calif']",1,['Wadsworth Pub. Co.'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00830,1989,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00831,1996,1,['enk'],1,"['London', 'New York']",2,['Routledge'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00832,1995,1,['nyu'],1,['New York'],1,['HarperCollinsCollegePublishers'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00833,1995,1,['cau'],1,"['Belmont, Calif']",1,['Wadsworth Pub. Co.'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00834,2002,1,['nyu'],1,"['Albany, N.Y']",1,"['Delmar/Thomson Learning', 'Cengage Delmar Learning']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00835,1983,1,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00836,2015,1,[],0,[],0,"['Oxford University Press', 'OXFORD UNIVERSITY PRESS']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00837,1983,1,['nyu'],1,"['New York', 'London']",2,"['Macmillan', 'Collier Macmillan']",2,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00838,2000,2,['onc'],1,['Toronto'],1,"['Addison-Wesley Educational Publishers Inc.', 'Addison Wesley Longman']",2,single_country_evidence,['Ontario'],['Canada'],1,[],False,single_country_evidence
+BOOK00839,1984,2,"['nyu', 'mau']",2,"['New York', 'Reading, Mass']",2,"['Random House', 'Addison-Wesley Pub. Co.']",2,multiple_country_evidence,"['New York (State)', 'Massachusetts']",['United States'],1,[],False,multi_code_same_country
+BOOK00840,2001,1,[],0,[],0,['McGraw-Hill Humanities/Social Sciences/Languages'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00841,1972,3,"['xxu', 'nyu', 'xx']",3,['New York'],1,"['Holt, Rinehart and Winston']",1,multiple_country_evidence,"['United States', 'New York (State)', 'No place, unknown, or undetermined']",['United States'],1,['xx'],True,single_country_with_unresolved_code
+BOOK00842,1989,2,['ilu'],1,"['Homewood, IL']",1,['Irwin'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00843,1991,1,['mau'],1,['Boston'],1,['Allyn and Bacon'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00844,1972,1,['ilu'],1,['Chicago'],1,['Aldine-Atherton'],1,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00845,1983,2,"['nyu', 'ja']",2,"['New York', 'Tokyo']",2,"['Holt, Rinehart, and Winston', 'Holt-Saunders Japan']",2,multiple_country_evidence,"['New York (State)', 'Japan']","['United States', 'Japan']",2,[],False,multi_country_evidence
+BOOK00846,2001,2,['enk'],1,"['Boston, Mass', 'London']",2,"['McGraw-Hill Irwin', 'Mcgraw-Hill College']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00847,1993,1,[],0,[],0,['Wadsworth Pub Co'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00848,1983,2,['mau'],1,"['Reading, Mass']",1,"['Longman Higher Education', 'Addison-Wesley']",2,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00849,1994,1,['nyu'],1,"['New York, N.Y', 'Toronto', 'New York']",3,"['The Free Press', 'Maxwell Macmillan Canada', 'Maxwell Macmillan International']",3,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00850,1986,2,"['xxu', 'nyu']",2,"['New York, USA', 'New York']",2,['Wiley'],1,multiple_country_evidence,"['United States', 'New York (State)']",['United States'],1,[],False,multi_code_same_country
+BOOK00851,2001,20,[],0,[],0,"['South-Western Educational Pub', 'South-Western Pub', 'Brand: South-Western Educational Pub', 'Brand: Cengage Learning', 'Cengage Learning']",5,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00853,1983,1,['nyu'],1,['New York'],1,['Random House'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00854,2000,1,[],0,[],0,['Addison Wesley'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00855,1994,1,[],0,[],0,['Wadsworth Publishing Company'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00856,1995,5,"['xxk', 'nyu']",2,"['New York', 'London']",2,"['Objetiva', 'Bantam Books', 'Bantam', 'Audio Renaissance']",4,multiple_country_evidence,"['United Kingdom', 'New York (State)']","['United Kingdom', 'United States']",2,[],False,multi_country_evidence
+BOOK00857,2009,2,"['xx', 'nyu']",2,['New York'],1,"['Pgw', 'TalentSmart']",2,multiple_country_evidence,"['No place, unknown, or undetermined', 'New York (State)']",['United States'],1,['xx'],True,single_country_with_unresolved_code
+BOOK00858,2019,1,[],0,[],0,"['Independently Published', 'Independently published']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00859,1998,8,"['it', 'enk', 'ch', 'nyu']",4,"['Milano', 'London', 'Taibei Shi', 'New York']",4,"['Bloomsbury Publishing Plc', 'Bantam', 'Rizzoli', 'Brand: Macmillan Audio', 'Macmillan Audio', 'Bloomsbury', 'Shi bao wen hua chu ban qi yeh gu fen yu xian gong si', 'Bantam Books']",8,multiple_country_evidence,"['Italy', 'England', 'China (Republic : 1949- )', 'New York (State)']","['Italy', 'United Kingdom', 'Taiwan', 'United States']",4,[],False,multi_country_evidence
+BOOK00860,2007,2,['enk'],1,['London'],1,"['Hodder Education Group', 'Teach Yourself']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00861,1997,2,['nyu'],1,['New York'],1,['Basic Books'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00862,2021,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00863,2011,2,['enk'],1,['London'],1,"['Hodder & Stoughton', 'Hodder Education']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00864,2012,1,['nyu'],1,"['New York, NY']",1,['MJF Books'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00865,2011,1,['mau'],1,"['Northampton, MA']",1,['More Than Sound'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00866,2023,1,[],0,[],0,"['TalentSmart, Incorporated']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00867,1997,2,['nyu'],1,['New York'],1,['H. Holt'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00868,2008,2,['cou'],1,"['Boulder, CO']",1,['Sounds True'],1,single_country_evidence,['Colorado'],['United States'],1,[],False,single_country_evidence
+BOOK00869,2011,1,['nyu'],1,['New York'],1,['Springer Pub.'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00870,2019,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00871,2002,1,[],0,[],0,['Harvard Business School Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00872,2007,1,['enk'],1,['London'],1,['Hodder Education'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00873,2019,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00874,2005,3,['mau'],1,"['Cambridge, MA']",1,"['Hogrefe Publishing', 'Hogrefe & Huber Publishing', 'Hogrefe & Huber Publishers']",3,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00875,2025,2,[],0,[],0,['Christopher Hinton'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00876,2019,6,[],0,[],0,"['Independently Published', 'Independently published']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00877,2009,2,['nju'],1,['Hoboken'],1,"['Wiley & Sons Canada, Limited, John', 'For Dummies [Imprint]', 'John Wiley & Sons, Incorporated.']",3,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00878,2000,1,[],0,[],0,['Sage Publications Pvt. Ltd'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00879,2005,1,['nyu'],1,['New York'],1,['Simon & Schuster'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00880,1998,1,['cau'],1,['San Francisco'],1,['Jossey-Bass Publishers'],1,single_country_evidence,['California'],['United States'],1,[],False,single_country_evidence
+BOOK00881,2008,2,['nyu'],1,['New York'],1,['McGraw-Hill'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00882,2015,1,['mau'],1,[],0,['Harvard Business Review Press'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00883,2003,3,['ilu'],1,"['Chicago, IL']",1,"['Brand: Kaplan Publishing', 'Kaplan Publishing', 'Dearborn Trade', 'Kaplan Business']",4,single_country_evidence,['Illinois'],['United States'],1,[],False,single_country_evidence
+BOOK00884,2005,2,['enk'],1,"['Milton Park, Abingdon, Oxon', 'New York, NY']",2,"['Taylor & Francis Group', 'Routledge']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00885,2011,1,['xxu'],1,['[United States?]'],1,"['G. Publishing, LLC.']",1,single_country_evidence,['United States'],['United States'],1,[],False,single_country_evidence
+BOOK00886,1997,3,"['enk', 'nyu']",2,"['London', 'New York']",2,"['Avon Books', 'Bloomsbury']",2,multiple_country_evidence,"['England', 'New York (State)']","['United Kingdom', 'United States']",2,[],False,multi_country_evidence
+BOOK00887,2017,2,[],0,[],0,['Harvard Business Review Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00888,2020,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00889,2019,6,[],0,[],0,"['Alakai Publishing LLC', 'SD Publishing LLC', 'Independently Published', 'Independently published']",4,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00890,2004,1,[],0,[],0,['Franklin Watts'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00891,2020,4,[],0,[],0,"['Independently Published', 'Bookify Ltd']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00892,2009,2,['mau'],1,"['Cambridge, MA', 'Cambridge, Mass']",2,['MIT Press'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00893,2007,1,['nyu'],1,"['New York, NY']",1,['Psychology Press'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00894,2010,2,[],0,[],0,"['Hodder & Stoughton', 'Hodder Education Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00895,2019,1,[],0,[],0,"['Independently Published', 'Independently published']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00896,2013,1,['mx'],1,"['Mexico, D. F']",1,['Ediciones B'],1,single_country_evidence,['Mexico'],['Mexico'],1,[],False,single_country_evidence
+BOOK00897,1998,1,[],0,[],0,"['Rowman & Littlefield Publishers, Incorporated']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00898,2001,1,[],0,[],0,['Management Pocketbooks'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00899,2019,11,[],0,[],0,['Alakai Publishing LLC'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00900,2019,1,[],0,[],0,"['Independently Published', 'Independently published']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00901,2002,1,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00902,2001,1,[],0,[],0,['Parkwest Publications'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00903,2019,1,[],0,[],0,['Independently Published'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00904,2018,1,[],0,[],0,"['Independently published', 'Independently Published']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00905,2004,1,[],0,[],0,['Harvard Business School Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00906,1997,1,[],0,[],0,"['Oxford University Press, USA']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00907,1998,1,[],0,[],0,['Trans-Atlantic Publications'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00908,2014,4,[],0,[],0,"['Wiley & Sons, Incorporated, John', 'Wiley']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00909,2010,1,[],0,[],0,['Palgrave Macmillan'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00910,2012,1,['enk'],1,"['Abingdon, Oxon', 'New York, NY']",2,['Routledge'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00911,2016,1,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00912,2013,1,[],0,[],0,['Oxford University Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00913,2005,1,[],0,[],0,['Palgrave Macmillan'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00914,1999,2,['enk'],1,"['Oxford', 'Boston']",2,['Butterworth-Heinemann'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00915,1997,1,['mau'],1,"['Boston, Mass']",1,['Harvard Business School Press'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00916,2019,1,[],0,[],0,['Rheinwerk Publishing Inc.'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00917,2021,2,[],0,[],0,['Macmillan Education UK'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00918,2017,5,['enk'],1,[],0,"['Taylor & Francis Group', 'Routledge']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00919,2007,1,[],0,[],0,['Sage Publications Pvt. Ltd'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00920,2007,1,[],0,[],0,['Prentice Hall'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00921,2016,4,[],0,[],0,['Palgrave Macmillan'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00922,2011,1,['enk'],1,"['Harlow, England', 'New York']",2,['Financial Times/Prentice Hall'],1,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00923,2008,1,['nyu'],1,['New York'],1,['Palgrave Macmillan'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00924,2021,1,[],0,[],0,['Springer International Publishing AG'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00925,2015,1,[],0,[],0,"['De Gruyter, Inc.']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00926,2020,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00927,2019,5,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00928,2019,1,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00929,2020,1,[],0,[],0,"['Prentice Hall India Pvt., Limited']",1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00930,2010,1,['enk'],1,['Chichester'],1,"['Wiley', 'Wiley-Blackwell']",2,single_country_evidence,['England'],['United Kingdom'],1,[],False,single_country_evidence
+BOOK00931,1998,1,['nyu'],1,['New York'],1,['Oxford University Press'],1,single_country_evidence,['New York (State)'],['United States'],1,[],False,single_country_evidence
+BOOK00932,1985,6,"['enk', 'nyu']",2,"['London', 'New York']",2,"['Harper & Row', 'Harpercollins', 'Heinemann', 'William Heinemann Ltd']",4,multiple_country_evidence,"['England', 'New York (State)']","['United Kingdom', 'United States']",2,[],False,multi_country_evidence
+BOOK00933,2005,1,['mau'],1,"['Malden, Mass']",1,['Blackwell Futura'],1,single_country_evidence,['Massachusetts'],['United States'],1,[],False,single_country_evidence
+BOOK00934,2020,3,[],0,[],0,['Vernon Art and Science Inc.'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00935,2025,3,[],0,[],0,['Cambridge University Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00936,2003,7,['xx'],1,['LONDON'],1,"['Taylor & Francis Group', 'Routledge', 'ROUTLEDGE']",3,single_country_evidence,"['No place, unknown, or undetermined']",[],0,['xx'],True,unresolved_only
+BOOK00937,2020,4,[],0,[],0,['Productivity Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00938,2010,7,['nju'],1,"['Hoboken, N.J']",1,"['Wiley & Sons, Incorporated, John', 'Wiley']",2,single_country_evidence,['New Jersey'],['United States'],1,[],False,single_country_evidence
+BOOK00939,2015,4,[],0,[],0,['Taylor & Francis Group'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00940,2022,5,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00941,2013,2,[],0,[],0,"['Palgrave Macmillan', 'Palgrave Macmillan Limited', 'Springer']",3,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00942,2022,5,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00943,1961,2,"['xxk', 'enk']",2,['[London]'],1,"['Tavistock', 'Tavistock Publications']",2,multiple_country_evidence,"['United Kingdom', 'England']",['United Kingdom'],1,[],False,multi_code_same_country
+BOOK00944,2022,5,[],0,[],0,"['Routledge', 'Taylor & Francis Group']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00945,2021,4,[],0,[],0,"['Taylor & Francis Group', 'Routledge']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00946,2018,2,[],0,[],0,['Momentum Press'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00947,2007,1,[],0,[],0,"['Palgrave Macmillan', 'Palgrave Macmillan in association with the European Institute for Technology and Innovation Management']",2,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00948,2019,4,[],0,[],0,['IGI Global'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00949,2020,5,[],0,[],0,['IGI Global'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence
+BOOK00950,2024,5,[],0,[],0,['IGI Global'],1,no_geographic_evidence,[],[],0,[],False,no_code_evidence

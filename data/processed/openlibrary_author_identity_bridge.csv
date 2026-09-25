@@ -1,0 +1,1469 @@
+book_id,canonical_title,author_position,openlibrary_author_key,author_name
+BOOK00001,Principle-Centered Leadership,1,OL383159A,Stephen R. Covey
+BOOK00002,Leadership in Organizations,1,OL400156A,Gary A. Yukl
+BOOK00003,Kepemimpinan =,1,OL1268A,Karjadi M.
+BOOK00004,Spiritual leadership,1,OL25389A,J. Oswald Sanders
+BOOK00005,Leadership,1,OL32040A,Peter Guy Northouse
+BOOK00006,The 21 Irrefutable Laws of Leadership,1,OL26423A,John C. Maxwell
+BOOK00007,Leadership,1,OL2655012A,Peter G. Northouse
+BOOK00008,Leadership and performance beyond expectations,1,OL333669A,Bernard M. Bass
+BOOK00009,A Higher Loyalty,1,OL7442788A,James Comey
+BOOK00009,A Higher Loyalty,2,OL8118723A,James B. Comey
+BOOK00009,A Higher Loyalty,3,OL7964852A,James Comey
+BOOK00010,Leadership and Self Deception,1,OL3080130A,The Arbinger Institute
+BOOK00010,Leadership and Self Deception,2,OL3010393A,Dick Ruhe
+BOOK00011,Leadership,1,OL7596247A,Elesa Zehndorfer
+BOOK00012,Leadership,1,OL233688A,Richard L. Hughes
+BOOK00012,Leadership,2,OL2635692A,Robert C. Ginnett
+BOOK00012,Leadership,3,OL2639183A,Gordon J Curphy
+BOOK00012,Leadership,4,OL957796A,Richard Hughes
+BOOK00012,Leadership,5,OL2639184A,Robert Ginnett
+BOOK00012,Leadership,6,OL2639185A,Gordon Curphy
+BOOK00012,Leadership,7,OL2635693A,Gordon J. Curphy
+BOOK00013,Lincoln on Leadership,1,OL216820A,Donald T. Phillips
+BOOK00014,Leadership,1,OL27560A,James MacGregor Burns
+BOOK00015,Leadership,1,OL217763A,Robert N. Lussier
+BOOK00016,The leadership challenge,1,OL237290A,James M. Kouzes
+BOOK00016,The leadership challenge,2,OL2648679A,Barry Z. Posner
+BOOK00016,The leadership challenge,3,OL218730A,Elaine Biech
+BOOK00016,The leadership challenge,4,OL4148975A,Barry Posner
+BOOK00017,ORGANIZATIONAL CULTURE AND LEADERSHIP,1,OL228253A,"Schein, Edgar H."
+BOOK00017,ORGANIZATIONAL CULTURE AND LEADERSHIP,2,OL8082877A,Peter Schein
+BOOK00018,Leadership,1,OL233688A,Richard L. Hughes
+BOOK00019,Leadership In Turbulent Times,1,OL222155A,Doris Kearns Goodwin
+BOOK00019,Leadership In Turbulent Times,2,OL9310463A,Doris Kearns Goodwin
+BOOK00020,Leadership,1,OL192352A,Michael Z. Hackman
+BOOK00020,Leadership,2,OL483114A,Craig E. Johnson
+BOOK00021,Transformational Leadership,1,OL333669A,Bernard M. Bass
+BOOK00021,Transformational Leadership,2,OL659144A,Ronald E. Riggio
+BOOK00022,Tribal leadership,1,OL4929480A,David Logan
+BOOK00022,Tribal leadership,2,OL2632097A,Dave Logan
+BOOK00022,Tribal leadership,3,OL2632098A,John King
+BOOK00022,Tribal leadership,4,OL2632099A,Halee Fischer-Wright
+BOOK00022,Tribal leadership,5,OL10000962A,"King, John, III"
+BOOK00022,Tribal leadership,6,OL302271A,John King (undifferentiated)
+BOOK00023,Tough Minded Leadership,1,OL386286A,Joe D. Batten
+BOOK00024,Transforming Leadership,1,OL27560A,James MacGregor Burns
+BOOK00025,Leadership,1,OL54602A,Rudolph W. Giuliani
+BOOK00026,Transformation leadership,1,OL333669A,Bernard M. Bass
+BOOK00026,Transformation leadership,2,OL659144A,Ronald E. Riggio
+BOOK00027,Las cinco disfunciones de un equipo,1,OL219764A,Patrick Lencioni
+BOOK00028,The Tao of leadership,1,OL1236399A,John Heider
+BOOK00029,The student leadership challenge,1,OL237290A,James M. Kouzes
+BOOK00029,The student leadership challenge,2,OL2648679A,Barry Z. Posner
+BOOK00029,The student leadership challenge,3,OL8049138A,Beth High
+BOOK00029,The student leadership challenge,4,OL8049139A,Gary M. Morgan
+BOOK00029,The student leadership challenge,5,OL9507985A,Martin Tan
+BOOK00030,Reframing Organizations,1,OL545889A,Lee G. Bolman
+BOOK00031,Wooden on Leadership,1,OL2637309A,John Wooden
+BOOK00032,Brand leadership,1,OL220279A,David A. Aaker
+BOOK00032,Brand leadership,2,OL2762041A,Erich Joachimsthaler
+BOOK00033,SuperVision and Instructional Leadership,1,OL383429A,Carl D. Glickman
+BOOK00033,SuperVision and Instructional Leadership,2,OL772556A,Stephen P. Gordon
+BOOK00033,SuperVision and Instructional Leadership,3,OL2672226A,Jovita M. Ross-Gordon
+BOOK00034,Leadership,1,OL3714825A,Simon Western
+BOOK00035,Leadership Strategy and Tactics,1,OL7524018A,Jocko Willink
+BOOK00036,Leadership,1,OL236243A,Henry Kissinger
+BOOK00037,Improving organizational effectiveness through transformational leadership,1,OL333669A,Bernard M. Bass
+BOOK00037,Improving organizational effectiveness through transformational leadership,2,OL241136A,Bruce J. Avolio
+BOOK00038,Introduction to Leadership,1,OL2655012A,Peter G. Northouse
+BOOK00039,Teacher leadership,1,OL770456A,Ann Lieberman
+BOOK00039,Teacher leadership,2,OL1862946A,Lynne Miller
+BOOK00040,HR leadership,1,OL265995A,Linda Holbeche
+BOOK00041,Leadership in health care,1,OL3480923A,Jill Barr
+BOOK00041,Leadership in health care,2,OL3714810A,Lesley L Dowding
+BOOK00042,Organizational culture and leadership,1,OL228253A,"Schein, Edgar H."
+BOOK00043,Leadership and the one minute manager,1,OL21502A,Kenneth H. Blanchard
+BOOK00043,Leadership and the one minute manager,2,OL2623346A,Patricia Zigarmi
+BOOK00043,Leadership and the one minute manager,3,OL2623347A,Drea Zigarmi
+BOOK00044,School leadership and administration,1,OL778253A,Richard A. Gorton
+BOOK00044,School leadership and administration,2,OL1478504A,Judy A. Alston
+BOOK00044,School leadership and administration,3,OL549296A,Petra E. Snowden
+BOOK00045,Leadership Is an Art,1,OL3925630A,Max DePree
+BOOK00046,Small unit leadership,1,OL1345371A,Dandridge M. Malone
+BOOK00047,Leadership Wisdom from the Monk Who Sold His Ferrari,1,OL221968A,Robin S. Sharma
+BOOK00048,Monday morning leadership,1,OL1386640A,David Cottrell
+BOOK00049,Leadership for dummies,1,OL35741A,Marshall Loeb
+BOOK00050,Leadership,1,OL32040A,Peter Guy Northouse
+BOOK00051,Curriculum leadership,1,OL383301A,Allan A. Glatthorn
+BOOK00051,Curriculum leadership,2,OL724209A,Floyd Boschee
+BOOK00051,Curriculum leadership,3,OL2842487A,Bruce M. Whitehead
+BOOK00052,Transformational leadership development,1,OL333669A,Bernard M. Bass
+BOOK00053,Full range leadership development,1,OL241136A,Bruce J. Avolio
+BOOK00054,Leadership Development in Balance,1,OL241136A,Bruce J. Avolio
+BOOK00055,Full range leadership development,1,OL3123115A,John J. Sosik
+BOOK00056,Leadership Development,1,OL3483889A,Kevin Flinn
+BOOK00057,Leadership development basics,1,OL72319A,Karen Lawson
+BOOK00058,Leadership development,1,OL562669A,Rosemary Ryan
+BOOK00059,The Center for Creative Leadership handbook of leadership development,1,OL391893A,Cynthia D. McCauley
+BOOK00059,The Center for Creative Leadership handbook of leadership development,2,OL389858A,Ellen Van Velsor
+BOOK00060,Applied leadership development,1,OL8299548A,Al Bolea
+BOOK00061,Full leadership development,1,OL241136A,Bruce J. Avolio
+BOOK00062,Implementing problem-based learning in leadership development,1,OL657508A,Edwin M. Bridges
+BOOK00063,Leadership Development Studies,1,OL8624393A,Monika Byrd
+BOOK00063,Leadership Development Studies,2,OL736784A,Susan Edwards
+BOOK00064,The making of a leader,1,OL956961A,J. Robert Clinton
+BOOK00065,Accelerating Leadership Development,1,OL7722532A,Jocelyn Berard
+BOOK00066,Innovations in public leadership development,1,OL948501A,Terry F. Buss
+BOOK00067,College Student Leadership Development,1,OL384936A,Valerie I. Sessa
+BOOK00068,The Center for Creative Leadership handbook of leadership development,1,OL389858A,Ellen Van Velsor
+BOOK00069,Leadership development program,1,OL387435A,Frances A. Karnes
+BOOK00070,Servant Leadership,1,OL7978852A,Dirk van Dierendonck
+BOOK00070,Servant Leadership,2,OL6456967A,K. Patterson
+BOOK00071,Real time leadership development,1,OL3692085A,Paul R. Yost
+BOOK00072,Leading Small Business,1,OL8154264A,Steve Kempster
+BOOK00072,Leading Small Business,2,OL1747377A,Sue Smith
+BOOK00073,Women's Leadership Development,1,OL8081136A,Gelaye Debebe
+BOOK00074,Leadership Development,1,OL28563A,Manuel London
+BOOK00075,Accelerated Leadership Development,1,OL7323380A,Ines Wichert
+BOOK00076,Business Leadership Development in China,1,OL4174624A,Shuang Ren
+BOOK00076,Business Leadership Development in China,2,OL395327A,Robert Wood
+BOOK00076,Business Leadership Development in China,3,OL5535617A,Ying Zhu
+BOOK00077,Leadership for a Better World,1,OL7666450A,Susan R. Komives
+BOOK00077,Leadership for a Better World,2,OL7582479A,Wendy Wagner
+BOOK00078,Future of Leadership Development,1,OL8048521A,Susan Elaine Murphy
+BOOK00078,Future of Leadership Development,2,OL659144A,Ronald E. Riggio
+BOOK00079,Curriculum Leadership Development,1,OL542112A,Carol A. Mullen
+BOOK00080,The handbook for student leadership development,1,OL396629A,Susan R. Komives
+BOOK00081,Leadership Development,1,OL28563A,Manuel London
+BOOK00082,Servant Leadership Development,1,OL10188240A,Janine Williams
+BOOK00083,Full range leadership development,1,OL241136A,Bruce J. Avolio
+BOOK00084,The Art of Christian Leadership,1,OL3238559A,Jon Byler
+BOOK00085,Community Leadership Development,1,OL7297514A,Mark A. Brennan
+BOOK00086,Ethical leadership,1,OL689094A,Stephen Connock
+BOOK00086,Ethical leadership,2,OL1326651A,Ted Johns
+BOOK00087,Leadership development,1,OL720844A,Lee Barr
+BOOK00088,Phi Theta Kappa leadership development program,1,OL4587626A,Carlene S. Feldman
+BOOK00089,Best practices in leadership development and organization change,1,OL2877334A,Louis Carter
+BOOK00089,Best practices in leadership development and organization change,2,OL236847A,David Ulrich
+BOOK00089,Best practices in leadership development and organization change,3,OL2652676A,Marshall Goldsmith
+BOOK00090,Collaborative leadership,1,OL218156A,Hank Rubin
+BOOK00091,Transnational leadership development,1,OL5124174A,Beth Fisher-Yoshida
+BOOK00092,Distributed School Leadership,1,OL230540A,Alma Harris
+BOOK00093,Leadership Development,1,OL13103672A,Ideal Curtis
+BOOK00094,Management and leadership development,1,OL443596A,Christopher Mabey
+BOOK00094,Management and leadership development,2,OL3714866A,Tim Finch Lees
+BOOK00095,The Pfeiffer book of successful leadership development tools,1,OL2434686A,Jack Gordon
+BOOK00096,Leadership development,1,OL6918312A,Abdullahi Sheikh Ali
+BOOK00097,Foundations of Educational Leadership,1,OL7664103A,Jeffrey S. Brooks
+BOOK00098,Strategic leadership development,1,OL8570118A,Jeff Stouffer
+BOOK00099,Executive Leadership,1,OL19864A,Albert Ellis
+BOOK00100,Executive leadership,1,OL389943A,Elliott Jaques
+BOOK00100,Executive leadership,2,OL3814333A,Stephen D. Clement
+BOOK00101,Executive leadership,1,OL833791A,Chris Argyris
+BOOK00102,Executive Leadership,1,OL6812521A,Joseph Olmstead
+BOOK00103,Executive leadership,1,OL1665908A,Bureau of Business Practice.
+BOOK00104,Effective Executive,1,OL4345625A,Peter F. Drucker
+BOOK00104,Effective Executive,2,OL717679A,Joseph A. Maciariello
+BOOK00104,Effective Executive,3,OL1802361A,Jim Collins
+BOOK00104,Effective Executive,4,OL8009750A,Tim Andres Pabon
+BOOK00104,Effective Executive,5,OL9348680A,Zachary First
+BOOK00105,Executive Leadership for Effective Administration,1,OL383503A,M. Scott Norton
+BOOK00106,Executive Leadership and Legislative Assemblies,1,OL3139458A,Nicholas D. J. Baldwin
+BOOK00107,The Palestinian executive,1,OL1290281A,Farid A. Muna
+BOOK00108,Executive Leadership Council Journal,1,OL7909458A,The Executive Leadership Council
+BOOK00108,Executive Leadership Council Journal,2,OL7909459A,The Executive Leadership Council
+BOOK00109,The Development of Executive Leadership,1,OL5714840A,Marvin Bower
+BOOK00110,Executive Leadership,1,OL3236048A,Nathan Axelrod
+BOOK00111,Legislative liaison; executive leadership in Congress,1,OL11546536A,abraham holtzman
+BOOK00112,Principles and problems of executive leadership,1,OL2173633A,Joseph Leo Krieger
+BOOK00113,The technique of executive leadership,1,OL5574571A,James Frederick Bender
+BOOK00114,The development of executive leadership,1,OL542945A,Marvin Bower
+BOOK00115,Executive leadership,1,OL945560A,Phillip Donald Grub
+BOOK00116,Chief nursing executives' leadership style and effectiveness,1,OL4654955A,Pamela R. Cronrath
+BOOK00117,Navigate,1,OL14525698A,Casey Kroll
+BOOK00117,Navigate,2,OL2959898A,Judi Williams
+BOOK00117,Navigate,3,OL14525699A,Rahul Dogra
+BOOK00117,Navigate,4,OL12780840A,Jacqui Malpass
+BOOK00118,Executive leadership in a dynamic society,1,OL2229435A,"Ralph Currier Davis Management Symposium (1964 Ohio State University, Columbus)"
+BOOK00119,Executive leadership in Anglo-American systems,1,OL340685A,"Campbell, Colin"
+BOOK00119,Executive leadership in Anglo-American systems,2,OL2933997A,Margaret Jane Wyszomirski
+BOOK00120,The focused executive,1,OL10717978A,Virginia Mansell
+BOOK00121,Executive leadership,1,OL13480136A,William N. Egan
+BOOK00122,Executive Leadership,1,OL16569129A,Miles Garrett
+BOOK00124,Executive leadership,1,OL4538944A,Edutext.
+BOOK00125,Executive Leadership,1,OL12307403A,Ph D. Joseph Olmstead
+BOOK00126,Executive leadership,1,OL39523A,Joseph A. Olmstead
+BOOK00127,Executive Leadership in Nonprofit Organizations,1,OL8193197A,Robert D. Herman & Associates
+BOOK00127,Executive Leadership in Nonprofit Organizations,2,OL9482201A,Richard D. Heimovics
+BOOK00128,Executive Leadership Series,1,OL3082566A,Alan C. Walter
+BOOK00129,Police Executive Leadership,1,OL643161A,Donald G. Hanna
+BOOK00130,"Presidents, Prime Ministers and Chancellors",1,OL2955129A,Ludger Helms
+BOOK00131,Presidential Administration and the Environment,1,OL2655210A,David M. Shafie
+BOOK00132,Executive leadership,1,OL1657009A,Mary E. Tramel
+BOOK00133,Development of Executive Leadership,1,OL5714840A,Marvin Bower
+BOOK00134,Models and theories of executive leadership,1,OL371014A,Stephen J. Zaccaro
+BOOK00135,Legislative liaison; executive leadership in Congress,1,OL1346979A,Abraham Holtzman
+BOOK00136,Reset Your Thinking Before Presenting to Executive Leadership,1,OL3028742A,P. J. Pierce
+BOOK00137,Executive leadership through communication,1,OL798259A,Barry Lenson
+BOOK00138,Executive leadership in a dynamic society,1,OL13925102A,Ralph Currier Davis Management Symposium (1964 Ohio State University)
+BOOK00139,Executive leadership and organizational outcomes,1,OL11583427A,Elaine Romanelli
+BOOK00140,Human nature and management,1,OL1756685A,Ordway Tead
+BOOK00141,NURSE EXECUTIVES: LEADERSHIP/POWER MOTIVATION AND LEADERSHIP EFFECTIVENESS,1,OL5356609A,Melinda Crenshaw Henderson
+BOOK00143,Dinosaur Tracks (Executive Leadership Series),1,OL13423982A,Ph. D. Keith Mathis
+BOOK00144,The Technique of Executive Leadership,1,OL11510748A,JAMES FREDERICK BENDER
+BOOK00145,Applied team leadership,1,OL8585526A,United States. Department of the Army
+BOOK00146,Team leadership,1,OL5554142A,John Apps
+BOOK00147,Nursing team leadership,1,OL1194495A,Thora Kron
+BOOK00148,Team leadership,1,OL341057A,"Parker, Glenn M."
+BOOK00149,Team leadership,1,OL400406A,Graham Kelly
+BOOK00150,Team of Rivals,1,OL222155A,Doris Kearns Goodwin
+BOOK00151,Interprofessional Health Care Team,1,OL3600663A,Donna Weiss
+BOOK00151,Interprofessional Health Care Team,2,OL8094178A,Felice J. Tilin
+BOOK00151,Interprofessional Health Care Team,3,OL8094179A,Marlene J. Morgan
+BOOK00152,Team leadership in Christian ministry,1,OL235247A,Kenneth O. Gangel
+BOOK00153,Leading self-directed work teams,1,OL392483A,Kimball Fisher
+BOOK00154,Team Leadership,1,OL886301A,Charles J. Margerison
+BOOK00155,Team leadership in the game industry,1,OL6733957A,"Spaulding, Seth II."
+BOOK00156,Team leadership,1,OL435244A,David C. Kolb
+BOOK00157,Team Leadership,1,OL8353306A,Drikus Kriek
+BOOK00158,The Team Leadership Practices Inventory,1,OL237290A,James M. Kouzes
+BOOK00158,The Team Leadership Practices Inventory,2,OL2648679A,Barry Z. Posner
+BOOK00159,Leading teams,1,OL6943398A,Paolo Guenzi
+BOOK00160,Team Leadership in Community Colleges,1,OL3547465A,George R. Boggs
+BOOK00160,Team Leadership in Community Colleges,2,OL8358679A,Christine Johnson McPhail
+BOOK00160,Team Leadership in Community Colleges,3,OL8358680A,Eloy Ortiz Oakley
+BOOK00161,Team Leadership in High-Hazard Environments,1,OL8147226A,Randy E. Cadieux
+BOOK00162,Effective Team Leadership,1,OL2948637A,Don Page
+BOOK00163,Leadership Team Coaching,1,OL410958A,Peter Hawkins
+BOOK00164,Team leadership,1,OL546738A,Michal K. Rosenberger
+BOOK00165,Remote Team Leadership,1,OL10872942A,Emanuela Giangregorio
+BOOK00166,Operations Team Leadership (Leadership Guides),1,OL474603A,Graham Little
+BOOK00167,Leaders Eat Last,1,OL6645079A,Simon Sinek
+BOOK00168,Sales Team Leadership,1,OL12203500A,Coach Joe Sasso
+BOOK00169,Tools for team leadership,1,OL454418A,Gregory E. Huszczo
+BOOK00170,Strategic Team Leadership,1,OL870626A,Peter Saul
+BOOK00171,Team leadership,1,OL3031908A,Douglas A. Johnson
+BOOK00171,Team leadership,2,OL3512935A,Susan T. Beyerlein
+BOOK00172,Team Leadership,1,OL2844756A,Geoff Ribbens
+BOOK00172,Team Leadership,2,OL13202475A,Mark Abraham
+BOOK00172,Team Leadership,3,OL14046862A,Alistair Cumming
+BOOK00173,The team leadership practices inventory,1,OL237290A,James M. Kouzes
+BOOK00174,Executive Team Leadership in the Global Economic and Competitive Environment,1,OL588234A,Richard L. Nolan
+BOOK00175,Practical Remote Team Leadership,1,OL10872942A,Emanuela Giangregorio
+BOOK00176,Virtual team leadership and collaborative engineering advancements,1,OL241292A,Ned F. Kock
+BOOK00177,Effective Team Leadership for Engineers,1,OL577733A,Pat Wellington
+BOOK00177,Effective Team Leadership for Engineers,2,OL8036471A,Niall Foster
+BOOK00178,Art of Middle Management,1,OL2657201A,Peter Fleming
+BOOK00178,Art of Middle Management,2,OL8161667A,Max Amesbury
+BOOK00179,Team Leadership,1,OL3377846A,Paul Newton
+BOOK00179,Team Leadership,2,OL13702277A,Helen Bristoll
+BOOK00180,Adaptive team leadership,1,OL8585526A,United States. Department of the Army
+BOOK00181,Team Leadership,1,OL3434034A,Rosenberger
+BOOK00182,Tim lidŏsip =,1,OL5246350A,Sŭng-gak Yi
+BOOK00183,Leading project teams,1,OL1429139A,Anthony T. Cobb
+BOOK00184,The Five Dysfunctions of a Team,1,OL219764A,Patrick Lencioni
+BOOK00185,Team leadership in action,1,OL445603A,Laura Mae Douglass
+BOOK00186,Effective team leadership,1,OL2920399A,David Parkes
+BOOK00187,Team Leadership Questionnaire,1,OL10057317A,D. Kayes
+BOOK00187,Team Leadership Questionnaire,2,OL6960937A,Anna Kayes
+BOOK00188,Five Dysfunctions of a Team,1,OL219764A,Patrick Lencioni
+BOOK00189,Team of Teams,1,OL7155908A,Stanley A. McChrystal
+BOOK00189,Team of Teams,2,OL8083074A,Tantum Collins
+BOOK00189,Team of Teams,3,OL8937874A,David Silverman
+BOOK00189,Team of Teams,4,OL7662892A,Chris Fussell
+BOOK00190,Executive Team Leadership for the 21st Century,1,OL588234A,Richard L. Nolan
+BOOK00191,Team Leadership Assessments,1,OL3879444A,LeaderTreks
+BOOK00192,Legendary team leadership,1,OL468373A,Wendy W. Peche
+BOOK00193,Transformational Leadership,1,OL333669A,Bernard M. Bass
+BOOK00194,Transformational leadership,1,OL3288505A,Stephen Hacker
+BOOK00194,Transformational leadership,2,OL3317804A,Tammy Roberts
+BOOK00195,Transformative leadership in education,1,OL1607910A,Carolyn M. Shields
+BOOK00196,Transforming leadership,1,OL579626A,Leighton Ford
+BOOK00197,Transformational Leadership,1,OL10997841A,Glenn Walter
+BOOK00198,Radical Transformational Leadership,1,OL7122754A,Monica Sharma
+BOOK00199,Transformative Leadership Primer,1,OL1607910A,Carolyn M. Shields
+BOOK00200,The dark side of transformational leadership,1,OL2850369A,Dennis Tourish
+BOOK00201,Transformational leadership,1,OL20618A,Charles B. Bugg
+BOOK00203,Transforming leadership,1,OL40032A,John D. Adams
+BOOK00204,Charismatic and transformational leadership,1,OL400156A,Gary A. Yukl
+BOOK00205,Transformational Leadership,1,OL10639050A,Halima Kabara
+BOOK00206,Transformative Leadership in Action,1,OL8306843A,Jacklyn A. Bruce
+BOOK00206,Transformative Leadership in Action,2,OL8306844A,Katherine E. McKee
+BOOK00207,Transformational Leadership Styles for Global Leaders,1,OL13197949A,Darcia Ann-Marie Roache
+BOOK00208,7 principles of transformational leadership,1,OL7524881A,Hugh Blane
+BOOK00209,Uniting the Virtual Workforce,1,OL3411846A,Karen Sobel Lojeski
+BOOK00210,"Women, spirituality, and transformative leadership",1,OL7007990A,Kathe Schaaf
+BOOK00211,Transformational leadership,1,OL450844A,Mary K. Kohles
+BOOK00212,Transformative Leadership and Sustainable Innovation in Education,1,OL13606546A,Sandra Baroudi
+BOOK00212,Transformative Leadership and Sustainable Innovation in Education,2,OL3237212A,Miltiadis D. Lytras
+BOOK00213,Transforming leadership,1,OL398134A,Terry D. Anderson
+BOOK00214,Transforming Leadership,1,OL40032A,John D. Adams
+BOOK00215,Transforming Leadership,1,OL1478161A,Terry Anderson
+BOOK00216,Transformative Leadership,1,OL8064183A,May Khadem
+BOOK00216,Transformative Leadership,2,OL8064184A,Joan Hernandez
+BOOK00217,The Transformational Leadership Compass,1,OL9106369A,Benny Ausmus
+BOOK00218,Sustainability Mindset and Transformative Leadership,1,OL9576570A,Aixa A. Ritz
+BOOK00218,Sustainability Mindset and Transformative Leadership,2,OL3584242A,Isabel Rimanoczy
+BOOK00219,Transforming Leadership,1,OL953196A,Richard Higginson
+BOOK00220,Transformational leadership in East Africa,1,OL380575A,Eric Masinde Aseka
+BOOK00220,Transformational leadership in East Africa,2,OL6519217A,ERIC MASINDE ASEKA
+BOOK00221,Transformational leadership,1,OL8809614A,Randy Dobbs
+BOOK00222,Transforming leadership,1,OL199718A,Girl Scouts of the United States of America.
+BOOK00223,Reframing Transformational Leadership,1,OL7000993A,Issa M. Saleh
+BOOK00223,Reframing Transformational Leadership,2,OL3227622A,Myint Swe Khine
+BOOK00224,Action Inquiry,1,OL9266383A,William Torbert
+BOOK00225,Transforming Leadership,1,OL5480270A,Terry Anderson
+BOOK00226,Transformational leadership,1,OL8019733A,Annmarie Sanders
+BOOK00227,Advancing Inclusive Open Education Through Transformative Leadership,1,OL16047315A,Madikela Titus Lekalakala
+BOOK00228,Transformative Leadership,1,OL14055814A,Shana Burnett Ed.D
+BOOK00229,Transformational leadership,1,OL531983A,Phillip V. Lewis
+BOOK00230,Shared vision,1,OL440459A,John E. Roueche
+BOOK00230,Shared vision,2,OL2938000A,George A. Baker
+BOOK00230,Shared vision,3,OL1711554A,Robert R. Rose
+BOOK00231,Transformative Leadership,1,OL14062650A,Joshua P. Trout
+BOOK00232,Transformational Leadership and Not for Profits and Social Enterprises,1,OL6265933A,Ken Wiltshire
+BOOK00233,Transformational Leadership Unleashed,1,OL16039789A,Ismael sanchez
+BOOK00234,Servant leadership,1,OL227813A,Robert K. Greenleaf
+BOOK00235,The case for servant leadership,1,OL1171623A,Kent M. Keith
+BOOK00236,The power of servant-leadership,1,OL227813A,Robert K. Greenleaf
+BOOK00238,Servant leadership,1,OL1424939A,Efrain Agosto
+BOOK00239,Scrum Mastery,1,OL3478629A,Geoff Watts
+BOOK00239,Scrum Mastery,2,OL9150800A,Rebecca Traeger
+BOOK00239,Scrum Mastery,3,OL9150801A,Ole Storksen
+BOOK00239,Scrum Mastery,4,OL5218702A,Mike Cohn
+BOOK00239,Scrum Mastery,5,OL3032412A,Esther Derby
+BOOK00240,Servant-leadership across cultures,1,OL399219A,Alfons Trompenaars
+BOOK00241,Seven pillars of servant leadership,1,OL3595253A,James W. Sipe
+BOOK00242,Servant leadership,1,OL3125428A,Jack Schaap
+BOOK00243,Reflections on leadership,1,OL6973134A,Larry C. Spears
+BOOK00244,Strength in servant leadership,1,OL222954A,Paul A. Cedar
+BOOK00246,Servant leadership,1,OL7039356A,Dirk van Dierendonck
+BOOK00248,Focus on Leadership,1,OL2732590A,Larry C. Spears
+BOOK00248,Focus on Leadership,2,OL6893146A,Michele Lawrence
+BOOK00248,Focus on Leadership,3,OL2623924A,Ken Blanchard
+BOOK00249,Servant Leadership in Action,1,OL2623924A,Ken Blanchard
+BOOK00249,Servant Leadership in Action,2,OL8346661A,Renee Broadwell
+BOOK00250,Servant Leadership,1,OL5310633A,Michael Rucker
+BOOK00250,Servant Leadership,2,OL2994264A,Holly Spence
+BOOK00251,Servant leadership,1,OL344341A,Jane Fryar
+BOOK00252,Servant leadership,1,OL6478198A,Rocky Wallace
+BOOK00253,Applying Servant Leadership in Today's Schools,1,OL8049704A,Mary Culver
+BOOK00254,Servant Leadership for Slow Learners,1,OL3153159A,J. David Lundy
+BOOK00255,Robert K. Greenleaf,1,OL3083322A,Don M Frick
+BOOK00256,The Servant Leadership Training Course,1,OL217423A,James C. Hunter
+BOOK00257,The Model of Servant-Leadership,1,OL3792801A,Henry P. Hildebrand
+BOOK00258,Cases on Servant Leadership and Equity,1,OL6231358A,Ursula Thomas
+BOOK00259,Leader As Servant Leadership Model,1,OL10550517A,Sylvanus Wosu
+BOOK00260,Servant Leadership,1,OL1004566A,"Stevens, David"
+BOOK00261,Global Servant-Leadership,1,OL3311046A,Philip Mathew
+BOOK00261,Global Servant-Leadership,2,OL9741600A,Jiying Song
+BOOK00261,Global Servant-Leadership,3,OL9708869A,Shann Ray Ferch
+BOOK00262,Servant leadership in nursing,1,OL221620A,Mary Elizabeth O'Brien
+BOOK00263,Servant Leadership,1,OL579275A,Ralph Lewis
+BOOK00263,Servant Leadership,2,OL1084157A,"Noble, John"
+BOOK00264,Servant Leadership Roadmap,1,OL8106208A,Cara H Bramlett
+BOOK00265,Using Servant Leadership,1,OL7647421A,Angelo J. Letizia
+BOOK00266,Servant Leadership,1,OL12320548A,Pastor Cecil Hollaway
+BOOK00267,The servant,1,OL217423A,James C. Hunter
+BOOK00267,The servant,2,OL1546981A,James Hunter
+BOOK00268,A Woman's Guide to Servant Leadership,1,OL294007A,Rhonda Kelley
+BOOK00269,Servant Leadership for Higher Education,1,OL3059266A,Daniel W. Wheeler
+BOOK00270,Principal to Principal,1,OL3860907A,Rocky Wallace
+BOOK00271,Servant Leadership,1,OL10083137A,Samuel O. Enyia
+BOOK00272,Personal and Organizational Excellence Through Servant Leadership,1,OL7948088A,Sen Sendjaya
+BOOK00273,Understanding Servant Leadership,1,OL11526794A,Chad Audi
+BOOK00274,Servant Leadership Styles and Strategic Decision Making,1,OL10259925A,Yasir Hayat Mughal
+BOOK00274,Servant Leadership Styles and Strategic Decision Making,2,OL10259926A,Shahid Kamal
+BOOK00275,The spirit of servant-leadership,1,OL6843918A,Robert K. Greenleaf Center. International Conference on Servant-Leadership
+BOOK00276,Idiot Guide to Servant Leadership,1,OL10439210A,Pierre Walter
+BOOK00277,Servant Leadership in diakonischen Unternehmen,1,OL8347278A,Mathias Hartmann
+BOOK00278,Servant Leadership,1,OL13693008A,John Wallace Whitehead
+BOOK00279,Developing Christian Servant Leadership,1,OL2695440A,G. Roberts
+BOOK00280,Paul on leadership,1,OL227825A,C. Gene Wilkes
+BOOK00281,Marketing management,1,OL216799A,Philip Kotler
+BOOK00282,Management information systems,1,OL34717A,Kenneth C. Laudon
+BOOK00282,Management information systems,2,OL2624937A,Jane P. Laudon
+BOOK00282,Management information systems,3,OL2624938A,Jane Price Laudon
+BOOK00282,Management information systems,4,OL2651047A,Jane Laudon
+BOOK00283,Marketing Management,1,OL216799A,Philip Kotler
+BOOK00283,Marketing Management,2,OL391962A,Kevin Lane Keller
+BOOK00284,Human Resource management,1,OL238534A,Gary Dessler
+BOOK00285,Operations management,1,OL226049A,Jay H. Heizer
+BOOK00285,Operations management,2,OL2648619A,Jay Heizer
+BOOK00285,Operations management,3,OL457089A,Barry Render
+BOOK00286,Principles of management,1,OL1308528A,George Robert Terry
+BOOK00287,Strategic management,1,OL239218A,Fred R. David
+BOOK00288,Statistics for management,1,OL7166567A,Richard I. Levin & David S. Rubin
+BOOK00289,The Night Manager,1,OL2101074A,John le Carré
+BOOK00290,Strategic management,1,OL240294A,Gregory G. Dess
+BOOK00290,Strategic management,2,OL2640638A,G. T. Lumpkin
+BOOK00290,Strategic management,3,OL2640639A,Alan B. Eisner
+BOOK00290,Strategic management,4,OL2986109A,Gerry McNamara
+BOOK00290,Strategic management,5,OL7807029A,Seung-Hyun Lee
+BOOK00290,Strategic management,6,OL1195678A,Marilyn L. Taylor
+BOOK00291,Management,1,OL33897A,Stephen P. Robbins
+BOOK00292,High Output Management,1,OL319610A,Andrew S. Grove
+BOOK00293,Financial Management,1,OL244414A,Eugene F. Brigham
+BOOK00293,Financial Management,2,OL715490A,Michael C. Ehrhardt
+BOOK00294,Human resource management,1,OL221453A,R. Wayne Mondy
+BOOK00294,Human resource management,2,OL2648915A,Robert M. Noe
+BOOK00294,Human resource management,3,OL2648916A,Shane R. Premeaux
+BOOK00294,Human resource management,4,OL455363A,Ronald Knowles
+BOOK00294,Human resource management,5,OL544809A,Joseph J. Martocchio
+BOOK00295,"Mind Management, Not Time Management",1,OL7170216A,David Kadavy
+BOOK00296,Strategic management and business policy,1,OL27304A,Thomas L. Wheelen
+BOOK00296,Strategic management and business policy,2,OL29722A,J. David Hunger
+BOOK00296,Strategic management and business policy,3,OL2652743A,Tom Wheelen
+BOOK00297,The Practice of Management,1,OL4345625A,Peter F. Drucker
+BOOK00298,Human Resource Management,1,OL238534A,Gary Dessler
+BOOK00299,Project management,1,OL450116A,Dennis Lock
+BOOK00300,Introduction to management accounting,1,OL218836A,Charles T. Horngren
+BOOK00301,The Principles of Scientific Management,1,OL223463A,Frederick Winslow Taylor
+BOOK00302,Management of organizational behavior,1,OL526722A,Paul Hersey
+BOOK00302,Management of organizational behavior,2,OL2655496A,Blanchard Hersey
+BOOK00303,Retailing management,1,OL392962A,Michael Levy
+BOOK00304,Strategic management,1,OL240891A,Arthur A. Thompson
+BOOK00304,Strategic management,2,OL1080210A,Alonzo J. Strickland
+BOOK00304,Strategic management,3,OL2638624A,"Arthur A., Jr. Thompson"
+BOOK00304,Strategic management,4,OL395336A,A. J. Strickland
+BOOK00304,Strategic management,5,OL2640627A,"Alonzo J., III Strickland"
+BOOK00305,Operations Management,1,OL224399A,Lee J. Krajewski
+BOOK00306,Contemporary management,1,OL389425A,Gareth R. Jones
+BOOK00306,Contemporary management,2,OL226973A,Jennifer M. George
+BOOK00307,Developing mangement skills,1,OL25513A,David A. Whetten
+BOOK00307,Developing mangement skills,2,OL226671A,Kim S. Cameron
+BOOK00307,Developing mangement skills,3,OL3011780A,Whetten
+BOOK00307,Developing mangement skills,4,OL5413970A,David A. Whetten
+BOOK00307,Developing mangement skills,5,OL6519846A,DAVID A. WHETTEN
+BOOK00307,Developing mangement skills,6,OL3368293A,David Whetten
+BOOK00307,Developing mangement skills,7,OL2622498A,Kim Cameron
+BOOK00308,Essentials of management,1,OL2635200A,Harold Koontz
+BOOK00309,A Guide to the Project Management Body of Knowledge (PMBOK® Guide),1,OL29513A,Project Management Institute
+BOOK00310,Analysis for financial management,1,OL389147A,Robert C. Higgins
+BOOK00311,Strategic market management,1,OL220279A,David A. Aaker
+BOOK00312,Strategic management,1,OL21141A,"Pearce, John A."
+BOOK00312,Strategic management,2,OL2634617A,John A. Pearce
+BOOK00312,Strategic management,3,OL2634618A,Richard B. Robinson
+BOOK00313,Retailing management,1,OL5476227A,Michael Levy
+BOOK00313,Retailing management,2,OL392962A,Michael Levy
+BOOK00313,Retailing management,3,OL391217A,Barton A. Weitz
+BOOK00314,Supply chain logistics management,1,OL453548A,Donald J. Bowersox
+BOOK00315,The one minute manager,1,OL21502A,Kenneth H. Blanchard
+BOOK00315,The one minute manager,2,OL223174A,Spencer Johnson
+BOOK00315,The one minute manager,3,OL2675184A,Kenneth Blanchard
+BOOK00316,Entrepreneurship,1,OL392669A,Robert D. Hisrich
+BOOK00317,Fundamentals of financial management,1,OL244414A,Eugene F. Brigham
+BOOK00317,Fundamentals of financial management,2,OL2627410A,Joel F. Houston
+BOOK00318,Fundamentals of financial management,1,OL383803A,James C. Van Horne
+BOOK00319,Management information systems,1,OL26542A,James A. O'Brien
+BOOK00320,Retail management,1,OL398560A,Barry Berman
+BOOK00320,Retail management,2,OL338289A,Joel R. Evans
+BOOK00321,Principles and Practice of Management,1,OL9417937A,L. M. Prasad
+BOOK00321,Principles and Practice of Management,2,OL4193465A,L.M. Prasad
+BOOK00322,Comprehensive stress management,1,OL30298A,Jerrold S. Greenberg
+BOOK00322,Comprehensive stress management,2,OL2844131A,Jerrold Greenberg
+BOOK00322,Comprehensive stress management,3,OL4672094A,Jerrold S Greenberg
+BOOK00322,Comprehensive stress management,4,OL7286488A,Gerrold Greenberg
+BOOK00323,Principles of management,1,OL2635200A,Harold Koontz
+BOOK00323,Principles of management,2,OL10856242A,Cyril O'Donnell
+BOOK00324,Operations Management,1,OL228184A,William J. Stevenson
+BOOK00325,Marketing management,1,OL216799A,Philip Kotler
+BOOK00325,Marketing management,2,OL8088432A,Mairead Brady
+BOOK00325,Marketing management,3,OL590573A,Malcolm Goodman
+BOOK00325,Marketing management,4,OL2946043A,Torben Hansen
+BOOK00325,Marketing management,5,OL391962A,Kevin Lane Keller
+BOOK00326,Intermediate financial management,1,OL244414A,Eugene F. Brigham
+BOOK00327,Sales management,1,OL394882A,Douglas J. Dalrymple
+BOOK00327,Sales management,2,OL1519807A,William Cron
+BOOK00327,Sales management,3,OL2730967A,William L. Cron
+BOOK00327,Sales management,4,OL2730968A,Thomas E. DeCarlo
+BOOK00328,Strategic Management,1,OL224314A,Charles W. L. Hill
+BOOK00329,Production & inventory management,1,OL890886A,Donald W. Fogarty
+BOOK00329,Production & inventory management,2,OL562491A,Thomas R. Hoffmann
+BOOK00330,Project management,1,OL390077A,Harold Kerzner
+BOOK00331,Unraveling the mystery of health,1,OL1193951A,Aaron Antonovsky
+BOOK00332,Mary Kay on people management,1,OL442735A,Mary Kay Ash
+BOOK00333,The 7 Habits of Highly Effective People,1,OL383159A,Stephen R. Covey
+BOOK00334,Armstrong's Handbook of Human Resource Management Practice,1,OL5686405A,Michael Armstrong
+BOOK00334,Armstrong's Handbook of Human Resource Management Practice,2,OL1126608A,"Taylor, Stephen"
+BOOK00335,"People, Management and Organizations",1,OL2021138A,Anna Sutton
+BOOK00336,Human resource management at work,1,OL4727974A,Mick Marchington
+BOOK00336,Human resource management at work,2,OL786466A,Mick Marchington
+BOOK00336,Human resource management at work,3,OL2694332A,Adrian Wilkinson
+BOOK00337,Supervisory management,1,OL535417A,Donald C. Mosley
+BOOK00337,Supervisory management,2,OL3317278A,"Jr., Donald C. Mosley"
+BOOK00337,Supervisory management,3,OL2629484A,Paul H. Pietri
+BOOK00337,Supervisory management,4,OL770018A,Leon C. Megginson
+BOOK00337,Supervisory management,5,OL2778389A,"Paul H., Jr. Pietri"
+BOOK00338,People Management and Performance,1,OL2847832A,John Purcell
+BOOK00339,Armstrong's Handbook of Strategic Human Resource Management,1,OL5686405A,Michael Armstrong
+BOOK00340,Corporate Reputations Branding and People Management,1,OL9516683A,Susan Hetrick
+BOOK00341,Hotel Management,1,OL8266105A,Charalampos Giousmpasoglou
+BOOK00341,Hotel Management,2,OL8266107A,Evangelia Marinakou
+BOOK00342,People Managing Forests,1,OL9515103A,Carol J. P. Colfer
+BOOK00342,People Managing Forests,2,OL3134337A,Yvonne Byron
+BOOK00343,Strategic People Management and Development,1,OL2800692A,Gary Rees
+BOOK00343,Strategic People Management and Development,2,OL8077721A,Raymond French
+BOOK00344,Short Guide to People Management,1,OL8150544A,Antonios Panagiotakopoulos
+BOOK00345,People management,1,OL2657848A,David Rees
+BOOK00345,People management,2,OL3461954A,Richard McBain
+BOOK00346,People management and development,1,OL478428A,David Farnham
+BOOK00346,People management and development,2,OL9308896A,Paul Smith CIPD
+BOOK00347,VOL.2.NO.13.27th JUNE 1998,1,OL5293406A,PEOPLE MANAGEMENT.
+BOOK00348,People Management and Performance,1,OL2847832A,John Purcell
+BOOK00348,People Management and Performance,2,OL9489251A,Nicholas Kinnie
+BOOK00348,People Management and Performance,3,OL4915492A,Juani Swart
+BOOK00348,People Management and Performance,4,OL9489252A,Bruce Rayton
+BOOK00348,People Management and Performance,5,OL1461878A,Susan Hutchinson
+BOOK00349,The changing face of people management in India,1,OL6994615A,Pawan S. Budhwar
+BOOK00350,Organizational Behavior,1,OL223415A,Ricky W. Griffin
+BOOK00350,Organizational Behavior,2,OL7320384A,Jean M. Phillips
+BOOK00350,Organizational Behavior,3,OL8049214A,Stanley M. Gully
+BOOK00351,The People of the Abyss,1,OL44633A,Jack London
+BOOK00352,Olson People Management Skills Set,1,OL3422904A,OLSON *PEOPLE*
+BOOK00353,Professional HR,1,OL6346643A,Paul Kearns
+BOOK00354,Armstrong's Handbook of Human Resource Management Practice,1,OL5686405A,Michael Armstrong
+BOOK00354,Armstrong's Handbook of Human Resource Management Practice,2,OL1126608A,"Taylor, Stephen"
+BOOK00355,How to Be a Super-Effective Manager,1,OL787582A,Clive T. Goodworth
+BOOK00356,Other People Manage,1,OL226543A,Ellen Hawley
+BOOK00357,Team play,1,OL5856610A,Shirley McKinnon
+BOOK00358,People Management,1,OL7317788A,Rus Slater
+BOOK00359,The people manager's pocketbook,1,OL4814507A,Ian Fleming
+BOOK00360,Business Models and People Management in the Indian IT Industry,1,OL7950578A,Ashish Malik
+BOOK00360,Business Models and People Management in the Indian IT Industry,2,OL2698142A,Chris Rowley
+BOOK00361,Armstrong's Handbook of Strategic Human Resource Management,1,OL5686405A,Michael Armstrong
+BOOK00362,Successful People Management,1,OL3874125A,David W. Griffiths
+BOOK00362,Successful People Management,2,OL11451297A,JAMES RICHARDSON
+BOOK00363,Mastering people management,1,OL274524A,"Thomas, Mark"
+BOOK00364,People management for small business,1,OL1459505A,William Laird Siegel
+BOOK00365,Perspectives in People Management,1,OL10906578A,Satish Bendigiri
+BOOK00366,People Management (Management Papers: 4),1,OL5933475A,Great Britain. Audit Commission for Local Authorities in England and Wales.
+BOOK00367,CMO of People,1,OL8211725A,David Creelman
+BOOK00367,CMO of People,2,OL8271274A,Peter Navin
+BOOK00368,Mastering People Management,1,OL3392140A,PAGE
+BOOK00369,Successful People Management in a Week,1,OL8083257A,Norma Barry
+BOOK00370,People Manager's Tool Kit,1,OL7620390A,Karen Gately
+BOOK00371,International human resource management,1,OL230346A,Peter Dowling
+BOOK00371,International human resource management,2,OL3289459A,Peter J. Dowling
+BOOK00371,International human resource management,3,OL2778426A,Denice E. Welch
+BOOK00371,International human resource management,4,OL393423A,Randall S. Schuler
+BOOK00372,Sustainable People Management,1,OL13217995A,Morgan Orioha
+BOOK00373,Effective People Management,1,OL8075384A,Richard Blackmon
+BOOK00374,Management,1,OL4345625A,Peter F. Drucker
+BOOK00375,People Management,1,OL12915435A,Diana Dias
+BOOK00375,People Management,2,OL12915436A,Carla Magalhães
+BOOK00376,Effective people management,1,OL333708A,Patricia Wellington
+BOOK00377,People Management,1,OL7546458A,Gerardus Blokdyk
+BOOK00378,Developing Excellent People Managers,1,OL3675364A,"Gerrit, Ph.D. Knodt"
+BOOK00379,Benchmarking for People Managers,1,OL1715750A,John Bramham
+BOOK00380,People managing forests,1,OL389341A,Carol J. Pierce Colfer
+BOOK00381,Strategic management,1,OL225835A,Michael A. Hitt
+BOOK00381,Strategic management,2,OL715487A,Robert E. Hoskisson
+BOOK00381,Strategic management,3,OL3446960A,"R. Duane Ireland, Robert E. Hoskisson Michael A.  Hitt"
+BOOK00381,Strategic management,4,OL2654206A,Duane Ireland
+BOOK00381,Strategic management,5,OL2650732A,R. Duane Ireland
+BOOK00382,Strategic management,1,OL7000742A,Frank T. Rothaermel
+BOOK00383,Strategic management,1,OL1076211A,R. Edward Freeman
+BOOK00384,Strategic management,1,OL239218A,Fred R. David
+BOOK00385,Strategic Management,1,OL2653134A,Fred David
+BOOK00386,Implanting strategic management,1,OL1010168A,H. Igor Ansoff
+BOOK00386,Implanting strategic management,2,OL12578562A,Edward McDonnell
+BOOK00387,Strategic management and competitive advantage,1,OL528859A,Jay B. Barney
+BOOK00387,Strategic management and competitive advantage,2,OL2652981A,Jay Barney
+BOOK00387,Strategic management and competitive advantage,3,OL3246876A,William S Hesterly
+BOOK00388,Strategic Management,1,OL2663874A,Jeffrey H. Dyer
+BOOK00388,Strategic Management,2,OL509421A,Paul Godfrey
+BOOK00388,Strategic Management,3,OL2699582A,Robert Jensen
+BOOK00388,Strategic Management,4,OL3136624A,David Bryce
+BOOK00389,Strategic management,1,OL19769A,Samuel C. Certo
+BOOK00389,Strategic management,2,OL3355954A,J.Paul Peter
+BOOK00390,Strategic Management Theory,1,OL389425A,Gareth R. Jones
+BOOK00391,Concepts of strategic management,1,OL239218A,Fred R. David
+BOOK00392,Strategic management of technological innovation,1,OL5649743A,Melissa A. Schilling
+BOOK00393,Strategic management,1,OL21141A,"Pearce, John A."
+BOOK00393,Strategic management,2,OL2634617A,John A. Pearce
+BOOK00393,Strategic management,3,OL2634618A,Richard B. Robinson
+BOOK00394,Strategic Management,1,OL2738537A,Garth Saloner
+BOOK00394,Strategic Management,2,OL2738538A,Andrea Shepard
+BOOK00394,Strategic Management,3,OL2738539A,Joel Podolny
+BOOK00395,Strategic management,1,OL2738537A,Garth Saloner
+BOOK00396,International business,1,OL24085A,Alan M. Rugman
+BOOK00396,International business,2,OL4380294A,Richard M. Hodgetts
+BOOK00397,Creating public value,1,OL401884A,Mark Harrison Moore
+BOOK00398,Strategic Management,1,OL2734901A,Tienie Ehlers
+BOOK00399,Global Strategic Management,1,OL449222A,Philippe Lasserre
+BOOK00400,Strategic Management : Theory & Cases,1,OL224314A,Charles W. L. Hill
+BOOK00400,Strategic Management : Theory & Cases,2,OL389425A,Gareth R. Jones
+BOOK00400,Strategic Management : Theory & Cases,3,OL5649743A,Melissa A. Schilling
+BOOK00401,Strategic Management,1,OL2735682A,John Parnell
+BOOK00402,Strategic management of health care organizations,1,OL386819A,Peter M. Ginter
+BOOK00402,Strategic management of health care organizations,2,OL531979A,Linda E. Swayne
+BOOK00402,Strategic management of health care organizations,3,OL223179A,W. Jack Duncan
+BOOK00403,Strategic management and business analysis,1,OL43312A,"Cooke, Peter"
+BOOK00403,Strategic management and business analysis,2,OL2837853A,David Williamson
+BOOK00403,Strategic management and business analysis,3,OL7607720A,Wyn Jenkins
+BOOK00403,Strategic management and business analysis,4,OL4390269A,Keith Michael Moreton
+BOOK00404,Strategic management,1,OL391735A,"Miller, Alex"
+BOOK00405,Strategic management,1,OL6843931A,Allen C. Amason
+BOOK00406,Strategic management,1,OL4357246A,John L. Thompson
+BOOK00406,Strategic management,2,OL283267A,Frank Martin
+BOOK00407,Sustainable strategic management,1,OL456615A,W. Edward Stead
+BOOK00407,Sustainable strategic management,2,OL2850421A,Jean Garner Stead
+BOOK00407,Sustainable strategic management,3,OL2850422A,Mark Starik
+BOOK00408,Strategic management in action,1,OL397965A,Mary K. Coulter
+BOOK00409,Strategize!,1,OL1519065A,C. Gopinath
+BOOK00409,Strategize!,2,OL3293873A,Julie I. Siciliano
+BOOK00410,Strategy safari,1,OL220074A,Henry Mintzberg
+BOOK00411,Strategic management,1,OL1433414A,Mason Andrew Carpenter
+BOOK00411,Strategic management,2,OL2652884A,Mason A. Carpenter
+BOOK00411,Strategic management,3,OL2652885A,William Gerard Sanders
+BOOK00412,Strategic Management,1,OL7807072A,Frank Rothaermel
+BOOK00413,Understanding Strategic Management,1,OL3378334A,Anthony Henry
+BOOK00414,Sustainable Strategic Management,1,OL456615A,W. Edward Stead
+BOOK00414,Sustainable Strategic Management,2,OL2850421A,Jean Garner Stead
+BOOK00414,Sustainable Strategic Management,3,OL2850422A,Mark Starik
+BOOK00415,Strategic management,1,OL239218A,Fred R. David
+BOOK00416,The Strategic Manager,1,OL7664098A,Harry Sminia
+BOOK00417,Strategic management,1,OL239218A,Fred R. David
+BOOK00418,Strategic Management,1,OL1010034A,Lester A. Digman
+BOOK00419,Strategic Management,1,OL7929313A,R. Edward Freeman
+BOOK00420,Strategic Management Accounting,1,OL3091571A,Zahirul Hoque
+BOOK00421,Essentials of strategic management,1,OL4598461A,J. David Hunger
+BOOK00421,Essentials of strategic management,2,OL27304A,Thomas L. Wheelen
+BOOK00422,Global strategic management,1,OL1479479A,Kamel Mellahi
+BOOK00422,Global strategic management,2,OL2669063A,Jedrzej George Frynas
+BOOK00422,Global strategic management,3,OL2669064A,Paul Finlay
+BOOK00423,Strategic management,1,OL609848A,Richard L. Lynch
+BOOK00424,Change management,1,OL3101058A,Jeffrey M. Hiatt
+BOOK00424,Change management,2,OL3101059A,Timothy J. Creasey
+BOOK00425,Managing Change/Changing Managers,1,OL7544304A,Julian Randall
+BOOK00426,Change management,1,OL2657294A,Robert Sullivan
+BOOK00426,Change management,2,OL3154863A,Stephen Lytton
+BOOK00427,Change Management,1,OL447504A,Thomas Lauer
+BOOK00428,"Managing change, changing managers",1,OL1515780A,Julian Randall
+BOOK00429,Change management in information services,1,OL1603319A,Lyndon Pugh
+BOOK00430,Making sense of change management,1,OL1427230A,Esther Cameron
+BOOK00430,Making sense of change management,2,OL2824520A,Mike Green
+BOOK00431,Changing Change Management,1,OL3278672A,Darren McCabe
+BOOK00432,Change Management,1,OL3182743A,Klaus Doppler
+BOOK00432,Change Management,2,OL7953007A,Christoph Lauterburg
+BOOK00433,Making sense of change management,1,OL1427230A,Esther Cameron
+BOOK00434,The Theory and Practice of Change Management,1,OL530471A,John Hayes
+BOOK00435,Effective Change Manager,1,OL10444445A,The Change Management Institute
+BOOK00436,Making sense of change management,1,OL1427230A,Esther Cameron
+BOOK00437,Managing change,1,OL834372A,Todd Jick
+BOOK00437,Managing change,2,OL1236949A,Maury Peiperl
+BOOK00437,Managing change,3,OL3258342A,Todd D. Jick
+BOOK00438,Change Management,1,OL3243172A,Jeff Hiatt
+BOOK00439,Lean Change Management,1,OL7275566A,Jason Little
+BOOK00440,Change Management,1,OL686666A,James McCalman
+BOOK00441,Strategic Change Management Strategic Change Management,1,OL6603031A,Djamel Eddine Laouisset
+BOOK00442,Organizational Behaviour and Change Management,1,OL10378844A,Cornell Vernooij
+BOOK00442,Organizational Behaviour and Change Management,2,OL10378845A,Judith Stuijt
+BOOK00442,Organizational Behaviour and Change Management,3,OL8765041A,Maarten Hendriks
+BOOK00442,Organizational Behaviour and Change Management,4,OL7699674A,Wouter ten Have
+BOOK00442,Organizational Behaviour and Change Management,5,OL7699673A,Steven ten Have
+BOOK00443,The Manager's Path,1,OL7564045A,Camille Fournier
+BOOK00444,Agile Change Management,1,OL8056985A,Melanie Franklin
+BOOK00445,The Effective Change Manager's Handbook,1,OL7708458A,APMG
+BOOK00446,Breakthrough IT Change Management,1,OL3329002A,Bennet Lientz
+BOOK00446,Breakthrough IT Change Management,2,OL3329003A,Kathryn Rea
+BOOK00447,Beyond change management,1,OL5450805A,Dean Anderson
+BOOK00448,Managing Change,1,OL1003227A,Bernard Burnes
+BOOK00449,Business process change management,1,OL218130A,August-Wilhelm Scheer
+BOOK00450,Change Management,1,OL7900742A,Frank Voehl
+BOOK00450,Change Management,2,OL2633920A,H. James Harrington
+BOOK00451,Change Management Für Dummies,1,OL295325A,Alexandra Schichtel
+BOOK00452,Reconsidering Change Management,1,OL7699673A,Steven ten Have
+BOOK00452,Reconsidering Change Management,2,OL8150541A,ten Have Wouter
+BOOK00452,Reconsidering Change Management,3,OL8150542A,Anne-Bregj Huijsmans
+BOOK00453,Correctional administration and change management,1,OL6785342A,Martha Henderson Hurley
+BOOK00454,Change management,1,OL218618A,Marcus Gonçalves
+BOOK00455,The Theory and Practice of Change Management,1,OL6789733A,John Hayes
+BOOK00456,Appreciative inquiry for change management,1,OL6933050A,Sarah Lewis
+BOOK00457,Leadership and change management,1,OL64477A,Annabel C. Beerel
+BOOK00458,Changing managers and managing change,1,OL1101366A,Mahmoud Ezzamel
+BOOK00458,Changing managers and managing change,2,OL1398747A,Simon Lilley
+BOOK00458,Changing managers and managing change,3,OL3818706A,Hugh Wilmott
+BOOK00458,Changing managers and managing change,4,OL409080A,Chris Green
+BOOK00459,Managing innovation,1,OL381405A,Joseph Tidd
+BOOK00459,Managing innovation,2,OL2729737A,Joe Tidd
+BOOK00459,Managing innovation,3,OL2730078A,John Bessant
+BOOK00459,Managing innovation,4,OL19869A,Keith Pavitt
+BOOK00460,Change Management During Unprecedented Times,1,OL7694457A,Kyla Latrice Tennin
+BOOK00461,"Change Management in schwierigen Zeiten, m. CD-ROM",1,OL802404A,Dietmar Vahs
+BOOK00462,Leadership and Change Management,1,OL7106773A,Daphne Halkias
+BOOK00462,Leadership and Change Management,2,OL794506A,Joseph C. Santora
+BOOK00462,Leadership and Change Management,3,OL7106775A,Nicholas Harkiolakis
+BOOK00462,Leadership and Change Management,4,OL8156259A,Paul W. Thurman
+BOOK00463,The complete idiot's guide to change management,1,OL229230A,Jeffrey P. Davidson
+BOOK00464,Additive Manufacturing Change Management,1,OL8464339A,David M. Dietrich
+BOOK00464,Additive Manufacturing Change Management,2,OL2971609A,Michael Kenworthy
+BOOK00464,Additive Manufacturing Change Management,3,OL6605196A,Elizabeth A. Cudney
+BOOK00465,Enterprise Change Management,1,OL15912311A,David Miller
+BOOK00465,Enterprise Change Management,2,OL7758460A,Audra Proctor
+BOOK00466,Switch,1,OL2812382A,Chip Heath
+BOOK00466,Switch,2,OL3092199A,"Chip; Heath, Dan Heath"
+BOOK00467,Leading Change,1,OL231767A,John P. Kotter
+BOOK00468,Employee Empowerment,1,OL2951994A,Daniel Bloom
+BOOK00469,Change Management Masterclass,1,OL2824520A,Mike Green
+BOOK00470,Change Manager,1,OL9751209A,Tracey Torble
+BOOK00471,Rework,1,OL2804440A,Jason Fried
+BOOK00471,Rework,2,OL7618544A,David Heinemeier Hansson
+BOOK00472,Production and operations management,1,OL953741A,Everett E. Adam
+BOOK00472,Production and operations management,2,OL390259A,Ronald J. Ebert
+BOOK00473,Production and operations management,1,OL397998A,Richard B. Chase
+BOOK00474,Operations management,1,OL23855A,Roger G. Schroeder
+BOOK00475,Operations management,1,OL228184A,William J. Stevenson
+BOOK00476,Operations management,1,OL589008A,Joseph G. Monks
+BOOK00477,Production/operations management,1,OL228184A,William J. Stevenson
+BOOK00478,Production and operations management,1,OL227233A,Norman Gaither
+BOOK00479,Operations Management,1,OL227233A,Norman Gaither
+BOOK00479,Operations Management,2,OL3278571A,Gregory Frazier
+BOOK00480,Operations management for MBAs,1,OL236061A,Jack R. Meredith
+BOOK00480,Operations management for MBAs,2,OL402185A,Scott M. Shafer
+BOOK00481,Operations management,1,OL228184A,William J. Stevenson
+BOOK00482,Operations management,1,OL392324A,Andrew Greasley
+BOOK00483,Operations Management,1,OL2648619A,Jay Heizer
+BOOK00484,Principles of operations management,1,OL457089A,Barry Render
+BOOK00484,Principles of operations management,2,OL2648619A,Jay Heizer
+BOOK00485,Operations management,1,OL2648619A,Jay Heizer
+BOOK00486,Slack,1,OL1518264A,Nigel Slack
+BOOK00486,Slack,2,OL5172814A,Alistair Brandon-Jones
+BOOK00486,Slack,3,OL370287A,Robert Johnston
+BOOK00487,Operations management,1,OL381502A,Roberta S. Russell
+BOOK00487,Operations management,2,OL228288A,Bernard W. Taylor
+BOOK00487,Operations management,3,OL2740534A,Roberta (Robin) Russell
+BOOK00488,Production and Operations Management,1,OL3376616A,Kanishka Bedi
+BOOK00489,Production and operations management,1,OL1708476A,Raymond R. Mayer
+BOOK00490,Operations Management,1,OL7832997A,Lee Krajewski
+BOOK00491,Production and Operations Management,1,OL1955312A,R. Panneerselvam
+BOOK00492,Schaum's outline of theory and problems of operations management,1,OL589008A,Joseph G. Monks
+BOOK00493,Principles of operations management,1,OL2648619A,Jay Heizer
+BOOK00494,Modern production/operations management,1,OL1193811A,Elwood Spencer Buffa
+BOOK00495,Restaurant operations management,1,OL402353A,Jack D. Ninemeier
+BOOK00495,Restaurant operations management,2,OL549981A,David K. Hayes
+BOOK00496,Production and operations management,1,OL721066A,Ray Wild
+BOOK00497,Fundamentals of operations management,1,OL235937A,Mark M. Davis
+BOOK00497,Fundamentals of operations management,2,OL579531A,Nicholas J. Aquilano
+BOOK00497,Fundamentals of operations management,3,OL397998A,Richard B. Chase
+BOOK00498,Hotel operations management,1,OL549981A,David K. Hayes
+BOOK00499,Operations management,1,OL38059A,James B. Dilworth
+BOOK00500,Strategic Operations Management,1,OL245994A,Steve Brown
+BOOK00500,Strategic Operations Management,2,OL2730078A,John Bessant
+BOOK00500,Strategic Operations Management,3,OL7482935A,Fu Jia
+BOOK00501,Operations management,1,OL2626801A,Richard J. Schonberger
+BOOK00501,Operations management,2,OL2635611A,Edward M. Knod
+BOOK00502,Principles of operations management,1,OL226049A,Jay H. Heizer
+BOOK00503,Operations management,1,OL772133A,John O. McClain
+BOOK00503,Operations management,2,OL2655823A,L. Joseph Thomas
+BOOK00503,Operations management,3,OL2655824A,Joseph B. Mazzola
+BOOK00504,Operations Management,1,OL224399A,Lee J. Krajewski
+BOOK00504,Operations Management,2,OL2648632A,Larry P. Ritzman
+BOOK00504,Operations Management,3,OL2653346A,Manoj K. Malhotra
+BOOK00505,Operations management,1,OL1012230A,Robert D. Reid
+BOOK00505,Operations management,2,OL2737989A,R. Dan Reid
+BOOK00505,Operations management,3,OL2737990A,Nada R. Sanders
+BOOK00506,Operations management,1,OL1429410A,David Barnes
+BOOK00507,Operations Management,1,OL7974314A,"Heizer, Render, Munson"
+BOOK00508,Operations Management,1,OL2648619A,Jay Heizer
+BOOK00508,Operations Management,2,OL457089A,Barry Render
+BOOK00508,Operations Management,3,OL7582321A,Chuck Munson
+BOOK00509,Operations management,1,OL228184A,William J. Stevenson
+BOOK00510,Essentials of Operations Management,1,OL1518264A,Nigel Slack
+BOOK00510,Essentials of Operations Management,2,OL5172814A,Alistair Brandon-Jones
+BOOK00510,Essentials of Operations Management,3,OL370287A,Robert Johnston
+BOOK00511,Production and operations management,1,OL38059A,James B. Dilworth
+BOOK00512,Production and operations management,1,OL2648619A,Jay Heizer
+BOOK00513,Operations Management,1,OL36499A,Terry Hill
+BOOK00514,Casino operations management,1,OL390608A,Jim Kilby
+BOOK00514,Casino operations management,2,OL2737594A,Jim Fox
+BOOK00514,Casino operations management,3,OL2737595A,Anthony F. Lucas
+BOOK00515,"Foundations of Operations Management, Fourth Canadian Edition, 4/e",1,OL7764309A,"Lee J. Krajewski (Author), Manoj K. Malhotra (Author) Larry P. Ritzman (Author)"
+BOOK00516,Modern Hotel Operations Management,1,OL7905386A,Michael Chibili
+BOOK00516,Modern Hotel Operations Management,2,OL8168446A,Shane de Bruyn
+BOOK00516,Modern Hotel Operations Management,3,OL8168447A,Latifa Benhadda
+BOOK00516,Modern Hotel Operations Management,4,OL257213A,Conrad Lashley
+BOOK00516,Modern Hotel Operations Management,5,OL8168448A,Saskia Penninga
+BOOK00517,Cruise Operations Management,1,OL7203538A,Philip Gibson
+BOOK00518,Operations management for competitive advantage,1,OL397998A,Richard B. Chase
+BOOK00519,Project management for dummies,1,OL2730366A,Stanley E. Portny
+BOOK00520,Project Management,1,OL2825763A,Harvey Maylor
+BOOK00521,Project management,1,OL390077A,Harold Kerzner
+BOOK00522,Software project management,1,OL5477272A,Bob Hughes
+BOOK00523,Project management,1,OL236061A,Jack R. Meredith
+BOOK00523,Project management,2,OL2206215A,Samuel J. Mantel
+BOOK00524,Project Management,1,OL2636200A,Erik W. Larson
+BOOK00525,PMBOK Guide,1,OL29513A,Project Management Institute
+BOOK00526,Construction project management,1,OL534330A,Frederick E. Gould
+BOOK00526,Construction project management,2,OL2656011A,Nancy Joyce
+BOOK00527,Information Technology Project Management,1,OL1407711A,Kathy Schwalbe
+BOOK00528,Construction project management,1,OL1424745A,Peter Fewings
+BOOK00529,A Guide to the Project Management Body of Knowledge (PMBOK® Guide),1,OL29513A,Project Management Institute
+BOOK00530,Agile Project Management For Dummies,1,OL7342127A,Mark C. Layton
+BOOK00531,Project Management for the Unofficial Project Manager,1,OL7277660A,Kory Kogon
+BOOK00531,Project Management for the Unofficial Project Manager,2,OL9598794A,Suzette Blakemore
+BOOK00532,Project Management,1,OL28562A,Jeffrey K. Pinto
+BOOK00533,Effective project management,1,OL365623A,Robert K. Wysocki
+BOOK00534,TOTAL PROJECT MANAGEMENT The Indian Context,1,OL875828A,P. K. Joy
+BOOK00535,Project Management,1,OL2730963A,Samuel E. Portny
+BOOK00535,Project Management,2,OL2206215A,Samuel J. Mantel
+BOOK00535,Project Management,3,OL236061A,Jack R. Meredith
+BOOK00535,Project Management,4,OL402185A,Scott M. Shafer
+BOOK00535,Project Management,5,OL2730965A,Margaret M. Sutton
+BOOK00535,Project Management,6,OL2730966A,Brian E. Kramer
+BOOK00536,Successful project management,1,OL397305A,Jack Gido
+BOOK00536,Successful project management,2,OL3291729A,James P. Clements
+BOOK00537,Project management,1,OL718530A,Avraham Shtub
+BOOK00537,Project management,2,OL238316A,Jonathan F. Bard
+BOOK00537,Project management,3,OL1237529A,Shlomo Globerson
+BOOK00538,Information technology project management,1,OL1436951A,Jack T. Marchewka
+BOOK00538,Information technology project management,2,OL236061A,Jack R. Meredith
+BOOK00538,Information technology project management,3,OL2206215A,Samuel J. Mantel
+BOOK00539,Successful Project Management,1,OL4772139A,Jack Gido
+BOOK00539,Successful Project Management,2,OL7937732A,Jim Clements
+BOOK00539,Successful Project Management,3,OL4440582A,Rose Baker
+BOOK00540,Project management,1,OL28562A,Jeffrey K. Pinto
+BOOK00541,Process Groups,1,OL29513A,Project Management Institute
+BOOK00542,The Fast Forward MBA in Project Management,1,OL2738029A,Eric Verzuh
+BOOK00543,Project Management in Perspective,1,OL7735729A,Theuns Oosthuizen
+BOOK00544,Project Management Techniques,1,OL7485326A,Rory Burke
+BOOK00545,Project Management,1,OL2636200A,Erik W. Larson
+BOOK00545,Project Management,2,OL1657128A,Clifford F. Gray
+BOOK00546,Project Management in Practice,1,OL2206215A,Samuel J. Mantel
+BOOK00546,Project Management in Practice,2,OL236061A,Jack R. Meredith
+BOOK00546,Project Management in Practice,3,OL402185A,Scott M. Shafer
+BOOK00546,Project Management in Practice,4,OL2730965A,Margaret M. Sutton
+BOOK00547,Construction project management,1,OL7007593A,Alison Dykstra
+BOOK00548,Project management,1,OL1657128A,Clifford F. Gray
+BOOK00548,Project management,2,OL2636200A,Erik W. Larson
+BOOK00549,Contemporary Project Management,1,OL3447283A,Timothy Kloppenborg
+BOOK00549,Contemporary Project Management,2,OL3030014A,Kathryn Wells
+BOOK00549,Contemporary Project Management,3,OL3059096A,Vittal S. Anantatmula
+BOOK00550,The Fast Forward MBA in Project Management,1,OL2738029A,Eric Verzuh
+BOOK00551,"Project Management for Engineering, Business and Technology",1,OL5849949A,John M. Nicholas
+BOOK00551,"Project Management for Engineering, Business and Technology",2,OL2734644A,Herman Steyn
+BOOK00552,Project Management,1,OL1657128A,Clifford F. Gray
+BOOK00552,Project Management,2,OL2636200A,Erik W. Larson
+BOOK00553,Project management for healthcare,1,OL5795331A,David Shirley
+BOOK00554,"Project management metrics, KPIs, and dashboards",1,OL390077A,Harold Kerzner
+BOOK00555,Project management,1,OL2637297A,David L. Cleland
+BOOK00555,Project management,2,OL768789A,Lewis R. Ireland
+BOOK00556,Project Management,1,OL2636200A,Erik W. Larson
+BOOK00556,Project Management,2,OL3697781A,Clifford Gray
+BOOK00557,Agile Project Management with Scrum (Microsoft Professional),1,OL2650932A,Ken Schwaber
+BOOK00558,The art of project management,1,OL1438336A,Scott Berkun
+BOOK00559,A guide to the project management body of knowledge (PMBOK guide),1,OL29513A,Project Management Institute
+BOOK00560,The Deadline,1,OL19395A,Tom DeMarco
+BOOK00561,Project Management Absolute Beginner's Guide,1,OL2879818A,Greg Horine
+BOOK00562,Project management in construction,1,OL235974A,Sidney M. Levy
+BOOK00563,Project management,1,OL2880269A,Paul C. Tinnirello
+BOOK00564,Project management for dummies,1,OL2730366A,Stanley E. Portny
+BOOK00565,Making Things Happen,1,OL1438336A,Scott Berkun
+BOOK00566,Performance management,1,OL719205A,Michael Armstrong
+BOOK00567,Performance Management,1,OL7652150A,Linda Ashdown
+BOOK00568,Performance Management,1,OL32869A,Aubrey C. Daniels
+BOOK00568,Performance Management,2,OL2817860A,Jon S. Bailey
+BOOK00569,Performance management systems,1,OL6837059A,Arup Varma
+BOOK00570,Performance management,1,OL1436313A,Herman Aguinis
+BOOK00571,Financial planning & analysis and performance management,1,OL7539915A,Jack Alexander
+BOOK00572,Performance management,1,OL5461640A,Jacky Holloway
+BOOK00573,Managing performance,1,OL719205A,Michael Armstrong
+BOOK00573,Managing performance,2,OL2824602A,Angela Baron
+BOOK00574,Handbook of corporate performance management,1,OL1437382A,Mike Bourne
+BOOK00575,Strategic Performance Management,1,OL8131521A,Ralph W. Adler
+BOOK00576,Performance management,1,OL375198A,A. S. Kohli
+BOOK00577,Employee engagement through effective performance management,1,OL3090367A,Edward M. Mone
+BOOK00578,Performance Management,1,OL4436663A,T. V. Rao
+BOOK00579,Performance management,1,OL3100585A,Ralph R Smith
+BOOK00580,ACCA Performance Management,1,OL7297300A,BPP Learning Media
+BOOK00581,Armstrong's Handbook of Performance Management,1,OL5686405A,Michael Armstrong
+BOOK00582,Enterprise Performance Management Done Right,1,OL7346974A,Ron Dimon
+BOOK00583,Armstrong's handbook of performance management,1,OL719205A,Michael Armstrong
+BOOK00584,Performance Management,1,OL4191708A,Madhu Arora
+BOOK00584,Performance Management,2,OL8468832A,Poonam Khurana
+BOOK00584,Performance Management,3,OL8468833A,Sonam Choiden
+BOOK00585,IT performance management,1,OL7200482A,Peter Wiggers
+BOOK00586,Intranet performance management,1,OL216889A,Kornel Terplan
+BOOK00587,Performance management,1,OL236518A,Robert Bacal
+BOOK00588,ACCA P5 Advanced Performance Management,1,OL7297300A,BPP Learning Media
+BOOK00589,Performance management,1,OL455914A,Michael D. McMaster
+BOOK00590,Performance Management in Nonprofit Organizations,1,OL3091571A,Zahirul Hoque
+BOOK00590,Performance Management in Nonprofit Organizations,2,OL1918598A,Lee Parker
+BOOK00591,Performance Management in the Public Sector,1,OL9502283A,Van Dooren Wouter
+BOOK00591,Performance Management in the Public Sector,2,OL9502284A,Wouter Van Dooren
+BOOK00591,Performance Management in the Public Sector,3,OL2667214A,Geert Bouckaert
+BOOK00591,Performance Management in the Public Sector,4,OL2806483A,John Halligan
+BOOK00592,Performance Management,1,OL1461878A,Susan Hutchinson
+BOOK00593,Performance management,1,OL236518A,Robert Bacal
+BOOK00594,Performance management,1,OL3118296A,Brian J. Hall
+BOOK00594,Performance management,2,OL2040906A,Richard Luecke
+BOOK00595,HBR guide to performance management,1,OL3399460A,HBR
+BOOK00596,Performance Management,1,OL719205A,Michael Armstrong
+BOOK00597,Strategic Planning and Performance Management,1,OL3295533A,Graham Kenny
+BOOK00598,Organizational behaviour,1,OL286362A,Richard Pettinger
+BOOK00599,Global Performance Management (Global HRM),1,OL3397009A,Arup; Bu Varma
+BOOK00600,ACCA F5 Performance Management,1,OL7297300A,BPP Learning Media
+BOOK00601,ACCA F5 Performance Management,1,OL7297300A,BPP Learning Media
+BOOK00602,Case Studies in Performance Management,1,OL2741067A,Tony C. Adkins
+BOOK00603,Performance management,1,OL455914A,Michael D. McMaster
+BOOK00604,ACCA Performance Management,1,OL7297300A,BPP Learning Media
+BOOK00605,Performance Management for Dummies,1,OL8114437A,Dummies Staff
+BOOK00605,Performance Management for Dummies,2,OL7645420A,Herman Aguinis
+BOOK00606,Performance Management (Acca),1,OL2785894A,Kaplan Publishing
+BOOK00607,Performance Management,1,OL455981A,Gary Cokins
+BOOK00608,Strategic Performance Management,1,OL3149792A,Bernard Marr
+BOOK00608,Strategic Performance Management,2,OL3410032A,Dina Gray
+BOOK00609,Performance management,1,OL32869A,Aubrey C. Daniels
+BOOK00610,Teach Yourself Performance Management,1,OL585079A,Phil Baguley
+BOOK00611,Innovative Corporate Performance Management,1,OL2729652A,Bob Paladino
+BOOK00612,HR networking,1,OL1401021A,Lisa R. Franke
+BOOK00613,Reengineering performance management,1,OL190840A,Tracey Bernstein Weiss
+BOOK00614,Implementing Performance Management,1,OL228229A,Joan Dean
+BOOK00615,Human resource management,1,OL395910A,H. John Bernardin
+BOOK00615,Human resource management,2,OL2633257A,Joyce E. A. Russell
+BOOK00616,Human resource management,1,OL535855A,Robert L. Mathis
+BOOK00616,Human resource management,2,OL1123662A,John Harold Jackson
+BOOK00617,Fundamentals of human resource management,1,OL235972A,David A. DeCenzo
+BOOK00618,Human Resource Management,1,OL238534A,Gary Dessler
+BOOK00619,Human resource management,1,OL229940A,Greg L. Stewart
+BOOK00619,Human resource management,2,OL3422129A,Kenneth G. Brown
+BOOK00620,Human resource management,1,OL466291A,John Bratton
+BOOK00620,Human resource management,2,OL2704923A,Jeffrey Gold
+BOOK00621,Human resources management,1,OL238777A,Wendell L. French
+BOOK00622,Human resource management,1,OL238534A,Gary Dessler
+BOOK00623,Human resource management,1,OL452017A,Lloyd L. Byars
+BOOK00624,Human resource management,1,OL223925A,John M. Ivancevich
+BOOK00625,Strategic Human Resource Management,1,OL584921A,Jeffrey A. Mello
+BOOK00626,Human resource management,1,OL238534A,Gary Dessler
+BOOK00627,Understanding Human Resources Management,1,OL8176962A,Melanie Peacock
+BOOK00627,Understanding Human Resources Management,2,OL5891029A,Monica Belcourt
+BOOK00627,Understanding Human Resources Management,3,OL8176963A,Eileen B. Stewart
+BOOK00628,Human Resource Management,1,OL8043921A,Pieter Nel
+BOOK00628,Human Resource Management,2,OL8183313A,Amanda Werner
+BOOK00628,Human Resource Management,3,OL8183314A,Christoff Botha
+BOOK00628,Human Resource Management,4,OL8183315A,Osmond Ngalo
+BOOK00628,Human Resource Management,5,OL8183316A,Paul Poisat
+BOOK00629,Human Resource Management,1,OL2731752A,Raymond J. Stone
+BOOK00630,Human resource management,1,OL246826A,William P. Anthony
+BOOK00630,Human resource management,2,OL2627251A,Pamela L. Perrewe
+BOOK00630,Human resource management,3,OL2627252A,K. Michele Kacmar
+BOOK00630,Human resource management,4,OL2627453A,K. Michelle Kacmar
+BOOK00631,Human resource management,1,OL6874322A,Melva M. Diamante
+BOOK00632,Human resource management,1,OL235972A,David A. DeCenzo
+BOOK00633,Fundamentals of Human Resource Management,1,OL238534A,Gary Dessler
+BOOK00634,Human resource management,1,OL244525A,Cynthia D. Fisher
+BOOK00635,Human Resource Management,1,OL217763A,Robert N. Lussier
+BOOK00635,Human Resource Management,2,OL7644918A,John R. Hendon
+BOOK00636,Human Resource Management,1,OL4204858A,K. Aswathappa
+BOOK00637,Human resource management,1,OL452017A,Lloyd L. Byars
+BOOK00638,Personnel and human resources management,1,OL1214150A,Perfecto S. Sison
+BOOK00639,Human resources management,1,OL6438768A,H. T. Graham
+BOOK00640,Human resource management,1,OL8201904A,Julie Beardwell
+BOOK00640,Human resource management,2,OL4427561A,Tim Claydon
+BOOK00641,Armstrong's handbook of human resource management practice,1,OL5686405A,Michael Armstrong
+BOOK00642,Fundamentals of human resource management,1,OL216674A,Raymond A. Noe
+BOOK00643,Strategic Human Resource Management,1,OL2800692A,Gary Rees
+BOOK00643,Strategic Human Resource Management,2,OL5005634A,Paul E Smith
+BOOK00644,International Human Resource Management,1,OL1207541A,Chris Brewster
+BOOK00644,International Human Resource Management,2,OL576940A,Paul Sparrow
+BOOK00644,International Human Resource Management,3,OL3147636A,Guy Vernon
+BOOK00645,"Human Resource Management, 16th edition",1,OL238534A,Gary Dessler
+BOOK00646,Strategic human resource management,1,OL719205A,Michael Armstrong
+BOOK00647,Human Resource Management,1,OL7915454A,Ronan Carbery
+BOOK00647,Human Resource Management,2,OL7915455A,Christine Cross
+BOOK00648,A Handbook of Human Resource Management Practice,1,OL719205A,Michael Armstrong
+BOOK00649,Human resource management,1,OL535855A,Robert L. Mathis
+BOOK00650,Human Resource Management,1,OL216674A,Raymond A. Noe
+BOOK00651,Healthcare human resource management,1,OL3281001A,Walter J. Flynn
+BOOK00651,Healthcare human resource management,2,OL535855A,Robert L. Mathis
+BOOK00651,Healthcare human resource management,3,OL1123662A,John Harold Jackson
+BOOK00652,Human resource management,1,OL238534A,Gary Dessler
+BOOK00653,Human Resource Management,1,OL7900133A,Jonathan Crawshaw
+BOOK00653,Human Resource Management,2,OL2695887A,Pawan Budhwar
+BOOK00653,Human Resource Management,3,OL739572A,Ann Davis
+BOOK00654,Human Resource Management,1,OL8624874A,Aswathappa
+BOOK00655,Human resource management,1,OL216674A,Raymond A. Noe
+BOOK00655,Human resource management,2,OL2639667A,John R. Hollenbeck
+BOOK00656,Fundamentals of Human Resource Management,1,OL216674A,Raymond A. Noe
+BOOK00656,Fundamentals of Human Resource Management,2,OL2639667A,John R. Hollenbeck
+BOOK00656,Fundamentals of Human Resource Management,3,OL2639668A,Barry Gerhart
+BOOK00656,Fundamentals of Human Resource Management,4,OL7455447A,Patrick M. Wright
+BOOK00657,Introduction to Human Resource Management,1,OL3477657A,Nick Wilton
+BOOK00658,Human resource management,1,OL2640713A,Laura Portolese Dias
+BOOK00659,Strategic compensation,1,OL544809A,Joseph J. Martocchio
+BOOK00660,Organizational Behavior,1,OL33897A,Stephen P. Robbins
+BOOK00661,Organizational behavior,1,OL388469A,Fred Luthans
+BOOK00662,Essentials of Organizational Behavior,1,OL33897A,Stephen P. Robbins
+BOOK00663,Organizational behavior,1,OL38917A,Robert Kreitner
+BOOK00663,Organizational behavior,2,OL1480578A,Angelo Kinicki
+BOOK00664,Organizational behavior,1,OL227214A,Don Hellriegel
+BOOK00664,Organizational behavior,2,OL3011892A,Hellriegel
+BOOK00664,Organizational behavior,3,OL342981A,John W. Slocum
+BOOK00665,Organizational behavior,1,OL28337A,Steven Lattimore McShane
+BOOK00666,International dimensions of organizational behavior,1,OL491328A,Nancy J. Adler
+BOOK00667,Organizational behavior,1,OL397106A,John W. Newstrom
+BOOK00667,Organizational behavior,2,OL128085A,Keith Davis
+BOOK00668,Human behavior at work,1,OL128085A,Keith Davis
+BOOK00669,Organizational behavior and management,1,OL223925A,John M. Ivancevich
+BOOK00669,Organizational behavior and management,2,OL2639584A,Robert Konopaske
+BOOK00669,Organizational behavior and management,3,OL1078587A,Michael T. Matteson
+BOOK00670,Managing organizational behavior,1,OL228002A,John R. Schermerhorn
+BOOK00671,Organizational behavior,1,OL5450786A,Jason Colquitt
+BOOK00672,Organizational behavior,1,OL228002A,John R. Schermerhorn
+BOOK00672,Organizational behavior,2,OL763752A,James G. Hunt
+BOOK00672,Organizational behavior,3,OL2736896A,Richard N. Osborn
+BOOK00673,Organizational behavior,1,OL1397152A,"Nelson, Debra L."
+BOOK00673,Organizational behavior,2,OL3236149A,Debra L. Nelson
+BOOK00673,Organizational behavior,3,OL3038563A,James Campbell Quick
+BOOK00674,Organizational Behavior,1,OL2634548A,Christopher P. Neck
+BOOK00674,Organizational Behavior,2,OL7675120A,Jeffery D. Houghton
+BOOK00674,Organizational Behavior,3,OL7659105A,Emma L. Murray
+BOOK00675,Introduction to organizational behavior,1,OL230982A,Richard M. Steers
+BOOK00676,Understanding and Managing Organizational Behavior,1,OL226973A,Jennifer M. George
+BOOK00676,Understanding and Managing Organizational Behavior,2,OL389425A,Gareth R. Jones
+BOOK00677,Organizational behavior in education,1,OL391875A,Robert G. Owens
+BOOK00677,Organizational behavior in education,2,OL2673094A,Thomas Valesky
+BOOK00678,Organizational behavior,1,OL2640119A,Steven McShane
+BOOK00678,Organizational behavior,2,OL2640120A,Mary Ann Von Glinow
+BOOK00679,Organizational behavior,1,OL1480578A,Angelo Kinicki
+BOOK00679,Organizational behavior,2,OL38917A,Robert Kreitner
+BOOK00680,Organizational behavior,1,OL381981A,Dorothy Marcic
+BOOK00680,Organizational behavior,2,OL3296061A,Hai
+BOOK00680,Organizational behavior,3,OL3307659A,Joe Seltzer
+BOOK00680,Organizational behavior,4,OL2877248A,Peter Vaill
+BOOK00680,Organizational behavior,5,OL3011854A,Marcic
+BOOK00681,Organizational Behavior,1,OL33897A,Stephen P. Robbins
+BOOK00681,Organizational Behavior,2,OL2654440A,Tim Judge
+BOOK00682,Organizational behavior,1,OL407371A,Gregory Moorhead
+BOOK00683,Managing organizational behavior,1,OL2877531A,Timothy T. Baldwin
+BOOK00684,Organizational behavior,1,OL658641A,Joyce Osland
+BOOK00685,Organizational behavior,1,OL220539A,Judith R. Gordon
+BOOK00686,Organizational behavior,1,OL388469A,Fred Luthans
+BOOK00687,Organizational behavior in health care,1,OL3247664A,Nancy Borkowski
+BOOK00688,Organizational Behavior,1,OL223415A,Ricky W. Griffin
+BOOK00689,Organizational behavior,1,OL725170A,Gregory B. Northcraft
+BOOK00690,Organizational behavior,1,OL387911A,John A. Wagner
+BOOK00690,Organizational behavior,2,OL2655520A,John A. Wagner
+BOOK00690,Organizational behavior,3,OL2639667A,John R. Hollenbeck
+BOOK00691,Organizational behavior,1,OL38917A,Robert Kreitner
+BOOK00692,"Work Motivation in Organizational Behavior, 2nd ed",1,OL395220A,Craig C. Pinder
+BOOK00693,Organizational behavior,1,OL444568A,Joseph E. Champoux
+BOOK00694,Management of Organizational Behavior,1,OL21502A,Kenneth H. Blanchard
+BOOK00695,International Organizational Behavior,1,OL3500659A,Dean McFarlin
+BOOK00695,International Organizational Behavior,2,OL269584A,Paul Sweeney
+BOOK00696,Essentials of Organizational Behavior,1,OL3040839A,Terri A. Scandura
+BOOK00697,Organizational behavior,1,OL128085A,Keith Davis
+BOOK00698,Organizational Behaviour,1,OL833994A,Karlene H. Roberts
+BOOK00698,Organizational Behaviour,2,OL2667355A,Hunt
+BOOK00699,Organizational behavior,1,OL1435358A,Linda K. Stroh
+BOOK00700,Essentials of Organizational Behavior,1,OL1394466A,John J. Wild
+BOOK00700,Essentials of Organizational Behavior,2,OL2649709A,Kenneth L. Wild
+BOOK00700,Essentials of Organizational Behavior,3,OL8152174A,Alverne Ball
+BOOK00700,Essentials of Organizational Behavior,4,OL3327432A,Timothy A. Judge
+BOOK00700,Essentials of Organizational Behavior,5,OL33897A,Stephen P. Robbins
+BOOK00701,Loose Leaf Organizational Behavior,1,OL5450786A,Jason Colquitt
+BOOK00701,Loose Leaf Organizational Behavior,2,OL7807077A,Jeffery LePine
+BOOK00701,Loose Leaf Organizational Behavior,3,OL7807078A,Michael Wesson
+BOOK00702,Managing organizational behavior,1,OL720319A,Henry L. Tosi
+BOOK00703,Organizational behavior,1,OL25174A,Afsaneh Nahavandi
+BOOK00703,Organizational behavior,2,OL2654622A,Ali R. Malekzadeh
+BOOK00704,Organizational Behavior,1,OL3012031A,Newstrom
+BOOK00705,Organizational behavior,1,OL447441A,"Nelson, Debra L."
+BOOK00705,Organizational behavior,2,OL3236149A,Debra L. Nelson
+BOOK00705,Organizational behavior,3,OL3038563A,James Campbell Quick
+BOOK00706,Organizational Behavior,1,OL7136242A,Mary Uhl-Bien
+BOOK00706,Organizational Behavior,2,OL8356072A,Ronald F. Piccolo
+BOOK00706,Organizational Behavior,3,OL7907538A,"Schermerhorn, John R., Jr."
+BOOK00707,International organizational behavior,1,OL389221A,Anne Marie Francesco
+BOOK00707,International organizational behavior,2,OL2653882A,Barry Allen Gold
+BOOK00708,Managerial Economics & Business Strategy,1,OL532682A,Michael R. Baye
+BOOK00708,Managerial Economics & Business Strategy,2,OL2639750A,Michael Baye
+BOOK00709,Your Next Five Moves,1,OL7657408A,Patrick Bet-David
+BOOK00709,Your Next Five Moves,2,OL2629810A,Greg Dinkin
+BOOK00710,The brand gap,1,OL1237664A,Marty Neumeier
+BOOK00711,Developing business strategies,1,OL220279A,David A. Aaker
+BOOK00712,Business strategy,1,OL730657A,John Grieve Smith
+BOOK00713,International business strategy,1,OL492603A,Alain Verbeke
+BOOK00715,Corporate identity,1,OL884162A,Wally Olins
+BOOK00716,Creating valuable business strategies,1,OL433587A,Shiv Sahai Mathur
+BOOK00716,Creating valuable business strategies,2,OL2825852A,Shiv S Mathur
+BOOK00716,Creating valuable business strategies,3,OL882934A,Alfred Kenyon
+BOOK00717,7 Powers,1,OL7987385A,Hamilton Helmer
+BOOK00718,International Business Strategy,1,OL492603A,Alain Verbeke
+BOOK00719,Aligning human resources and business strategy,1,OL265995A,Linda Holbeche
+BOOK00720,Business strategy,1,OL1608050A,Jeremy Kourdi
+BOOK00721,Acting as a business,1,OL237651A,Brian O'Neil
+BOOK00722,Opening Digital Markets,1,OL399968A,Walid Mougayar
+BOOK00723,International Business Strategy,1,OL52310A,Peter J. Buckley
+BOOK00723,International Business Strategy,2,OL2641400A,Pervez Ghauri
+BOOK00724,Swipe to Unlock,1,OL2846407A,Neel Mehta
+BOOK00724,Swipe to Unlock,2,OL7989361A,Aditya Agashe
+BOOK00724,Swipe to Unlock,3,OL7989362A,Parth Detroja
+BOOK00725,Media Telecommunications And Business Strategy,1,OL533987A,Richard A. Gershon
+BOOK00726,Business strategy,1,OL5202953A,David Campbell
+BOOK00727,Taxes and business strategy,1,OL698759A,Myron S. Scholes
+BOOK00727,Taxes and business strategy,2,OL2649358A,Mark A. Wolfson
+BOOK00727,Taxes and business strategy,3,OL2649359A,Merle M. Erickson
+BOOK00727,Taxes and business strategy,4,OL1453625A,Edward L. Maydew
+BOOK00727,Taxes and business strategy,5,OL2649360A,Terry J. Shevlin
+BOOK00727,Taxes and business strategy,6,OL2649361A,Edward Maydew
+BOOK00727,Taxes and business strategy,7,OL2649362A,Terry Shevlin
+BOOK00728,Global Business Strategy,1,OL3391341A,Robin John
+BOOK00729,The New Positioning,1,OL446800A,Jack Trout
+BOOK00730,Managerial Economics and Business Strategy,1,OL7466902A,Michael R. Baye
+BOOK00730,Managerial Economics and Business Strategy,2,OL7696713A,Jeff Prince
+BOOK00731,Business Strategy,1,OL8057057A,J. -C Spender
+BOOK00732,Business strategy and policy,1,OL897135A,Garry D. Smith
+BOOK00733,Demand-Driven Business Strategy,1,OL452035A,Cor Molenaar
+BOOK00734,The 33 Strategies of War,1,OL236414A,Robert Greene
+BOOK00734,The 33 Strategies of War,2,OL3056495A,Don Leslie
+BOOK00735,Taxes and business strategy,1,OL698759A,Myron S. Scholes
+BOOK00735,Taxes and business strategy,2,OL2656470A,Myron Scholes
+BOOK00735,Taxes and business strategy,3,OL2656471A,Mark Wolfson
+BOOK00736,Harvard business review on green business strategy,1,OL2634848A,Harvard Business School
+BOOK00737,Business strategy,1,OL1608050A,Jeremy Kourdi
+BOOK00738,Developing Business Strategies,1,OL220279A,David A. Aaker
+BOOK00739,International business,1,OL828245A,S. Tamer Cavusgil
+BOOK00739,International business,2,OL2866738A,Tamer Cavusgil
+BOOK00739,International business,3,OL768925A,Gary Knight
+BOOK00739,International business,4,OL3367886A,John Riesenberger
+BOOK00740,International Business Strategy and Cross-Cultural Management,1,OL9990496A,Nicole F. Richter
+BOOK00740,International Business Strategy and Cross-Cultural Management,2,OL7080504A,Jesper Strandskov
+BOOK00740,International Business Strategy and Cross-Cultural Management,3,OL9990497A,Sven Hauff
+BOOK00740,International Business Strategy and Cross-Cultural Management,4,OL9990498A,Vasyl Taras
+BOOK00741,Think Like a UX Researcher,1,OL2648409A,David Travis
+BOOK00741,Think Like a UX Researcher,2,OL3154865A,Philip Hodgson
+BOOK00742,Love As a Business Strategy,1,OL12433045A,Mohammad F. Anwar
+BOOK00742,Love As a Business Strategy,2,OL12433046A,Frank E. Danna
+BOOK00742,Love As a Business Strategy,3,OL12433047A,Jeffrey F. Ma
+BOOK00742,Love As a Business Strategy,4,OL12433048A,Christopher J. Pitre
+BOOK00743,Business Strategy,1,OL7954858A,Patrick J. Stroh
+BOOK00744,Understanding business strategy,1,OL2650732A,R. Duane Ireland
+BOOK00745,Digital Business,1,OL5064299A,Annmarie Hanlon
+BOOK00746,Corporate strategy,1,OL1010168A,H. Igor Ansoff
+BOOK00747,Business Strategy,1,OL2732133A,George Stonehouse
+BOOK00747,Business Strategy,2,OL7791069A,Bill Houston
+BOOK00748,Designing Identity,1,OL3056082A,Marc English
+BOOK00749,Managerial economics and business strategy,1,OL532682A,Michael R. Baye
+BOOK00750,e-Business strategies for virtual organizations,1,OL1098126A,Janice Burn
+BOOK00751,Managing Health Care Business Strategy,1,OL8089779A,George B. Moseley III
+BOOK00752,Business strategies for the next-generation network,1,OL2909853A,Nigel Seel
+BOOK00753,European Business Strategy,1,OL926801A,Terry Garrison
+BOOK00754,Business strategy,1,OL441696A,"Campbell, David J."
+BOOK00755,Learning Domain-Driven Design,1,OL9574146A,Vladik Khononov
+BOOK00756,International Business and Global Strategy,1,OL7276987A,Peter Zámborský
+BOOK00757,Instagram Business - Sell on Instagram Customer Psychology : How to Use Instagram for Business : Instagram Business Strategy : Start Business - Instagram,1,OL10681772A,Sobia Publication
+BOOK00758,Financial Accounting,1,OL402967A,Paul D. Kimmel
+BOOK00759,Managerial Accounting,1,OL225203A,Jerry J. Weygandt
+BOOK00760,Business Statistics,1,OL425147A,Ken Black
+BOOK00761,Statistical analysis for decision making,1,OL146690A,Morris Hamburg
+BOOK00762,The managerial decision-making process,1,OL244529A,E. Frank Harrison
+BOOK00763,Judgment in managerial decision making,1,OL236063A,Max H. Bazerman
+BOOK00764,Administrative behavior,1,OL121675A,Herbert Alexander Simon
+BOOK00765,Business ethics,1,OL37425A,O. C. Ferrell
+BOOK00765,Business ethics,2,OL2733865A,John Fraedrich
+BOOK00765,Business ethics,3,OL2640453A,Linda Ferrell
+BOOK00766,Business Analytics,1,OL239935A,S. Christian Albright
+BOOK00766,Business Analytics,2,OL452854A,Wayne L. Winston
+BOOK00767,Judgment and decision making,1,OL422889A,Peter Juslin
+BOOK00767,Judgment and decision making,2,OL2333737A,Henry Montgomery
+BOOK00768,Curriculum improvement,1,OL591198A,Ronald C. Doll
+BOOK00769,The psychology of judgment and decision making,1,OL836577A,Scott Plous
+BOOK00770,Financial accounting,1,OL225203A,Jerry J. Weygandt
+BOOK00771,Financial decision making,1,OL835181A,John J. Hampton
+BOOK00772,Executive decision making,1,OL2189463A,Manley Howe Jones
+BOOK00773,Policy paradox,1,OL2685917A,Deborah Stone
+BOOK00774,Career decision making,1,OL586777A,W. Bruce Walsh
+BOOK00774,Career decision making,2,OL658799A,Samuel H. Osipow
+BOOK00775,An introduction to management science,1,OL78984A,David Ray Anderson
+BOOK00776,Argumentation and debate,1,OL30687A,Austin J. Freeley
+BOOK00776,Argumentation and debate,2,OL2777196A,David L. Steinberg
+BOOK00777,Sales management,1,OL550262A,Thomas N. Ingram
+BOOK00777,Sales management,2,OL2627347A,Raymond W. Laforge
+BOOK00777,Sales management,3,OL2627348A,Ramon A. Avila
+BOOK00777,Sales management,4,OL2627349A,"Charles H., Jr Schwepker"
+BOOK00777,Sales management,5,OL2627350A,Michael R. Williams
+BOOK00778,Financial Accounting,1,OL402967A,Paul D. Kimmel
+BOOK00779,Decision making,1,OL129765A,Irving Lester Janis
+BOOK00780,Data analysis & decision making with Microsoft Excel,1,OL239935A,S. Christian Albright
+BOOK00780,Data analysis & decision making with Microsoft Excel,2,OL2776999A,Wayne Winston
+BOOK00780,Data analysis & decision making with Microsoft Excel,3,OL3322990A,Christopher J. Zappe
+BOOK00781,Financial Accounting,1,OL402967A,Paul D. Kimmel
+BOOK00781,Financial Accounting,2,OL7447258A,Donald E. Kieso
+BOOK00782,A primer on decision making,1,OL234151A,James G. March
+BOOK00783,"Management Decision-Making, Big Data and Analytics",1,OL8298977A,Simone Gressel
+BOOK00783,"Management Decision-Making, Big Data and Analytics",2,OL3118694A,David J. Pauleen
+BOOK00783,"Management Decision-Making, Big Data and Analytics",3,OL8298978A,Nazim Taskin
+BOOK00784,Business ethics,1,OL391613A,Laura Pincus Hartman
+BOOK00784,Business ethics,2,OL2638636A,Laura P. Hartman
+BOOK00784,Business ethics,3,OL218033A,Joseph R. DesJardins
+BOOK00785,DECISION MAKING,1,OL2626708A,Irving L. Janis
+BOOK00786,Data Analytics and Decision Making,1,OL10366460A,Ali AbdulHussein
+BOOK00787,Multiple criteria decision making,1,OL1434833A,Milan Zeleny
+BOOK00788,Nursing Fundamentals,1,OL2852718A,Rick Daniels
+BOOK00789,Fear of Missing Out,1,OL7609129A,Patrick J. McGinnis
+BOOK00790,Accounting for Decision Making and Control,1,OL542424A,Jerold L. Zimmerman
+BOOK00790,Accounting for Decision Making and Control,2,OL2865625A,Zimmerman
+BOOK00790,Accounting for Decision Making and Control,3,OL3401020A,Will Yancey
+BOOK00791,Accounting for managers,1,OL6512827A,Paul M. Collier
+BOOK00792,Radical Uncertainty,1,OL4438445A,Mervyn King
+BOOK00792,Radical Uncertainty,2,OL676066A,John Kay
+BOOK00793,Managerial Accounting,1,OL225203A,Jerry J. Weygandt
+BOOK00793,Managerial Accounting,2,OL8173710A,Ibrahim M. Aly
+BOOK00793,Managerial Accounting,3,OL7447258A,Donald E. Kieso
+BOOK00793,Managerial Accounting,4,OL402967A,Paul D. Kimmel
+BOOK00794,Business ethics,1,OL37425A,O. C. Ferrell
+BOOK00795,Judgment and Decision-Making,1,OL7773959A,Nancy S. Kim
+BOOK00796,Holistic management,1,OL236843A,Allan Savory
+BOOK00796,Holistic management,2,OL3041173A,Jody Butterfield
+BOOK00797,Creative decision making,1,OL897567A,H. B. Gelatt
+BOOK00798,Economics,1,OL119802A,George Leland Bach
+BOOK00799,The ethical decision-making manual for helping professionals,1,OL395036A,Sarah O. Steinman
+BOOK00800,AN INTRODUCTION TO MANAGEMENT SCIENCE,1,OL78984A,David Ray Anderson
+BOOK00800,AN INTRODUCTION TO MANAGEMENT SCIENCE,2,OL2778455A,Dennis J. Sweeney
+BOOK00800,AN INTRODUCTION TO MANAGEMENT SCIENCE,3,OL2778456A,Thomas Arthur Williams
+BOOK00800,AN INTRODUCTION TO MANAGEMENT SCIENCE,4,OL7501910A,Jeffrey D. Camm
+BOOK00800,AN INTRODUCTION TO MANAGEMENT SCIENCE,5,OL7501911A,James J. Cochran
+BOOK00801,Financial Accounting,1,OL402967A,Paul D. Kimmel
+BOOK00801,Financial Accounting,2,OL7447258A,Donald E. Kieso
+BOOK00802,Accounting,1,OL8126027A,Jacqueline Birt
+BOOK00802,Accounting,2,OL8126028A,Keryn Chalmers
+BOOK00802,Accounting,3,OL16223750A,Suzanne Byrne
+BOOK00802,Accounting,4,OL3537217A,Albie Brooks
+BOOK00802,Accounting,5,OL918315A,Judy Oliver
+BOOK00803,Decision making and problem solving strategies,1,OL2729090A,John Adair
+BOOK00804,Managerial accounting,1,OL534204A,Ray H. Garrison
+BOOK00804,Managerial accounting,2,OL2639592A,"Eric W., Phd Noreen"
+BOOK00804,Managerial accounting,3,OL2638699A,Eric Noreen
+BOOK00804,Managerial accounting,4,OL1436960A,Peter C. Brewer
+BOOK00805,An Introduction to Management Science,1,OL78984A,David Ray Anderson
+BOOK00806,Improve Your Communication Skills,1,OL2178985A,Alan Barker
+BOOK00807,Effective business communications,1,OL544400A,Herta A. Murphy
+BOOK00808,Theories of human communication,1,OL219084A,Stephen W. Littlejohn
+BOOK00808,Theories of human communication,2,OL228612A,Karen A. Foss
+BOOK00809,Nonviolent Communication,1,OL243612A,Marshall B. Rosenberg
+BOOK00809,Nonviolent Communication,2,OL39038A,Deepak Chopra
+BOOK00809,Nonviolent Communication,3,OL9735554A,Magiarí Díaz Díaz
+BOOK00809,Nonviolent Communication,4,OL9735555A,Alan Rafael Seid Llamas
+BOOK00809,Nonviolent Communication,5,OL2763830A,Rosenberg
+BOOK00810,Introduction to communicative disorders,1,OL226490A,M. N. Hegde
+BOOK00811,Wireless communications,1,OL342495A,Theodore S. Rappaport
+BOOK00811,Wireless communications,2,OL2974978A,Rappaport
+BOOK00812,Data Communications and Networking,1,OL39286A,Behrouz A. Forouzan
+BOOK00812,Data Communications and Networking,2,OL2633498A,Catherine Ann Coombs
+BOOK00812,Data Communications and Networking,3,OL2638690A,Sophia Chung Fegan
+BOOK00813,Corporate communication,1,OL397900A,Paul A. Argenti
+BOOK00814,Electronic communication,1,OL546514A,Robert L. Shrader
+BOOK00815,Introducing communication theory,1,OL31442A,Richard L. West
+BOOK00815,Introducing communication theory,2,OL398394A,Lynn H. Turner
+BOOK00815,Introducing communication theory,3,OL2640350A,Richard West
+BOOK00815,Introducing communication theory,4,OL1382017A,Lynn Turner
+BOOK00816,An introduction to communication studies,1,OL5507684A,Sheila Steinberg
+BOOK00817,Communication Skills,1,OL2939178A,Sanjay Kumar
+BOOK00817,Communication Skills,2,OL8041523A,Pushp Lata
+BOOK00818,Looking out/looking in,1,OL35572A,Ronald B. Adler
+BOOK00818,Looking out/looking in,2,OL1961519A,Ronald Adler
+BOOK00818,Looking out/looking in,3,OL3350407A,MARY O WIEMAN
+BOOK00818,Looking out/looking in,4,OL3372657A,Ronald Adler
+BOOK00818,Looking out/looking in,5,OL3383392A,Ron Adler
+BOOK00818,Looking out/looking in,6,OL4593553A,RONALD ADLER
+BOOK00818,Looking out/looking in,7,OL7232157A,Ronald B. Adler
+BOOK00818,Looking out/looking in,8,OL7582287A,Ronald B. Adler
+BOOK00818,Looking out/looking in,9,OL2664466A,Russell F. Proctor II
+BOOK00818,Looking out/looking in,10,OL8032569A,"Proctor, Russell F., II"
+BOOK00818,Looking out/looking in,11,OL2627896A,Neil Towne
+BOOK00819,Electronic communications systems,1,OL78865A,Wayne Tomasi
+BOOK00820,The slave community,1,OL1862774A,John W. Blassingame
+BOOK00820,The slave community,2,OL5017718A,John W. Blassingame
+BOOK00821,Human communication,1,OL22053A,Stewart L. Tubbs
+BOOK00822,Business Communication,1,OL218771A,Mary Ellen Guffey
+BOOK00823,Communicating effectively,1,OL386326A,Saundra Hybels
+BOOK00824,Communication between cultures,1,OL27525A,Larry A. Samovar
+BOOK00824,Communication between cultures,2,OL6744128A,Portar McDaniel Samovar
+BOOK00824,Communication between cultures,3,OL2777276A,Richard E. Porter
+BOOK00825,Imagined communities,1,OL193997A,Benedict Anderson
+BOOK00826,A First Look at Communication Theory,1,OL25012A,Emory A. Griffin
+BOOK00827,Today's isms,1,OL31351A,Alan O. Ebenstein
+BOOK00827,Today's isms,2,OL2649381A,Alan Ebenstein
+BOOK00827,Today's isms,3,OL2274431A,William Ebenstein
+BOOK00827,Today's isms,4,OL2656604A,EBENSTEIN FOGE
+BOOK00827,Today's isms,5,OL3350700A,W. Ebenstein
+BOOK00827,Today's isms,6,OL3370953A,Ebenstein & Fogelman
+BOOK00827,Today's isms,7,OL5717154A,William Ebenstein
+BOOK00828,Interplay,1,OL35572A,Ronald B. Adler
+BOOK00829,Interpersonal communication,1,OL21503A,Sarah Trenholm
+BOOK00829,Interpersonal communication,2,OL1879979A,Arthur Jensen
+BOOK00830,Business communication today,1,OL2650392A,Courtland L. Bovée
+BOOK00831,Fashion as communication,1,OL226398A,Malcolm Barnard
+BOOK00832,Communication,1,OL230865A,William J. Seiler
+BOOK00832,Communication,2,OL2672310A,Melissa L. Beall
+BOOK00833,Visual Communication,1,OL454516A,Paul Martin Lester
+BOOK00834,Electronic communication systems,1,OL541535A,Roy Blake
+BOOK00835,Digital communications,1,OL395659A,John G. Proakis
+BOOK00836,"Communication Skills, Second Edition",1,OL2939178A,Sanjay Kumar
+BOOK00836,"Communication Skills, Second Edition",2,OL8041523A,Pushp Lata
+BOOK00837,Digital and analog communication systems,1,OL536194A,Leon W. Couch
+BOOK00838,Technical Communication,1,OL387775A,John M. Lannon
+BOOK00839,Communicating with strangers,1,OL219702A,William B. Gudykunst
+BOOK00839,Communicating with strangers,2,OL1121414A,Young Yun Kim
+BOOK00839,Communicating with strangers,3,OL2638683A,William Gudykunst
+BOOK00840,Communication Theories,1,OL223621A,Katherine Miller
+BOOK00841,Nonverbal communication in human interaction,1,OL444993A,Mark L. Knapp
+BOOK00841,Nonverbal communication in human interaction,2,OL1239241A,Judith A. Hall
+BOOK00842,Business and administrative communication,1,OL385983A,Kitty O. Locker
+BOOK00842,Business and administrative communication,2,OL3357718A,Donna S. Kienzler
+BOOK00842,Business and administrative communication,3,OL2635513A,Locker
+BOOK00843,The media of mass communication 11th edition,1,OL229901A,John Vivian
+BOOK00844,Nonverbal Communication,1,OL886345A,Albert Mehrabian
+BOOK00845,Modern digital and analogue communication systems,1,OL220594A,B. P. Lathi
+BOOK00845,Modern digital and analogue communication systems,2,OL2870600A,Zhi Ding
+BOOK00846,Business communication,1,OL385983A,Kitty O. Locker
+BOOK00846,Business communication,2,OL2635636A,Stephen Kyo Kaczmarek
+BOOK00846,Business communication,3,OL2640011A,Kitty Locker
+BOOK00847,Gendered Lives,1,OL21137A,Julia T. Wood
+BOOK00848,The dynamics of mass communication,1,OL26076A,Joseph R. Dominick
+BOOK00849,History Of Communication Study,1,OL4331371A,Everett M. Rogers
+BOOK00850,Satellite communications,1,OL1122332A,Timothy Pratt
+BOOK00850,Satellite communications,2,OL2738451A,Charles W. Bostian
+BOOK00850,Satellite communications,3,OL2738452A,Jeremy E. Allnutt
+BOOK00851,Communication 2000,1,OL2778097A,Agency for Instructional Technology
+BOOK00853,Communicating at work,1,OL35572A,Ronald B. Adler
+BOOK00853,Communicating at work,2,OL4318331A,Adler; Elmhorst
+BOOK00853,Communicating at work,3,OL7582287A,Ronald B. Adler
+BOOK00853,Communicating at work,4,OL2639424A,Jeanne Marquardt Elmhorst
+BOOK00853,Communicating at work,5,OL7701767A,Kristen Lucas Assistant Professor Ph.D.
+BOOK00854,Multimedia communications,1,OL452098A,Fred Halsall
+BOOK00855,Mass communication theory,1,OL27404A,Stanley J. Baran
+BOOK00855,Mass communication theory,2,OL1655495A,Dennis K. Davis
+BOOK00856,Emotional Intelligence,1,OL224907A,Daniel Goleman
+BOOK00857,Emotional Intelligence 2.0,1,OL1433906A,Travis Bradberry
+BOOK00857,Emotional Intelligence 2.0,2,OL3010389A,Jean Greaves
+BOOK00857,Emotional Intelligence 2.0,3,OL7981494A,Jean Greaves Travis Bradberry
+BOOK00857,Emotional Intelligence 2.0,4,OL619876A,Tom Parks
+BOOK00858,Emotional Intelligence,1,OL11048858A,Daniela GOLEMAN
+BOOK00859,Working with Emotional Intelligence,1,OL224907A,Daniel Goleman
+BOOK00860,Emotional Intelligence,1,OL1568927A,Christine Wilding
+BOOK00861,Emotional development and emotional intelligence,1,OL2877610A,Peter Salovey
+BOOK00862,Emotional Intelligence : How to Improve Emotional Intelligence,1,OL11306985A,Kati Haylock
+BOOK00863,Great emotional intelligence,1,OL1568927A,Christine Wilding
+BOOK00864,Emotional intelligence,1,OL8447426A,"Walton, David (Psychologist)"
+BOOK00865,The brain and emotional intelligence,1,OL224907A,Daniel Goleman
+BOOK00866,Emotional Intelligence Habits,1,OL1433906A,Travis Bradberry
+BOOK00867,Raising your emotional intelligence,1,OL384616A,Jeanne Segal
+BOOK00868,Building emotional intelligence,1,OL530780A,Linda Lantieri
+BOOK00869,Emotional intelligence 101,1,OL387802A,Gerald Matthews
+BOOK00870,Emotional Intelligence : 3 Books in 1,1,OL10170844A,Emotional Pathway
+BOOK00871,Primal leadership : realizing the power of emotional intelligence,1,OL224907A,Daniel Goleman
+BOOK00871,Primal leadership : realizing the power of emotional intelligence,2,OL2828055A,Annie McKee
+BOOK00871,Primal leadership : realizing the power of emotional intelligence,3,OL401772A,Richard E. Boyatzis
+BOOK00872,Emotional intelligence,1,OL3477155A,Jill Dann
+BOOK00873,Emotional Intelligence,1,OL11026215A,Tanvir Shakil
+BOOK00874,Emotional intelligence,1,OL1520541A,Ralf Schulze
+BOOK00874,Emotional intelligence,2,OL3288778A,Richard D. Roberts
+BOOK00875,Who's Talking?,1,OL2795790A,Chris Hinton
+BOOK00876,Emotional Intelligence,1,OL9215235A,Modern Psychology Publishing
+BOOK00877,Emotional Intelligence for Dummies,1,OL2804175A,Steven J. Stein
+BOOK00878,Emotional Intelligence at Work,1,OL1482502A,"Singh, Dalip"
+BOOK00879,The emotional intelligence quick book,1,OL1433906A,Travis Bradberry
+BOOK00880,Emotional intelligence at work,1,OL27373A,Hendrie Weisinger
+BOOK00881,The language of emotional intelligence,1,OL384616A,Jeanne Segal
+BOOK00882,HBR's 10 must reads on emotional intelligence,1,OL3203461A,Harvard Business Review Press
+BOOK00883,Selling with emotional intelligence,1,OL1428099A,Mitch Anthony
+BOOK00884,Teaching with emotional intelligence,1,OL1425182A,Alan Mortiboys
+BOOK00885,Emotional intelligence,1,OL9195760A,Helen C. Bryant
+BOOK00886,Achieving emotional literacy,1,OL391748A,Claude Steiner
+BOOK00886,Achieving emotional literacy,2,OL2629173A,Paul Perry
+BOOK00887,HBR Guide to Emotional Intelligence,1,OL3399460A,HBR
+BOOK00888,Manipulation Techniques,1,OL8387486A,Daniel Brain
+BOOK00889,Emotional Intelligence,1,OL7949151A,James W. Williams
+BOOK00890,Emotional Intelligence (Life Balance),1,OL2664659A,Linda Wasmer Andrews
+BOOK00891,Bedtime Stories For Kids,1,OL9265506A,Emotional Intelligence Guided
+BOOK00892,What we know about emotional intelligence,1,OL223996A,Moshe Zeidner
+BOOK00893,Applying emotional intelligence,1,OL3138260A,Joseph Ciarrochi
+BOOK00893,Applying emotional intelligence,2,OL1436314A,"Mayer, John D."
+BOOK00894,Change Your Life With Emotional Intelligence,1,OL1568927A,Christine Wilding
+BOOK00895,Emotional Intelligence Mastery 2. 0,1,OL11043811A,Emotional Intelligence Academy
+BOOK00896,La iInteligencia emocional,1,OL224907A,Daniel Goleman
+BOOK00897,Emotional Intelligence,1,OL1158001A,Daniel Coleman
+BOOK00898,Emotional Intelligence,1,OL1008395A,Margaret Chapman
+BOOK00899,Emotional Intelligence,1,OL3094702A,Ryan James
+BOOK00900,Master Your Emotions,1,OL14948835A,Eric Robertson
+BOOK00901,Emotional Intelligence,1,OL2651699A,Darwin B. Nelson
+BOOK00901,Emotional Intelligence,2,OL479991A,Gary R. Low
+BOOK00902,Communicate with emotional intelligence,1,OL1357185A,John Eaton
+BOOK00902,Communicate with emotional intelligence,2,OL2879317A,Roy Johnson
+BOOK00903,Emotional Intelligence Secrets,1,OL11121520A,Tyler Dawson
+BOOK00904,The Science of Self Talk,1,OL7607098A,Ian Tuhovsky
+BOOK00905,Primal Leadership,1,OL224907A,Daniel Goleman
+BOOK00905,Primal Leadership,2,OL401772A,Richard E. Boyatzis
+BOOK00905,Primal Leadership,3,OL2828055A,Annie McKee
+BOOK00906,Innovation Management,1,OL385663A,Allan Afuah
+BOOK00907,Innovation Management and New Product Development,1,OL3083143A,Paul Trott
+BOOK00908,Strategic Innovation Management,1,OL2729737A,Joe Tidd
+BOOK00908,Strategic Innovation Management,2,OL7504235A,John R. Bessant
+BOOK00909,Innovation Management,1,OL2476984A,Keith Goffin
+BOOK00909,Innovation Management,2,OL1521017A,"Mitchell, Rick"
+BOOK00910,Creativity and strategic innovation management,1,OL590573A,Malcolm Goodman
+BOOK00911,Innovation Management,1,OL7208428A,Mark Dodgson
+BOOK00912,The Oxford Handbook Of Innovation Management,1,OL834892A,Mark Dodgson
+BOOK00913,Innovation management,1,OL2476984A,Keith Goffin
+BOOK00913,Innovation management,2,OL2952465A,Rick Mitchell
+BOOK00914,Best Practice,1,OL27182A,Mohamed Zairi
+BOOK00915,The Innovator's Dilemma,1,OL240826A,Clayton M. Christensen
+BOOK00915,The Innovator's Dilemma,2,OL9181563A,L J Ganser
+BOOK00915,The Innovator's Dilemma,3,OL3056495A,Don Leslie
+BOOK00916,SAP Billing and Revenue Innovation Management,1,OL9988316A,Chaitanaya Desai
+BOOK00916,SAP Billing and Revenue Innovation Management,2,OL9988317A,Sheikna Kulam
+BOOK00916,SAP Billing and Revenue Innovation Management,3,OL9988318A,Chun Wei Ooi
+BOOK00916,SAP Billing and Revenue Innovation Management,4,OL9988319A,Clement Sanjivi
+BOOK00916,SAP Billing and Revenue Innovation Management,5,OL9988320A,Andreas Tan
+BOOK00917,Innovation Management:,1,OL9745658A,Jan van den Ende
+BOOK00918,Creativity for innovation management,1,OL7526080A,Ina Goller
+BOOK00919,Innovation management,1,OL578250A,Shlomo Maital
+BOOK00919,Innovation management,2,OL2842375A,D V R Seshadri
+BOOK00920,Innovation Management,1,OL3410106A,Pervaiz Ahmed
+BOOK00920,Innovation Management,2,OL1398890A,Pervaiz K. Ahmed
+BOOK00921,Revolution of Innovation Management,1,OL7084372A,Alexander Brem
+BOOK00921,Revolution of Innovation Management,2,OL225185A,Eric Viardot
+BOOK00922,Innovation management and new product development,1,OL3083143A,Paul Trott
+BOOK00923,Global innovation management,1,OL3235516A,J. Christopher Westland
+BOOK00924,Product Innovation Management,1,OL7349537A,Stefano Biazzo
+BOOK00924,Product Innovation Management,2,OL9575127A,Roberto Filippini
+BOOK00925,Innovation Management,1,OL7356617A,Carolina Machado
+BOOK00925,Innovation Management,2,OL6582933A,J. Paulo Davim
+BOOK00926,Contextual Innovation Management,1,OL6862634A,Patrick van der Duin
+BOOK00926,Contextual Innovation Management,2,OL7888682A,Roland Ortt
+BOOK00927,Routledge Companion to Innovation Management,1,OL4155296A,Jin Chen
+BOOK00927,Routledge Companion to Innovation Management,2,OL7112037A,Poh Kam Wong
+BOOK00927,Routledge Companion to Innovation Management,3,OL225185A,Eric Viardot
+BOOK00927,Routledge Companion to Innovation Management,4,OL7084372A,Alexander Brem
+BOOK00928,Corporate Foresight and Innovation Management,1,OL8469889A,David Sarpong
+BOOK00928,Corporate Foresight and Innovation Management,2,OL4114926A,Dirk Meissner
+BOOK00929,Technology and Innovation Management,1,OL10068582A,Sanjiva Shankar Dubey
+BOOK00930,Encyclopedia of technology and innovation management,1,OL836169A,V. K. Narayanan
+BOOK00931,Information for Innovation,1,OL389509A,Stuart Macdonald
+BOOK00932,Innovation and Entrepreneurship,1,OL4345625A,Peter F. Drucker
+BOOK00933,Innovative management of atrial fibrillation,1,OL541941A,David Schwartzman
+BOOK00934,Crest of the Innovation Management Research Wave,1,OL7899424A,Marcus Tynnhammar
+BOOK00935,Innovation Management,1,OL14995058A,Rasmus Koss Hartmann
+BOOK00936,Intellectual property and innovation management in small firms,1,OL5642597A,Robert Blackburn
+BOOK00937,Total Innovative Management Excellence,1,OL2633920A,H. James Harrington
+BOOK00937,Total Innovative Management Excellence,2,OL7900742A,Frank Voehl
+BOOK00938,"Managing research, development and innovation",1,OL3751286A,Ravi Jain
+BOOK00938,"Managing research, development and innovation",2,OL2671747A,Harry C. Triandis
+BOOK00939,Innovation Management in Robot Society,1,OL9730645A,Kristian Wasén
+BOOK00940,Innovative Management Education Ecosystem,1,OL10520311A,Jordi Diaz
+BOOK00940,Innovative Management Education Ecosystem,2,OL7106773A,Daphne Halkias
+BOOK00940,Innovative Management Education Ecosystem,3,OL8156259A,Paul W. Thurman
+BOOK00941,Evolution of Innovation Management,1,OL3940857A,A. Brem
+BOOK00941,Evolution of Innovation Management,2,OL9713297A,E. Viardot
+BOOK00942,Collaborative Leadership and Innovation,1,OL10374910A,Elis Carlström
+BOOK00943,The management of innovation,1,OL952123A,Tom R. Burns
+BOOK00943,The management of innovation,2,OL7411684A,G. M. Stalker
+BOOK00944,Open Labs and Innovation Management,1,OL6931396A,Valérie Mérindol
+BOOK00944,Open Labs and Innovation Management,2,OL10455852A,David W. Versailles
+BOOK00945,Critical Perspectives on Innovation Management,1,OL9355361A,Patryk Dziurski
+BOOK00946,"Innovation Management and New Product Development for Engineers, Volume I",1,OL2680351A,Rob Dekkers
+BOOK00947,Sustained Innovation Management,1,OL3392850A,Gaston Trauffler
+BOOK00948,Innovative Management and Business Practices in Asia,1,OL9987515A,Patricia Ordoñez de
+BOOK00948,Innovative Management and Business Practices in Asia,2,OL5318188A,Xi Zhang
+BOOK00948,Innovative Management and Business Practices in Asia,3,OL7770816A,Kwok Tai Chui
+BOOK00949,Innovation Management and Growth in Emerging Economies,1,OL9986896A,Heather C. Webb
+BOOK00949,Innovation Management and Growth in Emerging Economies,2,OL9362244A,Wendy Wu
+BOOK00949,Innovation Management and Growth in Emerging Economies,3,OL10014892A,Hussain Al Numairy
+BOOK00950,Innovation Management for a Resilient Digital Economy,1,OL3237212A,Miltiadis D. Lytras
+BOOK00950,Innovation Management for a Resilient Digital Economy,2,OL15010118A,Patricia Ordonez
+BOOK00950,Innovation Management for a Resilient Digital Economy,3,OL13696133A,Afnan Alkhaldi
+BOOK00950,Innovation Management for a Resilient Digital Economy,4,OL13696132A,Andreea Claudia Serban

@@ -1,0 +1,26 @@
+book_id,title,isbn,isbn_type,wikidata_qid,wikidata_label,language_qid,language_label,instance_qid,instance_label,query_status
+BOOK00001,Principle-Centered Leadership,9780028639123,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00002,Leadership in Organizations,9780130323125,ISBN-13,,,,,,,error: HTTPError
+BOOK00004,Spiritual leadership,9780551006515,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00005,Leadership,9780761919254,ISBN-13,,,,,,,error: HTTPError
+BOOK00006,The 21 Irrefutable Laws of Leadership,9780785261360,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00007,Leadership,9780761925668,ISBN-13,,,,,,,no_match
+BOOK00008,Leadership and performance beyond expectations,9780029018101,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00009,A Higher Loyalty,9781250192455,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00010,Leadership and Self Deception,9780141030067,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00011,Leadership,9780367374822,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00012,Leadership,9780072445299,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00013,Lincoln on Leadership,9780446394598,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00014,Leadership,9780060105884,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00015,Leadership,9780324041668,ISBN-13,,,,,,,error: HTTPError
+BOOK00016,The leadership challenge,9780470403822,ISBN-13,,,,,,,no_match
+BOOK00017,ORGANIZATIONAL CULTURE AND LEADERSHIP,9780470244951,ISBN-13,,,,,,,no_match
+BOOK00018,Leadership,9780078112652,ISBN-13,,,,,,,no_match
+BOOK00019,Leadership In Turbulent Times,9780241300718,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00020,Leadership,9780881335330,ISBN-13,,,,,,,error: HTTPError
+BOOK00021,Transformational Leadership,9780805847611,ISBN-13,,,,,,,no_match
+BOOK00022,Tribal leadership,9780061251306,ISBN-13,,,,,,,no_match
+BOOK00023,Tough Minded Leadership,9780814459010,ISBN-13,,,,,,,no_match
+BOOK00024,Transforming Leadership,9780786126415,ISBN-13,,,,,,,error: ReadTimeout
+BOOK00025,Leadership,9780786251636,ISBN-13,,,,,,,no_match
+BOOK00026,Transformation leadership,9780805847628,ISBN-13,,,,,,,no_match

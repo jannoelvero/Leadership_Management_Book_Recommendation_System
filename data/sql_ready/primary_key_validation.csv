@@ -1,0 +1,7 @@
+table,primary_key,duplicate_keys,missing_keys
+books,book_id,0,0
+authors,author_id,0,0
+categories,category_id,0,0
+book_editions,edition_id,0,0
+data_sources,data_source_id,0,0
+source_records,source_record_id,0,0

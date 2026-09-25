@@ -1,0 +1,6 @@
+file,column,rows,non_null,meaningful_values,coverage_pct
+openlibrary_integrated.csv,languages,950,950,902,94.95
+openlibrary_book_edition_intelligence.csv,known_publication_languages_display,948,900,900,94.94
+openlibrary_book_edition_intelligence.csv,known_publication_language_count,948,948,948,100.0
+openlibrary_book_edition_intelligence.csv,known_publication_language_codes,948,948,900,94.94
+openlibrary_book_edition_intelligence.csv,known_publication_languages,948,948,900,94.94

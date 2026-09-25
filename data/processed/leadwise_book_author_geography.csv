@@ -1,0 +1,467 @@
+book_id,validated_geographic_author_count,validated_geographic_author_names,author_citizenship_evidence,author_birthplace_evidence,author_identity_evidence_tiers,author_geography_provenance
+BOOK00001,1,Stephen R. Covey,United States,Salt Lake City,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00002,1,Gary A. Yukl,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00006,1,John C. Maxwell,United States,Garden City,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00008,1,Bernard M. Bass,United States,The Bronx,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00009,3,James Comey | James B. Comey,United States,Yonkers,strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00010,1,Dick Ruhe,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00012,2,Richard L. Hughes | Richard Hughes,United Kingdom,Weybridge,probable_secondary | identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00013,1,Donald T. Phillips,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00014,1,James MacGregor Burns,United States,Melrose,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00015,1,Robert N. Lussier,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00016,3,James M. Kouzes | Barry Z. Posner | Barry Posner,United States,,identifier_verified | probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00017,1,Peter Schein,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00018,1,Richard L. Hughes,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00019,2,Doris Kearns Goodwin,United States,Brooklyn,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00021,2,Bernard M. Bass | Ronald E. Riggio,United States,The Bronx,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00022,3,Dave Logan | John King | Halee Fischer-Wright,United States | United Kingdom,Slough,strong_secondary | identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00023,1,Joe D. Batten,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00024,1,James MacGregor Burns,United States,Melrose,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00026,2,Bernard M. Bass | Ronald E. Riggio,United States,The Bronx,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00027,1,Patrick Lencioni,United States,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00028,1,John Heider,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00029,2,James M. Kouzes | Barry Z. Posner,United States,,identifier_verified | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00030,1,Lee G. Bolman,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00032,2,David A. Aaker | Erich Joachimsthaler,United States,Fargo,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00033,2,Stephen P. Gordon | Jovita M. Ross-Gordon,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00034,1,Simon Western,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00035,1,Jocko Willink,United States,New England,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00036,1,Henry Kissinger,German Reich | United States,Fürth,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00037,2,Bernard M. Bass | Bruce J. Avolio,United States,The Bronx,strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00039,2,Ann Lieberman | Lynne Miller,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00043,1,Kenneth H. Blanchard,United States,Orange,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00044,1,Richard A. Gorton,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00045,1,Max DePree,United States,Zeeland,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00047,1,Robin S. Sharma,Canada | Mauritius,Port Hawkesbury,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00048,1,David Cottrell,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00049,1,Marshall Loeb,United States,Chicago,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00051,1,Allan A. Glatthorn,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00052,1,Bernard M. Bass,United States,The Bronx,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00053,1,Bruce J. Avolio,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00054,1,Bruce J. Avolio,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00057,1,Karen Lawson,United States,East Liverpool,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00059,1,Ellen Van Velsor,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00061,1,Bruce J. Avolio,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00066,1,Terry F. Buss,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00068,1,Ellen Van Velsor,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00070,1,Dirk van Dierendonck,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00072,2,Steve Kempster | Sue Smith,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00074,1,Manuel London,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00076,3,Shuang Ren | Robert Wood | Ying Zhu,United States,Concord,strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00077,1,Wendy Wagner,United States,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00078,1,Ronald E. Riggio,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00079,1,Carol A. Mullen,United States,Halifax,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00081,1,Manuel London,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00082,1,Janine Williams,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00083,1,Bruce J. Avolio,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00086,1,Ted Johns,Canada,Seaforth,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00089,1,Marshall Goldsmith,United States,Valley Station,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00092,1,Alma Harris,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00094,1,Christopher Mabey,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00099,1,Albert Ellis,United States,Pittsburgh,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00100,1,Elliott Jaques,Canada | United States,Toronto,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00101,1,Chris Argyris,United States,Newark,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00104,2,Peter F. Drucker | Joseph A. Maciariello,United States | Austria,Vienna,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00105,1,M. Scott Norton,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00109,1,Marvin Bower,United States,Cincinnati,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00110,1,Nathan Axelrod,Israel | Soviet Union,Dubroŭna,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00111,1,abraham holtzman,United States,Detroit,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00113,1,James Frederick Bender,,Dayton,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00114,1,Marvin Bower,United States,Cincinnati,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00119,1,Margaret Jane Wyszomirski,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00127,1,Richard D. Heimovics,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00130,1,Ludger Helms,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00133,1,Marvin Bower,United States,Cincinnati,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00134,1,Stephen J. Zaccaro,United States,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00135,1,Abraham Holtzman,United States,Detroit,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00140,1,Ordway Tead,United States,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00144,1,JAMES FREDERICK BENDER,,Dayton,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00149,1,Graham Kelly,United Kingdom,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00150,1,Doris Kearns Goodwin,United States,Brooklyn,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00158,2,James M. Kouzes | Barry Z. Posner,United States,,identifier_verified | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00160,1,Christine Johnson McPhail,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00166,1,Graham Little,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00167,1,Simon Sinek,United Kingdom,Wimbledon,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00173,1,James M. Kouzes,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00174,1,Richard L. Nolan,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00178,1,Peter Fleming,United Kingdom,London,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00184,1,Patrick Lencioni,United States,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00186,1,David Parkes,United States,Sidcup,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00188,1,Patrick Lencioni,United States,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00189,3,Stanley A. McChrystal | Tantum Collins | Chris Fussell,United States,Fort Leavenworth,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00190,1,Richard L. Nolan,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00193,1,Bernard M. Bass,United States,The Bronx,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00195,1,Carolyn M. Shields,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00196,1,Leighton Ford,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00197,1,Glenn Walter,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00199,1,Carolyn M. Shields,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00200,1,Dennis Tourish,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00204,1,Gary A. Yukl,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00209,1,Karen Sobel Lojeski,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00212,1,Miltiadis D. Lytras,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00223,2,Issa M. Saleh | Myint Swe Khine,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00234,1,Robert K. Greenleaf,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00235,1,Kent M. Keith,United States,Brooklyn,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00236,1,Robert K. Greenleaf,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00239,3,Geoff Watts | Mike Cohn | Esther Derby,United States,Anaheim | Duluth,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00240,1,Alfons Trompenaars,Kingdom of the Netherlands | France,Amsterdam,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00243,1,Larry C. Spears,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00246,1,Dirk van Dierendonck,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00248,1,Larry C. Spears,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00250,1,Holly Spence,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00256,1,James C. Hunter,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00267,1,James C. Hunter,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00281,1,Philip Kotler,United States,Chicago,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00282,2,Kenneth C. Laudon | Jane Price Laudon,,,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00283,2,Philip Kotler | Kevin Lane Keller,United States,Chicago,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00284,1,Gary Dessler,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00285,1,Barry Render,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00289,1,John le Carré,United Kingdom | Ireland,Poole,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00290,2,Alan B. Eisner | Seung-Hyun Lee,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00292,1,Andrew S. Grove,United States | Hungary,Budapest | United States,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00293,2,Eugene F. Brigham | Michael C. Ehrhardt,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00294,2,Shane R. Premeaux | Joseph J. Martocchio,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00296,2,Thomas L. Wheelen | J. David Hunger,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00297,1,Peter F. Drucker,United States | Austria,Vienna,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00298,1,Gary Dessler,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00301,1,Frederick Winslow Taylor,United States,Germantown,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00302,1,Paul Hersey,United States,Brooklyn,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00304,2,Arthur A. Thompson | Alonzo J. Strickland,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00305,1,Lee J. Krajewski,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00306,2,Gareth R. Jones | Jennifer M. George,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00307,4,David A. Whetten | Kim S. Cameron | DAVID A. WHETTEN,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00308,1,Harold Koontz,United States,Findlay,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00309,1,Project Management Institute,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00311,1,David A. Aaker,United States,Fargo,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00313,1,Barton A. Weitz,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00314,1,Donald J. Bowersox,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00315,2,Kenneth H. Blanchard | Spencer Johnson,United States,Orange | Watertown,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00316,1,Robert D. Hisrich,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00317,1,Eugene F. Brigham,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00318,1,James C. Van Horne,United States,South Bend,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00319,1,James A. O'Brien,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00320,1,Barry Berman,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00322,1,Jerrold S. Greenberg,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00323,2,Harold Koontz | Cyril O'Donnell,United States,Findlay | Lincoln,strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00325,4,Philip Kotler | Mairead Brady | Torben Hansen | Kevin Lane Keller,United States | Kingdom of Denmark,Chicago,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00326,1,Eugene F. Brigham,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00327,1,William Cron,United States,New Haven,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00328,1,Charles W. L. Hill,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00330,1,Harold Kerzner,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00331,1,Aaron Antonovsky,United States | Israel,Brooklyn,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00332,1,Mary Kay Ash,United States,Cypress,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00333,1,Stephen R. Covey,United States,Salt Lake City,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00335,1,Anna Sutton,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00336,3,Mick Marchington | Adrian Wilkinson,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00337,2,Donald C. Mosley | Leon C. Megginson,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00341,1,Evangelia Marinakou,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00346,1,David Farnham,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00348,2,Juani Swart | Bruce Rayton,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00349,1,Pawan S. Budhwar,India,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00350,3,Ricky W. Griffin | Jean M. Phillips | Stanley M. Gully,,,strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00351,1,Jack London,United States,San Francisco,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00359,1,Ian Fleming,United Kingdom,Mayfair,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00360,2,Ashish Malik | Chris Rowley,Australia,,probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00371,1,Peter J. Dowling,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00374,1,Peter F. Drucker,United States | Austria,Vienna,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00375,2,Diana Dias | Carla Magalhães,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00381,3,Michael A. Hitt | Duane Ireland | R. Duane Ireland,United States,Lima,probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00382,1,Frank T. Rothaermel,United States,Butzbach,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00383,1,R. Edward Freeman,United States,Columbus,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00386,1,Edward McDonnell,Ireland,Dublin,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00387,1,Jay B. Barney,United States,Walnut Creek,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00388,1,Jeffrey H. Dyer,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00390,1,Gareth R. Jones,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00392,1,Melissa A. Schilling,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00394,2,Garth Saloner | Joel Podolny,United States,United States,strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00395,1,Garth Saloner,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00396,2,Alan M. Rugman | Richard M. Hodgetts,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00399,1,Philippe Lasserre,,Bordeaux,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00400,3,Charles W. L. Hill | Gareth R. Jones | Melissa A. Schilling,,,identifier_verified | strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00402,2,Peter M. Ginter | Linda E. Swayne,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00403,2,David Williamson | Wyn Jenkins,Australia,Melbourne,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00405,1,Allen C. Amason,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00406,2,John L. Thompson | Frank Martin,Switzerland,Geneva,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00407,2,W. Edward Stead | Jean Garner Stead,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00414,2,W. Edward Stead | Jean Garner Stead,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00416,1,Harry Sminia,,Amsterdam,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00419,1,R. Edward Freeman,United States,Columbus,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00421,2,J. David Hunger | Thomas L. Wheelen,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00422,3,Kamel Mellahi | Jedrzej George Frynas | Paul Finlay,United Kingdom,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00423,1,Richard L. Lynch,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00426,1,Robert Sullivan,New Zealand,Auckland,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00430,1,Esther Cameron,Israel | United States,New York City,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00431,1,Darren McCabe,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00432,2,Klaus Doppler | Christoph Lauterburg,Germany,Zeiskam,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00433,1,Esther Cameron,Israel | United States,New York City,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00436,1,Esther Cameron,Israel | United States,New York City,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00437,2,Todd Jick | Todd D. Jick,,,strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00438,1,Jeff Hiatt,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00440,1,James McCalman,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00442,2,Wouter ten Have | Steven ten Have,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00447,1,Dean Anderson,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00448,1,Bernard Burnes,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00449,1,August-Wilhelm Scheer,Germany,Lübbecke,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00450,1,Frank Voehl,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00452,1,Steven ten Have,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00454,1,Marcus Gonçalves,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00457,1,Annabel C. Beerel,,Johannesburg,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00458,2,Mahmoud Ezzamel | Chris Green,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00459,2,Joseph Tidd | Keith Pavitt,United Kingdom,London,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00461,1,Dietmar Vahs,Germany,Munich | Germany,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00464,1,Elizabeth A. Cudney,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00465,1,David Miller,United States,Paterson,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00466,1,Chip Heath,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00467,1,John P. Kotter,United States,San Diego,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00471,2,Jason Fried | David Heinemeier Hansson,Kingdom of Denmark,Copenhagen,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00472,2,Everett E. Adam | Ronald J. Ebert,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00473,1,Richard B. Chase,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00476,1,Joseph G. Monks,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00479,1,Gregory Frazier,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00480,2,Jack R. Meredith | Scott M. Shafer,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00484,1,Barry Render,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00486,1,Nigel Slack,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00491,1,R. Panneerselvam,India,Tiruchengode,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00492,1,Joseph G. Monks,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00494,1,Elwood Spencer Buffa,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00495,1,David K. Hayes,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00496,1,Ray Wild,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00497,2,Mark M. Davis | Richard B. Chase,United States,Paris,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00498,1,David K. Hayes,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00499,1,James B. Dilworth,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00501,1,Richard J. Schonberger,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00504,3,Lee J. Krajewski | Larry P. Ritzman | Manoj K. Malhotra,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00505,1,Nada R. Sanders,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00508,2,Barry Render | Chuck Munson,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00510,1,Nigel Slack,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00511,1,James B. Dilworth,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00514,1,Jim Kilby,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00516,1,Conrad Lashley,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00517,1,Philip Gibson,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00518,1,Richard B. Chase,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00519,1,Stanley E. Portny,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00520,1,Harvey Maylor,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00521,1,Harold Kerzner,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00523,1,Jack R. Meredith,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00524,1,Erik W. Larson,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00525,1,Project Management Institute,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00528,1,Peter Fewings,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00529,1,Project Management Institute,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00530,1,Mark C. Layton,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00531,1,Kory Kogon,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00533,1,Robert K. Wysocki,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00534,1,P. K. Joy,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00535,2,Jack R. Meredith | Scott M. Shafer,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00536,1,James P. Clements,,Arlington County,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00537,2,Avraham Shtub | Shlomo Globerson,Israel,Kiryat Chaim,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00538,1,Jack R. Meredith,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00539,1,Rose Baker,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00541,1,Project Management Institute,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00544,1,Rory Burke,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00545,2,Erik W. Larson | Clifford F. Gray,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00546,2,Jack R. Meredith | Scott M. Shafer,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00548,2,Clifford F. Gray | Erik W. Larson,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00551,2,John M. Nicholas | Herman Steyn,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00552,2,Clifford F. Gray | Erik W. Larson,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00553,1,David Shirley,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00554,1,Harold Kerzner,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00555,1,Lewis R. Ireland,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00556,1,Erik W. Larson,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00557,1,Ken Schwaber,United States,Wheaton,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00558,1,Scott Berkun,United States,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00559,1,Project Management Institute,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00560,1,Tom DeMarco,United States,Hazleton,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00561,1,Greg Horine,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00564,1,Stanley E. Portny,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00565,1,Scott Berkun,United States,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00568,2,Aubrey C. Daniels | Jon S. Bailey,United States,South Carolina,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00570,1,Herman Aguinis,Argentina,Río Cuarto,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00574,1,Mike Bourne,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00582,1,Ron Dimon,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00584,1,Poonam Khurana,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00591,3,Wouter Van Dooren | Geert Bouckaert | John Halligan,Belgium,Veurne,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00594,1,Brian J. Hall,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00598,1,Richard Pettinger,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00605,1,Herman Aguinis,Argentina,Río Cuarto,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00608,2,Bernard Marr | Dina Gray,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00609,1,Aubrey C. Daniels,United States,South Carolina,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00610,1,Phil Baguley,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00611,1,Bob Paladino,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00616,1,Robert L. Mathis,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00617,1,David A. DeCenzo,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00618,1,Gary Dessler,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00619,1,Kenneth G. Brown,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00620,1,Jeffrey Gold,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00621,1,Wendell L. French,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00622,1,Gary Dessler,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00623,1,Lloyd L. Byars,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00624,1,John M. Ivancevich,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00626,1,Gary Dessler,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00627,1,Monica Belcourt,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00628,1,Pieter Nel,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00630,2,Pamela L. Perrewe | K. Michele Kacmar,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00632,1,David A. DeCenzo,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00633,1,Gary Dessler,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00635,2,Robert N. Lussier | John R. Hendon,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00637,1,Lloyd L. Byars,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00640,1,Julie Beardwell,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00642,1,Raymond A. Noe,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00643,1,Paul E Smith,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00644,1,Chris Brewster,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00645,1,Gary Dessler,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00647,1,Ronan Carbery,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00649,1,Robert L. Mathis,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00650,1,Raymond A. Noe,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00651,1,Robert L. Mathis,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00652,1,Gary Dessler,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00653,2,Jonathan Crawshaw | Pawan Budhwar,India,,strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00655,2,Raymond A. Noe | John R. Hollenbeck,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00656,3,Raymond A. Noe | John R. Hollenbeck | Patrick M. Wright,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00659,1,Joseph J. Martocchio,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00661,1,Fred Luthans,United States,Clinton,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00663,2,Robert Kreitner | Angelo Kinicki,,Buffalo,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00666,1,Nancy J. Adler,Canada,Inglewood,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00667,1,John W. Newstrom,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00669,2,John M. Ivancevich | Michael T. Matteson,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00671,1,Jason Colquitt,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00673,1,James Campbell Quick,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00674,3,Christopher P. Neck | Jeffery D. Houghton | Emma L. Murray,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00675,1,Richard M. Steers,United States,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00676,2,Jennifer M. George | Gareth R. Jones,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00679,2,Angelo Kinicki | Robert Kreitner,,Buffalo,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00680,2,Dorothy Marcic | Peter Vaill,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00681,1,Tim Judge,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00684,1,Joyce Osland,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00686,1,Fred Luthans,United States,Clinton,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00687,1,Nancy Borkowski,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00688,1,Ricky W. Griffin,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00689,1,Gregory B. Northcraft,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00690,3,John A. Wagner | John R. Hollenbeck,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00691,1,Robert Kreitner,,Buffalo,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00692,1,Craig C. Pinder,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00694,1,Kenneth H. Blanchard,United States,Orange,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00696,1,Terri A. Scandura,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00698,1,Karlene H. Roberts,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00701,1,Jason Colquitt,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00703,1,Afsaneh Nahavandi,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00705,1,James Campbell Quick,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00708,2,Michael R. Baye | Michael Baye,United States,,probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00709,2,Patrick Bet-David | Greg Dinkin,United States,Tehran,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00711,1,David A. Aaker,United States,Fargo,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00713,1,Alain Verbeke,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00718,1,Alain Verbeke,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00720,1,Jeremy Kourdi,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00723,2,Peter J. Buckley | Pervez Ghauri,United Kingdom,,identifier_verified | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00724,2,Aditya Agashe | Parth Detroja,United States,,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00727,2,Myron S. Scholes | Terry Shevlin,Canada,Timmins,probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00730,2,Michael R. Baye | Jeff Prince,United States,,probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00733,1,Cor Molenaar,Kingdom of the Netherlands,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00734,1,Robert Greene,United States,Los Angeles,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00735,2,Myron S. Scholes | Myron Scholes,Canada,Timmins,probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00737,1,Jeremy Kourdi,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00738,1,David A. Aaker,United States,Fargo,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00739,2,S. Tamer Cavusgil | Tamer Cavusgil,United States | Turkey,,strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00740,2,Jesper Strandskov | Sven Hauff,Kingdom of Denmark,Frederiksberg,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00741,2,David Travis | Philip Hodgson,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00744,1,R. Duane Ireland,United States,Lima,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00745,1,Annmarie Hanlon,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00749,1,Michael R. Baye,United States,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00756,1,Peter Zámborský,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00759,1,Jerry J. Weygandt,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00761,1,Morris Hamburg,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00763,1,Max H. Bazerman,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00765,3,O. C. Ferrell | John Fraedrich | Linda Ferrell,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00766,2,S. Christian Albright | Wayne L. Winston,United States,New Jersey,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00767,1,Peter Juslin,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00768,1,Ronald C. Doll,United States,Mehoopany Township,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00769,1,Scott Plous,United States,Milwaukee,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00770,1,Jerry J. Weygandt,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00771,1,John J. Hampton,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00773,1,Deborah Stone,United Kingdom,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00775,1,David Ray Anderson,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00777,2,Thomas N. Ingram | Michael R. Williams,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00779,1,Irving Lester Janis,United States,Buffalo,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00780,1,S. Christian Albright,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00781,1,Donald E. Kieso,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00782,1,James G. March,United States,Cleveland,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00783,2,David J. Pauleen | Nazim Taskin,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00785,1,Irving L. Janis,United States,Buffalo,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00787,1,Milan Zeleny,Czech Republic | United States | Czechoslovakia,Klucké Chvalovice | Prague,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00790,1,Jerold L. Zimmerman,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00793,2,Jerry J. Weygandt | Donald E. Kieso,,,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00794,1,O. C. Ferrell,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00795,1,Nancy S. Kim,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00796,1,Allan Savory,Zimbabwe,Bulawayo,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00798,1,George Leland Bach,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00800,4,David Ray Anderson | Dennis J. Sweeney | Thomas Arthur Williams | James J. Cochran,United States,Des Moines,identifier_verified | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00801,1,Donald E. Kieso,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00802,2,Keryn Chalmers | Suzanne Byrne,,,strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00804,1,Ray H. Garrison,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00805,1,David Ray Anderson,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00806,1,Alan Barker,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00808,1,Stephen W. Littlejohn,,Los Angeles,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00809,2,Marshall B. Rosenberg | Deepak Chopra,United States | British Raj | Dominion of India | India,Canton | New Delhi,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00810,1,M. N. Hegde,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00811,1,Theodore S. Rappaport,United States,Brooklyn,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00812,1,Behrouz A. Forouzan,United States,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00815,1,Lynn H. Turner,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00817,1,Sanjay Kumar,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00820,1,John W. Blassingame,United States,Oxford,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00821,1,Stewart L. Tubbs,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00822,1,Mary Ellen Guffey,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00824,2,Larry A. Samovar | Richard E. Porter,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00825,1,Benedict Anderson,Ireland,Kunming,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00827,4,Alan O. Ebenstein | Alan Ebenstein | William Ebenstein,United States,Vienna,identifier_verified | probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00829,1,Sarah Trenholm,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00831,1,Malcolm Barnard,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00833,1,Paul Martin Lester,United States,Flushing,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00835,1,John G. Proakis,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00836,1,Sanjay Kumar,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00839,3,William B. Gudykunst | Young Yun Kim | William Gudykunst,,Manning | Seoul,probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00841,2,Mark L. Knapp | Judith A. Hall,United States,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00844,1,Albert Mehrabian,United States,Iran,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00845,1,B. P. Lathi,,,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00847,1,Julia T. Wood,,,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00849,1,Everett M. Rogers,United States,Carroll,probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00850,1,Timothy Pratt,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00855,2,Stanley J. Baran | Dennis K. Davis,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00856,1,Daniel Goleman,United States,Stockton,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00857,2,Travis Bradberry | Jean Greaves,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00859,1,Daniel Goleman,United States,Stockton,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00861,1,Peter Salovey,United States,Cambridge,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00865,1,Daniel Goleman,United States,Stockton,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00866,1,Travis Bradberry,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00869,1,Gerald Matthews,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00871,3,Daniel Goleman | Annie McKee | Richard E. Boyatzis,United States,Stockton,identifier_verified | strong_secondary | probable_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00872,1,Jill Dann,United Kingdom,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00879,1,Travis Bradberry,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00890,1,Linda Wasmer Andrews,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00892,1,Moshe Zeidner,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00893,1,Joseph Ciarrochi,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00896,1,Daniel Goleman,United States,Stockton,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00905,3,Daniel Goleman | Richard E. Boyatzis | Annie McKee,United States,Stockton,identifier_verified | probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00906,1,Allan Afuah,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00909,1,Keith Goffin,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00911,1,Mark Dodgson,Australia,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00912,1,Mark Dodgson,Australia,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00913,1,Keith Goffin,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00914,1,Mohamed Zairi,,El Kouif,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00915,1,Clayton M. Christensen,United States,Salt Lake City,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00918,1,Ina Goller,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00921,2,Alexander Brem | Eric Viardot,Germany | France,Bad Kötzting,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00924,2,Stefano Biazzo | Roberto Filippini,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00925,2,Carolina Machado | J. Paulo Davim,Portugal,Águeda,probable_secondary | strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00926,1,Patrick van der Duin,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00927,2,Eric Viardot | Alexander Brem,France | Germany,Bad Kötzting,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00931,1,Stuart Macdonald,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00932,1,Peter F. Drucker,United States | Austria,Vienna,identifier_verified,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00933,1,David Schwartzman,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00937,1,Frank Voehl,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00938,1,Harry C. Triandis,United States | Greece,Greece | Patras,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00939,1,Kristian Wasén,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00940,1,Jordi Diaz,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00943,2,Tom R. Burns | G. M. Stalker,United States,Arkansas,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00946,1,Rob Dekkers,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00948,2,Xi Zhang | Kwok Tai Chui,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00949,1,Wendy Wu,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities
+BOOK00950,2,Miltiadis D. Lytras | Andreea Claudia Serban,,,strong_secondary,Wikidata geographic claims linked through validated Open Library author identities

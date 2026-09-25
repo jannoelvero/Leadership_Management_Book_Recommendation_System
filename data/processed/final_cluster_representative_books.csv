@@ -1,0 +1,146 @@
+cluster,cluster_size,rank,book_id,title,authors,distance_to_centroid,cluster_label
+0,82,1,BOOK02062,A Platform Mindset,['Marcus Fontoura'],0.379655207798998,Entrepreneurial and Growth Mindset
+0,82,2,BOOK01663,Unstoppable Mindset,['Alden Mills'],0.379655207798998,Entrepreneurial and Growth Mindset
+0,82,3,BOOK01664,The Hacker Mindset,['Garrett Gee'],0.379655207798998,Entrepreneurial and Growth Mindset
+0,82,4,BOOK01631,Aliveness Mindset,['Jack Craven'],0.379655207798998,Entrepreneurial and Growth Mindset
+0,82,5,BOOK01670,The Entrepreneurial Mindset Advantage,['Gary G. Schoeniger'],0.5248351718326929,Entrepreneurial and Growth Mindset
+1,56,1,BOOK00674,Organizational Behavior,"['Christopher P. Neck', 'Jeffery D. Houghton', 'Emma L. Murray']",0.09183185830361262,Organizational Behavior
+1,56,2,BOOK00703,Organizational behavior,"['Afsaneh Nahavandi', 'Ali R. Malekzadeh']",0.09183185830361262,Organizational Behavior
+1,56,3,BOOK00688,Organizational Behavior,['Ricky W. Griffin'],0.09183185830361262,Organizational Behavior
+1,56,4,BOOK00679,Organizational behavior,"['Angelo Kinicki', 'Robert Kreitner']",0.09183185830361262,Organizational Behavior
+1,56,5,BOOK00706,Organizational Behavior,"['Mary Uhl-Bien', 'Ronald F. Piccolo', 'Schermerhorn, John R., Jr.']",0.09885269707012034,Organizational Behavior
+2,33,1,BOOK00146,Team leadership,['John Apps'],0.08909729776315745,Team Leadership
+2,33,2,BOOK00157,Team Leadership,['Drikus Kriek'],0.08909729776315745,Team Leadership
+2,33,3,BOOK00172,Team Leadership,"['Geoff Ribbens', 'Mark Abraham', 'Alistair Cumming']",0.08909729776315745,Team Leadership
+2,33,4,BOOK00187,Team Leadership Questionnaire,"['D. Kayes', 'Anna Kayes']",0.13558495177791574,Team Leadership
+2,33,5,BOOK00170,Strategic Team Leadership,['Peter Saul'],0.18644288051968672,Team Leadership
+3,70,1,BOOK01924,Stewards of the Future,['Helle Bank Jorgensen'],0.46820127572247283,Future Thinking and Personal Development
+3,70,2,BOOK00961,Future Tense,['Tracy Dennis-Tiwary'],0.46820127572247283,Future Thinking and Personal Development
+3,70,3,BOOK00954,Inventor of the Future,['Alec Nevala-Lee'],0.46820127572247283,Future Thinking and Personal Development
+3,70,4,BOOK01444,Be Your Future Self Now,['Dr. Benjamin Hardy'],0.5406086107886696,Future Thinking and Personal Development
+3,70,5,BOOK01058,Your Future Self,['Hal Hershfield'],0.5406086107886696,Future Thinking and Personal Development
+4,33,1,BOOK00785,DECISION MAKING,['Irving L. Janis'],0.09410263476490477,Decision Making
+4,33,2,BOOK00797,Creative decision making,['H. B. Gelatt'],0.23089100062345047,Decision Making
+4,33,3,BOOK00767,Judgment and decision making,"['Peter Juslin', 'Henry Montgomery']",0.28014035929960124,Decision Making
+4,33,4,BOOK00762,The managerial decision-making process,['E. Frank Harrison'],0.28363046677998915,Decision Making
+4,33,5,BOOK00769,The psychology of judgment and decision making,['Scott Plous'],0.3221289641590328,Decision Making
+5,33,1,BOOK01859,You're the Leader. Now What?,['Richard Winters'],0.026707788130774457,Leader Identity and Practice
+5,33,2,BOOK01285,We the Leader,['Jeffrey Spahn'],0.026707788130774457,Leader Identity and Practice
+5,33,3,BOOK01676,Reinventing the Leader,['Gui Loureiro and Carlos E. Marin'],0.026707788130774457,Leader Identity and Practice
+5,33,4,BOOK02018,The Relatable Leader,['Rachel DeAlto'],0.026707788130774457,Leader Identity and Practice
+5,33,5,BOOK02032,The Secure Leader,['Jaime Goff'],0.026707788130774457,Leader Identity and Practice
+6,47,1,BOOK01461,InCredible Communication,['Steven Lewis and Rebecca Weintraub'],0.12102966762791778,Communication
+6,47,2,BOOK00832,Communication,"['William J. Seiler', 'Melissa L. Beall']",0.2737052390262482,Communication
+6,47,3,BOOK00813,Corporate communication,['Paul A. Argenti'],0.35072183073951035,Communication
+6,47,4,BOOK00824,Communication between cultures,"['Larry A. Samovar', 'Portar McDaniel Samovar', 'Richard E. Porter']",0.35765483234113604,Communication
+6,47,5,BOOK00830,Business communication today,['Courtland L. Bovée'],0.3638760253915666,Communication
+7,185,1,BOOK01820,"Right Leader, Right Time",['Robert Jordan and Olivia Wagner'],0.6013536615674315,Broad Leadership and Success
+7,185,2,BOOK01572,Get Pay Right,['Kent Plunkett and Heather Bussing'],0.6997322590027555,Broad Leadership and Success
+7,185,3,BOOK01899,The Right Call,['Sally Jenkins'],0.6997322590027555,Broad Leadership and Success
+7,185,4,BOOK02058,Left and Right of the Boom,['Rob Campbell'],0.6997322590027555,Broad Leadership and Success
+7,185,5,BOOK00240,Servant-leadership across cultures,['Alfons Trompenaars'],0.7176527993487767,Broad Leadership and Success
+8,42,1,BOOK00278,Servant Leadership,['John Wallace Whitehead'],0.06413104862046726,Servant Leadership
+8,42,2,BOOK00250,Servant Leadership,"['Michael Rucker', 'Holly Spence']",0.06413104862046726,Servant Leadership
+8,42,3,BOOK00246,Servant leadership,['Dirk van Dierendonck'],0.09738888608765406,Servant Leadership
+8,42,4,BOOK00070,Servant Leadership,"['Dirk van Dierendonck', 'K. Patterson']",0.11630939678308183,Servant Leadership
+8,42,5,BOOK00275,The spirit of servant-leadership,['Robert K. Greenleaf Center. International Conference on Servant-Leadership'],0.15609373092033962,Servant Leadership
+9,42,1,BOOK00424,Change management,"['Jeffrey M. Hiatt', 'Timothy J. Creasey']",0.14080544519049143,Change Management
+9,42,2,BOOK00432,Change Management,"['Klaus Doppler', 'Christoph Lauterburg']",0.15893409272883896,Change Management
+9,42,3,BOOK01719,Change,"['Curtis Bateman, Marche Pleshette, Andy Cindrich and Christi Phillips']",0.22457271018056868,Change Management
+9,42,4,BOOK01286,Change Proof,['Adam Markel'],0.22457271018056868,Change Management
+9,42,5,BOOK00441,Strategic Change Management Strategic Change Management,['Djamel Eddine Laouisset'],0.28576855802687295,Change Management
+10,53,1,BOOK00087,Leadership development,['Lee Barr'],0.2219447910584449,Leadership Development
+10,53,2,BOOK00081,Leadership Development,['Manuel London'],0.24524952053953397,Leadership Development
+10,53,3,BOOK00096,Leadership development,['Abdullahi Sheikh Ali'],0.24524952053953397,Leadership Development
+10,53,4,BOOK00093,Leadership Development,['Ideal Curtis'],0.24524952053953397,Leadership Development
+10,53,5,BOOK00078,Future of Leadership Development,"['Susan Elaine Murphy', 'Ronald E. Riggio']",0.3253966070616351,Leadership Development
+11,184,1,BOOK01245,Culture Is the Way,['Matt Mayberry'],0.5200357285193168,Organizational Culture and Trust
+11,184,2,BOOK01989,Curative Culture,['Douglas K Shaw'],0.6155263593221498,Organizational Culture and Trust
+11,184,3,BOOK01968,Conquer Your Culture,['David Komar'],0.6155263593221498,Organizational Culture and Trust
+11,184,4,BOOK01543,For the Culture,['Marcus Collins'],0.6155263593221498,Organizational Culture and Trust
+11,184,5,BOOK02001,Culture Matters,['Jenni Catron'],0.6330061309448813,Organizational Culture and Trust
+12,18,1,BOOK00527,Information Technology Project Management,['Kathy Schwalbe'],0.22497732284777816,Information Technology Management
+12,18,2,BOOK00563,Project management,['Paul C. Tinnirello'],0.22875804476848516,Information Technology Management
+12,18,3,BOOK00931,Information for Innovation,['Stuart Macdonald'],0.2435815525115973,Information Technology Management
+12,18,4,BOOK00582,Enterprise Performance Management Done Right,['Ron Dimon'],0.25882807593285806,Information Technology Management
+12,18,5,BOOK00430,Making sense of change management,"['Esther Cameron', 'Mike Green']",0.2649562995976864,Information Technology Management
+13,72,1,BOOK00011,Leadership,['Elesa Zehndorfer'],0.2862283952233591,General Business and Management
+13,72,2,BOOK00055,Full range leadership development,['John J. Sosik'],0.33451755343909995,General Business and Management
+13,72,3,BOOK00444,Agile Change Management,['Melanie Franklin'],0.3720781447603413,General Business and Management
+13,72,4,BOOK00437,Managing change,"['Todd Jick', 'Maury Peiperl', 'Todd D. Jick']",0.42688638107295285,General Business and Management
+13,72,5,BOOK00927,Routledge Companion to Innovation Management,"['Jin Chen', 'Poh Kam Wong', 'Eric Viardot', 'Alexander Brem']",0.43533025172430384,General Business and Management
+14,41,1,BOOK00592,Performance Management,['Susan Hutchinson'],0.1599615977162162,Performance Management
+14,41,2,BOOK00573,Managing performance,"['Michael Armstrong', 'Angela Baron']",0.2673103512381534,Performance Management
+14,41,3,BOOK00569,Performance management systems,['Arup Varma'],0.2775809061670238,Performance Management
+14,41,4,BOOK00593,Performance management,['Robert Bacal'],0.30832278594754514,Performance Management
+14,41,5,BOOK00587,Performance management,['Robert Bacal'],0.33435382346569,Performance Management
+15,27,1,BOOK01355,Five Generations at Work,['Rebecca Robins and Patrick Dunne'],0.036418014687787825,Workplace and Generational Dynamics
+15,27,2,BOOK01237,Work Here Now,['Melissa Swift'],0.036418014687787825,Workplace and Generational Dynamics
+15,27,3,BOOK01278,Over Work,['Brigid Schulte'],0.036418014687787825,Workplace and Generational Dynamics
+15,27,4,BOOK01837,How to Work with (Almost) Anyone,['Michael Bungay Stanier'],0.036418014687787825,Workplace and Generational Dynamics
+15,27,5,BOOK01437,Rethinking Work,['Rishad Tobaccowala'],0.036418014687787825,Workplace and Generational Dynamics
+16,23,1,BOOK01673,Leading Giants,['Dave Durand'],0.02917723875955891,Leading Self and Others
+16,23,2,BOOK01786,Leading Through,"['Kim B. Clark, Jonathan R. Clark and Erin E. Clark']",0.02917723875955891,Leading Self and Others
+16,23,3,BOOK01236,Leading with Vulnerability,['Jacob Morgan'],0.02917723875955891,Leading Self and Others
+16,23,4,BOOK01347,Leading Yourself,['Elizabeth Lotardo'],0.02917723875955891,Leading Self and Others
+16,23,5,BOOK01374,Leading Relationships,['Steve McClatchy'],0.3381317618309758,Leading Self and Others
+17,28,1,BOOK00377,People Management,['Gerardus Blokdyk'],0.10304649527070375,People Management
+17,28,2,BOOK00358,People Management,['Rus Slater'],0.14596379451528374,People Management
+17,28,3,BOOK00345,People management,"['David Rees', 'Richard McBain']",0.14596379451528374,People Management
+17,28,4,BOOK00376,Effective people management,['Patricia Wellington'],0.2726445549461388,People Management
+17,28,5,BOOK00372,Sustainable People Management,['Morgan Orioha'],0.2898431834594797,People Management
+18,50,1,BOOK00858,Emotional Intelligence,['Daniela GOLEMAN'],0.045110594371581936,Emotional Intelligence
+18,50,2,BOOK00876,Emotional Intelligence,['Modern Psychology Publishing'],0.045110594371581936,Emotional Intelligence
+18,50,3,BOOK00897,Emotional Intelligence,['Daniel Coleman'],0.045110594371581936,Emotional Intelligence
+18,50,4,BOOK00873,Emotional Intelligence,['Tanvir Shakil'],0.045110594371581936,Emotional Intelligence
+18,50,5,BOOK00889,Emotional Intelligence,['James W. Williams'],0.045110594371581936,Emotional Intelligence
+19,39,1,BOOK00124,Executive leadership,['Edutext.'],0.08773219243148944,Executive Leadership
+19,39,2,BOOK00129,Police Executive Leadership,['Donald G. Hanna'],0.08773219243148944,Executive Leadership
+19,39,3,BOOK00126,Executive leadership,['Joseph A. Olmstead'],0.17915888437102656,Executive Leadership
+19,39,4,BOOK00125,Executive Leadership,['Ph D. Joseph Olmstead'],0.17915888437102656,Executive Leadership
+19,39,5,BOOK00121,Executive leadership,['William N. Egan'],0.22247046523717406,Executive Leadership
+20,57,1,BOOK00284,Human Resource management,['Gary Dessler'],0.04240259024941018,Human Resource Management
+20,57,2,BOOK00652,Human resource management,['Gary Dessler'],0.04240259024941018,Human Resource Management
+20,57,3,BOOK00650,Human Resource Management,['Raymond A. Noe'],0.04240259024941018,Human Resource Management
+20,57,4,BOOK00649,Human resource management,['Robert L. Mathis'],0.04240259024941018,Human Resource Management
+20,57,5,BOOK00647,Human Resource Management,"['Ronan Carbery', 'Christine Cross']",0.04240259024941018,Human Resource Management
+21,45,1,BOOK00935,Innovation Management,['Rasmus Koss Hartmann'],0.2417222422018317,Innovation Management
+21,45,2,BOOK00925,Innovation Management,"['Carolina Machado', 'J. Paulo Davim']",0.2639237860795389,Innovation Management
+21,45,3,BOOK00919,Innovation management,"['Shlomo Maital', 'D V R Seshadri']",0.2729668863190704,Innovation Management
+21,45,4,BOOK00939,Innovation Management in Robot Society,['Kristian Wasén'],0.2966379770831785,Innovation Management
+21,45,5,BOOK00921,Revolution of Innovation Management,"['Alexander Brem', 'Eric Viardot']",0.2985638134400954,Innovation Management
+22,27,1,BOOK02039,The Power of Mattering,['Zach Mercurio'],0.022813629079449838,Power and Influence
+22,27,2,BOOK01903,On Power,['Mark R. Levin'],0.022813629079449838,Power and Influence
+22,27,3,BOOK01683,You to the Power of Two,['Joseph Bradley and Don Tapscott'],0.022813629079449838,Power and Influence
+22,27,4,BOOK01129,Untold Power,['Rebecca Boggs Roberts'],0.022813629079449838,Power and Influence
+22,27,5,BOOK01178,The Power of Regret,['Daniel H. Pink'],0.022813629079449838,Power and Influence
+23,47,1,BOOK00540,Project management,['Jeffrey K. Pinto'],0.06589773838913882,Project Management
+23,47,2,BOOK00532,Project Management,['Jeffrey K. Pinto'],0.06589773838913882,Project Management
+23,47,3,BOOK00552,Project Management,"['Clifford F. Gray', 'Erik W. Larson']",0.06589773838913882,Project Management
+23,47,4,BOOK00549,Contemporary Project Management,"['Timothy Kloppenborg', 'Kathryn Wells', 'Vittal S. Anantatmula']",0.1459986929172602,Project Management
+23,47,5,BOOK00561,Project Management Absolute Beginner's Guide,['Greg Horine'],0.17106169890651213,Project Management
+24,49,1,BOOK00513,Operations Management,['Terry Hill'],0.08178101844798746,Operations Management
+24,49,2,BOOK00485,Operations management,['Jay Heizer'],0.08178101844798746,Operations Management
+24,49,3,BOOK00495,Restaurant operations management,"['Jack D. Ninemeier', 'David K. Hayes']",0.09025413115954184,Operations Management
+24,49,4,BOOK00512,Production and operations management,['Jay Heizer'],0.11989396973462918,Operations Management
+24,49,5,BOOK00489,Production and operations management,['Raymond R. Mayer'],0.11989396973462918,Operations Management
+25,108,1,BOOK00003,Kepemimpinan =,['Karjadi M.'],0.08967890136736656,Transformational Leadership
+25,108,2,BOOK00973,Leadership Is Overrated,['Kyle Buckett and Chris Mefford'],0.08967890136736656,Transformational Leadership
+25,108,3,BOOK01956,The Soil of Leadership,['Britt Yamamoto'],0.08967890136736656,Transformational Leadership
+25,108,4,BOOK01829,Leadership Starts with You,['Whitney Breer'],0.08967890136736656,Transformational Leadership
+25,108,5,BOOK01164,On Leadership,['Tony Blair'],0.08967890136736656,Transformational Leadership
+26,26,1,BOOK01607,Lead With AI,['Amir Elkabir'],0.07824961536410369,Contemporary Leadership Practice
+26,26,2,BOOK01482,Formed to Lead,['Jason Jensen'],0.15488305286389925,Contemporary Leadership Practice
+26,26,3,BOOK00999,Never Lead Alone,['Keith Ferrazzi'],0.15488305286389925,Contemporary Leadership Practice
+26,26,4,BOOK01594,Lead Boldly,['Hugh Blane'],0.15488305286389925,Contemporary Leadership Practice
+26,26,5,BOOK01577,Lead Well,['Paula Davis'],0.15488305286389925,Contemporary Leadership Practice
+27,82,1,BOOK00389,Strategic management,"['Samuel C. Certo', 'J.Paul Peter']",0.20995913719910608,Strategic Management and Planning
+27,82,2,BOOK00423,Strategic management,['Richard L. Lynch'],0.2528015487204892,Strategic Management and Planning
+27,82,3,BOOK00382,Strategic management,['Frank T. Rothaermel'],0.27071804665644195,Strategic Management and Planning
+27,82,4,BOOK00405,Strategic management,['Allen C. Amason'],0.27219392650471597,Strategic Management and Planning
+27,82,5,BOOK00385,Strategic Management,['Fred David'],0.2777734613573236,Strategic Management and Planning
+28,285,1,BOOK01534,Sideline CEO,['Marty Smith / Foreword by Tim Tebow'],0.6865921173330172,CEO and Executive Transformation
+28,285,2,BOOK01413,How To Be A CEO,['Ben Renshaw'],0.6865921173330172,CEO and Executive Transformation
+28,285,3,BOOK01711,From Welfare To CEO,['Korena Keys'],0.6865921173330172,CEO and Executive Transformation
+28,285,4,BOOK02010,The Detour CEO,['Paul Perreault'],0.6865921173330172,CEO and Executive Transformation
+28,285,5,BOOK01811,A CEO for All Seasons,"['Carolyn Dewar, Scott Keller, Vikram Malhotra and Kurt Strovink']",0.6865921173330172,CEO and Executive Transformation

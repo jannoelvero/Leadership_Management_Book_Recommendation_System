@@ -1,0 +1,468 @@
+openlibrary_author_key,author_name,wikidata_id,wikidata_label,wikidata_description,identity_evidence_tier,tier_priority,citizenship_qids,birthplace_qids,birth_dates,citizenship_qids_parsed,birthplace_qids_parsed,has_citizenship,has_birthplace
+OL1003227A,Bernard Burnes,Q112444995,Bernard Burnes,,strong_secondary,2,[],[],['+1953-00-00T00:00:00Z'],[],[],False,False
+OL10188240A,Janine Williams,Q112574706,Janine Williams,marketing and international business lecturer in New Zealand,strong_secondary,2,[],[],[],[],[],False,False
+OL10520311A,Jordi Diaz,Q57413095,Jordi Diaz,researcher ORCID id 0000-0003-1801-0541,strong_secondary,2,[],[],[],[],[],False,False
+OL1076211A,R. Edward Freeman,Q3938264,R. Edward Freeman,American philosopher (1951-),strong_secondary,2,['Q30'],['Q239870'],['+1951-12-18T00:00:00Z'],['Q30'],['Q239870'],True,True
+OL1078587A,Michael T. Matteson,Q139482667,Michael T. Matteson,,strong_secondary,2,[],[],['+1943-01-01T00:00:00Z'],[],[],False,False
+OL1080210A,Alonzo J. Strickland,Q140330104,Alonzo J. Strickland,,strong_secondary,2,[],[],[],[],[],False,False
+OL10856242A,Cyril O'Donnell,Q5200774,Cyril J. O'Donnell,American professor,probable_secondary,3,['Q30'],['Q28260'],['+1900-12-00T00:00:00Z'],['Q30'],['Q28260'],True,True
+OL10997841A,Glenn Walter,Q91890750,Glenn A Walter,researcher (ORCID 0000-0002-7346-2244),probable_secondary,3,[],[],[],[],[],False,False
+OL1101366A,Mahmoud Ezzamel,Q16728891,Mahmoud Ezzamel,British academic,strong_secondary,2,[],[],['+1942-10-24T00:00:00Z'],[],[],False,False
+OL1121414A,Young Yun Kim,Q122582777,Young Yun Kim,,strong_secondary,2,[],['Q8684'],[],[],['Q8684'],False,True
+OL1122332A,Timothy Pratt,Q112358326,Timothy Pratt,researcher in New Zealand,strong_secondary,2,[],[],[],[],[],False,False
+OL11510748A,JAMES FREDERICK BENDER,Q112464590,James Frederick Bender,,strong_secondary,2,[],['Q34739'],['+1905-00-00T00:00:00Z'],[],['Q34739'],False,True
+OL11546536A,abraham holtzman,Q23722834,Abraham Holtzman,American political scientist,strong_secondary,2,['Q30'],['Q12439'],['+1921-11-03T00:00:00Z'],['Q30'],['Q12439'],True,True
+OL1171623A,Kent M. Keith,Q11301302,Kent M. Keith,American writer and sociologist,strong_secondary,2,['Q30'],['Q18419'],['+1949-00-00T00:00:00Z'],['Q30'],['Q18419'],True,True
+OL1193811A,Elwood Spencer Buffa,Q59627441,Elwood Spencer Buffa,"born:1923|died:2005|; Buffa, Elwood S.; Buffa, Elwood Spencer; Buffa, Elwood S. 1923-; Buffa, Elwood Spencer, 1923-2005; Buffa, Elwood S. (Elwood Spencer), 1923-",identifier_verified,1,[],[],['+1923-01-01T00:00:00Z'],[],[],False,False
+OL1193951A,Aaron Antonovsky,Q301653,Aaron Antonovsky,Israeli American sociologist,strong_secondary,2,"['Q30', 'Q801']",['Q18419'],['+1923-12-19T00:00:00Z'],"['Q30', 'Q801']",['Q18419'],True,True
+OL119802A,George Leland Bach,Q59629195,George Leland Bach,American economist (1915-1994),identifier_verified,1,[],[],['+1915-04-28T00:00:00Z'],[],[],False,False
+OL1207541A,Chris Brewster,Q56954539,Chris Brewster,researcher,strong_secondary,2,[],[],['+1947-01-13T00:00:00Z'],[],[],False,False
+OL1236399A,John Heider,Q112418595,John Heider,,strong_secondary,2,[],[],['+1936-00-00T00:00:00Z'],[],[],False,False
+OL1237529A,Shlomo Globerson,Q30527030,Shlomo Globerson,Israeli university teacher,strong_secondary,2,['Q801'],['Q2655674'],"['+1941-01-13T00:00:00Z', '+1941-00-00T00:00:00Z']",['Q801'],['Q2655674'],True,True
+OL1239241A,Judith A. Hall,Q89263098,Judith A. Hall,American social psychologist,identifier_verified,1,['Q30'],[],['+1946-00-00T00:00:00Z'],['Q30'],[],True,False
+OL12578562A,Edward McDonnell,Q1292980,Edward McDonnell,producer,strong_secondary,2,['Q27'],['Q1761'],['+1806-01-01T00:00:00Z'],['Q27'],['Q1761'],True,True
+OL12915435A,Diana Dias,Q87106585,Diana Dias,researcher (ORCID 0000-0002-5065-8068),strong_secondary,2,[],[],[],[],[],False,False
+OL12915436A,Carla Magalhães,Q87884221,Carla Magalhães,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL129765A,Irving Lester Janis,Q3080462,Irving Janis,American psychologist (1918–1990),identifier_verified,1,['Q30'],['Q40435'],['+1918-05-26T00:00:00Z'],['Q30'],['Q40435'],True,True
+OL1326651A,Ted Johns,Q7693343,Ted Johns,Canadian writer,strong_secondary,2,['Q16'],['Q7440408'],['+1942-01-01T00:00:00Z'],['Q16'],['Q7440408'],True,True
+OL1346979A,Abraham Holtzman,Q23722834,Abraham Holtzman,American political scientist,strong_secondary,2,['Q30'],['Q12439'],['+1921-11-03T00:00:00Z'],['Q30'],['Q12439'],True,True
+OL13696132A,Andreea Claudia Serban,Q140137286,Andreea Claudia Şerban,,strong_secondary,2,[],[],['+1980-01-01T00:00:00Z'],[],[],False,False
+OL1386640A,David Cottrell,Q112509983,David Cottrell,psychiatrist (born 1956),strong_secondary,2,[],[],['+1956-00-00T00:00:00Z'],[],[],False,False
+OL1424745A,Peter Fewings,Q139478043,Peter Fewings,,strong_secondary,2,[],[],[],[],[],False,False
+OL1427230A,Esther Cameron,Q6895576,Esther Cameron,Israeli-American writer (born 1941),strong_secondary,2,"['Q801', 'Q30']",['Q60'],['+1941-09-00T00:00:00Z'],"['Q801', 'Q30']",['Q60'],True,True
+OL1433906A,Travis Bradberry,Q17986043,Travis Bradberry,American business writer,strong_secondary,2,[],[],[],[],[],False,False
+OL1434833A,Milan Zeleny,Q12037337,Milan Zelený,"Czech economist, professor and university educator (1942-2023)",strong_secondary,2,"['Q213', 'Q30', 'Q33946']","['Q12029472', 'Q1085']",['+1942-01-22T00:00:00Z'],"['Q213', 'Q30', 'Q33946']","['Q12029472', 'Q1085']",True,True
+OL1436313A,Herman Aguinis,Q22003019,Herman Aguinis,business theorist,strong_secondary,2,['Q414'],['Q983451'],"['+1966-03-00T00:00:00Z', '+1966-03-11T00:00:00Z']",['Q414'],['Q983451'],True,True
+OL1437382A,Mike Bourne,Q112499304,Mike Bourne,,strong_secondary,2,[],[],['+1975-00-00T00:00:00Z'],[],[],False,False
+OL1438336A,Scott Berkun,Q7435985,Scott Berkun,"Author, speaker",identifier_verified,1,['Q30'],[],['+1901-00-00T00:00:00Z'],['Q30'],[],True,False
+OL146690A,Morris Hamburg,Q107488326,Morris Hamburg,American statistician,strong_secondary,2,['Q30'],[],['+1922-00-00T00:00:00Z'],['Q30'],[],True,False
+OL1479479A,Kamel Mellahi,Q113769537,Kamel Mellahi,,strong_secondary,2,['Q145'],[],[],['Q145'],[],True,False
+OL1480578A,Angelo Kinicki,Q4762900,Angelo Kinicki,American academic,strong_secondary,2,[],[],[],[],[],False,False
+OL1518264A,Nigel Slack,Q10336827,Nigel Slack,,strong_secondary,2,[],[],['+1946-00-00T00:00:00Z'],[],[],False,False
+OL1519807A,William Cron,Q8007305,William Cronon,American historian,probable_secondary,3,['Q30'],['Q49145'],['+1954-09-11T00:00:00Z'],['Q30'],['Q49145'],True,True
+OL15912311A,David Miller,Q927439,David Miller,film director (1909–1992),strong_secondary,2,['Q30'],['Q138391'],['+1909-11-28T00:00:00Z'],['Q30'],['Q138391'],True,True
+OL1607910A,Carolyn M. Shields,Q112467419,Carolyn M. Shields,,strong_secondary,2,[],[],['+1945-00-00T00:00:00Z'],[],[],False,False
+OL1608050A,Jeremy Kourdi,Q139424023,Jeremy Kourdi,,strong_secondary,2,[],[],[],[],[],False,False
+OL16223750A,Suzanne Byrne,Q88083711,Suzanne C Byrne,researcher,probable_secondary,3,[],[],[],[],[],False,False
+OL1655495A,Dennis K. Davis,Q112510316,Dennis K. Davis,"(1945–?) American university professor emeritus in the field of media studies, dealing with mass communication.",strong_secondary,2,[],[],['+1945-00-00T00:00:00Z'],[],[],False,False
+OL1657128A,Clifford F. Gray,Q120432303,Clifford F. Gray,1930-,strong_secondary,2,[],[],['+1930-00-00T00:00:00Z'],[],[],False,False
+OL1747377A,Sue Smith,Q57451503,Sue Smith,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL1756685A,Ordway Tead,Q7100953,Ordway Tead,American academic,identifier_verified,1,['Q30'],[],['+1891-09-10T00:00:00Z'],['Q30'],[],True,False
+OL1862774A,John W. Blassingame,Q6263525,John Wesley Blassingame,American historian (1940–2000),identifier_verified,1,['Q30'],['Q34217'],['+1940-03-23T00:00:00Z'],['Q30'],['Q34217'],True,True
+OL1862946A,Lynne Miller,Q112542883,Lynne Miller,,strong_secondary,2,[],[],['+1945-00-00T00:00:00Z'],[],[],False,False
+OL19395A,Tom DeMarco,Q93115,Tom DeMarco,"American software engineer, author, and consultant",identifier_verified,1,['Q30'],['Q1186937'],['+1940-08-20T00:00:00Z'],['Q30'],['Q1186937'],True,True
+OL193997A,Benedict Anderson,Q212993,Benedict Anderson,American political scientist (1936-2015),identifier_verified,1,['Q27'],['Q182852'],['+1936-08-26T00:00:00Z'],['Q27'],['Q182852'],True,True
+OL1955312A,R. Panneerselvam,Q7273907,R. Panneerselvam,Indian film director,strong_secondary,2,['Q668'],['Q2229506'],['+1970-04-10T00:00:00Z'],['Q668'],['Q2229506'],True,True
+OL19864A,Albert Ellis,Q313931,Albert Ellis,American psychologist (1913–2007),identifier_verified,1,['Q30'],['Q1342'],['+1913-09-27T00:00:00Z'],['Q30'],['Q1342'],True,True
+OL19869A,Keith Pavitt,Q3194763,Keith Pavitt,British economist (1937-2002),strong_secondary,2,['Q145'],['Q84'],['+1937-01-13T00:00:00Z'],['Q145'],['Q84'],True,True
+OL2021138A,Anna Sutton,Q118108991,Anna Sutton,occupational psychologist in New Zealand,strong_secondary,2,[],[],[],[],[],False,False
+OL2101074A,John le Carré,Q209641,John le Carré,British novelist and spy (1931–2020),identifier_verified,1,"['Q145', 'Q27']",['Q203349'],['+1931-10-19T00:00:00Z'],"['Q145', 'Q27']",['Q203349'],True,True
+OL21137A,Julia T. Wood,Q29583260,Julia Wood,professor and author,probable_secondary,3,[],[],['+1950-08-26T00:00:00Z'],[],[],False,False
+OL21502A,Kenneth H. Blanchard,Q320595,Kenneth Hartley Blanchard,American business writer,identifier_verified,1,['Q30'],['Q1087121'],['+1939-05-06T00:00:00Z'],['Q30'],['Q1087121'],True,True
+OL21503A,Sarah Trenholm,Q112393583,Sarah Trenholm,,strong_secondary,2,[],[],['+1944-00-00T00:00:00Z'],[],[],False,False
+OL216674A,Raymond A. Noe,Q83190893,Raymond A Noe,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL216799A,Philip Kotler,Q164170,Philip Kotler,"American marketing author, consultant, and professor",identifier_verified,1,['Q30'],['Q1297'],['+1931-05-27T00:00:00Z'],['Q30'],['Q1297'],True,True
+OL216820A,Donald T. Phillips,Q5295213,Donald T. Phillips,American writer,strong_secondary,2,['Q30'],[],['+1952-03-10T00:00:00Z'],['Q30'],[],True,False
+OL217423A,James C. Hunter,Q47118636,James C. Hunter,,identifier_verified,1,[],[],[],[],[],False,False
+OL217763A,Robert N. Lussier,Q112485435,Robert N. Lussier,,strong_secondary,2,[],[],['+1949-00-00T00:00:00Z'],[],[],False,False
+OL2178985A,Alan Barker,Q37838941,Alan R. Barker,researcher,probable_secondary,3,[],[],[],[],[],False,False
+OL218130A,August-Wilhelm Scheer,Q95485,August-Wilhelm Scheer,German business theorist,strong_secondary,2,['Q183'],['Q182805'],['+1941-07-27T00:00:00Z'],['Q183'],['Q182805'],True,True
+OL218618A,Marcus Gonçalves,Q56507044,Marcus D Goncalves,researcher,probable_secondary,3,[],[],[],[],[],False,False
+OL218771A,Mary Ellen Guffey,Q112436893,Mary Ellen Guffey,,identifier_verified,1,[],[],['+1936-00-00T00:00:00Z'],[],[],False,False
+OL219084A,Stephen W. Littlejohn,Q139003122,Stephen W. Littlejohn,American communication researcher,strong_secondary,2,[],['Q65'],['+1944-09-12T00:00:00Z'],[],['Q65'],False,True
+OL219702A,William B. Gudykunst,Q20723884,William Gudykunst,sociologist (1947-2005),probable_secondary,3,[],['Q2233616'],['+1947-10-26T00:00:00Z'],[],['Q2233616'],False,True
+OL219764A,Patrick Lencioni,Q7147004,Patrick Lencioni,American writer,identifier_verified,1,['Q30'],[],['+1965-01-01T00:00:00Z'],['Q30'],[],True,False
+OL220279A,David A. Aaker,Q1173491,David Allen Aaker,American economist,identifier_verified,1,['Q30'],['Q34109'],['+1938-00-00T00:00:00Z'],['Q30'],['Q34109'],True,True
+OL22053A,Stewart L. Tubbs,Q112360354,Stewart L. Tubbs,American communication researcher,strong_secondary,2,[],[],['+1943-09-06T00:00:00Z'],[],[],False,False
+OL220594A,B. P. Lathi,Q112431724,Bhagwandas Pannalal Lathi,,identifier_verified,1,[],[],['+1933-00-00T00:00:00Z'],[],[],False,False
+OL221968A,Robin S. Sharma,Q2604952,Robin Sharma,Canadian self-help writer,identifier_verified,1,"['Q16', 'Q1027']",['Q2326975'],['+1964-06-16T00:00:00Z'],"['Q16', 'Q1027']",['Q2326975'],True,True
+OL222155A,Doris Kearns Goodwin,Q442008,Doris Kearns Goodwin,American biographer and historian (born 1943),identifier_verified,1,['Q30'],['Q18419'],['+1943-01-04T00:00:00Z'],['Q30'],['Q18419'],True,True
+OL223174A,Spencer Johnson,Q200760,Patrick Spencer Johnson,American writer,identifier_verified,1,['Q30'],['Q1065503'],['+1938-11-24T00:00:00Z'],['Q30'],['Q1065503'],True,True
+OL223415A,Ricky W. Griffin,Q112451098,Ricky W. Griffin,,strong_secondary,2,[],[],['+1950-00-00T00:00:00Z'],[],[],False,False
+OL223463A,Frederick Winslow Taylor,Q203906,Frederick Winslow Taylor,American mechanical engineer (1856–1915),identifier_verified,1,['Q30'],['Q279890'],['+1856-03-20T00:00:00Z'],['Q30'],['Q279890'],True,True
+OL223925A,John M. Ivancevich,Q109832605,John M. Ivancevich,,strong_secondary,2,[],[],['+1939-01-01T00:00:00Z'],[],[],False,False
+OL223996A,Moshe Zeidner,Q112420836,Moshe Zeidner,,strong_secondary,2,[],[],['+1948-00-00T00:00:00Z'],[],[],False,False
+OL224314A,Charles W. L. Hill,Q23303093,Charles W.L. Hill,British-born academic,identifier_verified,1,[],[],['+1900-01-01T00:00:00Z'],[],[],False,False
+OL224399A,Lee J. Krajewski,Q112420778,Lee J. Krajewski,,strong_secondary,2,[],[],['+1940-00-00T00:00:00Z'],[],[],False,False
+OL224907A,Daniel Goleman,Q351701,Daniel Goleman,American psychologist and journalist,identifier_verified,1,['Q30'],['Q49240'],['+1946-03-07T00:00:00Z'],['Q30'],['Q49240'],True,True
+OL225185A,Eric Viardot,Q101560156,Eric Viardot,"Éric Viardot, EADA Business School",strong_secondary,2,['Q142'],[],['+1956-11-28T00:00:00Z'],['Q142'],[],True,False
+OL225203A,Jerry J. Weygandt,Q93434078,Jerry J. Weygandt,,identifier_verified,1,[],[],['+1942-12-24T00:00:00Z'],[],[],False,False
+OL225835A,Michael A. Hitt,Q1927840,Michael Hitt,American economist,probable_secondary,3,['Q30'],[],['+1946-01-24T00:00:00Z'],['Q30'],[],True,False
+OL226398A,Malcolm Barnard,Q96606655,Malcolm A Barnard,researcher,probable_secondary,3,[],[],[],[],[],False,False
+OL226490A,M. N. Hegde,Q136449879,M. N. Hegde,,strong_secondary,2,[],[],['+1941-01-01T00:00:00Z'],[],[],False,False
+OL226671A,Kim S. Cameron,Q16107244,Kim S. Cameron,American academic,strong_secondary,2,['Q30'],[],['+1946-00-00T00:00:00Z'],['Q30'],[],True,False
+OL226973A,Jennifer M. George,Q112487789,Jennifer M. George,,strong_secondary,2,[],[],['+1949-00-00T00:00:00Z'],[],[],False,False
+OL2274431A,William Ebenstein,Q18911354,William Ebenstein,political science scholar,strong_secondary,2,['Q30'],['Q1741'],"['+1910-05-11T00:00:00Z', '+1910-00-00T00:00:00Z']",['Q30'],['Q1741'],True,True
+OL227813A,Robert K. Greenleaf,Q7346224,Robert K. Greenleaf,American consultant (1904–1990),identifier_verified,1,[],[],['+1904-01-01T00:00:00Z'],[],[],False,False
+OL230540A,Alma Harris,Q106638408,Alma Harris,Welsh pedagogue,strong_secondary,2,[],[],['+1958-12-21T00:00:00Z'],[],[],False,False
+OL230982A,Richard M. Steers,Q112374268,Richard M. Steers,American economist,identifier_verified,1,['Q30'],[],"['+1944-00-00T00:00:00Z', '+1944-12-14T00:00:00Z']",['Q30'],[],True,False
+OL231767A,John P. Kotter,Q935152,John Kotter,American economist (1947-),probable_secondary,3,['Q30'],['Q16552'],['+1947-02-25T00:00:00Z'],['Q30'],['Q16552'],True,True
+OL233688A,Richard L. Hughes,Q127751718,Richard Hughes,United States academic,probable_secondary,3,[],[],[],[],[],False,False
+OL234151A,James G. March,Q1352604,James G. March,American sociologist (1928–2018),identifier_verified,1,['Q30'],['Q37320'],['+1928-01-15T00:00:00Z'],['Q30'],['Q37320'],True,True
+OL235937A,Mark M. Davis,Q1900227,Mark M. Davis,"American molecular biologist, Professor at Stanford University",strong_secondary,2,['Q30'],['Q90'],['+1952-11-27T00:00:00Z'],['Q30'],['Q90'],True,True
+OL235972A,David A. DeCenzo,Q93431301,David A. DeCenzo,,strong_secondary,2,[],[],"['+1955-02-21T00:00:00Z', '+1955-00-00T00:00:00Z']",[],[],False,False
+OL236061A,Jack R. Meredith,Q15429284,Jack R. Meredith,American engineer,strong_secondary,2,[],[],['+1939-01-01T00:00:00Z'],[],[],False,False
+OL236063A,Max H. Bazerman,Q16246142,Max H. Bazerman,Negotiation theorist and teacher,strong_secondary,2,[],[],['+1955-08-14T00:00:00Z'],[],[],False,False
+OL236243A,Henry Kissinger,Q66107,Henry Kissinger,"American diplomat and geopolitical advisor, served as U.S. Secretary of State from 1973 to 1977 (1923–2023)",identifier_verified,1,"['Q1206012', 'Q30']",['Q3075'],['+1923-05-27T00:00:00Z'],"['Q1206012', 'Q30']",['Q3075'],True,True
+OL236414A,Robert Greene,Q1386992,Robert Greene,American author,identifier_verified,1,['Q30'],['Q65'],['+1959-05-14T00:00:00Z'],['Q30'],['Q65'],True,True
+OL236843A,Allan Savory,Q4730957,Allan Savory,Zimbabwean scientist,strong_secondary,2,['Q954'],['Q193250'],['+1935-09-15T00:00:00Z'],['Q954'],['Q193250'],True,True
+OL237290A,James M. Kouzes,Q55865983,James M. Kouzes,1945-,identifier_verified,1,[],[],['+1945-01-01T00:00:00Z'],[],[],False,False
+OL238534A,Gary Dessler,Q93386547,Gary Dessler,,strong_secondary,2,[],[],['+1942-00-00T00:00:00Z'],[],[],False,False
+OL238777A,Wendell L. French,Q85409823,Wendell L. French,,strong_secondary,2,[],[],['+1923-01-01T00:00:00Z'],[],[],False,False
+OL239935A,S. Christian Albright,Q112426101,S. Christian Albright,Professor (1946-,strong_secondary,2,[],[],['+1946-00-00T00:00:00Z'],[],[],False,False
+OL240826A,Clayton M. Christensen,Q5130292,Clayton Christensen,American economist (1952-2020),identifier_verified,1,['Q30'],['Q23337'],['+1952-04-06T00:00:00Z'],['Q30'],['Q23337'],True,True
+OL24085A,Alan M. Rugman,Q16150461,Alan M. Rugman,,strong_secondary,2,[],[],['+1945-01-01T00:00:00Z'],[],[],False,False
+OL240891A,Arthur A. Thompson,Q112386104,Arthur A. Thompson,,strong_secondary,2,[],[],['+1940-00-00T00:00:00Z'],[],[],False,False
+OL241136A,Bruce J. Avolio,Q52152510,Bruce Avolio,American leadership studies scholar,probable_secondary,3,[],[],['+1953-06-17T00:00:00Z'],[],[],False,False
+OL243612A,Marshall B. Rosenberg,Q732048,Marshall Rosenberg,American psychologist (1934-2015),identifier_verified,1,['Q30'],['Q491239'],['+1934-10-06T00:00:00Z'],['Q30'],['Q491239'],True,True
+OL244414A,Eugene F. Brigham,Q112383110,Eugene F. Brigham,1930-,strong_secondary,2,[],[],['+1930-00-00T00:00:00Z'],[],[],False,False
+OL2476984A,Keith Goffin,Q112424583,Keith Goffin,,strong_secondary,2,[],[],['+1956-00-00T00:00:00Z'],[],[],False,False
+OL25174A,Afsaneh Nahavandi,Q100154628,Afsaneh Nahavandi,,strong_secondary,2,[],[],[],[],[],False,False
+OL25513A,David A. Whetten,Q19666912,David A. Whetten,American organizational theorist,strong_secondary,2,[],[],['+1946-06-22T00:00:00Z'],[],[],False,False
+OL257213A,Conrad Lashley,Q139436123,Conrad Lashley,,strong_secondary,2,[],[],[],[],[],False,False
+OL2624938A,Jane Price Laudon,Q106329947,Jane Price Laudon,,strong_secondary,2,[],[],['+1920-00-00T00:00:00Z'],[],[],False,False
+OL2626708A,Irving L. Janis,Q3080462,Irving Janis,American psychologist (1918–1990),probable_secondary,3,['Q30'],['Q40435'],['+1918-05-26T00:00:00Z'],['Q30'],['Q40435'],True,True
+OL2626801A,Richard J. Schonberger,Q112378637,Richard Schonberger,economist,probable_secondary,3,[],[],['+1937-00-00T00:00:00Z'],[],[],False,False
+OL2627251A,Pamela L. Perrewe,Q137848812,Pamela L. Perrewé,academic in management and organizational behavior at Florida State University,strong_secondary,2,[],[],[],[],[],False,False
+OL2627252A,K. Michele Kacmar,Q117236858,K. Michele Kacmar,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL2627350A,Michael R. Williams,Q16499868,Michael R. Williams,American physician,strong_secondary,2,[],[],[],[],[],False,False
+OL2629810A,Greg Dinkin,Q130769258,Greg Dinkin,,strong_secondary,2,[],[],['+1971-01-01T00:00:00Z'],[],[],False,False
+OL2632097A,Dave Logan,Q16731592,Dave Logan,American author and professor,strong_secondary,2,['Q30'],[],['+1968-03-27T00:00:00Z'],['Q30'],[],True,False
+OL2632098A,John King,Q671520,John King,English writer (born 1960),identifier_verified,1,['Q145'],['Q211907'],['+1960-01-01T00:00:00Z'],['Q145'],['Q211907'],True,True
+OL2632099A,Halee Fischer-Wright,Q43110878,Halee Fischer-Wright,American physician,strong_secondary,2,['Q30'],[],['+1950-00-00T00:00:00Z'],['Q30'],[],True,False
+OL2634548A,Christopher P. Neck,Q139468506,Christopher P. Neck,,strong_secondary,2,[],[],[],[],[],False,False
+OL2635200A,Harold Koontz,Q16010961,Harold Koontz,American business consultant,strong_secondary,2,['Q30'],['Q590191'],"['+1909-05-19T00:00:00Z', '+1908-00-00T00:00:00Z']",['Q30'],['Q590191'],True,True
+OL2636200A,Erik W. Larson,Q112485914,Erik W. Larson,,strong_secondary,2,[],[],['+1952-00-00T00:00:00Z'],[],[],False,False
+OL2638683A,William Gudykunst,Q20723884,William Gudykunst,sociologist (1947-2005),strong_secondary,2,[],['Q2233616'],['+1947-10-26T00:00:00Z'],[],['Q2233616'],False,True
+OL2639667A,John R. Hollenbeck,Q139455293,John R. Hollenbeck,,strong_secondary,2,[],[],[],[],[],False,False
+OL2639750A,Michael Baye,Q6828511,Michael Baye,American economist,strong_secondary,2,['Q30'],[],['+1958-04-06T00:00:00Z'],['Q30'],[],True,False
+OL2640453A,Linda Ferrell,Q130815305,Linda Ferrell,,strong_secondary,2,[],[],[],[],[],False,False
+OL2640639A,Alan B. Eisner,Q139478718,Alan B. Eisner,,strong_secondary,2,[],[],[],[],[],False,False
+OL2641400A,Pervez Ghauri,Q21546586,Pervez N. Ghauri,researcher,probable_secondary,3,[],[],"['+1948-01-01T00:00:00Z', '+1948-03-19T00:00:00Z']",[],[],False,False
+OL26423A,John C. Maxwell,Q3304739,John C. Maxwell,"American author, speaker and neopentecostal pastor",identifier_verified,1,['Q30'],['Q1013879'],['+1947-02-20T00:00:00Z'],['Q30'],['Q1013879'],True,True
+OL2648409A,David Travis,Q112562460,David Travis,,strong_secondary,2,[],[],['+1960-00-00T00:00:00Z'],[],[],False,False
+OL2648632A,Larry P. Ritzman,Q112483191,Larry P. Ritzman,,strong_secondary,2,[],[],['+1938-00-00T00:00:00Z'],[],[],False,False
+OL2648679A,Barry Z. Posner,Q16137225,Barry Posner,American leadership academic,probable_secondary,3,['Q30'],[],['+1949-03-11T00:00:00Z'],['Q30'],[],True,False
+OL2648916A,Shane R. Premeaux,Q134622746,Shane R. Premeaux,management scientist (1954-),strong_secondary,2,[],[],"['+1954-01-01T00:00:00Z', '+1954-03-13T00:00:00Z']",[],[],False,False
+OL2649362A,Terry Shevlin,Q57777136,Terry Shevlin,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL2649381A,Alan Ebenstein,Q19787390,Alan O. Ebenstein,"American political scientist, educator and author",probable_secondary,3,['Q30'],[],['+1959-05-28T00:00:00Z'],['Q30'],[],True,False
+OL2650732A,R. Duane Ireland,Q108626265,R. Duane Ireland,American academic,strong_secondary,2,['Q30'],['Q983974'],['+1947-00-00T00:00:00Z'],['Q30'],['Q983974'],True,True
+OL2650932A,Ken Schwaber,Q93032,Ken Schwaber,American computer scientist,identifier_verified,1,['Q30'],['Q575315'],['+1945-01-01T00:00:00Z'],['Q30'],['Q575315'],True,True
+OL2652676A,Marshall Goldsmith,Q1274760,Marshall Goldsmith,American author of leadership and management literature,identifier_verified,1,['Q30'],['Q2168889'],['+1949-03-20T00:00:00Z'],['Q30'],['Q2168889'],True,True
+OL2653346A,Manoj K. Malhotra,Q112483193,Manoj K. Malhotra,,strong_secondary,2,[],[],['+1960-00-00T00:00:00Z'],[],[],False,False
+OL2654206A,Duane Ireland,Q108626265,R. Duane Ireland,American academic,probable_secondary,3,['Q30'],['Q983974'],['+1947-00-00T00:00:00Z'],['Q30'],['Q983974'],True,True
+OL26542A,James A. O'Brien,Q112400512,James A. O'Brien,,strong_secondary,2,[],[],['+1936-00-00T00:00:00Z'],[],[],False,False
+OL2654440A,Tim Judge,Q130456829,Tim Judge,,strong_secondary,2,[],[],[],[],[],False,False
+OL2655520A,John A. Wagner,Q112343464,John A. Wagner,,strong_secondary,2,[],[],['+1952-00-00T00:00:00Z'],[],[],False,False
+OL2656470A,Myron Scholes,Q295647,Myron Scholes,Canadian economist,strong_secondary,2,['Q16'],['Q991310'],['+1941-07-01T00:00:00Z'],['Q16'],['Q991310'],True,True
+OL2657201A,Peter Fleming,Q2605075,Peter Fleming,"British adventurer, journalist, soldier & travel writer (1907–1971)",strong_secondary,2,['Q145'],['Q84'],['+1907-05-31T00:00:00Z'],['Q145'],['Q84'],True,True
+OL2657294A,Robert Sullivan,Q1689230,Robert Sullivan,"Māori poet, academic and editor",strong_secondary,2,['Q664'],['Q37100'],['+1967-01-01T00:00:00Z'],['Q664'],['Q37100'],True,True
+OL2663874A,Jeffrey H. Dyer,Q112444979,Jeffrey H. Dyer,,strong_secondary,2,[],[],['+1959-00-00T00:00:00Z'],[],[],False,False
+OL2664659A,Linda Wasmer Andrews,Q112444358,Linda Wasmer Andrews,,strong_secondary,2,[],[],['+1957-00-00T00:00:00Z'],[],[],False,False
+OL2667214A,Geert Bouckaert,Q112398665,Geert Bouckaert,economist,strong_secondary,2,['Q31'],['Q506707'],"['+1958-00-00T00:00:00Z', '+1958-09-28T00:00:00Z']",['Q31'],['Q506707'],True,True
+OL2669063A,Jedrzej George Frynas,Q106674855,Jedrzej George Frynas,British economist,strong_secondary,2,['Q145'],[],[],['Q145'],[],True,False
+OL2669064A,Paul Finlay,Q104473098,Paul Finlay,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL2671747A,Harry C. Triandis,Q43253933,Harry C. Triandis,Greek-American cross-cultural social psychologist,strong_secondary,2,"['Q30', 'Q41']","['Q41', 'Q133123']","['+1926-00-00T00:00:00Z', '+1926-10-16T00:00:00Z']","['Q30', 'Q41']","['Q41', 'Q133123']",True,True
+OL2672226A,Jovita M. Ross-Gordon,Q112517260,Jovita M. Ross-Gordon,academic in adult education,strong_secondary,2,[],[],['+1952-00-00T00:00:00Z'],[],[],False,False
+OL2680351A,Rob Dekkers,Q112530278,Rob Dekkers,scientist,strong_secondary,2,[],[],['+1959-00-00T00:00:00Z'],[],[],False,False
+OL2685917A,Deborah Stone,Q120610979,Deborah Stone,UK travel writer,strong_secondary,2,['Q145'],[],[],['Q145'],[],True,False
+OL2694332A,Adrian Wilkinson,Q112427096,Adrian Wilkinson,,strong_secondary,2,[],[],['+1963-00-00T00:00:00Z'],[],[],False,False
+OL2695887A,Pawan Budhwar,Q58655935,Pawan S. Budhwar,researcher ORCID ID = 0000-0001-8915-6172,probable_secondary,3,['Q668'],[],['+1964-00-00T00:00:00Z'],['Q668'],[],True,False
+OL2698142A,Chris Rowley,Q115329218,Chris Rowley,researcher,strong_secondary,2,['Q408'],[],[],['Q408'],[],True,False
+OL2704923A,Jeffrey Gold,Q112399272,Jeffrey Gold,,strong_secondary,2,[],[],['+1955-00-00T00:00:00Z'],[],[],False,False
+OL27182A,Mohamed Zairi,Q6891571,Mohamed Zairi,"British academic, author",strong_secondary,2,[],['Q5351493'],['+1956-09-17T00:00:00Z'],[],['Q5351493'],False,True
+OL2729652A,Bob Paladino,Q112446555,Bob Paladino,,strong_secondary,2,[],[],['+1959-00-00T00:00:00Z'],[],[],False,False
+OL2730366A,Stanley E. Portny,Q116486036,Stanley E. Portny,"American engineer, project manager and entrepreneur",strong_secondary,2,['Q30'],[],[],['Q30'],[],True,False
+OL27304A,Thomas L. Wheelen,Q112445340,Thomas L. Wheelen,,strong_secondary,2,[],[],['+1935-00-00T00:00:00Z'],[],[],False,False
+OL2732590A,Larry C. Spears,Q112505992,Larry C. Spears,,strong_secondary,2,[],[],['+1955-00-00T00:00:00Z'],[],[],False,False
+OL2733865A,John Fraedrich,Q112419769,John Fraedrich,,strong_secondary,2,[],[],['+1957-00-00T00:00:00Z'],[],[],False,False
+OL2734644A,Herman Steyn,Q139433827,Herman Steyn,,strong_secondary,2,[],[],[],[],[],False,False
+OL2737990A,Nada R. Sanders,Q66532068,Nada R. Sanders,American supply chain expert,strong_secondary,2,['Q30'],[],['+1957-06-18T00:00:00Z'],['Q30'],[],True,False
+OL2738537A,Garth Saloner,Q29032387,Garth Saloner,South African-born American economist,strong_secondary,2,[],[],"['+1955-00-00T00:00:00Z', '+1955-01-18T00:00:00Z']",[],[],False,False
+OL2738539A,Joel Podolny,Q6213706,Joel M. Podolny,American sociologist,probable_secondary,3,['Q30'],['Q30'],['+1950-00-00T00:00:00Z'],['Q30'],['Q30'],True,True
+OL27404A,Stanley J. Baran,Q93261840,Stanley J. Baran,,strong_secondary,2,[],[],['+1948-12-27T00:00:00Z'],[],[],False,False
+OL27525A,Larry A. Samovar,Q112448013,Larry A. Samovar,,strong_secondary,2,[],[],['+1935-00-00T00:00:00Z'],[],[],False,False
+OL27560A,James MacGregor Burns,Q1529607,James MacGregor Burns,American historian and political scientist (1918–2014),identifier_verified,1,['Q30'],['Q54143'],['+1918-08-03T00:00:00Z'],['Q30'],['Q54143'],True,True
+OL2762041A,Erich Joachimsthaler,Q5388045,Erich Joachimsthaler,American businessman,strong_secondary,2,['Q30'],[],['+1956-12-28T00:00:00Z'],['Q30'],[],True,False
+OL2777276A,Richard E. Porter,Q112448014,Richard E. Porter,professor,strong_secondary,2,[],[],['+1933-00-00T00:00:00Z'],[],[],False,False
+OL2778455A,Dennis J. Sweeney,Q102277817,Dennis J. Sweeney,D.B.A. Indiana University 1971,strong_secondary,2,['Q30'],['Q39709'],"['+1941-00-00T00:00:00Z', '+1941-10-05T00:00:00Z']",['Q30'],['Q39709'],True,True
+OL2778456A,Thomas Arthur Williams,Q93429028,Thomas Arthur Williams,,identifier_verified,1,[],[],"['+1944-05-05T00:00:00Z', '+1944-00-00T00:00:00Z']",[],[],False,False
+OL2804440A,Jason Fried,Q23795888,Jason Fried,software entrepreneur,identifier_verified,1,[],[],['+1974-00-00T00:00:00Z'],[],[],False,False
+OL2806483A,John Halligan,Q112456587,John Halligan,"professor at University of Canberra, born 1945",strong_secondary,2,[],[],['+1945-00-00T00:00:00Z'],[],[],False,False
+OL2812382A,Chip Heath,Q16252439,Chip Heath,American writer,strong_secondary,2,[],[],['+1963-07-19T00:00:00Z'],[],[],False,False
+OL2817860A,Jon S. Bailey,Q133569030,Jon S. Bailey,American teacher and psychologist,strong_secondary,2,['Q30'],[],[],['Q30'],[],True,False
+OL2825763A,Harvey Maylor,Q94654199,Harvey Maylor,researcher,identifier_verified,1,[],[],[],[],[],False,False
+OL2828055A,Annie McKee,Q112374564,Annie McKee,,strong_secondary,2,[],[],['+1955-00-00T00:00:00Z'],[],[],False,False
+OL283267A,Frank Martin,Q123910,Frank Martin,Swiss composer (1890–1974),strong_secondary,2,['Q39'],['Q71'],['+1890-09-15T00:00:00Z'],['Q39'],['Q71'],True,True
+OL2837853A,David Williamson,Q968980,David Williamson,Australian dramatist and playwright,identifier_verified,1,['Q408'],['Q3141'],['+1942-02-24T00:00:00Z'],['Q408'],['Q3141'],True,True
+OL2850369A,Dennis Tourish,Q59140026,Dennis Tourish,professor of leadership studies,strong_secondary,2,[],[],['+1957-01-01T00:00:00Z'],[],[],False,False
+OL2850421A,Jean Garner Stead,Q105592455,Jean Garner Stead,,strong_secondary,2,[],[],['+1949-01-01T00:00:00Z'],[],[],False,False
+OL28563A,Manuel London,Q112416244,Manuel London,,strong_secondary,2,[],[],['+1949-00-00T00:00:00Z'],[],[],False,False
+OL286362A,Richard Pettinger,Q130776002,Richard Pettinger,management scholar (1953-),strong_secondary,2,[],[],['+1953-00-00T00:00:00Z'],[],[],False,False
+OL2866738A,Tamer Cavusgil,Q60024331,S. Tamer Cavusgil,Turkish-American economist (born 1947),probable_secondary,3,"['Q30', 'Q43']",[],['+1947-10-04T00:00:00Z'],"['Q30', 'Q43']",[],True,False
+OL2877248A,Peter Vaill,Q14948774,Peter Vaill,American academic,strong_secondary,2,['Q30'],[],[],['Q30'],[],True,False
+OL2877610A,Peter Salovey,Q2077999,Peter Salovey,American social psychologist and former president of Yale University,identifier_verified,1,['Q30'],['Q49111'],"['+1958-02-21T00:00:00Z', '+1958-02-00T00:00:00Z']",['Q30'],['Q49111'],True,True
+OL2879818A,Greg Horine,Q139454091,Greg Horine,,strong_secondary,2,[],[],[],[],[],False,False
+OL2920399A,David Parkes,Q91932103,David C. Parkes,British-American computer scientist,probable_secondary,3,['Q30'],['Q146705'],[],['Q30'],['Q146705'],True,True
+OL2933997A,Margaret Jane Wyszomirski,Q139433622,Margaret Jane Wyszomirski,,strong_secondary,2,[],[],[],[],[],False,False
+OL2939178A,Sanjay Kumar,Q100725719,Sanjay Kumar,researcher ORCID 0000-0002-8951-5996,strong_secondary,2,[],[],[],[],[],False,False
+OL2946043A,Torben Hansen,Q29583803,Torben Hansen,Danish professor,strong_secondary,2,['Q756617'],[],['+1966-00-00T00:00:00Z'],['Q756617'],[],True,False
+OL29513A,Project Management Institute,Q1545010,Project Management Institute,U.S.-based non-profit corporation,identifier_verified,1,[],[],[],[],[],False,False
+OL2955129A,Ludger Helms,Q112551609,Ludger Helms,,strong_secondary,2,[],[],['+1967-00-00T00:00:00Z'],[],[],False,False
+OL29722A,J. David Hunger,Q112383715,J. David Hunger,,strong_secondary,2,[],[],['+1941-00-00T00:00:00Z'],[],[],False,False
+OL2994264A,Holly Spence,Q100561183,Holly Spence,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL3010389A,Jean Greaves,Q130797164,Jean Greaves,,strong_secondary,2,[],[],[],[],[],False,False
+OL3010393A,Dick Ruhe,Q123247117,Dick Ruhe,,strong_secondary,2,[],[],"['+1928-05-21T00:00:00Z', '+1928-01-01T00:00:00Z']",[],[],False,False
+OL30298A,Jerrold S. Greenberg,Q112516443,Jerrold S. Greenberg,,strong_secondary,2,[],[],['+1942-00-00T00:00:00Z'],[],[],False,False
+OL3032412A,Esther Derby,Q130767212,Esther Derby,,strong_secondary,2,[],['Q485708'],[],[],['Q485708'],False,True
+OL3038563A,James Campbell Quick,Q95993783,James Campbell Quick,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL3040839A,Terri A. Scandura,Q139468691,Terri A. Scandura,,strong_secondary,2,[],[],[],[],[],False,False
+OL3118296A,Brian J. Hall,Q48236402,Brian J. Hall,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL3118694A,David J. Pauleen,Q113531347,David J Pauleen,professor of technology management in New Zealand,strong_secondary,2,[],[],['+1957-01-01T00:00:00Z'],[],[],False,False
+OL31351A,Alan O. Ebenstein,Q19787390,Alan O. Ebenstein,"American political scientist, educator and author",identifier_verified,1,['Q30'],[],['+1959-05-28T00:00:00Z'],['Q30'],[],True,False
+OL3138260A,Joseph Ciarrochi,Q47503195,Joseph Ciarrochi,researcher,strong_secondary,2,[],[],['+1900-01-01T00:00:00Z'],[],[],False,False
+OL3149792A,Bernard Marr,Q130776205,Bernard Marr,,strong_secondary,2,[],[],[],[],[],False,False
+OL3154865A,Philip Hodgson,Q87874640,Philip Hodgson,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL3182743A,Klaus Doppler,Q1745009,Klaus Doppler,German author,strong_secondary,2,['Q183'],['Q184983'],['+1939-01-01T00:00:00Z'],['Q183'],['Q184983'],True,True
+OL319610A,Andrew S. Grove,Q432929,Andrew Grove,"Hungarian-born American businessman, engineer and author (1936–2016)",identifier_verified,1,"['Q30', 'Q28']","['Q1781', 'Q30']",['+1936-09-02T00:00:00Z'],"['Q30', 'Q28']","['Q1781', 'Q30']",True,True
+OL3227622A,Myint Swe Khine,Q130775381,Myint Swe Khine,,strong_secondary,2,[],[],[],[],[],False,False
+OL3236048A,Nathan Axelrod,Q2687017,Nathan Axelrod,"Israeli cinematographer, screenwriter, director (1905–1987)",strong_secondary,2,"['Q801', 'Q15180']",['Q954505'],['+1905-04-07T00:00:00Z'],"['Q801', 'Q15180']",['Q954505'],True,True
+OL3237212A,Miltiadis D. Lytras,Q112443481,Miltiadis D. Lytras,,strong_secondary,2,[],[],['+1973-00-00T00:00:00Z'],[],[],False,False
+OL3243172A,Jeff Hiatt,Q124644188,Jeff Hiatt,,strong_secondary,2,[],[],[],[],[],False,False
+OL3247664A,Nancy Borkowski,Q98772150,Nancy Borkowski,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL3258342A,Todd D. Jick,Q130279005,Todd Jick,,probable_secondary,3,[],[],['+1949-01-01T00:00:00Z'],[],[],False,False
+OL3278571A,Gregory Frazier,Q11924708,Gregory Frazier,,strong_secondary,2,[],[],['+1947-00-00T00:00:00Z'],[],[],False,False
+OL3278672A,Darren McCabe,Q58068135,Darren McCabe,"researcher, ORCID id # 0000-0001-9938-2085",strong_secondary,2,[],[],[],[],[],False,False
+OL32869A,Aubrey C. Daniels,Q4819095,Aubrey C. Daniels,American psychologist,identifier_verified,1,['Q30'],['Q1456'],['+1935-05-17T00:00:00Z'],['Q30'],['Q1456'],True,True
+OL3289459A,Peter J. Dowling,Q112436586,Peter Dowling,Australian marketing specialist and lecturer,probable_secondary,3,[],[],['+1950-00-00T00:00:00Z'],[],[],False,False
+OL3291729A,James P. Clements,Q16973357,James P. Clements,American computer scientist and academic administrator,strong_secondary,2,[],['Q107126'],['+1964-03-11T00:00:00Z'],[],['Q107126'],False,True
+OL333669A,Bernard M. Bass,Q52162437,Bernard M. Bass,American psychologist and leadership pioneer,strong_secondary,2,['Q30'],['Q18426'],['+1925-06-11T00:00:00Z'],['Q30'],['Q18426'],True,True
+OL3410032A,Dina Gray,Q112529553,Dina Gray,,strong_secondary,2,[],[],['+1963-00-00T00:00:00Z'],[],[],False,False
+OL3411846A,Karen Sobel Lojeski,Q112554706,Karen Sobel Lojeski,,strong_secondary,2,[],[],['+1960-00-00T00:00:00Z'],[],[],False,False
+OL3422129A,Kenneth G. Brown,Q71735155,Kenneth G. Brown,Psychologist; PhD Michigan State 1999,strong_secondary,2,[],[],[],[],[],False,False
+OL342495A,Theodore S. Rappaport,Q18619463,Theodore Rappaport,American electrical engineering professor,probable_secondary,3,['Q30'],['Q18419'],['+1960-11-26T00:00:00Z'],['Q30'],['Q18419'],True,True
+OL34717A,Kenneth C. Laudon,Q16731279,Kenneth C. Laudon,American academic,identifier_verified,1,[],[],['+1944-01-01T00:00:00Z'],[],[],False,False
+OL3477155A,Jill Dann,Q15994393,Jill Dann,"British IT Professional and Manager,",strong_secondary,2,['Q145'],[],['+1957-03-17T00:00:00Z'],['Q145'],[],True,False
+OL3478629A,Geoff Watts,Q64497023,Geoff Watts,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL35741A,Marshall Loeb,Q6773687,Marshall Loeb,American journalist,identifier_verified,1,['Q30'],['Q1297'],['+1929-01-01T00:00:00Z'],['Q30'],['Q1297'],True,True
+OL365623A,Robert K. Wysocki,Q112441319,Robert K. Wysocki,,strong_secondary,2,[],[],['+1941-00-00T00:00:00Z'],[],[],False,False
+OL371014A,Stephen J. Zaccaro,Q16221621,Stephen Zaccaro,American psychologist,probable_secondary,3,['Q30'],[],['+1955-01-01T00:00:00Z'],['Q30'],[],True,False
+OL3714825A,Simon Western,Q120188564,Simon Western,British academic,strong_secondary,2,[],[],[],[],[],False,False
+OL37425A,O. C. Ferrell,Q112417372,O. C. Ferrell,,strong_secondary,2,[],[],['+1943-00-00T00:00:00Z'],[],[],False,False
+OL38059A,James B. Dilworth,Q112383322,James B. Dilworth,,strong_secondary,2,[],[],['+1939-00-00T00:00:00Z'],[],[],False,False
+OL381405A,Joseph Tidd,Q93372493,Joseph Tidd,Professor of technology and innovation management,strong_secondary,2,[],[],['+1960-07-08T00:00:00Z'],[],[],False,False
+OL381981A,Dorothy Marcic,Q107395086,Dorothy Marcic,American dramatist,strong_secondary,2,[],[],[],[],[],False,False
+OL383159A,Stephen R. Covey,Q313482,Stephen Covey,"American educator, author, businessman and motivational speaker (1932-2012)",identifier_verified,1,['Q30'],['Q23337'],['+1932-10-24T00:00:00Z'],['Q30'],['Q23337'],True,True
+OL383301A,Allan A. Glatthorn,Q52008212,Allan A. Glatthorn,1924-,strong_secondary,2,['Q30'],[],['+1924-01-01T00:00:00Z'],['Q30'],[],True,False
+OL383503A,M. Scott Norton,Q130640309,M. Scott Norton,,strong_secondary,2,[],[],['+1930-01-01T00:00:00Z'],[],[],False,False
+OL383803A,James C. Van Horne,Q29524967,James C. Van Horne,American economist,strong_secondary,2,['Q30'],['Q486877'],['+1935-00-00T00:00:00Z'],['Q30'],['Q486877'],True,True
+OL385663A,Allan Afuah,Q139435257,Allan Afuah,,strong_secondary,2,[],[],[],[],[],False,False
+OL386286A,Joe D. Batten,Q112373371,Joe D. Batten,,strong_secondary,2,[],[],['+1925-00-00T00:00:00Z'],[],[],False,False
+OL386819A,Peter M. Ginter,Q112451990,Peter M. Ginter,,strong_secondary,2,[],[],['+1946-00-00T00:00:00Z'],[],[],False,False
+OL387802A,Gerald Matthews,Q112475877,Gerald Matthews,research professor,strong_secondary,2,[],[],['+1957-00-00T00:00:00Z'],[],[],False,False
+OL387911A,John A. Wagner,Q112343464,John A. Wagner,,strong_secondary,2,[],[],['+1952-00-00T00:00:00Z'],[],[],False,False
+OL388469A,Fred Luthans,Q5495821,Fred Luthans,American academic,strong_secondary,2,['Q30'],['Q676421'],['+1939-06-28T00:00:00Z'],['Q30'],['Q676421'],True,True
+OL38917A,Robert Kreitner,Q139463390,Robert Kreitner,,strong_secondary,2,[],['Q40435'],[],[],['Q40435'],False,True
+OL389425A,Gareth R. Jones,Q43031731,Gareth R. Jones,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL389509A,Stuart Macdonald,Q112546051,Stuart MacDonald,British professor of criminal law,strong_secondary,2,[],[],['+1979-00-00T00:00:00Z'],[],[],False,False
+OL389858A,Ellen Van Velsor,Q112549518,Ellen Van Velsor,,strong_secondary,2,[],[],['+1949-00-00T00:00:00Z'],[],[],False,False
+OL389943A,Elliott Jaques,Q1332333,Elliott Jaques,Canadian psychoanalyst and organizational psychologist (1917-2003),strong_secondary,2,"['Q16', 'Q30']",['Q172'],['+1917-01-18T00:00:00Z'],"['Q16', 'Q30']",['Q172'],True,True
+OL390077A,Harold Kerzner,Q16262001,Harold Kerzner,"American engineer, management consultant",strong_secondary,2,['Q30'],[],['+1940-01-01T00:00:00Z'],['Q30'],[],True,False
+OL390259A,Ronald J. Ebert,Q112392395,Ronald J. Ebert,,strong_secondary,2,[],[],['+1938-00-00T00:00:00Z'],[],[],False,False
+OL39038A,Deepak Chopra,Q318506,Deepak Chopra,"Indian-born American author and alternative-medicine advocate, physician and public speaker",identifier_verified,1,"['Q129286', 'Q1775277', 'Q668']",['Q987'],['+1946-10-22T00:00:00Z'],"['Q129286', 'Q1775277', 'Q668']",['Q987'],True,True
+OL390608A,Jim Kilby,Q139453665,Jim Kilby,,strong_secondary,2,[],[],[],[],[],False,False
+OL391217A,Barton A. Weitz,Q112527136,Barton A. Weitz,,strong_secondary,2,[],[],['+1941-00-00T00:00:00Z'],[],[],False,False
+OL391962A,Kevin Lane Keller,Q6396753,Kevin Lane Keller,American business theorist,identifier_verified,1,['Q30'],[],['+1956-06-23T00:00:00Z'],['Q30'],[],True,False
+OL3925630A,Max DePree,Q3302067,Max De Pree,American businessman and writer (1924–2017),probable_secondary,3,['Q30'],['Q1840466'],['+1924-10-28T00:00:00Z'],['Q30'],['Q1840466'],True,True
+OL392669A,Robert D. Hisrich,Q112446160,Robert D. Hisrich,,strong_secondary,2,[],[],['+1944-00-00T00:00:00Z'],[],[],False,False
+OL39286A,Behrouz A. Forouzan,Q4880998,Behrouz A. Forouzan,American academic,strong_secondary,2,['Q30'],[],['+1944-01-01T00:00:00Z'],['Q30'],[],True,False
+OL395220A,Craig C. Pinder,Q112515910,Craig C. Pinder,,strong_secondary,2,[],[],['+1948-00-00T00:00:00Z'],[],[],False,False
+OL395327A,Robert Wood,Q550926,Robert W. Wood,American physicist and inventor (1868–1955),probable_secondary,3,['Q30'],['Q523240'],['+1868-05-02T00:00:00Z'],['Q30'],['Q523240'],True,True
+OL395659A,John G. Proakis,Q20203470,John G. Proakis,American electrical engineer,strong_secondary,2,[],[],['+1935-01-01T00:00:00Z'],[],[],False,False
+OL397106A,John W. Newstrom,Q118874081,John W. Newstrom,American economist and business scholar,strong_secondary,2,['Q30'],[],[],['Q30'],[],True,False
+OL397998A,Richard B. Chase,Q16902252,Richard B. Chase,American academic,strong_secondary,2,[],[],['+1939-01-01T00:00:00Z'],[],[],False,False
+OL398394A,Lynn H. Turner,Q112537384,Lynn H. Turner,,strong_secondary,2,[],[],['+1946-00-00T00:00:00Z'],[],[],False,False
+OL398560A,Barry Berman,Q95785077,Barry Berman,screenwriter,strong_secondary,2,[],[],['+1957-01-01T00:00:00Z'],[],[],False,False
+OL399219A,Alfons Trompenaars,Q712041,Fons Trompenaars,Dutch-French anthropologist,probable_secondary,3,"['Q29999', 'Q142']",['Q727'],['+1953-00-00T00:00:00Z'],"['Q29999', 'Q142']",['Q727'],True,True
+OL400156A,Gary A. Yukl,Q130733922,Gary A. Yukl,"psychologist, business manager, university teacher (1940-)",strong_secondary,2,[],[],['+1940-01-01T00:00:00Z'],[],[],False,False
+OL400406A,Graham Kelly,Q5592972,Graham Kelly,English football administrator,strong_secondary,2,['Q145'],[],['+1945-12-23T00:00:00Z'],['Q145'],[],True,False
+OL401772A,Richard E. Boyatzis,Q7324289,Richard Boyatzis,American business theorist,probable_secondary,3,['Q30'],[],['+1946-01-01T00:00:00Z'],['Q30'],[],True,False
+OL402185A,Scott M. Shafer,Q112496868,Scott M. Shafer,,strong_secondary,2,[],[],['+1962-00-00T00:00:00Z'],[],[],False,False
+OL409080A,Chris Green,Q117193524,Chris Green,American poet,strong_secondary,2,['Q30'],[],[],['Q30'],[],True,False
+OL4148975A,Barry Posner,Q16137225,Barry Posner,American leadership academic,strong_secondary,2,['Q30'],[],['+1949-03-11T00:00:00Z'],['Q30'],[],True,False
+OL4174624A,Shuang Ren,Q130948953,Shuang Ren,researcher (ORCID 0009-0008-7381-487X),strong_secondary,2,[],[],[],[],[],False,False
+OL422889A,Peter Juslin,Q117251839,Peter Juslin,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL4331371A,Everett M. Rogers,Q3061477,Everett Rogers,American academic,probable_secondary,3,['Q30'],['Q1903180'],['+1931-03-06T00:00:00Z'],['Q30'],['Q1903180'],True,True
+OL4345625A,Peter F. Drucker,Q84238,Peter Drucker,American business consultant (1909–2005),identifier_verified,1,"['Q30', 'Q40']",['Q1741'],['+1909-11-19T00:00:00Z'],"['Q30', 'Q40']",['Q1741'],True,True
+OL4357246A,John L. Thompson,Q112390986,John L. Thompson,,strong_secondary,2,[],[],['+1931-00-00T00:00:00Z'],[],[],False,False
+OL4380294A,Richard M. Hodgetts,Q112395567,Richard M. Hodgetts,,strong_secondary,2,[],[],['+1942-00-00T00:00:00Z'],[],[],False,False
+OL442735A,Mary Kay Ash,Q610716,Mary Kay Ash,entrepreneure (1918–2001),strong_secondary,2,['Q30'],['Q36379'],['+1918-05-12T00:00:00Z'],['Q30'],['Q36379'],True,True
+OL443596A,Christopher Mabey,Q112467277,Christopher Mabey,,strong_secondary,2,[],[],['+1951-00-00T00:00:00Z'],[],[],False,False
+OL4440582A,Rose Baker,Q60058974,Rose D Baker,researcher ORCID ID = 0000-0003-3555-3425,probable_secondary,3,[],[],[],[],[],False,False
+OL444993A,Mark L. Knapp,Q6768451,Mark L. Knapp,American academic,identifier_verified,1,['Q30'],[],['+1938-07-12T00:00:00Z'],['Q30'],[],True,False
+OL44633A,Jack London,Q45765,Jack London,"American author, journalist and social activist (1876–1916)",identifier_verified,1,['Q30'],['Q62'],['+1876-01-12T00:00:00Z'],['Q30'],['Q62'],True,True
+OL449222A,Philippe Lasserre,Q124637186,Philippe Lasserre,,strong_secondary,2,[],['Q1479'],['+1939-01-01T00:00:00Z'],[],['Q1479'],False,True
+OL452017A,Lloyd L. Byars,Q112436490,LLoyd L. Byars,,strong_secondary,2,[],[],['+1940-00-00T00:00:00Z'],[],[],False,False
+OL452035A,Cor Molenaar,Q19945907,Cor Molenaar,Dutch economist,strong_secondary,2,['Q29999'],[],['+1950-00-00T00:00:00Z'],['Q29999'],[],True,False
+OL452854A,Wayne L. Winston,Q30074498,Wayne L. Winston,American information scientist,strong_secondary,2,['Q30'],['Q1408'],['+1950-02-14T00:00:00Z'],['Q30'],['Q1408'],True,True
+OL453548A,Donald J. Bowersox,Q112396964,Donald J. Bowersox,,strong_secondary,2,[],[],['+1932-00-00T00:00:00Z'],[],[],False,False
+OL454516A,Paul Martin Lester,Q7152242,Paul Martin Lester,American academic,strong_secondary,2,['Q30'],['Q1058775'],['+1953-03-21T00:00:00Z'],['Q30'],['Q1058775'],True,True
+OL456615A,W. Edward Stead,Q112382368,W. Edward Stead,,strong_secondary,2,[],[],['+1946-00-00T00:00:00Z'],[],[],False,False
+OL457089A,Barry Render,Q112418918,Barry Render,,strong_secondary,2,[],[],['+1946-00-00T00:00:00Z'],[],[],False,False
+OL4598461A,J. David Hunger,Q112383715,J. David Hunger,,strong_secondary,2,[],[],['+1941-00-00T00:00:00Z'],[],[],False,False
+OL4727974A,Mick Marchington,Q112429200,Mick Marchington,,strong_secondary,2,[],[],['+1949-00-00T00:00:00Z'],[],[],False,False
+OL474603A,Graham Little,Q91320618,Graham Little,researcher (ORCID 0000-0002-2511-6945),strong_secondary,2,[],[],[],[],[],False,False
+OL478428A,David Farnham,Q124738278,David Farnham,gravitational wave researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL4814507A,Ian Fleming,Q82104,Ian Fleming,British author (1908–1964),strong_secondary,2,['Q145'],['Q124184'],"['+1908-05-28T00:00:00Z', '+1908-12-28T00:00:00Z']",['Q145'],['Q124184'],True,True
+OL491328A,Nancy J. Adler,Q61783042,Nancy J. Adler,Canadian academic,strong_secondary,2,['Q16'],['Q621549'],['+1948-10-03T00:00:00Z'],['Q16'],['Q621549'],True,True
+OL4915492A,Juani Swart,Q58178664,Juani Swart,"researcher, ORCID id # 0000-0002-5365-0686",strong_secondary,2,[],[],[],[],[],False,False
+OL492603A,Alain Verbeke,Q59609905,Alain Verbeke,"born:1960|; Verbeke, Alain.; Verbeke, A. (Alain), jurist, 1960-; Verbeke, Alain, 19..-...., professeur de gestion",strong_secondary,2,[],[],['+1960-01-01T00:00:00Z'],[],[],False,False
+OL5005634A,Paul E Smith,Q88452698,Paul E Smith,researcher (ORCID 0000-0002-5565-3274),strong_secondary,2,[],[],[],[],[],False,False
+OL5064299A,Annmarie Hanlon,Q139461172,Annmarie Hanlon,,strong_secondary,2,[],[],[],[],[],False,False
+OL5218702A,Mike Cohn,Q6846351,Mike Cohn,American software developer,strong_secondary,2,['Q30'],['Q49247'],['+1962-08-25T00:00:00Z'],['Q30'],['Q49247'],True,True
+OL52310A,Peter J. Buckley,Q7173038,Peter Buckley,British business professor,identifier_verified,1,['Q145'],[],['+1949-07-11T00:00:00Z'],['Q145'],[],True,False
+OL526722A,Paul Hersey,Q1474230,Paul Hersey,American academic (1931-2012),identifier_verified,1,['Q30'],['Q18419'],['+1931-01-26T00:00:00Z'],['Q30'],['Q18419'],True,True
+OL528859A,Jay B. Barney,Q1538942,Jay Barney,American economist,probable_secondary,3,['Q30'],['Q493261'],['+1954-00-00T00:00:00Z'],['Q30'],['Q493261'],True,True
+OL5318188A,Xi Zhang,Q100737136,Xi Zhang,researcher ORCID 0000-0002-8548-2832,strong_secondary,2,[],[],[],[],[],False,False
+OL531979A,Linda E. Swayne,Q64706294,Linda E. Swayne,"American academic, professor of marketing, researcher",strong_secondary,2,['Q30'],[],['+1946-01-01T00:00:00Z'],['Q30'],[],True,False
+OL532682A,Michael R. Baye,Q6828511,Michael Baye,American economist,probable_secondary,3,['Q30'],[],['+1958-04-06T00:00:00Z'],['Q30'],[],True,False
+OL534204A,Ray H. Garrison,Q93430950,Ray H. Garrison,,strong_secondary,2,[],[],"['+1933-02-23T00:00:00Z', '+1933-00-00T00:00:00Z']",[],[],False,False
+OL535417A,Donald C. Mosley,Q124635735,Donald C. Mosley,,strong_secondary,2,[],[],['+1932-01-01T00:00:00Z'],[],[],False,False
+OL535855A,Robert L. Mathis,Q112366479,Robert L. Mathis,1944-,strong_secondary,2,[],[],['+1944-00-00T00:00:00Z'],[],[],False,False
+OL5413970A,David A. Whetten,Q19666912,David A. Whetten,American organizational theorist,strong_secondary,2,[],[],['+1946-06-22T00:00:00Z'],[],[],False,False
+OL541941A,David Schwartzman,Q131374734,David Schwartzman,geologist,strong_secondary,2,[],[],[],[],[],False,False
+OL542112A,Carol A. Mullen,Q91914357,Carol A Mullen,American academic researcher and scholar of alternative mentoring,strong_secondary,2,['Q30'],"['Q2141', 'Q3246744']",['+1961-01-01T00:00:00Z'],['Q30'],"['Q2141', 'Q3246744']",True,True
+OL542424A,Jerold L. Zimmerman,Q41800554,Jerold Zimmerman,economist (University of Rochester),identifier_verified,1,[],[],['+1947-01-01T00:00:00Z'],[],[],False,False
+OL542945A,Marvin Bower,Q1906048,Marvin Bower,American business theorist (1903–2003),identifier_verified,1,['Q30'],['Q43196'],['+1903-08-01T00:00:00Z'],['Q30'],['Q43196'],True,True
+OL544809A,Joseph J. Martocchio,Q113481605,Joseph J. Martocchio,American psychologist,strong_secondary,2,['Q30'],[],[],['Q30'],[],True,False
+OL5450786A,Jason Colquitt,Q139449355,Jason Colquitt,,strong_secondary,2,[],[],[],[],[],False,False
+OL5450805A,Dean Anderson,Q104798769,Dean P Anderson,researcher,probable_secondary,3,[],[],[],[],[],False,False
+OL545889A,Lee G. Bolman,Q93239421,Lee G. Bolman,,strong_secondary,2,[],[],['+1941-01-01T00:00:00Z'],[],[],False,False
+OL549981A,David K. Hayes,Q112453649,David K. Hayes,,strong_secondary,2,[],[],['+1954-00-00T00:00:00Z'],[],[],False,False
+OL550262A,Thomas N. Ingram,Q139468725,Thomas N. Ingram,,strong_secondary,2,[],[],[],[],[],False,False
+OL5535617A,Ying Zhu,Q104131505,Ying Zhu,researcher ORCID 0000-0003-0949-0475,strong_secondary,2,[],[],[],[],[],False,False
+OL5574571A,James Frederick Bender,Q112464590,James Frederick Bender,,strong_secondary,2,[],['Q34739'],['+1905-00-00T00:00:00Z'],[],['Q34739'],False,True
+OL5649743A,Melissa A. Schilling,Q55622741,Melissa Schilling,American innovation scholar and professor,probable_secondary,3,[],[],[],[],[],False,False
+OL5714840A,Marvin Bower,Q1906048,Marvin Bower,American business theorist (1903–2003),strong_secondary,2,['Q30'],['Q43196'],['+1903-08-01T00:00:00Z'],['Q30'],['Q43196'],True,True
+OL5717154A,William Ebenstein,Q18911354,William Ebenstein,political science scholar,strong_secondary,2,['Q30'],['Q1741'],"['+1910-05-11T00:00:00Z', '+1910-00-00T00:00:00Z']",['Q30'],['Q1741'],True,True
+OL5795331A,David Shirley,Q91226344,David J Shirley,researcher (ORCID 0000-0003-4529-0403),probable_secondary,3,[],[],[],[],[],False,False
+OL579626A,Leighton Ford,Q135436992,Leighton Ford,canadian-American evangelist and author (born 1931),strong_secondary,2,[],[],['+1931-01-01T00:00:00Z'],[],[],False,False
+OL5849949A,John M. Nicholas,Q112486942,John M. Nicholas,,strong_secondary,2,[],[],['+1945-00-00T00:00:00Z'],[],[],False,False
+OL585079A,Phil Baguley,Q139371980,Phil Baguley,,strong_secondary,2,[],[],['+1936-01-01T00:00:00Z'],[],[],False,False
+OL588234A,Richard L. Nolan,Q2150035,Richard L. Nolan,"American business theorist, and Emeritus Professor of Business Administration at the Harvard Business School",strong_secondary,2,['Q30'],[],['+1940-04-28T00:00:00Z'],['Q30'],[],True,False
+OL589008A,Joseph G. Monks,Q123224797,Joseph G. Monks,American industrial engineer,strong_secondary,2,['Q30'],[],[],['Q30'],[],True,False
+OL5891029A,Monica Belcourt,Q112427086,Monica Belcourt,,strong_secondary,2,[],[],['+1946-00-00T00:00:00Z'],[],[],False,False
+OL591198A,Ronald C. Doll,Q112767040,Ronald C. Doll,American educator and author,strong_secondary,2,['Q30'],['Q6809717'],['+1913-03-14T00:00:00Z'],['Q30'],['Q6809717'],True,True
+OL609848A,Richard L. Lynch,Q112343906,Richard L. Lynch,,strong_secondary,2,[],[],"['+1943-00-00T00:00:00Z', '+1953-00-00T00:00:00Z']",[],[],False,False
+OL64477A,Annabel C. Beerel,Q112387828,Annabel C. Beerel,1953-,strong_secondary,2,[],['Q34647'],['+1953-00-00T00:00:00Z'],[],['Q34647'],False,True
+OL6519846A,DAVID A. WHETTEN,Q19666912,David A. Whetten,American organizational theorist,strong_secondary,2,[],[],['+1946-06-22T00:00:00Z'],[],[],False,False
+OL6582933A,J. Paulo Davim,Q64691563,J. Paulo Davim,"born:1964-02-05|; Davim, J. Paulo 1964-; Davim, João Paulo; Davim, J. P., 1964-; Davim, João Paulo, 1964-",strong_secondary,2,['Q45'],['Q249906'],['+1964-02-05T00:00:00Z'],['Q45'],['Q249906'],True,True
+OL658641A,Joyce Osland,Q112546978,Joyce Osland,,strong_secondary,2,[],[],['+1949-00-00T00:00:00Z'],[],[],False,False
+OL659144A,Ronald E. Riggio,Q72594844,Ronald E. Riggio,researcher,strong_secondary,2,[],[],['+1955-01-01T00:00:00Z'],[],[],False,False
+OL6605196A,Elizabeth A. Cudney,Q90264377,Elizabeth A Cudney,researcher (ORCID 0000-0002-3990-0474),strong_secondary,2,[],[],[],[],[],False,False
+OL6645079A,Simon Sinek,Q7519777,Simon Sinek,British/American author and motivational speaker,identifier_verified,1,['Q145'],['Q736742'],['+1973-10-09T00:00:00Z'],['Q145'],['Q736742'],True,True
+OL6843931A,Allen C. Amason,Q124741367,Allen C. Amason,scientist,strong_secondary,2,[],[],[],[],[],False,False
+OL6862634A,Patrick van der Duin,Q112539001,Patrick van der Duin,,strong_secondary,2,[],[],['+1970-00-00T00:00:00Z'],[],[],False,False
+OL686666A,James McCalman,Q112495581,James McCalman,,strong_secondary,2,[],[],['+1958-00-00T00:00:00Z'],[],[],False,False
+OL6973134A,Larry C. Spears,Q112505992,Larry C. Spears,,strong_secondary,2,[],[],['+1955-00-00T00:00:00Z'],[],[],False,False
+OL698759A,Myron S. Scholes,Q295647,Myron Scholes,Canadian economist,probable_secondary,3,['Q16'],['Q991310'],['+1941-07-01T00:00:00Z'],['Q16'],['Q991310'],True,True
+OL6994615A,Pawan S. Budhwar,Q58655935,Pawan S. Budhwar,researcher ORCID ID = 0000-0001-8915-6172,strong_secondary,2,['Q668'],[],['+1964-00-00T00:00:00Z'],['Q668'],[],True,False
+OL7000742A,Frank T. Rothaermel,Q5489871,Frank T. Rothaermel,American academic,strong_secondary,2,['Q30'],['Q569680'],[],['Q30'],['Q569680'],True,True
+OL7000993A,Issa M. Saleh,Q139466667,Issa M. Saleh,,strong_secondary,2,[],[],[],[],[],False,False
+OL7039356A,Dirk van Dierendonck,Q58173568,Dirk Van Dierendonck,"researcher, ORCID id # 0000-0002-3545-1798",strong_secondary,2,[],[],[],[],[],False,False
+OL7080504A,Jesper Strandskov,Q12319668,Jesper Strandskov,Danish scientist,strong_secondary,2,['Q756617'],['Q30096'],"['+1954-11-24T00:00:00Z', '+1954-00-00T00:00:00Z']",['Q756617'],['Q30096'],True,True
+OL7084372A,Alexander Brem,Q43196955,Alexander Brem,German researcher and professor,strong_secondary,2,['Q183'],['Q623464'],['+1979-00-00T00:00:00Z'],['Q183'],['Q623464'],True,True
+OL715490A,Michael C. Ehrhardt,Q112390984,Michael C. Ehrhardt,1955-,strong_secondary,2,[],[],['+1955-00-00T00:00:00Z'],[],[],False,False
+OL7155908A,Stanley A. McChrystal,Q374338,Stanley A. McChrystal,American general,identifier_verified,1,['Q30'],['Q590879'],['+1954-08-14T00:00:00Z'],['Q30'],['Q590879'],True,True
+OL717679A,Joseph A. Maciariello,Q112398200,Joseph A. Maciariello,,strong_secondary,2,[],[],['+1941-00-00T00:00:00Z'],[],[],False,False
+OL718530A,Avraham Shtub,Q87888792,Avraham Shtub,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL7203538A,Philip Gibson,Q112536432,Philip Gibson,,strong_secondary,2,[],[],['+1955-00-00T00:00:00Z'],[],[],False,False
+OL7208428A,Mark Dodgson,Q6767387,Mark Dodgson,Australian academic,strong_secondary,2,['Q408'],[],['+1957-05-01T00:00:00Z'],['Q408'],[],True,False
+OL721066A,Ray Wild,Q125402117,Ray Wild,,strong_secondary,2,[],[],[],[],[],False,False
+OL72319A,Karen Lawson,Q112444520,Karen Lawson,,strong_secondary,2,['Q30'],['Q998893'],"['+1947-00-00T00:00:00Z', '+1947-12-05T00:00:00Z', '+1947-05-12T00:00:00Z']",['Q30'],['Q998893'],True,True
+OL725170A,Gregory B. Northcraft,Q125130524,Gregory B. Northcraft,American social psychologist,strong_secondary,2,[],[],[],[],[],False,False
+OL7276987A,Peter Zámborský,Q124839952,Peter Zamborsky,business academic,strong_secondary,2,[],[],[],[],[],False,False
+OL7277660A,Kory Kogon,Q120595797,Kory Kogon,,strong_secondary,2,[],[],[],[],[],False,False
+OL7320384A,Jean M. Phillips,Q112484316,Jean Phillips,,probable_secondary,3,[],[],['+1969-00-00T00:00:00Z'],[],[],False,False
+OL7342127A,Mark C. Layton,Q119268884,Mark C. Layton,,strong_secondary,2,[],[],[],[],[],False,False
+OL7346974A,Ron Dimon,Q112467375,Ron Dimon,,strong_secondary,2,[],[],['+1963-01-01T00:00:00Z'],[],[],False,False
+OL7349537A,Stefano Biazzo,Q139447974,Stefano Biazzo,,strong_secondary,2,[],[],[],[],[],False,False
+OL7356617A,Carolina Machado,Q57018851,Carolina B Machado,researcher,probable_secondary,3,[],[],[],[],[],False,False
+OL7411684A,G. M. Stalker,Q124644134,G. M. Stalker,,strong_secondary,2,[],[],['+1925-01-01T00:00:00Z'],[],[],False,False
+OL7442788A,James Comey,Q167607,James Comey,American lawyer and 7th director of the Federal Bureau of Investigation (born 1960),strong_secondary,2,['Q30'],['Q128114'],['+1960-12-14T00:00:00Z'],['Q30'],['Q128114'],True,True
+OL7447258A,Donald E. Kieso,Q93434081,Donald E. Kieso,,strong_secondary,2,[],[],['+1936-00-00T00:00:00Z'],[],[],False,False
+OL7455447A,Patrick M. Wright,Q112523532,Patrick M. Wright,,strong_secondary,2,[],[],['+1960-00-00T00:00:00Z'],[],[],False,False
+OL7466902A,Michael R. Baye,Q6828511,Michael Baye,American economist,probable_secondary,3,['Q30'],[],['+1958-04-06T00:00:00Z'],['Q30'],[],True,False
+OL7485326A,Rory Burke,Q112479589,Rory Burke,1952-,strong_secondary,2,[],[],['+1952-00-00T00:00:00Z'],[],[],False,False
+OL7501911A,James J. Cochran,Q102311298,James J. Cochran,statistics researcher; Ph.D. University of Cincinnati 1997,strong_secondary,2,[],[],[],[],[],False,False
+OL7524018A,Jocko Willink,Q22935809,Jocko Willink,American author,strong_secondary,2,['Q30'],['Q18389'],['+1971-09-08T00:00:00Z'],['Q30'],['Q18389'],True,True
+OL7526080A,Ina Goller,Q112545666,Ina Goller,,strong_secondary,2,[],[],['+1970-00-00T00:00:00Z'],[],[],False,False
+OL7582321A,Chuck Munson,Q139465712,Chuck Munson,,strong_secondary,2,[],[],[],[],[],False,False
+OL7582479A,Wendy Wagner,Q111820212,Wendy N. Wagner,American writer and editor,probable_secondary,3,['Q30'],[],['+2000-00-00T00:00:00Z'],['Q30'],[],True,False
+OL7607720A,Wyn Jenkins,Q139466730,Wyn Jenkins,,strong_secondary,2,[],[],[],[],[],False,False
+OL7618544A,David Heinemeier Hansson,Q719413,David Heinemeier Hansson,"programmer, racing driver, creator of Ruby on Rails",identifier_verified,1,['Q756617'],['Q1748'],['+1979-10-15T00:00:00Z'],['Q756617'],['Q1748'],True,True
+OL7644918A,John R. Hendon,Q139463264,John R. Hendon,,strong_secondary,2,[],[],[],[],[],False,False
+OL7645420A,Herman Aguinis,Q22003019,Herman Aguinis,business theorist,strong_secondary,2,['Q414'],['Q983451'],"['+1966-03-00T00:00:00Z', '+1966-03-11T00:00:00Z']",['Q414'],['Q983451'],True,True
+OL7657408A,Patrick Bet-David,Q16217194,Patrick Bet-David,American entrepreneur and YouTuber,strong_secondary,2,['Q30'],['Q3616'],"['+1978-10-18T00:00:00Z', '+1978-01-01T00:00:00Z']",['Q30'],['Q3616'],True,True
+OL7659105A,Emma L. Murray,Q139468508,Emma L. Murray,,strong_secondary,2,[],[],[],[],[],False,False
+OL7662892A,Chris Fussell,Q131261928,Chris Fussell,,strong_secondary,2,[],[],[],[],[],False,False
+OL7664098A,Harry Sminia,Q112533206,Harry Sminia,,strong_secondary,2,[],['Q727'],['+1963-00-00T00:00:00Z'],[],['Q727'],False,True
+OL7675120A,Jeffery D. Houghton,Q139468507,Jeffery D. Houghton,,strong_secondary,2,[],[],[],[],[],False,False
+OL768789A,Lewis R. Ireland,Q112480252,Lewis R. Ireland,,strong_secondary,2,[],[],['+1937-00-00T00:00:00Z'],[],[],False,False
+OL7696713A,Jeff Prince,Q112467140,Jeff Prince,,strong_secondary,2,[],[],['+1976-00-00T00:00:00Z'],[],[],False,False
+OL7699673A,Steven ten Have,Q89132205,Steven Ten Have,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL7699674A,Wouter ten Have,Q88399817,Wouter Ten Have,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL770018A,Leon C. Megginson,Q93253605,Leon C. Megginson,American business academic,strong_secondary,2,[],[],['+1921-00-00T00:00:00Z'],[],[],False,False
+OL770456A,Ann Lieberman,Q112520504,Ann Lieberman,,strong_secondary,2,[],[],['+1931-00-00T00:00:00Z'],[],[],False,False
+OL772556A,Stephen P. Gordon,Q114569791,Stephen P. Gordon,American academic in educational leadership,strong_secondary,2,[],[],['+1948-09-10T00:00:00Z'],[],[],False,False
+OL7770816A,Kwok Tai Chui,Q60372505,Kwok Tai Chui,researcher ORCID ID = 0000-0001-7992-9901,strong_secondary,2,[],[],[],[],[],False,False
+OL7773959A,Nancy S. Kim,Q139419343,Nancy S. Kim,,strong_secondary,2,[],[],[],[],[],False,False
+OL778253A,Richard A. Gorton,Q139446157,Richard A. Gorton,,strong_secondary,2,[],[],[],[],[],False,False
+OL7807029A,Seung-Hyun Lee,Q57010537,Seung Hyun Lee,researcher (ORCID 0000-0002-0311-6565),strong_secondary,2,[],[],[],[],[],False,False
+OL786466A,Mick Marchington,Q112429200,Mick Marchington,,strong_secondary,2,[],[],['+1949-00-00T00:00:00Z'],[],[],False,False
+OL78984A,David Ray Anderson,Q112352068,David Ray Anderson,,identifier_verified,1,[],[],['+1941-00-00T00:00:00Z'],[],[],False,False
+OL7900133A,Jonathan Crawshaw,Q117260095,Jonathan Crawshaw,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL7900742A,Frank Voehl,Q112518109,Frank Voehl,,strong_secondary,2,[],[],['+1946-00-00T00:00:00Z'],[],[],False,False
+OL7915454A,Ronan Carbery,Q124643389,Ronan Carbery,,strong_secondary,2,[],[],[],[],[],False,False
+OL7929313A,R. Edward Freeman,Q3938264,R. Edward Freeman,American philosopher (1951-),strong_secondary,2,['Q30'],['Q239870'],['+1951-12-18T00:00:00Z'],['Q30'],['Q239870'],True,True
+OL7950578A,Ashish Malik,Q90288688,Ashish A. Malik,researcher (ORCID 0000-0003-4866-9072),probable_secondary,3,[],[],[],[],[],False,False
+OL7953007A,Christoph Lauterburg,Q132265938,Christoph Lauterburg,,strong_secondary,2,[],[],['+1937-01-01T00:00:00Z'],[],[],False,False
+OL7964852A,James Comey,Q167607,James Comey,American lawyer and 7th director of the Federal Bureau of Investigation (born 1960),strong_secondary,2,['Q30'],['Q128114'],['+1960-12-14T00:00:00Z'],['Q30'],['Q128114'],True,True
+OL7978852A,Dirk van Dierendonck,Q58173568,Dirk Van Dierendonck,"researcher, ORCID id # 0000-0002-3545-1798",strong_secondary,2,[],[],[],[],[],False,False
+OL7989361A,Aditya Agashe,Q107301879,Aditya Agashe,American computer scientist and author,identifier_verified,1,['Q30'],[],['+1996-01-28T00:00:00Z'],['Q30'],[],True,False
+OL7989362A,Parth Detroja,Q111982434,Parth Detroja,researcher,strong_secondary,2,['Q30'],[],[],['Q30'],[],True,False
+OL802404A,Dietmar Vahs,Q1223576,Dietmar Vahs,German economist,strong_secondary,2,['Q183'],"['Q1726', 'Q183']",['+1961-01-01T00:00:00Z'],['Q183'],"['Q1726', 'Q183']",True,True
+OL8043921A,Pieter Nel,Q122212367,Pieter Nel,business academic at Unitec in New Zealand,strong_secondary,2,[],[],[],[],[],False,False
+OL8049214A,Stanley M. Gully,Q71971150,Stanley Gully,researcher,probable_secondary,3,[],[],[],[],[],False,False
+OL8082877A,Peter Schein,Q119582967,Peter A. Schein,,probable_secondary,3,[],[],[],[],[],False,False
+OL8083074A,Tantum Collins,Q130461376,Tantum Collins,,strong_secondary,2,[],[],[],[],[],False,False
+OL8088432A,Mairead Brady,Q139446636,Mairead Brady,,strong_secondary,2,[],[],[],[],[],False,False
+OL8118723A,James B. Comey,Q167607,James Comey,American lawyer and 7th director of the Federal Bureau of Investigation (born 1960),probable_secondary,3,['Q30'],['Q128114'],['+1960-12-14T00:00:00Z'],['Q30'],['Q128114'],True,True
+OL8126028A,Keryn Chalmers,Q130312592,Keryn Chalmers,accounting researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL8154264A,Steve Kempster,Q58076270,Steve Kempster,researcher,strong_secondary,2,[],[],['+1961-01-01T00:00:00Z'],[],[],False,False
+OL8201904A,Julie Beardwell,Q139455643,Julie Beardwell,,strong_secondary,2,[],[],[],[],[],False,False
+OL8266107A,Evangelia Marinakou,Q132158377,Evangelia Marinakou,,strong_secondary,2,[],[],[],[],[],False,False
+OL828245A,S. Tamer Cavusgil,Q60024331,S. Tamer Cavusgil,Turkish-American economist (born 1947),strong_secondary,2,"['Q30', 'Q43']",[],['+1947-10-04T00:00:00Z'],"['Q30', 'Q43']",[],True,False
+OL8298978A,Nazim Taskin,Q130616572,Nazim Taskin,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL833791A,Chris Argyris,Q1076951,Chris Argyris,American business theorist (1923-2013),identifier_verified,1,['Q30'],['Q25395'],['+1923-07-16T00:00:00Z'],['Q30'],['Q25395'],True,True
+OL833994A,Karlene H. Roberts,Q141520388,Karlene H. Roberts,"American organizational theorist, professor emerita at the Haas School of Business, UC Berkeley (born 1937)",strong_secondary,2,['Q30'],[],['+1937-06-12T00:00:00Z'],['Q30'],[],True,False
+OL834372A,Todd Jick,Q130279005,Todd Jick,,strong_secondary,2,[],[],['+1949-01-01T00:00:00Z'],[],[],False,False
+OL834892A,Mark Dodgson,Q6767387,Mark Dodgson,Australian academic,strong_secondary,2,['Q408'],[],['+1957-05-01T00:00:00Z'],['Q408'],[],True,False
+OL835181A,John J. Hampton,Q112446749,John J. Hampton,,strong_secondary,2,[],[],['+1942-00-00T00:00:00Z'],[],[],False,False
+OL8358679A,Christine Johnson McPhail,Q124544159,Christine Johnson McPhail,American academic administrator,strong_secondary,2,['Q30'],[],[],['Q30'],[],True,False
+OL836577A,Scott Plous,Q16734588,Scott Plous,American social psychologist (1959-),identifier_verified,1,['Q30'],['Q37836'],['+1959-11-02T00:00:00Z'],['Q30'],['Q37836'],True,True
+OL8468832A,Poonam Khurana,Q87417067,Poonam Khurana,associate professor of clinical pediatrics,strong_secondary,2,[],[],[],[],[],False,False
+OL875828A,P. K. Joy,Q94648395,P. K. Joy,,strong_secondary,2,[],[],['+1940-00-00T00:00:00Z'],[],[],False,False
+OL886345A,Albert Mehrabian,Q609529,Albert Mehrabian,American psychologist,identifier_verified,1,['Q30'],['Q794'],['+1939-11-17T00:00:00Z'],['Q30'],['Q794'],True,True
+OL9310463A,Doris Kearns Goodwin,Q442008,Doris Kearns Goodwin,American biographer and historian (born 1943),strong_secondary,2,['Q30'],['Q18419'],['+1943-01-04T00:00:00Z'],['Q30'],['Q18419'],True,True
+OL9362244A,Wendy Wu,Q101052057,Wendy Wu,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL9482201A,Richard D. Heimovics,Q112385927,Richard Heimovics,,probable_secondary,3,[],[],['+1941-00-00T00:00:00Z'],[],[],False,False
+OL948501A,Terry F. Buss,Q112443627,Terry F. Buss,,strong_secondary,2,[],[],['+1947-00-00T00:00:00Z'],[],[],False,False
+OL9489252A,Bruce Rayton,Q57090207,Bruce Rayton,researcher,strong_secondary,2,[],[],[],[],[],False,False
+OL9502284A,Wouter Van Dooren,Q139426629,Wouter Van Dooren,,strong_secondary,2,[],[],[],[],[],False,False
+OL952123A,Tom R. Burns,Q2440014,Tom R. Burns,American sociologist,strong_secondary,2,['Q30'],['Q1612'],"['+1937-01-01T00:00:00Z', '+1937-02-27T00:00:00Z']",['Q30'],['Q1612'],True,True
+OL953741A,Everett E. Adam,Q112392394,Everett E. Adam,,strong_secondary,2,[],[],['+1941-00-00T00:00:00Z'],[],[],False,False
+OL9575127A,Roberto Filippini,Q130921881,Roberto Filippini,researcher (ORCID 0009-0007-3443-1174),strong_secondary,2,[],[],[],[],[],False,False
+OL957796A,Richard Hughes,Q302433,Richard Hughes,British writer (1900–1976),identifier_verified,1,['Q145'],['Q1754096'],['+1900-04-19T00:00:00Z'],['Q145'],['Q1754096'],True,True
+OL9730645A,Kristian Wasén,Q112545640,Kristian Wasén,scientist,strong_secondary,2,[],[],['+1980-00-00T00:00:00Z'],[],[],False,False
+OL9990497A,Sven Hauff,Q132926476,Sven Hauff,,strong_secondary,2,[],[],[],[],[],False,False

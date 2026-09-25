@@ -1,0 +1,5 @@
+release_page,release_page_url,status_code,isbn_labels_found,records_parsed,response_length,elapsed_seconds,error
+2025 Releases,https://www.leadershipnow.com/leadershop/new2025.html,200,252,252,266723,0.94,
+2024 Releases,https://www.leadershipnow.com/leadershop/new2024.html,200,280,280,294840,0.76,
+2023 Releases,https://www.leadershipnow.com/leadershop/new2023.html,200,303,303,317385,0.91,
+2022 Releases,https://www.leadershipnow.com/leadershop/new2022.html,200,289,289,302698,0.82,

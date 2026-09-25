@@ -1,0 +1,141 @@
+book_id,openlibrary_key,title,authors,isbn,isbn_type,isbn_source,isbn_length,structurally_valid_length,title_compare,authors_compare
+BOOK00667,/works/OL2714552W,Organizational behavior,"['John W. Newstrom', 'Keith Davis']",0071127305,ISBN-10,all_isbns,10,True,organizational behavior,john w newstrom keith davis
+BOOK00697,/works/OL1267341W,Organizational behavior,['Keith Davis'],0071127305,ISBN-10,all_isbns,10,True,organizational behavior,keith davis
+BOOK00708,/works/OL3266746W,Managerial Economics & Business Strategy,"['Michael R. Baye', 'Michael Baye']",0072487933,ISBN-10,all_isbns,10,True,managerial economics business strategy,michael r baye michael baye
+BOOK00749,/works/OL15843963W,Managerial economics and business strategy,['Michael R. Baye'],0072487933,ISBN-10,all_isbns,10,True,managerial economics and business strategy,michael r baye
+BOOK00663,/works/OL547477W,Organizational behavior,"['Robert Kreitner', 'Angelo Kinicki']",007353045X,ISBN-10,all_isbns,10,True,organizational behavior,robert kreitner angelo kinicki
+BOOK00691,/works/OL18648685W,Organizational behavior,['Robert Kreitner'],007353045X,ISBN-10,all_isbns,10,True,organizational behavior,robert kreitner
+BOOK00493,/works/OL7942381W,Principles of operations management,['Jay Heizer'],0130271470,ISBN-10,all_isbns,10,True,principles of operations management,jay heizer
+BOOK00502,/works/OL1887969W,Principles of operations management,['Jay H. Heizer'],0130271470,ISBN-10,all_isbns,10,True,principles of operations management,jay h heizer
+BOOK00298,/works/OL1982791W,Human Resource Management,['Gary Dessler'],0130664928,ISBN-10,all_isbns,10,True,human resource management,gary dessler
+BOOK00622,/works/OL15643306W,Human resource management,['Gary Dessler'],0130664928,ISBN-10,all_isbns,10,True,human resource management,gary dessler
+BOOK00285,/works/OL1887971W,Operations management,"['Jay H. Heizer', 'Jay Heizer', 'Barry Render']",0131016121,ISBN-10,all_isbns,10,True,operations management,jay h heizer jay heizer barry render
+BOOK00485,/works/OL7942382W,Operations management,['Jay Heizer'],0131016121,ISBN-10,all_isbns,10,True,operations management,jay heizer
+BOOK00285,/works/OL1887971W,Operations management,"['Jay H. Heizer', 'Jay Heizer', 'Barry Render']",0131422723,ISBN-10,all_isbns,10,True,operations management,jay h heizer jay heizer barry render
+BOOK00485,/works/OL7942382W,Operations management,['Jay Heizer'],0131422723,ISBN-10,all_isbns,10,True,operations management,jay heizer
+BOOK00298,/works/OL1982791W,Human Resource Management,['Gary Dessler'],0131440977,ISBN-10,all_isbns,10,True,human resource management,gary dessler
+BOOK00626,/works/OL15711892W,Human resource management,['Gary Dessler'],0131440977,ISBN-10,all_isbns,10,True,human resource management,gary dessler
+BOOK00302,/works/OL3232991W,Management of organizational behavior,"['Paul Hersey', 'Blanchard Hersey']",0131441396,ISBN-10,all_isbns,10,True,management of organizational behavior,paul hersey blanchard hersey
+BOOK00694,/works/OL15076937W,Management of Organizational Behavior,['Kenneth H. Blanchard'],0131441396,ISBN-10,all_isbns,10,True,management of organizational behavior,kenneth h blanchard
+BOOK00287,/works/OL1987799W,Strategic management,['Fred R. David'],0131503464,ISBN-10,all_isbns,10,True,strategic management,fred r david
+BOOK00385,/works/OL7951839W,Strategic Management,['Fred David'],0131503464,ISBN-10,all_isbns,10,True,strategic management,fred david
+BOOK00287,/works/OL1987799W,Strategic management,['Fred R. David'],0131869558,ISBN-10,all_isbns,10,True,strategic management,fred r david
+BOOK00385,/works/OL7951839W,Strategic Management,['Fred David'],0131869558,ISBN-10,all_isbns,10,True,strategic management,fred david
+BOOK00284,/works/OL11789290W,Human Resource management,['Gary Dessler'],0132343525,ISBN-10,all_isbns,10,True,human resource management,gary dessler
+BOOK00298,/works/OL1982791W,Human Resource Management,['Gary Dessler'],0132343525,ISBN-10,all_isbns,10,True,human resource management,gary dessler
+BOOK00287,/works/OL1987799W,Strategic management,['Fred R. David'],0136015700,ISBN-10,all_isbns,10,True,strategic management,fred r david
+BOOK00385,/works/OL7951839W,Strategic Management,['Fred David'],0136015700,ISBN-10,all_isbns,10,True,strategic management,fred david
+BOOK00532,/works/OL59388W,Project Management,['Jeffrey K. Pinto'],0136065619,ISBN-10,all_isbns,10,True,project management,jeffrey k pinto
+BOOK00540,/works/OL18738779W,Project management,['Jeffrey K. Pinto'],0136065619,ISBN-10,all_isbns,10,True,project management,jeffrey k pinto
+BOOK00284,/works/OL11789290W,Human Resource management,['Gary Dessler'],0136589073,ISBN-10,all_isbns,10,True,human resource management,gary dessler
+BOOK00298,/works/OL1982791W,Human Resource Management,['Gary Dessler'],0136589073,ISBN-10,all_isbns,10,True,human resource management,gary dessler
+BOOK00775,/works/OL892915W,An introduction to management science,['David Ray Anderson'],0314631496,ISBN-10,all_isbns,10,True,an introduction to management science,david ray anderson
+BOOK00805,/works/OL13342723W,An Introduction to Management Science,['David Ray Anderson'],0314631496,ISBN-10,all_isbns,10,True,an introduction to management science,david ray anderson
+BOOK00682,/works/OL2768785W,Organizational behavior,['Gregory Moorhead'],0395841968,ISBN-10,all_isbns,10,True,organizational behavior,gregory moorhead
+BOOK00688,/works/OL1866343W,Organizational Behavior,['Ricky W. Griffin'],0395841968,ISBN-10,all_isbns,10,True,organizational behavior,ricky w griffin
+BOOK00569,/works/OL15431388W,Performance management systems,['Arup Varma'],0415771765,ISBN-10,all_isbns,10,True,performance management systems,arup varma
+BOOK00599,/works/OL9353543W,Global Performance Management (Global HRM),['Arup; Bu Varma'],0415771765,ISBN-10,all_isbns,10,True,global performance management global hrm,arup bu varma
+BOOK00569,/works/OL15431388W,Performance management systems,['Arup Varma'],0415771773,ISBN-10,all_isbns,10,True,performance management systems,arup varma
+BOOK00599,/works/OL9353543W,Global Performance Management (Global HRM),['Arup; Bu Varma'],0415771773,ISBN-10,all_isbns,10,True,global performance management global hrm,arup bu varma
+BOOK00711,/works/OL1839160W,Developing business strategies,['David A. Aaker'],0471064114,ISBN-10,all_isbns,10,True,developing business strategies,david a aaker
+BOOK00738,/works/OL1839137W,Developing Business Strategies,['David A. Aaker'],0471064114,ISBN-10,all_isbns,10,True,developing business strategies,david a aaker
+BOOK00758,/works/OL2746901W,Financial Accounting,['Paul D. Kimmel'],0471169196,ISBN-10,all_isbns,10,True,financial accounting,paul d kimmel
+BOOK00770,/works/OL1881222W,Financial accounting,['Jerry J. Weygandt'],0471169196,ISBN-10,all_isbns,10,True,financial accounting,jerry j weygandt
+BOOK00394,/works/OL8229244W,Strategic Management,"['Garth Saloner', 'Andrea Shepard', 'Joel Podolny']",0471380717,ISBN-10,all_isbns,10,True,strategic management,garth saloner andrea shepard joel podolny
+BOOK00395,/works/OL16069259W,Strategic management,['Garth Saloner'],0471380717,ISBN-10,all_isbns,10,True,strategic management,garth saloner
+BOOK00758,/works/OL2746901W,Financial Accounting,['Paul D. Kimmel'],0471415782,ISBN-10,all_isbns,10,True,financial accounting,paul d kimmel
+BOOK00770,/works/OL1881222W,Financial accounting,['Jerry J. Weygandt'],0471415782,ISBN-10,all_isbns,10,True,financial accounting,jerry j weygandt
+BOOK00542,/works/OL8227958W,The Fast Forward MBA in Project Management,['Eric Verzuh'],0471692840,ISBN-10,all_isbns,10,True,the fast forward mba in project management,eric verzuh
+BOOK00550,/works/OL8227960W,The Fast Forward MBA in Project Management,['Eric Verzuh'],0471692840,ISBN-10,all_isbns,10,True,the fast forward mba in project management,eric verzuh
+BOOK00682,/works/OL2768785W,Organizational behavior,['Gregory Moorhead'],0618056491,ISBN-10,all_isbns,10,True,organizational behavior,gregory moorhead
+BOOK00688,/works/OL1866343W,Organizational Behavior,['Ricky W. Griffin'],0618056491,ISBN-10,all_isbns,10,True,organizational behavior,ricky w griffin
+BOOK00005,/works/OL94176W,Leadership,['Peter Guy Northouse'],0761919260,ISBN-10,all_isbns,10,True,leadership,peter guy northouse
+BOOK00007,/works/OL7956784W,Leadership,['Peter G. Northouse'],0761919260,ISBN-10,all_isbns,10,True,leadership,peter g northouse
+BOOK00027,/works/OL1835386W,Las cinco disfunciones de un equipo,['Patrick Lencioni'],0787960756,ISBN-10,all_isbns,10,True,las cinco disfunciones de un equipo,patrick lencioni
+BOOK00184,/works/OL31272706W,The Five Dysfunctions of a Team,['Patrick Lencioni'],0787960756,ISBN-10,all_isbns,10,True,the five dysfunctions of a team,patrick lencioni
+BOOK00234,/works/OL1903158W,Servant leadership,['Robert K. Greenleaf'],080910220X,ISBN-10,all_isbns,10,True,servant leadership,robert k greenleaf
+BOOK00245,/works/OL16327340W,Servant leadership,[],080910220X,ISBN-10,all_isbns,10,True,servant leadership,
+BOOK00234,/works/OL1903158W,Servant leadership,['Robert K. Greenleaf'],0809125277,ISBN-10,all_isbns,10,True,servant leadership,robert k greenleaf
+BOOK00237,/works/OL16997792W,Servant leadership,[],0809125277,ISBN-10,all_isbns,10,True,servant leadership,
+BOOK00005,/works/OL94176W,Leadership,['Peter Guy Northouse'],141294161X,ISBN-10,all_isbns,10,True,leadership,peter guy northouse
+BOOK00007,/works/OL7956784W,Leadership,['Peter G. Northouse'],141294161X,ISBN-10,all_isbns,10,True,leadership,peter g northouse
+BOOK00053,/works/OL15443861W,Full range leadership development,['Bruce J. Avolio'],1412974755,ISBN-10,all_isbns,10,True,full range leadership development,bruce j avolio
+BOOK00083,/works/OL15508124W,Full range leadership development,['Bruce J. Avolio'],1412974755,ISBN-10,all_isbns,10,True,full range leadership development,bruce j avolio
+BOOK00005,/works/OL94176W,Leadership,['Peter Guy Northouse'],1412974887,ISBN-10,all_isbns,10,True,leadership,peter guy northouse
+BOOK00050,/works/OL18724331W,Leadership,['Peter Guy Northouse'],1412974887,ISBN-10,all_isbns,10,True,leadership,peter guy northouse
+BOOK00720,/works/OL18606296W,Business strategy,['Jeremy Kourdi'],1846681243,ISBN-10,all_isbns,10,True,business strategy,jeremy kourdi
+BOOK00737,/works/OL6223851W,Business strategy,['Jeremy Kourdi'],1846681243,ISBN-10,all_isbns,10,True,business strategy,jeremy kourdi
+BOOK00309,/works/OL102817W,A Guide to the Project Management Body of Knowledge (PMBOK® Guide),['Project Management Institute'],1880410222,ISBN-10,all_isbns,10,True,a guide to the project management body of knowledge pmbok guide,project management institute
+BOOK00559,/works/OL19130377W,A guide to the project management body of knowledge (PMBOK guide),['Project Management Institute'],1880410222,ISBN-10,all_isbns,10,True,a guide to the project management body of knowledge pmbok guide,project management institute
+BOOK00309,/works/OL102817W,A Guide to the Project Management Body of Knowledge (PMBOK® Guide),['Project Management Institute'],1880410230,ISBN-10,all_isbns,10,True,a guide to the project management body of knowledge pmbok guide,project management institute
+BOOK00559,/works/OL19130377W,A guide to the project management body of knowledge (PMBOK guide),['Project Management Institute'],1880410230,ISBN-10,all_isbns,10,True,a guide to the project management body of knowledge pmbok guide,project management institute
+BOOK00667,/works/OL2714552W,Organizational behavior,"['John W. Newstrom', 'Keith Davis']",9780071127301,ISBN-13,all_isbns,13,True,organizational behavior,john w newstrom keith davis
+BOOK00697,/works/OL1267341W,Organizational behavior,['Keith Davis'],9780071127301,ISBN-13,all_isbns,13,True,organizational behavior,keith davis
+BOOK00708,/works/OL3266746W,Managerial Economics & Business Strategy,"['Michael R. Baye', 'Michael Baye']",9780072487930,ISBN-13,all_isbns,13,True,managerial economics business strategy,michael r baye michael baye
+BOOK00749,/works/OL15843963W,Managerial economics and business strategy,['Michael R. Baye'],9780072487930,ISBN-13,all_isbns,13,True,managerial economics and business strategy,michael r baye
+BOOK00663,/works/OL547477W,Organizational behavior,"['Robert Kreitner', 'Angelo Kinicki']",9780073530451,ISBN-13,all_isbns,13,True,organizational behavior,robert kreitner angelo kinicki
+BOOK00691,/works/OL18648685W,Organizational behavior,['Robert Kreitner'],9780073530451,ISBN-13,all_isbns,13,True,organizational behavior,robert kreitner
+BOOK00493,/works/OL7942381W,Principles of operations management,['Jay Heizer'],9780130271471,ISBN-13,all_isbns,13,True,principles of operations management,jay heizer
+BOOK00502,/works/OL1887969W,Principles of operations management,['Jay H. Heizer'],9780130271471,ISBN-13,all_isbns,13,True,principles of operations management,jay h heizer
+BOOK00298,/works/OL1982791W,Human Resource Management,['Gary Dessler'],9780130664921,ISBN-13,all_isbns,13,True,human resource management,gary dessler
+BOOK00622,/works/OL15643306W,Human resource management,['Gary Dessler'],9780130664921,ISBN-13,all_isbns,13,True,human resource management,gary dessler
+BOOK00285,/works/OL1887971W,Operations management,"['Jay H. Heizer', 'Jay Heizer', 'Barry Render']",9780131016125,ISBN-13,all_isbns,13,True,operations management,jay h heizer jay heizer barry render
+BOOK00485,/works/OL7942382W,Operations management,['Jay Heizer'],9780131016125,ISBN-13,all_isbns,13,True,operations management,jay heizer
+BOOK00285,/works/OL1887971W,Operations management,"['Jay H. Heizer', 'Jay Heizer', 'Barry Render']",9780131422728,ISBN-13,all_isbns,13,True,operations management,jay h heizer jay heizer barry render
+BOOK00485,/works/OL7942382W,Operations management,['Jay Heizer'],9780131422728,ISBN-13,all_isbns,13,True,operations management,jay heizer
+BOOK00298,/works/OL1982791W,Human Resource Management,['Gary Dessler'],9780131440975,ISBN-13,all_isbns,13,True,human resource management,gary dessler
+BOOK00626,/works/OL15711892W,Human resource management,['Gary Dessler'],9780131440975,ISBN-13,all_isbns,13,True,human resource management,gary dessler
+BOOK00302,/works/OL3232991W,Management of organizational behavior,"['Paul Hersey', 'Blanchard Hersey']",9780131441392,ISBN-13,all_isbns,13,True,management of organizational behavior,paul hersey blanchard hersey
+BOOK00694,/works/OL15076937W,Management of Organizational Behavior,['Kenneth H. Blanchard'],9780131441392,ISBN-13,all_isbns,13,True,management of organizational behavior,kenneth h blanchard
+BOOK00287,/works/OL1987799W,Strategic management,['Fred R. David'],9780131503465,ISBN-13,all_isbns,13,True,strategic management,fred r david
+BOOK00385,/works/OL7951839W,Strategic Management,['Fred David'],9780131503465,ISBN-13,all_isbns,13,True,strategic management,fred david
+BOOK00287,/works/OL1987799W,Strategic management,['Fred R. David'],9780131869554,ISBN-13,all_isbns,13,True,strategic management,fred r david
+BOOK00385,/works/OL7951839W,Strategic Management,['Fred David'],9780131869554,ISBN-13,all_isbns,13,True,strategic management,fred david
+BOOK00284,/works/OL11789290W,Human Resource management,['Gary Dessler'],9780132343527,ISBN-13,all_isbns,13,True,human resource management,gary dessler
+BOOK00298,/works/OL1982791W,Human Resource Management,['Gary Dessler'],9780132343527,ISBN-13,all_isbns,13,True,human resource management,gary dessler
+BOOK00287,/works/OL1987799W,Strategic management,['Fred R. David'],9780136015703,ISBN-13,all_isbns,13,True,strategic management,fred r david
+BOOK00385,/works/OL7951839W,Strategic Management,['Fred David'],9780136015703,ISBN-13,all_isbns,13,True,strategic management,fred david
+BOOK00532,/works/OL59388W,Project Management,['Jeffrey K. Pinto'],9780136065616,ISBN-13,all_isbns,13,True,project management,jeffrey k pinto
+BOOK00540,/works/OL18738779W,Project management,['Jeffrey K. Pinto'],9780136065616,ISBN-13,all_isbns,13,True,project management,jeffrey k pinto
+BOOK00284,/works/OL11789290W,Human Resource management,['Gary Dessler'],9780136589075,ISBN-13,all_isbns,13,True,human resource management,gary dessler
+BOOK00298,/works/OL1982791W,Human Resource Management,['Gary Dessler'],9780136589075,ISBN-13,all_isbns,13,True,human resource management,gary dessler
+BOOK00775,/works/OL892915W,An introduction to management science,['David Ray Anderson'],9780314631497,ISBN-13,all_isbns,13,True,an introduction to management science,david ray anderson
+BOOK00805,/works/OL13342723W,An Introduction to Management Science,['David Ray Anderson'],9780314631497,ISBN-13,all_isbns,13,True,an introduction to management science,david ray anderson
+BOOK00682,/works/OL2768785W,Organizational behavior,['Gregory Moorhead'],9780395841969,ISBN-13,all_isbns,13,True,organizational behavior,gregory moorhead
+BOOK00688,/works/OL1866343W,Organizational Behavior,['Ricky W. Griffin'],9780395841969,ISBN-13,all_isbns,13,True,organizational behavior,ricky w griffin
+BOOK00569,/works/OL15431388W,Performance management systems,['Arup Varma'],9780415771764,ISBN-13,all_isbns,13,True,performance management systems,arup varma
+BOOK00599,/works/OL9353543W,Global Performance Management (Global HRM),['Arup; Bu Varma'],9780415771764,ISBN-13,all_isbns,13,True,global performance management global hrm,arup bu varma
+BOOK00569,/works/OL15431388W,Performance management systems,['Arup Varma'],9780415771771,ISBN-13,all_isbns,13,True,performance management systems,arup varma
+BOOK00599,/works/OL9353543W,Global Performance Management (Global HRM),['Arup; Bu Varma'],9780415771771,ISBN-13,all_isbns,13,True,global performance management global hrm,arup bu varma
+BOOK00711,/works/OL1839160W,Developing business strategies,['David A. Aaker'],9780471064114,ISBN-13,all_isbns,13,True,developing business strategies,david a aaker
+BOOK00738,/works/OL1839137W,Developing Business Strategies,['David A. Aaker'],9780471064114,ISBN-13,all_isbns,13,True,developing business strategies,david a aaker
+BOOK00758,/works/OL2746901W,Financial Accounting,['Paul D. Kimmel'],9780471169192,ISBN-13,all_isbns,13,True,financial accounting,paul d kimmel
+BOOK00770,/works/OL1881222W,Financial accounting,['Jerry J. Weygandt'],9780471169192,ISBN-13,all_isbns,13,True,financial accounting,jerry j weygandt
+BOOK00394,/works/OL8229244W,Strategic Management,"['Garth Saloner', 'Andrea Shepard', 'Joel Podolny']",9780471380719,ISBN-13,all_isbns,13,True,strategic management,garth saloner andrea shepard joel podolny
+BOOK00395,/works/OL16069259W,Strategic management,['Garth Saloner'],9780471380719,ISBN-13,all_isbns,13,True,strategic management,garth saloner
+BOOK00758,/works/OL2746901W,Financial Accounting,['Paul D. Kimmel'],9780471415787,ISBN-13,all_isbns,13,True,financial accounting,paul d kimmel
+BOOK00770,/works/OL1881222W,Financial accounting,['Jerry J. Weygandt'],9780471415787,ISBN-13,all_isbns,13,True,financial accounting,jerry j weygandt
+BOOK00542,/works/OL8227958W,The Fast Forward MBA in Project Management,['Eric Verzuh'],9780471692843,ISBN-13,all_isbns,13,True,the fast forward mba in project management,eric verzuh
+BOOK00550,/works/OL8227960W,The Fast Forward MBA in Project Management,['Eric Verzuh'],9780471692843,ISBN-13,all_isbns,13,True,the fast forward mba in project management,eric verzuh
+BOOK00682,/works/OL2768785W,Organizational behavior,['Gregory Moorhead'],9780618056491,ISBN-13,all_isbns,13,True,organizational behavior,gregory moorhead
+BOOK00688,/works/OL1866343W,Organizational Behavior,['Ricky W. Griffin'],9780618056491,ISBN-13,all_isbns,13,True,organizational behavior,ricky w griffin
+BOOK00005,/works/OL94176W,Leadership,['Peter Guy Northouse'],9780761919261,ISBN-13,all_isbns,13,True,leadership,peter guy northouse
+BOOK00007,/works/OL7956784W,Leadership,['Peter G. Northouse'],9780761919261,ISBN-13,all_isbns,13,True,leadership,peter g northouse
+BOOK00027,/works/OL1835386W,Las cinco disfunciones de un equipo,['Patrick Lencioni'],9780787960759,ISBN-13,all_isbns,13,True,las cinco disfunciones de un equipo,patrick lencioni
+BOOK00184,/works/OL31272706W,The Five Dysfunctions of a Team,['Patrick Lencioni'],9780787960759,ISBN-13,all_isbns,13,True,the five dysfunctions of a team,patrick lencioni
+BOOK00234,/works/OL1903158W,Servant leadership,['Robert K. Greenleaf'],9780809102204,ISBN-13,all_isbns,13,True,servant leadership,robert k greenleaf
+BOOK00245,/works/OL16327340W,Servant leadership,[],9780809102204,ISBN-13,all_isbns,13,True,servant leadership,
+BOOK00234,/works/OL1903158W,Servant leadership,['Robert K. Greenleaf'],9780809125272,ISBN-13,all_isbns,13,True,servant leadership,robert k greenleaf
+BOOK00237,/works/OL16997792W,Servant leadership,[],9780809125272,ISBN-13,all_isbns,13,True,servant leadership,
+BOOK00005,/works/OL94176W,Leadership,['Peter Guy Northouse'],9781412941617,ISBN-13,all_isbns,13,True,leadership,peter guy northouse
+BOOK00007,/works/OL7956784W,Leadership,['Peter G. Northouse'],9781412941617,ISBN-13,all_isbns,13,True,leadership,peter g northouse
+BOOK00053,/works/OL15443861W,Full range leadership development,['Bruce J. Avolio'],9781412974752,ISBN-13,all_isbns,13,True,full range leadership development,bruce j avolio
+BOOK00083,/works/OL15508124W,Full range leadership development,['Bruce J. Avolio'],9781412974752,ISBN-13,all_isbns,13,True,full range leadership development,bruce j avolio
+BOOK00005,/works/OL94176W,Leadership,['Peter Guy Northouse'],9781412974882,ISBN-13,all_isbns,13,True,leadership,peter guy northouse
+BOOK00050,/works/OL18724331W,Leadership,['Peter Guy Northouse'],9781412974882,ISBN-13,all_isbns,13,True,leadership,peter guy northouse
+BOOK00720,/works/OL18606296W,Business strategy,['Jeremy Kourdi'],9781846681240,ISBN-13,all_isbns,13,True,business strategy,jeremy kourdi
+BOOK00737,/works/OL6223851W,Business strategy,['Jeremy Kourdi'],9781846681240,ISBN-13,all_isbns,13,True,business strategy,jeremy kourdi
+BOOK00309,/works/OL102817W,A Guide to the Project Management Body of Knowledge (PMBOK® Guide),['Project Management Institute'],9781880410226,ISBN-13,all_isbns,13,True,a guide to the project management body of knowledge pmbok guide,project management institute
+BOOK00559,/works/OL19130377W,A guide to the project management body of knowledge (PMBOK guide),['Project Management Institute'],9781880410226,ISBN-13,all_isbns,13,True,a guide to the project management body of knowledge pmbok guide,project management institute
+BOOK00309,/works/OL102817W,A Guide to the Project Management Body of Knowledge (PMBOK® Guide),['Project Management Institute'],9781880410233,ISBN-13,all_isbns,13,True,a guide to the project management body of knowledge pmbok guide,project management institute
+BOOK00559,/works/OL19130377W,A guide to the project management body of knowledge (PMBOK guide),['Project Management Institute'],9781880410233,ISBN-13,all_isbns,13,True,a guide to the project management body of knowledge pmbok guide,project management institute

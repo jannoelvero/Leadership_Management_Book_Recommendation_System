@@ -1,0 +1,12 @@
+kpi,value,unit
+Catalog Size,2067.0,books
+Eligible Query Books,2040.0,books
+Recommendation Pairs,19396.0,pairs
+Unique Books Recommended,2016.0,books
+Catalog Coverage,97.53265602322206,%
+Mean Similarity,0.3219812122978201,cosine similarity
+Median Similarity,0.3015563543362059,cosine similarity
+Mean Rank-1 Similarity,0.5131427328442176,cosine similarity
+Mean Rank-10 Similarity,0.23311696028010026,cosine similarity
+Mean Unique Topic Clusters,3.840686274509804,clusters
+Mean Cluster Diversity Ratio,0.46730508870214754,ratio

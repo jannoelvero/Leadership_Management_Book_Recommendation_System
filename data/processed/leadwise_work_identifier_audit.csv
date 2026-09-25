@@ -1,0 +1,10 @@
+column,books_with_value,coverage_pct
+openlibrary_key,950,100.0
+work_status_code,950,100.0
+isbn13_count,950,100.0
+author_keys,942,99.16
+isbn_13,915,96.32
+all_isbns,915,96.32
+isbn_10,903,95.05
+work_subjects,826,86.95
+work_covers,743,78.21

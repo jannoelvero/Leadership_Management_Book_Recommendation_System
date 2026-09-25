@@ -1,0 +1,3 @@
+data_source_id,source_name,source_type,data_level
+SRC001,Open Library,API,Work-level
+SRC002,LeadershipNow / LeaderShop,Web,Edition-level

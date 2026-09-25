@@ -1,0 +1,10 @@
+metric,value
+Open Library books,950
+LeadershipNow canonical books,1120
+Confirmed cross-source matches,3
+Open Library-only books,947
+LeadershipNow-only books,1117
+Both-source books,3
+Final unique book entities,2067
+Duplicate master book IDs,0
+Invalid edition-book relationships,0

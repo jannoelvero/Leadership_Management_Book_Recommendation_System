@@ -1,0 +1,11 @@
+component,top_terms,top_weights
+LSA_1,"leadership, management, servant leadership, servant, development, team, leadership development, david, team leadership, executive","0.709, 0.309, 0.190, 0.189, 0.155, 0.154, 0.148, 0.145, 0.144, 0.138"
+LSA_2,"management, human, human resource, resource management, resource, performance, performance management, strategic, strategic management, operations management","0.596, 0.195, 0.174, 0.174, 0.174, 0.164, 0.161, 0.155, 0.125, 0.120"
+LSA_3,"emotional, intelligence, emotional intelligence, daniel, goleman, daniel goleman, work, david, james, intelligence work","0.594, 0.550, 0.540, 0.066, 0.065, 0.050, 0.046, 0.045, 0.045, 0.040"
+LSA_4,"human, human resource, resource management, resource, gary, gary dessler, dessler, john, strategic human, raymond","0.428, 0.402, 0.402, 0.402, 0.145, 0.122, 0.122, 0.076, 0.046, 0.044"
+LSA_5,"organizational, behavior, organizational behavior, john, robert, richard, business, gregory, managing organizational, stephen robbins","0.531, 0.525, 0.520, 0.234, 0.091, 0.062, 0.061, 0.057, 0.053, 0.050"
+LSA_6,"david, business, strategy, business strategy, strategic, strategic management, team, john, team leadership, fred david","0.616, 0.273, 0.211, 0.191, 0.163, 0.162, 0.145, 0.129, 0.106, 0.084"
+LSA_7,"servant, servant leadership, david, michael, performance, performance management, leader, handbook, james, strategic","0.553, 0.553, 0.167, 0.136, 0.099, 0.094, 0.041, 0.038, 0.035, 0.031"
+LSA_8,"performance, performance management, business, strategy, business strategy, michael, john, international business, international, michael armstrong","0.422, 0.399, 0.387, 0.307, 0.273, 0.187, 0.112, 0.074, 0.067, 0.065"
+LSA_9,"business, strategy, business strategy, operations, operations management, john, servant, servant leadership, executive, change","0.376, 0.281, 0.249, 0.182, 0.178, 0.142, 0.138, 0.138, 0.106, 0.105"
+LSA_10,"operations, operations management, production, production operations, performance, performance management, team, heizer, jay heizer, jay","0.449, 0.438, 0.153, 0.153, 0.116, 0.111, 0.110, 0.109, 0.098, 0.095"

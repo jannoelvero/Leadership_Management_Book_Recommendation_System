@@ -1,0 +1,7 @@
+query,recommendations,unique_books,mean_similarity,max_similarity,unique_clusters,dominant_cluster,dominant_cluster_count,dominant_cluster_pct
+New Manager,10,10,0.2391942031432622,0.4753278115337236,5,Organizational Culture and Trust,5,50.0
+Conflict Management,10,10,0.1943815529326965,0.3141639084925345,5,Organizational Culture and Trust,4,40.0
+Strategy,10,10,0.2818838164987401,0.3611377968216822,4,Decision Making,6,60.0
+Organizational Change,10,10,0.2390243776368613,0.364433187905168,4,Change Management,7,70.0
+Entrepreneurship,10,10,0.2396721719374764,0.318541204653984,3,Entrepreneurial and Growth Mindset,7,70.0
+Employee Motivation,10,10,0.2087121370007495,0.3527365710811953,3,Performance Management,4,40.0

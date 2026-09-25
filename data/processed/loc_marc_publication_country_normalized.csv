@@ -1,0 +1,55 @@
+publication_geo_code,book_occurrences,marc_geographic_label,normalized_parent_country,marc_geographic_level
+nyu,136,New York (State),United States,subnational
+enk,75,England,United Kingdom,constituent_country
+mau,43,Massachusetts,United States,subnational
+nju,41,New Jersey,United States,subnational
+ilu,38,Illinois,United States,subnational
+cau,37,California,United States,subnational
+xxu,26,United States,United States,country
+xxk,24,United Kingdom,United Kingdom,country
+xx,17,"No place, unknown, or undetermined",,unknown
+pau,9,Pennsylvania,United States,subnational
+ohu,9,Ohio,United States,subnational
+txu,8,Texas,United States,subnational
+inu,6,Indiana,United States,subnational
+dcu,6,District of Columbia,United States,subnational
+mnu,6,Minnesota,United States,subnational
+vau,5,Virginia,United States,subnational
+flu,5,Florida,United States,subnational
+ch,3,China (Republic : 1949- ),Taiwan,country
+cou,3,Colorado,United States,subnational
+vtu,3,Vermont,United States,subnational
+gw,3,Germany,Germany,country
+onc,3,Ontario,Canada,subnational
+tnu,2,Tennessee,United States,subnational
+miu,2,Michigan,United States,subnational
+gau,2,Georgia,United States,subnational
+iau,2,Iowa,United States,subnational
+oru,2,Oregon,United States,subnational
+mou,2,Missouri,United States,subnational
+at,2,Australia,Australia,country
+ph,2,Philippines,Philippines,country
+io,1,Indonesia,Indonesia,country
+meu,1,Maine,United States,subnational
+ne,1,Netherlands,Netherlands,country
+msu,1,Mississippi,United States,subnational
+mbc,1,Manitoba,Canada,subnational
+xna,1,New South Wales,Australia,subnational
+ctu,1,Connecticut,United States,subnational
+ko,1,Korea (South),South Korea,country
+nz,1,New Zealand,New Zealand,country
+ug,1,Uganda,Uganda,country
+aru,1,Arkansas,United States,subnational
+us,1,,,unresolved
+ksu,1,Kansas,United States,subnational
+mdu,1,Maryland,United States,subnational
+fr,1,France,France,country
+quc,1,Québec (Province),Canada,subnational
+cc,1,China,China,country
+wau,1,Washington (State),United States,subnational
+ii,1,India,India,country
+nhu,1,New Hampshire,United States,subnational
+sa,1,South Africa,South Africa,country
+ja,1,Japan,Japan,country
+it,1,Italy,Italy,country
+mx,1,Mexico,Mexico,country

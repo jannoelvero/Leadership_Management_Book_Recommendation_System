@@ -1,0 +1,3 @@
+representation,eligible_queries,total_recommendations,unique_books_recommended,catalog_coverage_pct
+Core TF-IDF,2025,18711,1995,96.5166908563135
+Enriched TF-IDF,2040,19396,2016,97.53265602322206

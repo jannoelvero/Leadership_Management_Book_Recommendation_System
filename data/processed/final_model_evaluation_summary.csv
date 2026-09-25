@@ -1,0 +1,7 @@
+component,primary_function,key_metric,metric_value,metric_unit,supporting_evidence,main_limitation,final_role
+Enriched TF-IDF + Cosine,Production recommendation retrieval,Catalog coverage,97.532656,%,"2,016 unique books recommended; mean similarity 0.322; mean Rank-1 similarity 0.513",Lexical sensitivity and heterogeneous metadata,Production
+Enriched SVD / LSA (200D),Dense semantic representation,Top-10 neighbor preservation,57.966667,%,Similarity Spearman rho 0.516; 41.95% explained variance,Reduced representation approximates original TF-IDF geometry,Supporting
+K-Means (29 clusters),Topic discovery and semantic organization,Books clustered,1884.0,books,29 interpretable topic clusters; median cluster size 47,Cluster cohesion varies across topics,Supporting
+Autoencoder (200→32→200),Experimental nonlinear compression,Test MSE improvement,82.247979,%,Final test MSE 0.001188; semantic rho 0.107; Top-10 preservation 42.75%,Weak preservation of original semantic geometry,Experimental
+Natural-Language Retrieval,User-intent query interface,Successful diagnostic retrieval,6.0,queries,10 unique recommendations per diagnostic; empty/OOV queries safely return zero results,Broad and multi-concept queries can be less specific,Production Interface
+Grounded LLM Layer,Recommendation explanation,Grounding catalog coverage,2067.0,books,Ranking-preserving prompt; anti-fabrication rules; provider-independent architecture,No live LLM inference evaluated,Optional Explanation

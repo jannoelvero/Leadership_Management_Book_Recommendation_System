@@ -1,0 +1,11 @@
+table,exists,rows,columns,unique_book_ids,duplicate_book_ids
+grounding_catalog,True,2067,19,2067.0,0.0
+books_master,True,2067,18,2067.0,0.0
+openlibrary_integrated,True,950,50,950.0,0.0
+leadershipnow_editions,True,1120,23,1120.0,0.0
+edition_intelligence,True,948,28,948.0,0.0
+publication_geography,True,945,7,945.0,0.0
+language_evidence,True,948,11,948.0,0.0
+author_geography,True,467,16,,
+commercial_metadata,True,2067,9,2067.0,0.0
+topic_clusters,True,1884,73,1884.0,0.0

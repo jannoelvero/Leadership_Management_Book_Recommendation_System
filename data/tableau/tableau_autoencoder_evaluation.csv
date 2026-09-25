@@ -1,0 +1,12 @@
+metric,value
+untrained_validation_mse,0.0067503056458495
+best_validation_mse,0.0012403903863837
+untrained_test_mse,0.0066921595009226
+final_test_mse,0.0011879935407146
+test_mse_improvement_pct,82.24797928753964
+pairwise_similarity_spearman_rho,0.107467332269827
+pairwise_similarity_spearman_p,6.745561289270737e-120
+mean_top10_shared_neighbors,4.2745098039215685
+median_top10_shared_neighbors,4.0
+mean_top10_neighbor_preservation,0.4274509803921568
+median_top10_neighbor_preservation,0.4

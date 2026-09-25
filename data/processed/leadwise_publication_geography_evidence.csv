@@ -1,0 +1,946 @@
+book_id,earliest_observed_year,earliest_observed_publication_country,earliest_observed_publication_countries,publication_geo_evidence_type,unresolved_geo_codes,publication_geo_provenance
+BOOK00001,1989,,,no_country_evidence,[],Open Library earliest observed edition year 1989
+BOOK00002,1981,,United Kingdom; United States,multiple_countries,[],Open Library earliest observed edition year 1981
+BOOK00003,1977,Indonesia,Indonesia,single_country,[],Open Library earliest observed edition year 1977
+BOOK00004,1967,United States,United States,single_country,[],Open Library earliest observed edition year 1967
+BOOK00005,1997,United States,United States,single_country,[],Open Library earliest observed edition year 1997
+BOOK00006,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00007,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00008,1985,United States,United States,single_country,[],Open Library earliest observed edition year 1985
+BOOK00009,2018,United States,United States,single_country,[],Open Library earliest observed edition year 2018
+BOOK00010,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00011,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00012,1993,United States,United States,single_country,[],Open Library earliest observed edition year 1993
+BOOK00013,1992,United States,United States,single_country,[],Open Library earliest observed edition year 1992
+BOOK00014,1978,United States,United States,single_country,[],Open Library earliest observed edition year 1978
+BOOK00015,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00016,1987,United States,United States,single_country,[],Open Library earliest observed edition year 1987
+BOOK00017,1991,,,no_country_evidence,[],Open Library earliest observed edition year 1991
+BOOK00018,2012,United States,United States,single_country,[],Open Library earliest observed edition year 2012
+BOOK00019,2018,United States,United States,single_country,[],Open Library earliest observed edition year 2018
+BOOK00020,1991,United States,United States,single_country,[],Open Library earliest observed edition year 1991
+BOOK00021,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00022,2007,United States,United States,single_country,[],Open Library earliest observed edition year 2007
+BOOK00023,1989,United States,United States,single_country,[],Open Library earliest observed edition year 1989
+BOOK00024,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00025,2002,,Taiwan; United States,multiple_countries,[],Open Library earliest observed edition year 2002
+BOOK00026,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00027,2002,United States,United States,single_country,[],Open Library earliest observed edition year 2002
+BOOK00028,1985,United States,United States,single_country,[],Open Library earliest observed edition year 1985
+BOOK00029,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00030,1991,United States,United States,single_country,[],Open Library earliest observed edition year 1991
+BOOK00031,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00032,2000,United States,United States,single_country,[],Open Library earliest observed edition year 2000
+BOOK00033,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00034,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00035,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00036,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00037,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00038,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00039,1950,,,no_country_evidence,[],Open Library earliest observed edition year 1950
+BOOK00040,2010,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2010
+BOOK00041,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00042,1985,United States,United States,single_country_with_unresolved_evidence,['xx'],Open Library earliest observed edition year 1985
+BOOK00043,1985,,Taiwan; United States,multiple_countries,[],Open Library earliest observed edition year 1985
+BOOK00044,1987,United States,United States,single_country,[],Open Library earliest observed edition year 1987
+BOOK00045,1989,,,no_country_evidence,[],Open Library earliest observed edition year 1989
+BOOK00046,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00047,1998,,,no_country_evidence,[],Open Library earliest observed edition year 1998
+BOOK00048,2002,United States,United States,single_country,[],Open Library earliest observed edition year 2002
+BOOK00049,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00050,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00051,1987,United States,United States,single_country,[],Open Library earliest observed edition year 1987
+BOOK00052,1990,United States,United States,single_country,[],Open Library earliest observed edition year 1990
+BOOK00053,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00054,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00055,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00056,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00057,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00058,2008,Netherlands,Netherlands,single_country,[],Open Library earliest observed edition year 2008
+BOOK00059,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00060,2015,United States,United States,single_country,[],Open Library earliest observed edition year 2015
+BOOK00061,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00062,1995,United States,United States,single_country,[],Open Library earliest observed edition year 1995
+BOOK00063,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00064,1988,United States,United States,single_country,[],Open Library earliest observed edition year 1988
+BOOK00065,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00066,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00067,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00068,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00069,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00070,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00071,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00072,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00073,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00074,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00075,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00076,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00077,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00078,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00079,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00080,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00081,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00082,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00083,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00084,2009,,,no_country_evidence,[],Open Library earliest observed edition year 2009
+BOOK00085,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00086,1995,,,no_country_evidence,[],Open Library earliest observed edition year 1995
+BOOK00087,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00088,1996,United States,United States,single_country,[],Open Library earliest observed edition year 1996
+BOOK00089,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00090,2002,United States,United States,single_country,[],Open Library earliest observed edition year 2002
+BOOK00091,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00092,2008,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2008
+BOOK00093,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00094,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00095,2007,United States,United States,single_country,[],Open Library earliest observed edition year 2007
+BOOK00096,1980,,,unresolved_only,['xx'],Open Library earliest observed edition year 1980
+BOOK00097,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00098,2007,Canada,Canada,single_country,[],Open Library earliest observed edition year 2007
+BOOK00099,1972,United States,United States,single_country,[],Open Library earliest observed edition year 1972
+BOOK00100,1991,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1991
+BOOK00101,1953,,United States; United Kingdom,multiple_countries_with_unresolved_evidence,['xx'],Open Library earliest observed edition year 1953
+BOOK00102,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00103,1940,United States,United States,single_country,[],Open Library earliest observed edition year 1940
+BOOK00104,1967,,United Kingdom; United States,multiple_countries,[],Open Library earliest observed edition year 1967
+BOOK00105,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00106,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00107,2012,United States,United States,single_country,[],Open Library earliest observed edition year 2012
+BOOK00108,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00109,1949,,,no_country_evidence,[],Open Library earliest observed edition year 1949
+BOOK00110,1969,United States,United States,single_country,[],Open Library earliest observed edition year 1969
+BOOK00111,1970,,,no_country_evidence,[],Open Library earliest observed edition year 1970
+BOOK00112,1956,United States,United States,single_country,[],Open Library earliest observed edition year 1956
+BOOK00113,1950,,United Kingdom; United States,multiple_countries,[],Open Library earliest observed edition year 1950
+BOOK00114,1949,United States,United States,single_country,[],Open Library earliest observed edition year 1949
+BOOK00115,1969,United States,United States,single_country,[],Open Library earliest observed edition year 1969
+BOOK00116,1990,,,unresolved_only,['xx'],Open Library earliest observed edition year 1990
+BOOK00117,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00118,1964,,,unresolved_only,['xx'],Open Library earliest observed edition year 1964
+BOOK00119,1991,United States,United States,single_country,[],Open Library earliest observed edition year 1991
+BOOK00120,2014,Australia,Australia,single_country,[],Open Library earliest observed edition year 2014
+BOOK00121,1960,United States,United States,single_country,[],Open Library earliest observed edition year 1960
+BOOK00122,2024,,,no_country_evidence,[],Open Library earliest observed edition year 2024
+BOOK00124,1971,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1971
+BOOK00125,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00126,2000,United States,United States,single_country,[],Open Library earliest observed edition year 2000
+BOOK00127,1991,,,no_country_evidence,[],Open Library earliest observed edition year 1991
+BOOK00128,1996,,,no_country_evidence,[],Open Library earliest observed edition year 1996
+BOOK00129,1990,,,no_country_evidence,[],Open Library earliest observed edition year 1990
+BOOK00130,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00131,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00132,1981,United States,United States,single_country,[],Open Library earliest observed edition year 1981
+BOOK00133,1949,,,no_country_evidence,[],Open Library earliest observed edition year 1949
+BOOK00134,1996,United States,United States,single_country,[],Open Library earliest observed edition year 1996
+BOOK00135,1970,United States,United States,single_country,[],Open Library earliest observed edition year 1970
+BOOK00136,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00137,1990,United States,United States,single_country,[],Open Library earliest observed edition year 1990
+BOOK00138,1966,United States,United States,single_country,[],Open Library earliest observed edition year 1966
+BOOK00139,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00140,1929,,,unresolved_only,['xx'],Open Library earliest observed edition year 1929
+BOOK00141,1988,,,no_country_evidence,[],Open Library earliest observed edition year 1988
+BOOK00142,1963,,,no_country_evidence,[],Open Library earliest observed edition year 1963
+BOOK00143,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00144,1950,,,no_country_evidence,[],Open Library earliest observed edition year 1950
+BOOK00145,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00146,1999,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1999
+BOOK00147,1961,United States,United States,single_country,[],Open Library earliest observed edition year 1961
+BOOK00148,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00149,1998,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1998
+BOOK00150,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00151,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00152,1997,United States,United States,single_country,[],Open Library earliest observed edition year 1997
+BOOK00153,1993,United States,United States,single_country,[],Open Library earliest observed edition year 1993
+BOOK00154,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00155,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00156,1996,United States,United States,single_country,[],Open Library earliest observed edition year 1996
+BOOK00157,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00158,1992,United States,United States,single_country,[],Open Library earliest observed edition year 1992
+BOOK00159,2013,United States,United States,single_country,[],Open Library earliest observed edition year 2013
+BOOK00160,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00161,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00162,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00163,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00164,1997,United States,United States,single_country,[],Open Library earliest observed edition year 1997
+BOOK00165,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00166,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00167,1900,,,no_country_evidence,[],Open Library earliest observed edition year 1900
+BOOK00168,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00169,2004,United States,United States,single_country,[],Open Library earliest observed edition year 2004
+BOOK00170,1992,,,no_country_evidence,[],Open Library earliest observed edition year 1992
+BOOK00171,1996,United States,United States,single_country,[],Open Library earliest observed edition year 1996
+BOOK00172,2024,,,no_country_evidence,[],Open Library earliest observed edition year 2024
+BOOK00173,1992,United States,United States,single_country,[],Open Library earliest observed edition year 1992
+BOOK00174,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00175,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00176,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00177,2009,,,no_country_evidence,[],Open Library earliest observed edition year 2009
+BOOK00178,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00179,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00180,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00181,1998,,,no_country_evidence,[],Open Library earliest observed edition year 1998
+BOOK00182,1996,South Korea,South Korea,single_country,[],Open Library earliest observed edition year 1996
+BOOK00183,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00184,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00185,1970,United States,United States,single_country,[],Open Library earliest observed edition year 1970
+BOOK00186,1994,New Zealand,New Zealand,single_country,[],Open Library earliest observed edition year 1994
+BOOK00187,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00188,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00189,2015,United States,United States,single_country,[],Open Library earliest observed edition year 2015
+BOOK00190,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00191,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00192,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00193,1997,,,no_country_evidence,[],Open Library earliest observed edition year 1997
+BOOK00194,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00195,2012,United States,United States,single_country,[],Open Library earliest observed edition year 2012
+BOOK00196,1991,United States,United States,single_country,[],Open Library earliest observed edition year 1991
+BOOK00197,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00198,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00199,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00200,2013,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2013
+BOOK00201,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00202,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00203,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00204,1989,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1989
+BOOK00205,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00206,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00207,2023,,,no_country_evidence,[],Open Library earliest observed edition year 2023
+BOOK00208,2017,United States,United States,single_country,[],Open Library earliest observed edition year 2017
+BOOK00209,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00210,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00211,1995,United States,United States,single_country,[],Open Library earliest observed edition year 1995
+BOOK00212,2024,,,no_country_evidence,[],Open Library earliest observed edition year 2024
+BOOK00213,1992,United States,United States,single_country,[],Open Library earliest observed edition year 1992
+BOOK00214,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00215,1999,,,no_country_evidence,[],Open Library earliest observed edition year 1999
+BOOK00216,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00217,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00218,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00219,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00220,2005,Uganda,Uganda,single_country,[],Open Library earliest observed edition year 2005
+BOOK00221,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00222,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00223,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00224,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00225,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00226,2015,United States,United States,single_country,[],Open Library earliest observed edition year 2015
+BOOK00227,2025,,,no_country_evidence,[],Open Library earliest observed edition year 2025
+BOOK00228,2024,,,no_country_evidence,[],Open Library earliest observed edition year 2024
+BOOK00229,1996,United States,United States,single_country,[],Open Library earliest observed edition year 1996
+BOOK00230,1989,United States,United States,single_country,[],Open Library earliest observed edition year 1989
+BOOK00231,2024,,,no_country_evidence,[],Open Library earliest observed edition year 2024
+BOOK00232,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00233,2025,,,no_country_evidence,[],Open Library earliest observed edition year 2025
+BOOK00234,1977,United States,United States,single_country,[],Open Library earliest observed edition year 1977
+BOOK00235,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00236,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00238,2004,,,unresolved_only,['us'],Open Library earliest observed edition year 2004
+BOOK00239,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00240,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00241,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00242,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00243,1995,United States,United States,single_country,[],Open Library earliest observed edition year 1995
+BOOK00244,1987,United States,United States,single_country,[],Open Library earliest observed edition year 1987
+BOOK00245,1977,,,no_country_evidence,[],Open Library earliest observed edition year 1977
+BOOK00246,2010,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2010
+BOOK00247,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00248,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00249,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00250,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00251,2001,United States,United States,single_country,[],Open Library earliest observed edition year 2001
+BOOK00252,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00253,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00254,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00255,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00256,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00257,1990,,,no_country_evidence,[],Open Library earliest observed edition year 1990
+BOOK00258,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00259,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00260,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00261,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00262,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00263,2008,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2008
+BOOK00264,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00265,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00266,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00267,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00268,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00269,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00270,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00271,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00272,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00273,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00274,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00275,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00276,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00277,2013,Germany,Germany,single_country,[],Open Library earliest observed edition year 2013
+BOOK00278,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00279,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00280,2004,United States,United States,single_country,[],Open Library earliest observed edition year 2004
+BOOK00281,1973,France,France,single_country,[],Open Library earliest observed edition year 1973
+BOOK00282,1945,,,no_country_evidence,[],Open Library earliest observed edition year 1945
+BOOK00283,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00284,1994,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1994
+BOOK00285,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00286,1953,United States,United States,single_country,[],Open Library earliest observed edition year 1953
+BOOK00287,1969,,,no_country_evidence,[],Open Library earliest observed edition year 1969
+BOOK00288,1978,United States,United States,single_country,[],Open Library earliest observed edition year 1978
+BOOK00289,1993,,United States; Canada; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1993
+BOOK00290,1992,,,no_country_evidence,[],Open Library earliest observed edition year 1992
+BOOK00291,1984,United States,United States,single_country,[],Open Library earliest observed edition year 1984
+BOOK00292,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00293,1977,United States,United States,single_country,[],Open Library earliest observed edition year 1977
+BOOK00294,1990,United States,United States,single_country,[],Open Library earliest observed edition year 1990
+BOOK00295,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00296,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00297,1954,United States,United States,single_country,[],Open Library earliest observed edition year 1954
+BOOK00298,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00299,1968,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1968
+BOOK00300,1978,United States,United States,single_country,[],Open Library earliest observed edition year 1978
+BOOK00301,1911,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1911
+BOOK00302,1969,United States,United States,single_country,[],Open Library earliest observed edition year 1969
+BOOK00303,1992,United States,United States,single_country,[],Open Library earliest observed edition year 1992
+BOOK00304,1984,United States,United States,single_country,[],Open Library earliest observed edition year 1984
+BOOK00305,1987,United States,United States,single_country,[],Open Library earliest observed edition year 1987
+BOOK00306,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00307,1984,,United Kingdom; United States,multiple_countries,[],Open Library earliest observed edition year 1984
+BOOK00308,1974,United States,United States,single_country,[],Open Library earliest observed edition year 1974
+BOOK00309,1996,United States,United States,single_country,[],Open Library earliest observed edition year 1996
+BOOK00310,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00311,1984,United States,United States,single_country,[],Open Library earliest observed edition year 1984
+BOOK00312,1982,United States,United States,single_country,[],Open Library earliest observed edition year 1982
+BOOK00313,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00314,2002,United States,United States,single_country,[],Open Library earliest observed edition year 2002
+BOOK00315,1981,,,no_country_evidence,[],Open Library earliest observed edition year 1981
+BOOK00316,1989,United States,United States,single_country,[],Open Library earliest observed edition year 1989
+BOOK00317,1978,United States,United States,single_country,[],Open Library earliest observed edition year 1978
+BOOK00318,1971,United States,United States,single_country,[],Open Library earliest observed edition year 1971
+BOOK00319,1990,United States,United States,single_country,[],Open Library earliest observed edition year 1990
+BOOK00320,1979,United States,United States,single_country,[],Open Library earliest observed edition year 1979
+BOOK00321,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00322,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00323,1955,United States,United States,single_country,[],Open Library earliest observed edition year 1955
+BOOK00324,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00325,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00326,1985,United States,United States,single_country,[],Open Library earliest observed edition year 1985
+BOOK00327,1982,United States,United States,single_country,[],Open Library earliest observed edition year 1982
+BOOK00328,1989,United States,United States,single_country,[],Open Library earliest observed edition year 1989
+BOOK00329,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00330,2003,United States,United States,single_country,[],Open Library earliest observed edition year 2003
+BOOK00331,1987,United States,United States,single_country,[],Open Library earliest observed edition year 1987
+BOOK00332,1984,United States,United States,single_country,[],Open Library earliest observed edition year 1984
+BOOK00333,1989,United States,United States,single_country,[],Open Library earliest observed edition year 1989
+BOOK00334,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00335,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00336,2005,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2005
+BOOK00337,1985,United States,United States,single_country,[],Open Library earliest observed edition year 1985
+BOOK00338,2007,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2007
+BOOK00339,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00340,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00341,2024,,,no_country_evidence,[],Open Library earliest observed edition year 2024
+BOOK00342,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00343,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00344,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00345,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00346,2003,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2003
+BOOK00348,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00349,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00350,2012,United States,United States,single_country,[],Open Library earliest observed edition year 2012
+BOOK00351,1900,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1900
+BOOK00352,1986,,,no_country_evidence,[],Open Library earliest observed edition year 1986
+BOOK00353,2013,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2013
+BOOK00354,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00355,1984,,,unresolved_only,['xx'],Open Library earliest observed edition year 1984
+BOOK00356,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00357,1998,Australia,Australia,single_country,[],Open Library earliest observed edition year 1998
+BOOK00358,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00359,1993,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1993
+BOOK00360,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00361,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00362,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00363,1997,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1997
+BOOK00364,1978,United States,United States,single_country,[],Open Library earliest observed edition year 1978
+BOOK00365,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00366,1989,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1989
+BOOK00367,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00368,2024,,,no_country_evidence,[],Open Library earliest observed edition year 2024
+BOOK00369,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00370,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00371,1998,,,no_country_evidence,[],Open Library earliest observed edition year 1998
+BOOK00372,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00373,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00374,1973,,,unresolved_only,['xx'],Open Library earliest observed edition year 1973
+BOOK00375,2023,,,no_country_evidence,[],Open Library earliest observed edition year 2023
+BOOK00376,2011,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2011
+BOOK00377,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00378,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00379,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00380,2001,United States,United States,single_country,[],Open Library earliest observed edition year 2001
+BOOK00381,1995,United States,United States,single_country,[],Open Library earliest observed edition year 1995
+BOOK00382,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00383,1984,United States,United States,single_country,[],Open Library earliest observed edition year 1984
+BOOK00384,1994,,,no_country_evidence,[],Open Library earliest observed edition year 1994
+BOOK00385,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00386,1984,United States,United States,single_country,[],Open Library earliest observed edition year 1984
+BOOK00387,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00388,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00389,1988,United States,United States,single_country,[],Open Library earliest observed edition year 1988
+BOOK00390,1992,United States,United States,single_country,[],Open Library earliest observed edition year 1992
+BOOK00391,1987,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1987
+BOOK00392,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00393,2005,United States,United States,single_country,[],Open Library earliest observed edition year 2005
+BOOK00394,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00395,2001,United States,United States,single_country,[],Open Library earliest observed edition year 2001
+BOOK00396,1985,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1985
+BOOK00397,1995,United States,United States,single_country,[],Open Library earliest observed edition year 1995
+BOOK00398,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00399,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00400,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00401,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00402,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00403,2003,United States,United States,single_country,[],Open Library earliest observed edition year 2003
+BOOK00404,1996,,United Kingdom; United States,multiple_countries,[],Open Library earliest observed edition year 1996
+BOOK00405,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00406,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00407,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00408,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00409,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00410,1998,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1998
+BOOK00411,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00412,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00413,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00414,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00415,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00416,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00417,2001,United States,United States,single_country,[],Open Library earliest observed edition year 2001
+BOOK00418,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00419,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00420,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00421,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00422,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00423,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00424,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00425,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00426,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00427,2010,Germany,Germany,single_country,[],Open Library earliest observed edition year 2010
+BOOK00428,2004,United States,United States,single_country,[],Open Library earliest observed edition year 2004
+BOOK00429,2000,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2000
+BOOK00430,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00431,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00432,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00433,2008,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2008
+BOOK00434,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00435,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00436,2015,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2015
+BOOK00437,1993,United States,United States,single_country,[],Open Library earliest observed edition year 1993
+BOOK00438,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00439,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00440,1992,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1992
+BOOK00441,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00442,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00443,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00444,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00445,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00446,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00447,2001,United States,United States,single_country,[],Open Library earliest observed edition year 2001
+BOOK00448,1992,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1992
+BOOK00449,2003,Germany,Germany,single_country,[],Open Library earliest observed edition year 2003
+BOOK00450,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00451,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00452,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00453,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00454,2007,United States,United States,single_country,[],Open Library earliest observed edition year 2007
+BOOK00455,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00456,2011,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2011
+BOOK00457,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00458,1995,,,no_country_evidence,[],Open Library earliest observed edition year 1995
+BOOK00459,1997,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1997
+BOOK00460,2023,,,no_country_evidence,[],Open Library earliest observed edition year 2023
+BOOK00461,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00462,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00463,2002,United States,United States,single_country,[],Open Library earliest observed edition year 2002
+BOOK00464,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00465,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00466,1999,,,no_country_evidence,[],Open Library earliest observed edition year 1999
+BOOK00467,1996,United States,United States,single_country,[],Open Library earliest observed edition year 1996
+BOOK00468,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00469,2007,United States,United States,single_country,[],Open Library earliest observed edition year 2007
+BOOK00470,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00471,2010,,Canada; United States,multiple_countries,[],Open Library earliest observed edition year 2010
+BOOK00472,1978,United States,United States,single_country,[],Open Library earliest observed edition year 1978
+BOOK00473,1973,United States,United States,single_country_with_unresolved_evidence,['xx'],Open Library earliest observed edition year 1973
+BOOK00474,1981,United States,United States,single_country,[],Open Library earliest observed edition year 1981
+BOOK00475,2004,Canada,Canada,single_country,[],Open Library earliest observed edition year 2004
+BOOK00476,1977,United States,United States,single_country,[],Open Library earliest observed edition year 1977
+BOOK00477,1982,United States,United States,single_country,[],Open Library earliest observed edition year 1982
+BOOK00478,1980,United States,United States,single_country_with_unresolved_evidence,['xx'],Open Library earliest observed edition year 1980
+BOOK00479,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00480,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00481,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00482,2005,United States,United States,single_country,[],Open Library earliest observed edition year 2005
+BOOK00483,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00484,1993,,,no_country_evidence,[],Open Library earliest observed edition year 1993
+BOOK00485,1999,,,no_country_evidence,[],Open Library earliest observed edition year 1999
+BOOK00486,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00487,1997,,,no_country_evidence,[],Open Library earliest observed edition year 1997
+BOOK00488,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00489,1975,United States,United States,single_country,[],Open Library earliest observed edition year 1975
+BOOK00490,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00491,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00492,1985,United States,United States,single_country,[],Open Library earliest observed edition year 1985
+BOOK00493,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00494,1980,United States,United States,single_country,[],Open Library earliest observed edition year 1980
+BOOK00495,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00496,1979,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1979
+BOOK00497,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00498,2004,United States,United States,single_country,[],Open Library earliest observed edition year 2004
+BOOK00499,1992,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1992
+BOOK00500,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00501,1981,United States,United States,single_country,[],Open Library earliest observed edition year 1981
+BOOK00502,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00503,1980,United States,United States,single_country,[],Open Library earliest observed edition year 1980
+BOOK00504,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00505,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00506,1996,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1996
+BOOK00507,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00508,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00509,2007,United States,United States,single_country,[],Open Library earliest observed edition year 2007
+BOOK00510,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00511,1979,United States,United States,single_country,[],Open Library earliest observed edition year 1979
+BOOK00512,1988,United States,United States,single_country,[],Open Library earliest observed edition year 1988
+BOOK00513,2000,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2000
+BOOK00514,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00515,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00516,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00517,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00518,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00519,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00520,1996,,,no_country_evidence,[],Open Library earliest observed edition year 1996
+BOOK00521,1979,United States,United States,single_country,[],Open Library earliest observed edition year 1979
+BOOK00522,1999,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1999
+BOOK00523,1985,United States,United States,single_country,[],Open Library earliest observed edition year 1985
+BOOK00524,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00525,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00526,1999,,,no_country_evidence,[],Open Library earliest observed edition year 1999
+BOOK00527,1999,,,no_country_evidence,[],Open Library earliest observed edition year 1999
+BOOK00528,2005,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2005
+BOOK00529,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00530,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00531,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00532,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00533,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00534,1993,,,no_country_evidence,[],Open Library earliest observed edition year 1993
+BOOK00535,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00536,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00537,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00538,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00539,2008,,,unresolved_only,['xx'],Open Library earliest observed edition year 2008
+BOOK00540,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00541,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00542,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00543,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00544,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00545,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00546,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00547,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00548,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00549,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00550,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00551,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00552,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00553,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00554,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00555,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00556,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00557,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00558,2005,,China; United States,multiple_countries,[],Open Library earliest observed edition year 2005
+BOOK00559,2000,United States,United States,single_country,[],Open Library earliest observed edition year 2000
+BOOK00560,1997,United States,United States,single_country,[],Open Library earliest observed edition year 1997
+BOOK00561,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00562,1987,United States,United States,single_country,[],Open Library earliest observed edition year 1987
+BOOK00563,2000,United States,United States,single_country,[],Open Library earliest observed edition year 2000
+BOOK00564,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00565,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00566,1994,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1994
+BOOK00567,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00568,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00569,2008,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2008
+BOOK00570,2005,United States,United States,single_country,[],Open Library earliest observed edition year 2005
+BOOK00571,2018,United States,United States,single_country,[],Open Library earliest observed edition year 2018
+BOOK00572,2008,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2008
+BOOK00573,2005,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2005
+BOOK00574,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00575,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00576,2008,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2008
+BOOK00577,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00578,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00579,1996,,,no_country_evidence,[],Open Library earliest observed edition year 1996
+BOOK00580,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00581,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00582,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00583,2009,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 2009
+BOOK00584,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00585,2004,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2004
+BOOK00586,2000,United States,United States,single_country,[],Open Library earliest observed edition year 2000
+BOOK00587,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00588,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00589,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00590,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00591,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00592,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00593,2012,United States,United States,single_country,[],Open Library earliest observed edition year 2012
+BOOK00594,2006,United States,United States,single_country,[],Open Library earliest observed edition year 2006
+BOOK00595,2017,United States,United States,single_country,[],Open Library earliest observed edition year 2017
+BOOK00596,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00597,2012,,,unresolved_only,['xx'],Open Library earliest observed edition year 2012
+BOOK00598,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00599,2007,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2007
+BOOK00600,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00601,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00602,2006,United States,United States,single_country,[],Open Library earliest observed edition year 2006
+BOOK00603,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00604,2024,,,no_country_evidence,[],Open Library earliest observed edition year 2024
+BOOK00605,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00606,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00607,2004,United States,United States,single_country,[],Open Library earliest observed edition year 2004
+BOOK00608,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00609,1989,,,no_country_evidence,[],Open Library earliest observed edition year 1989
+BOOK00610,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00611,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00612,2004,United States,United States,single_country,[],Open Library earliest observed edition year 2004
+BOOK00613,1997,United States,United States,single_country,[],Open Library earliest observed edition year 1997
+BOOK00614,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00615,1992,United States,United States,single_country,[],Open Library earliest observed edition year 1992
+BOOK00616,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00617,2005,United States,United States,single_country,[],Open Library earliest observed edition year 2005
+BOOK00618,1999,,,no_country_evidence,[],Open Library earliest observed edition year 1999
+BOOK00619,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00620,1994,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1994
+BOOK00621,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00622,2003,United States,United States,single_country,[],Open Library earliest observed edition year 2003
+BOOK00623,1987,United States,United States,single_country,[],Open Library earliest observed edition year 1987
+BOOK00624,1992,United States,United States,single_country,[],Open Library earliest observed edition year 1992
+BOOK00625,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00626,2005,United States,United States,single_country,[],Open Library earliest observed edition year 2005
+BOOK00627,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00628,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00629,1995,Australia,Australia,single_country,[],Open Library earliest observed edition year 1995
+BOOK00630,1998,,,no_country_evidence,[],Open Library earliest observed edition year 1998
+BOOK00631,2007,Philippines,Philippines,single_country,[],Open Library earliest observed edition year 2007
+BOOK00632,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00633,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00634,1990,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1990
+BOOK00635,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00636,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00637,2000,United States,United States,single_country,[],Open Library earliest observed edition year 2000
+BOOK00638,1981,Philippines,Philippines,single_country,[],Open Library earliest observed edition year 1981
+BOOK00639,1974,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1974
+BOOK00640,2009,,,no_country_evidence,[],Open Library earliest observed edition year 2009
+BOOK00641,2009,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2009
+BOOK00642,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00643,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00644,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00645,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00646,2000,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2000
+BOOK00647,2013,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2013
+BOOK00648,1999,,,no_country_evidence,[],Open Library earliest observed edition year 1999
+BOOK00649,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00650,1999,,,no_country_evidence,[],Open Library earliest observed edition year 1999
+BOOK00651,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00652,2006,India,India,single_country,[],Open Library earliest observed edition year 2006
+BOOK00653,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00654,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00655,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00656,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00657,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00658,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00659,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00660,1979,United States,United States,single_country,[],Open Library earliest observed edition year 1979
+BOOK00661,1973,United States,United States,single_country,[],Open Library earliest observed edition year 1973
+BOOK00662,1984,United States,United States,single_country,[],Open Library earliest observed edition year 1984
+BOOK00663,1989,United States,United States,single_country,[],Open Library earliest observed edition year 1989
+BOOK00664,1976,United States,United States,single_country,[],Open Library earliest observed edition year 1976
+BOOK00665,2000,United States,United States,single_country,[],Open Library earliest observed edition year 2000
+BOOK00666,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00667,1993,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1993
+BOOK00668,1971,United States,United States,single_country,[],Open Library earliest observed edition year 1971
+BOOK00669,1987,United States,United States,single_country,[],Open Library earliest observed edition year 1987
+BOOK00670,1982,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1982
+BOOK00671,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00672,1997,United States,United States,single_country,[],Open Library earliest observed edition year 1997
+BOOK00673,1994,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1994
+BOOK00674,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00675,1981,United States,United States,single_country,[],Open Library earliest observed edition year 1981
+BOOK00676,2002,United States,United States,single_country,[],Open Library earliest observed edition year 2002
+BOOK00677,1981,United States,United States,single_country,[],Open Library earliest observed edition year 1981
+BOOK00678,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00679,2003,United States,United States,single_country,[],Open Library earliest observed edition year 2003
+BOOK00680,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00681,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00682,1989,United States,United States,single_country,[],Open Library earliest observed edition year 1989
+BOOK00683,2013,United States,United States,single_country,[],Open Library earliest observed edition year 2013
+BOOK00684,2001,United States,United States,single_country,[],Open Library earliest observed edition year 2001
+BOOK00685,1996,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1996
+BOOK00686,1997,,,no_country_evidence,[],Open Library earliest observed edition year 1997
+BOOK00687,2009,,,no_country_evidence,[],Open Library earliest observed edition year 2009
+BOOK00688,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00689,1990,United States,United States,single_country,[],Open Library earliest observed edition year 1990
+BOOK00690,1997,,,no_country_evidence,[],Open Library earliest observed edition year 1997
+BOOK00691,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00692,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00693,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00694,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00695,2012,,,no_country_evidence,[],Open Library earliest observed edition year 2012
+BOOK00696,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00697,1974,United States,United States,single_country,[],Open Library earliest observed edition year 1974
+BOOK00698,1991,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1991
+BOOK00699,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00700,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00701,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00702,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00703,1998,,,no_country_evidence,[],Open Library earliest observed edition year 1998
+BOOK00704,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00705,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00706,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00707,1997,,,no_country_evidence,[],Open Library earliest observed edition year 1997
+BOOK00708,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00709,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00710,2003,United States,United States,single_country,[],Open Library earliest observed edition year 2003
+BOOK00711,1984,United States,United States,single_country,[],Open Library earliest observed edition year 1984
+BOOK00712,1985,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1985
+BOOK00713,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00715,1989,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1989
+BOOK00716,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00717,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00718,2009,,,no_country_evidence,[],Open Library earliest observed edition year 2009
+BOOK00719,2001,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2001
+BOOK00720,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00721,1993,United States,United States,single_country,[],Open Library earliest observed edition year 1993
+BOOK00722,1997,,,no_country_evidence,[],Open Library earliest observed edition year 1997
+BOOK00723,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00724,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00725,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00726,2002,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2002
+BOOK00727,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00728,1997,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1997
+BOOK00729,1995,United States,United States,single_country,[],Open Library earliest observed edition year 1995
+BOOK00730,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00731,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00732,1985,United States,United States,single_country,[],Open Library earliest observed edition year 1985
+BOOK00733,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00734,1998,,,no_country_evidence,[],Open Library earliest observed edition year 1998
+BOOK00735,1991,,,no_country_evidence,[],Open Library earliest observed edition year 1991
+BOOK00736,2007,United States,United States,single_country,[],Open Library earliest observed edition year 2007
+BOOK00737,2003,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2003
+BOOK00738,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00739,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00740,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00741,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00742,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00743,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00744,2012,United States,United States,single_country,[],Open Library earliest observed edition year 2012
+BOOK00745,2024,,,no_country_evidence,[],Open Library earliest observed edition year 2024
+BOOK00746,1965,,United Kingdom; United States,multiple_countries_with_unresolved_evidence,['xx'],Open Library earliest observed edition year 1965
+BOOK00747,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00748,1998,,,no_country_evidence,[],Open Library earliest observed edition year 1998
+BOOK00749,2003,United States,United States,single_country,[],Open Library earliest observed edition year 2003
+BOOK00750,2002,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2002
+BOOK00751,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00752,2006,,,no_country_evidence,[],Open Library earliest observed edition year 2006
+BOOK00753,1993,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1993
+BOOK00754,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00755,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00756,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00757,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00758,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00759,1999,,,no_country_evidence,[],Open Library earliest observed edition year 1999
+BOOK00760,1991,,,no_country_evidence,[],Open Library earliest observed edition year 1991
+BOOK00761,1970,United States,United States,single_country,[],Open Library earliest observed edition year 1970
+BOOK00762,1975,United States,United States,single_country,[],Open Library earliest observed edition year 1975
+BOOK00763,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00764,1947,United States,United States,single_country,[],Open Library earliest observed edition year 1947
+BOOK00765,1991,United States,United States,single_country,[],Open Library earliest observed edition year 1991
+BOOK00766,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00767,1999,,,no_country_evidence,[],Open Library earliest observed edition year 1999
+BOOK00768,1964,United States,United States,single_country,[],Open Library earliest observed edition year 1964
+BOOK00769,1993,United States,United States,single_country,[],Open Library earliest observed edition year 1993
+BOOK00770,1995,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 1995
+BOOK00771,1976,United States,United States,single_country,[],Open Library earliest observed edition year 1976
+BOOK00772,1957,United States,United States,single_country,[],Open Library earliest observed edition year 1957
+BOOK00773,2012,United States,United States,single_country,[],Open Library earliest observed edition year 2012
+BOOK00774,1988,United States,United States,single_country,[],Open Library earliest observed edition year 1988
+BOOK00775,1976,United States,United States,single_country,[],Open Library earliest observed edition year 1976
+BOOK00776,1961,United States,United States,single_country,[],Open Library earliest observed edition year 1961
+BOOK00777,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00778,2008,,,no_country_evidence,[],Open Library earliest observed edition year 2008
+BOOK00779,1977,United States,United States,single_country,[],Open Library earliest observed edition year 1977
+BOOK00780,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00781,2008,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2008
+BOOK00782,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00783,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00784,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00785,1979,,,no_country_evidence,[],Open Library earliest observed edition year 1979
+BOOK00786,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00787,1982,United States,United States,single_country,[],Open Library earliest observed edition year 1982
+BOOK00788,2003,,,no_country_evidence,[],Open Library earliest observed edition year 2003
+BOOK00789,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00790,1995,United States,United States,single_country,[],Open Library earliest observed edition year 1995
+BOOK00791,2009,,,no_country_evidence,[],Open Library earliest observed edition year 2009
+BOOK00792,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00793,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00794,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00795,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00796,1998,,,no_country_evidence,[],Open Library earliest observed edition year 1998
+BOOK00797,1991,United States,United States,single_country,[],Open Library earliest observed edition year 1991
+BOOK00798,1954,United States,United States,single_country,[],Open Library earliest observed edition year 1954
+BOOK00799,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00800,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00801,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00802,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00803,2010,,United States; United Kingdom,multiple_countries,[],Open Library earliest observed edition year 2010
+BOOK00804,1976,United States,United States,single_country,[],Open Library earliest observed edition year 1976
+BOOK00805,1982,United States,United States,single_country,[],Open Library earliest observed edition year 1982
+BOOK00806,2010,,United Kingdom; United States,multiple_countries,[],Open Library earliest observed edition year 2010
+BOOK00807,1972,United States,United States,single_country,[],Open Library earliest observed edition year 1972
+BOOK00808,1978,United States,United States,single_country,[],Open Library earliest observed edition year 1978
+BOOK00809,1999,United States,United States,single_country,[],Open Library earliest observed edition year 1999
+BOOK00810,1991,United States,United States,single_country,[],Open Library earliest observed edition year 1991
+BOOK00811,1995,,,no_country_evidence,[],Open Library earliest observed edition year 1995
+BOOK00812,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00813,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00814,1959,United States,United States,single_country,[],Open Library earliest observed edition year 1959
+BOOK00815,2000,United States,United States,single_country,[],Open Library earliest observed edition year 2000
+BOOK00816,2007,South Africa,South Africa,single_country,[],Open Library earliest observed edition year 2007
+BOOK00817,2011,,,no_country_evidence,[],Open Library earliest observed edition year 2011
+BOOK00818,1974,United States,United States,single_country,[],Open Library earliest observed edition year 1974
+BOOK00819,1988,United States,United States,single_country,[],Open Library earliest observed edition year 1988
+BOOK00820,1972,,United Kingdom; United States,multiple_countries,[],Open Library earliest observed edition year 1972
+BOOK00821,1974,United States,United States,single_country,[],Open Library earliest observed edition year 1974
+BOOK00822,1993,,,no_country_evidence,[],Open Library earliest observed edition year 1993
+BOOK00823,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00824,1991,United States,United States,single_country,[],Open Library earliest observed edition year 1991
+BOOK00825,1983,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1983
+BOOK00826,1991,United States,United States,single_country,[],Open Library earliest observed edition year 1991
+BOOK00827,1954,United States,United States,single_country_with_unresolved_evidence,['xx'],Open Library earliest observed edition year 1954
+BOOK00828,1980,United States,United States,single_country,[],Open Library earliest observed edition year 1980
+BOOK00829,1988,United States,United States,single_country,[],Open Library earliest observed edition year 1988
+BOOK00830,1989,United States,United States,single_country,[],Open Library earliest observed edition year 1989
+BOOK00831,1996,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1996
+BOOK00832,1995,United States,United States,single_country,[],Open Library earliest observed edition year 1995
+BOOK00833,1995,United States,United States,single_country,[],Open Library earliest observed edition year 1995
+BOOK00834,2002,United States,United States,single_country,[],Open Library earliest observed edition year 2002
+BOOK00835,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00836,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00837,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00838,2000,Canada,Canada,single_country,[],Open Library earliest observed edition year 2000
+BOOK00839,1984,United States,United States,single_country,[],Open Library earliest observed edition year 1984
+BOOK00840,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00841,1972,United States,United States,single_country_with_unresolved_evidence,['xx'],Open Library earliest observed edition year 1972
+BOOK00842,1989,United States,United States,single_country,[],Open Library earliest observed edition year 1989
+BOOK00843,1991,United States,United States,single_country,[],Open Library earliest observed edition year 1991
+BOOK00844,1972,United States,United States,single_country,[],Open Library earliest observed edition year 1972
+BOOK00845,1983,,United States; Japan,multiple_countries,[],Open Library earliest observed edition year 1983
+BOOK00846,2001,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2001
+BOOK00847,1993,,,no_country_evidence,[],Open Library earliest observed edition year 1993
+BOOK00848,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00849,1994,United States,United States,single_country,[],Open Library earliest observed edition year 1994
+BOOK00850,1986,United States,United States,single_country,[],Open Library earliest observed edition year 1986
+BOOK00851,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00853,1983,United States,United States,single_country,[],Open Library earliest observed edition year 1983
+BOOK00854,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00855,1994,,,no_country_evidence,[],Open Library earliest observed edition year 1994
+BOOK00856,1995,,United Kingdom; United States,multiple_countries,[],Open Library earliest observed edition year 1995
+BOOK00857,2009,United States,United States,single_country_with_unresolved_evidence,['xx'],Open Library earliest observed edition year 2009
+BOOK00858,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00859,1998,,Italy; United Kingdom; Taiwan; United States,multiple_countries,[],Open Library earliest observed edition year 1998
+BOOK00860,2007,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2007
+BOOK00861,1997,United States,United States,single_country,[],Open Library earliest observed edition year 1997
+BOOK00862,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00863,2011,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2011
+BOOK00864,2012,United States,United States,single_country,[],Open Library earliest observed edition year 2012
+BOOK00865,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00866,2023,,,no_country_evidence,[],Open Library earliest observed edition year 2023
+BOOK00867,1997,United States,United States,single_country,[],Open Library earliest observed edition year 1997
+BOOK00868,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00869,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00870,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00871,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00872,2007,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2007
+BOOK00873,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00874,2005,United States,United States,single_country,[],Open Library earliest observed edition year 2005
+BOOK00875,2025,,,no_country_evidence,[],Open Library earliest observed edition year 2025
+BOOK00876,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00877,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00878,2000,,,no_country_evidence,[],Open Library earliest observed edition year 2000
+BOOK00879,2005,United States,United States,single_country,[],Open Library earliest observed edition year 2005
+BOOK00880,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00881,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00882,2015,United States,United States,single_country,[],Open Library earliest observed edition year 2015
+BOOK00883,2003,United States,United States,single_country,[],Open Library earliest observed edition year 2003
+BOOK00884,2005,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2005
+BOOK00885,2011,United States,United States,single_country,[],Open Library earliest observed edition year 2011
+BOOK00886,1997,,United Kingdom; United States,multiple_countries,[],Open Library earliest observed edition year 1997
+BOOK00887,2017,,,no_country_evidence,[],Open Library earliest observed edition year 2017
+BOOK00888,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00889,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00890,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00891,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00892,2009,United States,United States,single_country,[],Open Library earliest observed edition year 2009
+BOOK00893,2007,United States,United States,single_country,[],Open Library earliest observed edition year 2007
+BOOK00894,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00895,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00896,2013,Mexico,Mexico,single_country,[],Open Library earliest observed edition year 2013
+BOOK00897,1998,,,no_country_evidence,[],Open Library earliest observed edition year 1998
+BOOK00898,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00899,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00900,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00901,2002,,,no_country_evidence,[],Open Library earliest observed edition year 2002
+BOOK00902,2001,,,no_country_evidence,[],Open Library earliest observed edition year 2001
+BOOK00903,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00904,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00905,2004,,,no_country_evidence,[],Open Library earliest observed edition year 2004
+BOOK00906,1997,,,no_country_evidence,[],Open Library earliest observed edition year 1997
+BOOK00907,1998,,,no_country_evidence,[],Open Library earliest observed edition year 1998
+BOOK00908,2014,,,no_country_evidence,[],Open Library earliest observed edition year 2014
+BOOK00909,2010,,,no_country_evidence,[],Open Library earliest observed edition year 2010
+BOOK00910,2012,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2012
+BOOK00911,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00912,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00913,2005,,,no_country_evidence,[],Open Library earliest observed edition year 2005
+BOOK00914,1999,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1999
+BOOK00915,1997,United States,United States,single_country,[],Open Library earliest observed edition year 1997
+BOOK00916,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00917,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00918,2017,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2017
+BOOK00919,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00920,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00921,2016,,,no_country_evidence,[],Open Library earliest observed edition year 2016
+BOOK00922,2011,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2011
+BOOK00923,2008,United States,United States,single_country,[],Open Library earliest observed edition year 2008
+BOOK00924,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00925,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00926,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00927,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00928,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00929,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00930,2010,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 2010
+BOOK00931,1998,United States,United States,single_country,[],Open Library earliest observed edition year 1998
+BOOK00932,1985,,United Kingdom; United States,multiple_countries,[],Open Library earliest observed edition year 1985
+BOOK00933,2005,United States,United States,single_country,[],Open Library earliest observed edition year 2005
+BOOK00934,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00935,2025,,,no_country_evidence,[],Open Library earliest observed edition year 2025
+BOOK00936,2003,,,unresolved_only,['xx'],Open Library earliest observed edition year 2003
+BOOK00937,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00938,2010,United States,United States,single_country,[],Open Library earliest observed edition year 2010
+BOOK00939,2015,,,no_country_evidence,[],Open Library earliest observed edition year 2015
+BOOK00940,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00941,2013,,,no_country_evidence,[],Open Library earliest observed edition year 2013
+BOOK00942,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00943,1961,United Kingdom,United Kingdom,single_country,[],Open Library earliest observed edition year 1961
+BOOK00944,2022,,,no_country_evidence,[],Open Library earliest observed edition year 2022
+BOOK00945,2021,,,no_country_evidence,[],Open Library earliest observed edition year 2021
+BOOK00946,2018,,,no_country_evidence,[],Open Library earliest observed edition year 2018
+BOOK00947,2007,,,no_country_evidence,[],Open Library earliest observed edition year 2007
+BOOK00948,2019,,,no_country_evidence,[],Open Library earliest observed edition year 2019
+BOOK00949,2020,,,no_country_evidence,[],Open Library earliest observed edition year 2020
+BOOK00950,2024,,,no_country_evidence,[],Open Library earliest observed edition year 2024

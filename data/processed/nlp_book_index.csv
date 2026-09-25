@@ -1,0 +1,2068 @@
+matrix_row,book_id,canonical_title,source_group,core_zero_vector,enriched_zero_vector
+0,BOOK00001,Principle-Centered Leadership,Open Library only,False,False
+1,BOOK00002,Leadership in Organizations,Open Library only,False,False
+2,BOOK00003,Kepemimpinan =,Open Library only,True,False
+3,BOOK00004,Spiritual leadership,Open Library only,False,False
+4,BOOK00005,Leadership,Open Library only,False,False
+5,BOOK00006,The 21 Irrefutable Laws of Leadership,Open Library only,False,False
+6,BOOK00007,Leadership,Open Library only,False,False
+7,BOOK00008,Leadership and performance beyond expectations,Open Library only,False,False
+8,BOOK00009,A Higher Loyalty,Open Library only,False,False
+9,BOOK00010,Leadership and Self Deception,Open Library only,False,False
+10,BOOK00011,Leadership,Open Library only,False,False
+11,BOOK00012,Leadership,Open Library only,False,False
+12,BOOK00013,Lincoln on Leadership,Open Library only,False,False
+13,BOOK00014,Leadership,Open Library only,False,False
+14,BOOK00015,Leadership,Open Library only,False,False
+15,BOOK00016,The leadership challenge,Both,False,False
+16,BOOK00017,ORGANIZATIONAL CULTURE AND LEADERSHIP,Open Library only,False,False
+17,BOOK00018,Leadership,Open Library only,False,False
+18,BOOK00019,Leadership In Turbulent Times,Open Library only,False,False
+19,BOOK00020,Leadership,Open Library only,False,False
+20,BOOK00021,Transformational Leadership,Open Library only,False,False
+21,BOOK00022,Tribal leadership,Open Library only,False,False
+22,BOOK00023,Tough Minded Leadership,Open Library only,False,False
+23,BOOK00024,Transforming Leadership,Open Library only,False,False
+24,BOOK00025,Leadership,Open Library only,False,False
+25,BOOK00026,Transformation leadership,Open Library only,False,False
+26,BOOK00027,Las cinco disfunciones de un equipo,Open Library only,False,False
+27,BOOK00028,The Tao of leadership,Open Library only,False,False
+28,BOOK00029,The student leadership challenge,Open Library only,False,False
+29,BOOK00030,Reframing Organizations,Open Library only,False,False
+30,BOOK00031,Wooden on Leadership,Open Library only,False,False
+31,BOOK00032,Brand leadership,Open Library only,False,False
+32,BOOK00033,SuperVision and Instructional Leadership,Open Library only,False,False
+33,BOOK00034,Leadership,Open Library only,False,False
+34,BOOK00035,Leadership Strategy and Tactics,Open Library only,False,False
+35,BOOK00036,Leadership,Both,False,False
+36,BOOK00037,Improving organizational effectiveness through transformational leadership,Open Library only,False,False
+37,BOOK00038,Introduction to Leadership,Open Library only,False,False
+38,BOOK00039,Teacher leadership,Open Library only,False,False
+39,BOOK00040,HR leadership,Open Library only,False,False
+40,BOOK00041,Leadership in health care,Open Library only,False,False
+41,BOOK00042,Organizational culture and leadership,Open Library only,False,False
+42,BOOK00043,Leadership and the one minute manager,Open Library only,False,False
+43,BOOK00044,School leadership and administration,Open Library only,False,False
+44,BOOK00045,Leadership Is an Art,Open Library only,False,False
+45,BOOK00046,Small unit leadership,Open Library only,False,False
+46,BOOK00047,Leadership Wisdom from the Monk Who Sold His Ferrari,Open Library only,False,False
+47,BOOK00048,Monday morning leadership,Open Library only,False,False
+48,BOOK00049,Leadership for dummies,Open Library only,False,False
+49,BOOK00050,Leadership,Open Library only,False,False
+50,BOOK00051,Curriculum leadership,Open Library only,False,False
+51,BOOK00052,Transformational leadership development,Open Library only,False,False
+52,BOOK00053,Full range leadership development,Open Library only,False,False
+53,BOOK00054,Leadership Development in Balance,Open Library only,False,False
+54,BOOK00055,Full range leadership development,Open Library only,False,False
+55,BOOK00056,Leadership Development,Open Library only,False,False
+56,BOOK00057,Leadership development basics,Open Library only,False,False
+57,BOOK00058,Leadership development,Open Library only,False,False
+58,BOOK00059,The Center for Creative Leadership handbook of leadership development,Open Library only,False,False
+59,BOOK00060,Applied leadership development,Open Library only,False,False
+60,BOOK00061,Full leadership development,Open Library only,False,False
+61,BOOK00062,Implementing problem-based learning in leadership development,Open Library only,False,False
+62,BOOK00063,Leadership Development Studies,Open Library only,False,False
+63,BOOK00064,The making of a leader,Open Library only,False,False
+64,BOOK00065,Accelerating Leadership Development,Open Library only,False,False
+65,BOOK00066,Innovations in public leadership development,Open Library only,False,False
+66,BOOK00067,College Student Leadership Development,Open Library only,False,False
+67,BOOK00068,The Center for Creative Leadership handbook of leadership development,Open Library only,False,False
+68,BOOK00069,Leadership development program,Open Library only,False,False
+69,BOOK00070,Servant Leadership,Open Library only,False,False
+70,BOOK00071,Real time leadership development,Open Library only,False,False
+71,BOOK00072,Leading Small Business,Open Library only,False,False
+72,BOOK00073,Women's Leadership Development,Open Library only,False,False
+73,BOOK00074,Leadership Development,Open Library only,False,False
+74,BOOK00075,Accelerated Leadership Development,Open Library only,False,False
+75,BOOK00076,Business Leadership Development in China,Open Library only,False,False
+76,BOOK00077,Leadership for a Better World,Open Library only,False,False
+77,BOOK00078,Future of Leadership Development,Open Library only,False,False
+78,BOOK00079,Curriculum Leadership Development,Open Library only,False,False
+79,BOOK00080,The handbook for student leadership development,Open Library only,False,False
+80,BOOK00081,Leadership Development,Open Library only,False,False
+81,BOOK00082,Servant Leadership Development,Open Library only,False,False
+82,BOOK00083,Full range leadership development,Open Library only,False,False
+83,BOOK00084,The Art of Christian Leadership,Open Library only,False,False
+84,BOOK00085,Community Leadership Development,Open Library only,False,False
+85,BOOK00086,Ethical leadership,Open Library only,False,False
+86,BOOK00087,Leadership development,Open Library only,False,False
+87,BOOK00088,Phi Theta Kappa leadership development program,Open Library only,False,False
+88,BOOK00089,Best practices in leadership development and organization change,Open Library only,False,False
+89,BOOK00090,Collaborative leadership,Open Library only,False,False
+90,BOOK00091,Transnational leadership development,Open Library only,False,False
+91,BOOK00092,Distributed School Leadership,Open Library only,False,False
+92,BOOK00093,Leadership Development,Open Library only,False,False
+93,BOOK00094,Management and leadership development,Open Library only,False,False
+94,BOOK00095,The Pfeiffer book of successful leadership development tools,Open Library only,False,False
+95,BOOK00096,Leadership development,Open Library only,False,False
+96,BOOK00097,Foundations of Educational Leadership,Open Library only,False,False
+97,BOOK00098,Strategic leadership development,Open Library only,False,False
+98,BOOK00099,Executive Leadership,Open Library only,False,False
+99,BOOK00100,Executive leadership,Open Library only,False,False
+100,BOOK00101,Executive leadership,Open Library only,False,False
+101,BOOK00102,Executive Leadership,Open Library only,False,False
+102,BOOK00103,Executive leadership,Open Library only,False,False
+103,BOOK00104,Effective Executive,Open Library only,False,False
+104,BOOK00105,Executive Leadership for Effective Administration,Open Library only,False,False
+105,BOOK00106,Executive Leadership and Legislative Assemblies,Open Library only,False,False
+106,BOOK00107,The Palestinian executive,Open Library only,False,False
+107,BOOK00108,Executive Leadership Council Journal,Open Library only,False,False
+108,BOOK00109,The Development of Executive Leadership,Open Library only,False,False
+109,BOOK00110,Executive Leadership,Open Library only,False,False
+110,BOOK00111,Legislative liaison; executive leadership in Congress,Open Library only,False,False
+111,BOOK00112,Principles and problems of executive leadership,Open Library only,False,False
+112,BOOK00113,The technique of executive leadership,Open Library only,False,False
+113,BOOK00114,The development of executive leadership,Open Library only,False,False
+114,BOOK00115,Executive leadership,Open Library only,False,False
+115,BOOK00116,Chief nursing executives' leadership style and effectiveness,Open Library only,False,False
+116,BOOK00117,Navigate,Open Library only,False,False
+117,BOOK00118,Executive leadership in a dynamic society,Open Library only,False,False
+118,BOOK00119,Executive leadership in Anglo-American systems,Open Library only,False,False
+119,BOOK00120,The focused executive,Open Library only,False,False
+120,BOOK00121,Executive leadership,Open Library only,False,False
+121,BOOK00122,Executive Leadership,Open Library only,False,False
+122,BOOK00123,Executive leadership.,Open Library only,False,False
+123,BOOK00124,Executive leadership,Open Library only,False,False
+124,BOOK00125,Executive Leadership,Open Library only,False,False
+125,BOOK00126,Executive leadership,Open Library only,False,False
+126,BOOK00127,Executive Leadership in Nonprofit Organizations,Open Library only,False,False
+127,BOOK00128,Executive Leadership Series,Open Library only,False,False
+128,BOOK00129,Police Executive Leadership,Open Library only,False,False
+129,BOOK00130,"Presidents, Prime Ministers and Chancellors",Open Library only,False,False
+130,BOOK00131,Presidential Administration and the Environment,Open Library only,False,False
+131,BOOK00132,Executive leadership,Open Library only,False,False
+132,BOOK00133,Development of Executive Leadership,Open Library only,False,False
+133,BOOK00134,Models and theories of executive leadership,Open Library only,False,False
+134,BOOK00135,Legislative liaison; executive leadership in Congress,Open Library only,False,False
+135,BOOK00136,Reset Your Thinking Before Presenting to Executive Leadership,Open Library only,False,False
+136,BOOK00137,Executive leadership through communication,Open Library only,False,False
+137,BOOK00138,Executive leadership in a dynamic society,Open Library only,False,False
+138,BOOK00139,Executive leadership and organizational outcomes,Open Library only,False,False
+139,BOOK00140,Human nature and management,Open Library only,False,False
+140,BOOK00141,NURSE EXECUTIVES: LEADERSHIP/POWER MOTIVATION AND LEADERSHIP EFFECTIVENESS,Open Library only,False,False
+141,BOOK00142,executive leadership course volume 3,Open Library only,False,False
+142,BOOK00143,Dinosaur Tracks (Executive Leadership Series),Open Library only,False,False
+143,BOOK00144,The Technique of Executive Leadership,Open Library only,False,False
+144,BOOK00145,Applied team leadership,Open Library only,False,False
+145,BOOK00146,Team leadership,Open Library only,False,False
+146,BOOK00147,Nursing team leadership,Open Library only,False,False
+147,BOOK00148,Team leadership,Open Library only,False,False
+148,BOOK00149,Team leadership,Open Library only,False,False
+149,BOOK00150,Team of Rivals,Open Library only,False,False
+150,BOOK00151,Interprofessional Health Care Team,Open Library only,False,False
+151,BOOK00152,Team leadership in Christian ministry,Open Library only,False,False
+152,BOOK00153,Leading self-directed work teams,Open Library only,False,False
+153,BOOK00154,Team Leadership,Open Library only,False,False
+154,BOOK00155,Team leadership in the game industry,Open Library only,False,False
+155,BOOK00156,Team leadership,Open Library only,False,False
+156,BOOK00157,Team Leadership,Open Library only,False,False
+157,BOOK00158,The Team Leadership Practices Inventory,Open Library only,False,False
+158,BOOK00159,Leading teams,Open Library only,False,False
+159,BOOK00160,Team Leadership in Community Colleges,Open Library only,False,False
+160,BOOK00161,Team Leadership in High-Hazard Environments,Open Library only,False,False
+161,BOOK00162,Effective Team Leadership,Open Library only,False,False
+162,BOOK00163,Leadership Team Coaching,Open Library only,False,False
+163,BOOK00164,Team leadership,Open Library only,False,False
+164,BOOK00165,Remote Team Leadership,Open Library only,False,False
+165,BOOK00166,Operations Team Leadership (Leadership Guides),Open Library only,False,False
+166,BOOK00167,Leaders Eat Last,Open Library only,False,False
+167,BOOK00168,Sales Team Leadership,Open Library only,False,False
+168,BOOK00169,Tools for team leadership,Open Library only,False,False
+169,BOOK00170,Strategic Team Leadership,Open Library only,False,False
+170,BOOK00171,Team leadership,Open Library only,False,False
+171,BOOK00172,Team Leadership,Open Library only,False,False
+172,BOOK00173,The team leadership practices inventory,Open Library only,False,False
+173,BOOK00174,Executive Team Leadership in the Global Economic and Competitive Environment,Open Library only,False,False
+174,BOOK00175,Practical Remote Team Leadership,Open Library only,False,False
+175,BOOK00176,Virtual team leadership and collaborative engineering advancements,Open Library only,False,False
+176,BOOK00177,Effective Team Leadership for Engineers,Open Library only,False,False
+177,BOOK00178,Art of Middle Management,Open Library only,False,False
+178,BOOK00179,Team Leadership,Open Library only,False,False
+179,BOOK00180,Adaptive team leadership,Open Library only,False,False
+180,BOOK00181,Team Leadership,Open Library only,False,False
+181,BOOK00182,Tim lidŏsip =,Open Library only,False,False
+182,BOOK00183,Leading project teams,Open Library only,False,False
+183,BOOK00184,The Five Dysfunctions of a Team,Open Library only,False,False
+184,BOOK00185,Team leadership in action,Open Library only,False,False
+185,BOOK00186,Effective team leadership,Open Library only,False,False
+186,BOOK00187,Team Leadership Questionnaire,Open Library only,False,False
+187,BOOK00188,Five Dysfunctions of a Team,Open Library only,False,False
+188,BOOK00189,Team of Teams,Open Library only,False,False
+189,BOOK00190,Executive Team Leadership for the 21st Century,Open Library only,False,False
+190,BOOK00191,Team Leadership Assessments,Open Library only,False,False
+191,BOOK00192,Legendary team leadership,Open Library only,False,False
+192,BOOK00193,Transformational Leadership,Open Library only,False,False
+193,BOOK00194,Transformational leadership,Open Library only,False,False
+194,BOOK00195,Transformative leadership in education,Open Library only,False,False
+195,BOOK00196,Transforming leadership,Open Library only,False,False
+196,BOOK00197,Transformational Leadership,Open Library only,False,False
+197,BOOK00198,Radical Transformational Leadership,Open Library only,False,False
+198,BOOK00199,Transformative Leadership Primer,Open Library only,False,False
+199,BOOK00200,The dark side of transformational leadership,Open Library only,False,False
+200,BOOK00201,Transformational leadership,Open Library only,False,False
+201,BOOK00202,Transforming leadership: from vision to results,Open Library only,False,False
+202,BOOK00203,Transforming leadership,Open Library only,False,False
+203,BOOK00204,Charismatic and transformational leadership,Open Library only,False,False
+204,BOOK00205,Transformational Leadership,Open Library only,False,False
+205,BOOK00206,Transformative Leadership in Action,Open Library only,False,False
+206,BOOK00207,Transformational Leadership Styles for Global Leaders,Open Library only,False,False
+207,BOOK00208,7 principles of transformational leadership,Open Library only,False,False
+208,BOOK00209,Uniting the Virtual Workforce,Open Library only,False,False
+209,BOOK00210,"Women, spirituality, and transformative leadership",Open Library only,False,False
+210,BOOK00211,Transformational leadership,Open Library only,False,False
+211,BOOK00212,Transformative Leadership and Sustainable Innovation in Education,Open Library only,False,False
+212,BOOK00213,Transforming leadership,Open Library only,False,False
+213,BOOK00214,Transforming Leadership,Open Library only,False,False
+214,BOOK00215,Transforming Leadership,Open Library only,False,False
+215,BOOK00216,Transformative Leadership,Open Library only,False,False
+216,BOOK00217,The Transformational Leadership Compass,Open Library only,False,False
+217,BOOK00218,Sustainability Mindset and Transformative Leadership,Open Library only,False,False
+218,BOOK00219,Transforming Leadership,Open Library only,False,False
+219,BOOK00220,Transformational leadership in East Africa,Open Library only,False,False
+220,BOOK00221,Transformational leadership,Open Library only,False,False
+221,BOOK00222,Transforming leadership,Open Library only,False,False
+222,BOOK00223,Reframing Transformational Leadership,Open Library only,False,False
+223,BOOK00224,Action Inquiry,Open Library only,False,False
+224,BOOK00225,Transforming Leadership,Open Library only,False,False
+225,BOOK00226,Transformational leadership,Open Library only,False,False
+226,BOOK00227,Advancing Inclusive Open Education Through Transformative Leadership,Open Library only,False,False
+227,BOOK00228,Transformative Leadership,Open Library only,False,False
+228,BOOK00229,Transformational leadership,Open Library only,False,False
+229,BOOK00230,Shared vision,Open Library only,False,False
+230,BOOK00231,Transformative Leadership,Open Library only,False,False
+231,BOOK00232,Transformational Leadership and Not for Profits and Social Enterprises,Open Library only,False,False
+232,BOOK00233,Transformational Leadership Unleashed,Open Library only,False,False
+233,BOOK00234,Servant leadership,Open Library only,False,False
+234,BOOK00235,The case for servant leadership,Open Library only,False,False
+235,BOOK00236,The power of servant-leadership,Open Library only,False,False
+236,BOOK00237,Servant leadership,Open Library only,False,False
+237,BOOK00238,Servant leadership,Open Library only,False,False
+238,BOOK00239,Scrum Mastery,Open Library only,False,False
+239,BOOK00240,Servant-leadership across cultures,Open Library only,False,False
+240,BOOK00241,Seven pillars of servant leadership,Open Library only,False,False
+241,BOOK00242,Servant leadership,Open Library only,False,False
+242,BOOK00243,Reflections on leadership,Open Library only,False,False
+243,BOOK00244,Strength in servant leadership,Open Library only,False,False
+244,BOOK00245,Servant leadership,Open Library only,False,False
+245,BOOK00246,Servant leadership,Open Library only,False,False
+246,BOOK00247,Handbook for secular Franciscan servant leadership,Open Library only,False,False
+247,BOOK00248,Focus on Leadership,Open Library only,False,False
+248,BOOK00249,Servant Leadership in Action,Open Library only,False,False
+249,BOOK00250,Servant Leadership,Open Library only,False,False
+250,BOOK00251,Servant leadership,Open Library only,False,False
+251,BOOK00252,Servant leadership,Open Library only,False,False
+252,BOOK00253,Applying Servant Leadership in Today's Schools,Open Library only,False,False
+253,BOOK00254,Servant Leadership for Slow Learners,Open Library only,False,False
+254,BOOK00255,Robert K. Greenleaf,Open Library only,False,False
+255,BOOK00256,The Servant Leadership Training Course,Open Library only,False,False
+256,BOOK00257,The Model of Servant-Leadership,Open Library only,False,False
+257,BOOK00258,Cases on Servant Leadership and Equity,Open Library only,False,False
+258,BOOK00259,Leader As Servant Leadership Model,Open Library only,False,False
+259,BOOK00260,Servant Leadership,Open Library only,False,False
+260,BOOK00261,Global Servant-Leadership,Open Library only,False,False
+261,BOOK00262,Servant leadership in nursing,Open Library only,False,False
+262,BOOK00263,Servant Leadership,Open Library only,False,False
+263,BOOK00264,Servant Leadership Roadmap,Open Library only,False,False
+264,BOOK00265,Using Servant Leadership,Open Library only,False,False
+265,BOOK00266,Servant Leadership,Open Library only,False,False
+266,BOOK00267,The servant,Open Library only,False,False
+267,BOOK00268,A Woman's Guide to Servant Leadership,Open Library only,False,False
+268,BOOK00269,Servant Leadership for Higher Education,Open Library only,False,False
+269,BOOK00270,Principal to Principal,Open Library only,False,False
+270,BOOK00271,Servant Leadership,Open Library only,False,False
+271,BOOK00272,Personal and Organizational Excellence Through Servant Leadership,Open Library only,False,False
+272,BOOK00273,Understanding Servant Leadership,Open Library only,False,False
+273,BOOK00274,Servant Leadership Styles and Strategic Decision Making,Open Library only,False,False
+274,BOOK00275,The spirit of servant-leadership,Open Library only,False,False
+275,BOOK00276,Idiot Guide to Servant Leadership,Open Library only,False,False
+276,BOOK00277,Servant Leadership in diakonischen Unternehmen,Open Library only,False,False
+277,BOOK00278,Servant Leadership,Open Library only,False,False
+278,BOOK00279,Developing Christian Servant Leadership,Open Library only,False,False
+279,BOOK00280,Paul on leadership,Open Library only,False,False
+280,BOOK00281,Marketing management,Open Library only,False,False
+281,BOOK00282,Management information systems,Open Library only,False,False
+282,BOOK00283,Marketing Management,Open Library only,False,False
+283,BOOK00284,Human Resource management,Open Library only,False,False
+284,BOOK00285,Operations management,Open Library only,False,False
+285,BOOK00286,Principles of management,Open Library only,False,False
+286,BOOK00287,Strategic management,Open Library only,False,False
+287,BOOK00288,Statistics for management,Open Library only,False,False
+288,BOOK00289,The Night Manager,Open Library only,False,False
+289,BOOK00290,Strategic management,Open Library only,False,False
+290,BOOK00291,Management,Open Library only,False,False
+291,BOOK00292,High Output Management,Open Library only,False,False
+292,BOOK00293,Financial Management,Open Library only,False,False
+293,BOOK00294,Human resource management,Open Library only,False,False
+294,BOOK00295,"Mind Management, Not Time Management",Open Library only,False,False
+295,BOOK00296,Strategic management and business policy,Open Library only,False,False
+296,BOOK00297,The Practice of Management,Open Library only,False,False
+297,BOOK00298,Human Resource Management,Open Library only,False,False
+298,BOOK00299,Project management,Open Library only,False,False
+299,BOOK00300,Introduction to management accounting,Open Library only,False,False
+300,BOOK00301,The Principles of Scientific Management,Open Library only,False,False
+301,BOOK00302,Management of organizational behavior,Open Library only,False,False
+302,BOOK00303,Retailing management,Open Library only,False,False
+303,BOOK00304,Strategic management,Open Library only,False,False
+304,BOOK00305,Operations Management,Open Library only,False,False
+305,BOOK00306,Contemporary management,Open Library only,False,False
+306,BOOK00307,Developing mangement skills,Open Library only,False,False
+307,BOOK00308,Essentials of management,Open Library only,False,False
+308,BOOK00309,A Guide to the Project Management Body of Knowledge (PMBOK® Guide),Open Library only,False,False
+309,BOOK00310,Analysis for financial management,Open Library only,False,False
+310,BOOK00311,Strategic market management,Open Library only,False,False
+311,BOOK00312,Strategic management,Open Library only,False,False
+312,BOOK00313,Retailing management,Open Library only,False,False
+313,BOOK00314,Supply chain logistics management,Open Library only,False,False
+314,BOOK00315,The one minute manager,Open Library only,False,False
+315,BOOK00316,Entrepreneurship,Open Library only,False,False
+316,BOOK00317,Fundamentals of financial management,Open Library only,False,False
+317,BOOK00318,Fundamentals of financial management,Open Library only,False,False
+318,BOOK00319,Management information systems,Open Library only,False,False
+319,BOOK00320,Retail management,Open Library only,False,False
+320,BOOK00321,Principles and Practice of Management,Open Library only,False,False
+321,BOOK00322,Comprehensive stress management,Open Library only,False,False
+322,BOOK00323,Principles of management,Open Library only,False,False
+323,BOOK00324,Operations Management,Open Library only,False,False
+324,BOOK00325,Marketing management,Open Library only,False,False
+325,BOOK00326,Intermediate financial management,Open Library only,False,False
+326,BOOK00327,Sales management,Open Library only,False,False
+327,BOOK00328,Strategic Management,Open Library only,False,False
+328,BOOK00329,Production & inventory management,Open Library only,False,False
+329,BOOK00330,Project management,Open Library only,False,False
+330,BOOK00331,Unraveling the mystery of health,Open Library only,False,False
+331,BOOK00332,Mary Kay on people management,Open Library only,False,False
+332,BOOK00333,The 7 Habits of Highly Effective People,Open Library only,False,False
+333,BOOK00334,Armstrong's Handbook of Human Resource Management Practice,Open Library only,False,False
+334,BOOK00335,"People, Management and Organizations",Open Library only,False,False
+335,BOOK00336,Human resource management at work,Open Library only,False,False
+336,BOOK00337,Supervisory management,Open Library only,False,False
+337,BOOK00338,People Management and Performance,Open Library only,False,False
+338,BOOK00339,Armstrong's Handbook of Strategic Human Resource Management,Open Library only,False,False
+339,BOOK00340,Corporate Reputations Branding and People Management,Open Library only,False,False
+340,BOOK00341,Hotel Management,Open Library only,False,False
+341,BOOK00342,People Managing Forests,Open Library only,False,False
+342,BOOK00343,Strategic People Management and Development,Open Library only,False,False
+343,BOOK00344,Short Guide to People Management,Open Library only,False,False
+344,BOOK00345,People management,Open Library only,False,False
+345,BOOK00346,People management and development,Open Library only,False,False
+346,BOOK00347,VOL.2.NO.13.27th JUNE 1998,Open Library only,False,False
+347,BOOK00348,People Management and Performance,Open Library only,False,False
+348,BOOK00349,The changing face of people management in India,Open Library only,False,False
+349,BOOK00350,Organizational Behavior,Open Library only,False,False
+350,BOOK00351,The People of the Abyss,Open Library only,False,False
+351,BOOK00352,Olson People Management Skills Set,Open Library only,False,False
+352,BOOK00353,Professional HR,Open Library only,False,False
+353,BOOK00354,Armstrong's Handbook of Human Resource Management Practice,Open Library only,False,False
+354,BOOK00355,How to Be a Super-Effective Manager,Open Library only,False,False
+355,BOOK00356,Other People Manage,Open Library only,False,False
+356,BOOK00357,Team play,Open Library only,False,False
+357,BOOK00358,People Management,Open Library only,False,False
+358,BOOK00359,The people manager's pocketbook,Open Library only,False,False
+359,BOOK00360,Business Models and People Management in the Indian IT Industry,Open Library only,False,False
+360,BOOK00361,Armstrong's Handbook of Strategic Human Resource Management,Open Library only,False,False
+361,BOOK00362,Successful People Management,Open Library only,False,False
+362,BOOK00363,Mastering people management,Open Library only,False,False
+363,BOOK00364,People management for small business,Open Library only,False,False
+364,BOOK00365,Perspectives in People Management,Open Library only,False,False
+365,BOOK00366,People Management (Management Papers: 4),Open Library only,False,False
+366,BOOK00367,CMO of People,Open Library only,False,False
+367,BOOK00368,Mastering People Management,Open Library only,False,False
+368,BOOK00369,Successful People Management in a Week,Open Library only,False,False
+369,BOOK00370,People Manager's Tool Kit,Open Library only,False,False
+370,BOOK00371,International human resource management,Open Library only,False,False
+371,BOOK00372,Sustainable People Management,Open Library only,False,False
+372,BOOK00373,Effective People Management,Open Library only,False,False
+373,BOOK00374,Management,Open Library only,False,False
+374,BOOK00375,People Management,Open Library only,False,False
+375,BOOK00376,Effective people management,Open Library only,False,False
+376,BOOK00377,People Management,Open Library only,False,False
+377,BOOK00378,Developing Excellent People Managers,Open Library only,False,False
+378,BOOK00379,Benchmarking for People Managers,Open Library only,False,False
+379,BOOK00380,People managing forests,Open Library only,False,False
+380,BOOK00381,Strategic management,Open Library only,False,False
+381,BOOK00382,Strategic management,Open Library only,False,False
+382,BOOK00383,Strategic management,Open Library only,False,False
+383,BOOK00384,Strategic management,Open Library only,False,False
+384,BOOK00385,Strategic Management,Open Library only,False,False
+385,BOOK00386,Implanting strategic management,Open Library only,False,False
+386,BOOK00387,Strategic management and competitive advantage,Open Library only,False,False
+387,BOOK00388,Strategic Management,Open Library only,False,False
+388,BOOK00389,Strategic management,Open Library only,False,False
+389,BOOK00390,Strategic Management Theory,Open Library only,False,False
+390,BOOK00391,Concepts of strategic management,Open Library only,False,False
+391,BOOK00392,Strategic management of technological innovation,Open Library only,False,False
+392,BOOK00393,Strategic management,Open Library only,False,False
+393,BOOK00394,Strategic Management,Open Library only,False,False
+394,BOOK00395,Strategic management,Open Library only,False,False
+395,BOOK00396,International business,Open Library only,False,False
+396,BOOK00397,Creating public value,Open Library only,False,False
+397,BOOK00398,Strategic Management,Open Library only,False,False
+398,BOOK00399,Global Strategic Management,Open Library only,False,False
+399,BOOK00400,Strategic Management : Theory & Cases,Open Library only,False,False
+400,BOOK00401,Strategic Management,Open Library only,False,False
+401,BOOK00402,Strategic management of health care organizations,Open Library only,False,False
+402,BOOK00403,Strategic management and business analysis,Open Library only,False,False
+403,BOOK00404,Strategic management,Open Library only,False,False
+404,BOOK00405,Strategic management,Open Library only,False,False
+405,BOOK00406,Strategic management,Open Library only,False,False
+406,BOOK00407,Sustainable strategic management,Open Library only,False,False
+407,BOOK00408,Strategic management in action,Open Library only,False,False
+408,BOOK00409,Strategize!,Open Library only,False,False
+409,BOOK00410,Strategy safari,Open Library only,False,False
+410,BOOK00411,Strategic management,Open Library only,False,False
+411,BOOK00412,Strategic Management,Open Library only,False,False
+412,BOOK00413,Understanding Strategic Management,Open Library only,False,False
+413,BOOK00414,Sustainable Strategic Management,Open Library only,False,False
+414,BOOK00415,Strategic management,Open Library only,False,False
+415,BOOK00416,The Strategic Manager,Open Library only,False,False
+416,BOOK00417,Strategic management,Open Library only,False,False
+417,BOOK00418,Strategic Management,Open Library only,False,False
+418,BOOK00419,Strategic Management,Open Library only,False,False
+419,BOOK00420,Strategic Management Accounting,Open Library only,False,False
+420,BOOK00421,Essentials of strategic management,Open Library only,False,False
+421,BOOK00422,Global strategic management,Open Library only,False,False
+422,BOOK00423,Strategic management,Open Library only,False,False
+423,BOOK00424,Change management,Open Library only,False,False
+424,BOOK00425,Managing Change/Changing Managers,Open Library only,False,False
+425,BOOK00426,Change management,Open Library only,False,False
+426,BOOK00427,Change Management,Open Library only,False,False
+427,BOOK00428,"Managing change, changing managers",Open Library only,False,False
+428,BOOK00429,Change management in information services,Open Library only,False,False
+429,BOOK00430,Making sense of change management,Open Library only,False,False
+430,BOOK00431,Changing Change Management,Open Library only,False,False
+431,BOOK00432,Change Management,Open Library only,False,False
+432,BOOK00433,Making sense of change management,Open Library only,False,False
+433,BOOK00434,The Theory and Practice of Change Management,Open Library only,False,False
+434,BOOK00435,Effective Change Manager,Open Library only,False,False
+435,BOOK00436,Making sense of change management,Open Library only,False,False
+436,BOOK00437,Managing change,Open Library only,False,False
+437,BOOK00438,Change Management,Open Library only,False,False
+438,BOOK00439,Lean Change Management,Open Library only,False,False
+439,BOOK00440,Change Management,Open Library only,False,False
+440,BOOK00441,Strategic Change Management Strategic Change Management,Open Library only,False,False
+441,BOOK00442,Organizational Behaviour and Change Management,Open Library only,False,False
+442,BOOK00443,The Manager's Path,Open Library only,False,False
+443,BOOK00444,Agile Change Management,Open Library only,False,False
+444,BOOK00445,The Effective Change Manager's Handbook,Open Library only,False,False
+445,BOOK00446,Breakthrough IT Change Management,Open Library only,False,False
+446,BOOK00447,Beyond change management,Open Library only,False,False
+447,BOOK00448,Managing Change,Open Library only,False,False
+448,BOOK00449,Business process change management,Open Library only,False,False
+449,BOOK00450,Change Management,Open Library only,False,False
+450,BOOK00451,Change Management Für Dummies,Open Library only,False,False
+451,BOOK00452,Reconsidering Change Management,Open Library only,False,False
+452,BOOK00453,Correctional administration and change management,Open Library only,False,False
+453,BOOK00454,Change management,Open Library only,False,False
+454,BOOK00455,The Theory and Practice of Change Management,Open Library only,False,False
+455,BOOK00456,Appreciative inquiry for change management,Open Library only,False,False
+456,BOOK00457,Leadership and change management,Open Library only,False,False
+457,BOOK00458,Changing managers and managing change,Open Library only,False,False
+458,BOOK00459,Managing innovation,Open Library only,False,False
+459,BOOK00460,Change Management During Unprecedented Times,Open Library only,False,False
+460,BOOK00461,"Change Management in schwierigen Zeiten, m. CD-ROM",Open Library only,False,False
+461,BOOK00462,Leadership and Change Management,Open Library only,False,False
+462,BOOK00463,The complete idiot's guide to change management,Open Library only,False,False
+463,BOOK00464,Additive Manufacturing Change Management,Open Library only,False,False
+464,BOOK00465,Enterprise Change Management,Open Library only,False,False
+465,BOOK00466,Switch,Open Library only,False,False
+466,BOOK00467,Leading Change,Open Library only,False,False
+467,BOOK00468,Employee Empowerment,Open Library only,False,False
+468,BOOK00469,Change Management Masterclass,Open Library only,False,False
+469,BOOK00470,Change Manager,Open Library only,False,False
+470,BOOK00471,Rework,Open Library only,False,False
+471,BOOK00472,Production and operations management,Open Library only,False,False
+472,BOOK00473,Production and operations management,Open Library only,False,False
+473,BOOK00474,Operations management,Open Library only,False,False
+474,BOOK00475,Operations management,Open Library only,False,False
+475,BOOK00476,Operations management,Open Library only,False,False
+476,BOOK00477,Production/operations management,Open Library only,False,False
+477,BOOK00478,Production and operations management,Open Library only,False,False
+478,BOOK00479,Operations Management,Open Library only,False,False
+479,BOOK00480,Operations management for MBAs,Open Library only,False,False
+480,BOOK00481,Operations management,Open Library only,False,False
+481,BOOK00482,Operations management,Open Library only,False,False
+482,BOOK00483,Operations Management,Open Library only,False,False
+483,BOOK00484,Principles of operations management,Open Library only,False,False
+484,BOOK00485,Operations management,Open Library only,False,False
+485,BOOK00486,Slack,Open Library only,False,False
+486,BOOK00487,Operations management,Open Library only,False,False
+487,BOOK00488,Production and Operations Management,Open Library only,False,False
+488,BOOK00489,Production and operations management,Open Library only,False,False
+489,BOOK00490,Operations Management,Open Library only,False,False
+490,BOOK00491,Production and Operations Management,Open Library only,False,False
+491,BOOK00492,Schaum's outline of theory and problems of operations management,Open Library only,False,False
+492,BOOK00493,Principles of operations management,Open Library only,False,False
+493,BOOK00494,Modern production/operations management,Open Library only,False,False
+494,BOOK00495,Restaurant operations management,Open Library only,False,False
+495,BOOK00496,Production and operations management,Open Library only,False,False
+496,BOOK00497,Fundamentals of operations management,Open Library only,False,False
+497,BOOK00498,Hotel operations management,Open Library only,False,False
+498,BOOK00499,Operations management,Open Library only,False,False
+499,BOOK00500,Strategic Operations Management,Open Library only,False,False
+500,BOOK00501,Operations management,Open Library only,False,False
+501,BOOK00502,Principles of operations management,Open Library only,False,False
+502,BOOK00503,Operations management,Open Library only,False,False
+503,BOOK00504,Operations Management,Open Library only,False,False
+504,BOOK00505,Operations management,Open Library only,False,False
+505,BOOK00506,Operations management,Open Library only,False,False
+506,BOOK00507,Operations Management,Open Library only,False,False
+507,BOOK00508,Operations Management,Open Library only,False,False
+508,BOOK00509,Operations management,Open Library only,False,False
+509,BOOK00510,Essentials of Operations Management,Open Library only,False,False
+510,BOOK00511,Production and operations management,Open Library only,False,False
+511,BOOK00512,Production and operations management,Open Library only,False,False
+512,BOOK00513,Operations Management,Open Library only,False,False
+513,BOOK00514,Casino operations management,Open Library only,False,False
+514,BOOK00515,"Foundations of Operations Management, Fourth Canadian Edition, 4/e",Open Library only,False,False
+515,BOOK00516,Modern Hotel Operations Management,Open Library only,False,False
+516,BOOK00517,Cruise Operations Management,Open Library only,False,False
+517,BOOK00518,Operations management for competitive advantage,Open Library only,False,False
+518,BOOK00519,Project management for dummies,Open Library only,False,False
+519,BOOK00520,Project Management,Open Library only,False,False
+520,BOOK00521,Project management,Open Library only,False,False
+521,BOOK00522,Software project management,Open Library only,False,False
+522,BOOK00523,Project management,Open Library only,False,False
+523,BOOK00524,Project Management,Open Library only,False,False
+524,BOOK00525,PMBOK Guide,Open Library only,False,False
+525,BOOK00526,Construction project management,Open Library only,False,False
+526,BOOK00527,Information Technology Project Management,Open Library only,False,False
+527,BOOK00528,Construction project management,Open Library only,False,False
+528,BOOK00529,A Guide to the Project Management Body of Knowledge (PMBOK® Guide),Open Library only,False,False
+529,BOOK00530,Agile Project Management For Dummies,Open Library only,False,False
+530,BOOK00531,Project Management for the Unofficial Project Manager,Open Library only,False,False
+531,BOOK00532,Project Management,Open Library only,False,False
+532,BOOK00533,Effective project management,Open Library only,False,False
+533,BOOK00534,TOTAL PROJECT MANAGEMENT The Indian Context,Open Library only,False,False
+534,BOOK00535,Project Management,Open Library only,False,False
+535,BOOK00536,Successful project management,Open Library only,False,False
+536,BOOK00537,Project management,Open Library only,False,False
+537,BOOK00538,Information technology project management,Open Library only,False,False
+538,BOOK00539,Successful Project Management,Open Library only,False,False
+539,BOOK00540,Project management,Open Library only,False,False
+540,BOOK00541,Process Groups,Open Library only,False,False
+541,BOOK00542,The Fast Forward MBA in Project Management,Open Library only,False,False
+542,BOOK00543,Project Management in Perspective,Open Library only,False,False
+543,BOOK00544,Project Management Techniques,Open Library only,False,False
+544,BOOK00545,Project Management,Open Library only,False,False
+545,BOOK00546,Project Management in Practice,Open Library only,False,False
+546,BOOK00547,Construction project management,Open Library only,False,False
+547,BOOK00548,Project management,Open Library only,False,False
+548,BOOK00549,Contemporary Project Management,Open Library only,False,False
+549,BOOK00550,The Fast Forward MBA in Project Management,Open Library only,False,False
+550,BOOK00551,"Project Management for Engineering, Business and Technology",Open Library only,False,False
+551,BOOK00552,Project Management,Open Library only,False,False
+552,BOOK00553,Project management for healthcare,Open Library only,False,False
+553,BOOK00554,"Project management metrics, KPIs, and dashboards",Open Library only,False,False
+554,BOOK00555,Project management,Open Library only,False,False
+555,BOOK00556,Project Management,Open Library only,False,False
+556,BOOK00557,Agile Project Management with Scrum (Microsoft Professional),Open Library only,False,False
+557,BOOK00558,The art of project management,Open Library only,False,False
+558,BOOK00559,A guide to the project management body of knowledge (PMBOK guide),Open Library only,False,False
+559,BOOK00560,The Deadline,Open Library only,False,False
+560,BOOK00561,Project Management Absolute Beginner's Guide,Open Library only,False,False
+561,BOOK00562,Project management in construction,Open Library only,False,False
+562,BOOK00563,Project management,Open Library only,False,False
+563,BOOK00564,Project management for dummies,Open Library only,False,False
+564,BOOK00565,Making Things Happen,Open Library only,False,False
+565,BOOK00566,Performance management,Open Library only,False,False
+566,BOOK00567,Performance Management,Open Library only,False,False
+567,BOOK00568,Performance Management,Open Library only,False,False
+568,BOOK00569,Performance management systems,Open Library only,False,False
+569,BOOK00570,Performance management,Open Library only,False,False
+570,BOOK00571,Financial planning & analysis and performance management,Open Library only,False,False
+571,BOOK00572,Performance management,Open Library only,False,False
+572,BOOK00573,Managing performance,Open Library only,False,False
+573,BOOK00574,Handbook of corporate performance management,Open Library only,False,False
+574,BOOK00575,Strategic Performance Management,Open Library only,False,False
+575,BOOK00576,Performance management,Open Library only,False,False
+576,BOOK00577,Employee engagement through effective performance management,Open Library only,False,False
+577,BOOK00578,Performance Management,Open Library only,False,False
+578,BOOK00579,Performance management,Open Library only,False,False
+579,BOOK00580,ACCA Performance Management,Open Library only,False,False
+580,BOOK00581,Armstrong's Handbook of Performance Management,Open Library only,False,False
+581,BOOK00582,Enterprise Performance Management Done Right,Open Library only,False,False
+582,BOOK00583,Armstrong's handbook of performance management,Open Library only,False,False
+583,BOOK00584,Performance Management,Open Library only,False,False
+584,BOOK00585,IT performance management,Open Library only,False,False
+585,BOOK00586,Intranet performance management,Open Library only,False,False
+586,BOOK00587,Performance management,Open Library only,False,False
+587,BOOK00588,ACCA P5 Advanced Performance Management,Open Library only,False,False
+588,BOOK00589,Performance management,Open Library only,False,False
+589,BOOK00590,Performance Management in Nonprofit Organizations,Open Library only,False,False
+590,BOOK00591,Performance Management in the Public Sector,Open Library only,False,False
+591,BOOK00592,Performance Management,Open Library only,False,False
+592,BOOK00593,Performance management,Open Library only,False,False
+593,BOOK00594,Performance management,Open Library only,False,False
+594,BOOK00595,HBR guide to performance management,Open Library only,False,False
+595,BOOK00596,Performance Management,Open Library only,False,False
+596,BOOK00597,Strategic Planning and Performance Management,Open Library only,False,False
+597,BOOK00598,Organizational behaviour,Open Library only,False,False
+598,BOOK00599,Global Performance Management (Global HRM),Open Library only,False,False
+599,BOOK00600,ACCA F5 Performance Management,Open Library only,False,False
+600,BOOK00601,ACCA F5 Performance Management,Open Library only,False,False
+601,BOOK00602,Case Studies in Performance Management,Open Library only,False,False
+602,BOOK00603,Performance management,Open Library only,False,False
+603,BOOK00604,ACCA Performance Management,Open Library only,False,False
+604,BOOK00605,Performance Management for Dummies,Open Library only,False,False
+605,BOOK00606,Performance Management (Acca),Open Library only,False,False
+606,BOOK00607,Performance Management,Open Library only,False,False
+607,BOOK00608,Strategic Performance Management,Open Library only,False,False
+608,BOOK00609,Performance management,Open Library only,False,False
+609,BOOK00610,Teach Yourself Performance Management,Open Library only,False,False
+610,BOOK00611,Innovative Corporate Performance Management,Open Library only,False,False
+611,BOOK00612,HR networking,Open Library only,False,False
+612,BOOK00613,Reengineering performance management,Open Library only,False,False
+613,BOOK00614,Implementing Performance Management,Open Library only,False,False
+614,BOOK00615,Human resource management,Open Library only,False,False
+615,BOOK00616,Human resource management,Open Library only,False,False
+616,BOOK00617,Fundamentals of human resource management,Open Library only,False,False
+617,BOOK00618,Human Resource Management,Open Library only,False,False
+618,BOOK00619,Human resource management,Open Library only,False,False
+619,BOOK00620,Human resource management,Open Library only,False,False
+620,BOOK00621,Human resources management,Open Library only,False,False
+621,BOOK00622,Human resource management,Open Library only,False,False
+622,BOOK00623,Human resource management,Open Library only,False,False
+623,BOOK00624,Human resource management,Open Library only,False,False
+624,BOOK00625,Strategic Human Resource Management,Open Library only,False,False
+625,BOOK00626,Human resource management,Open Library only,False,False
+626,BOOK00627,Understanding Human Resources Management,Open Library only,False,False
+627,BOOK00628,Human Resource Management,Open Library only,False,False
+628,BOOK00629,Human Resource Management,Open Library only,False,False
+629,BOOK00630,Human resource management,Open Library only,False,False
+630,BOOK00631,Human resource management,Open Library only,False,False
+631,BOOK00632,Human resource management,Open Library only,False,False
+632,BOOK00633,Fundamentals of Human Resource Management,Open Library only,False,False
+633,BOOK00634,Human resource management,Open Library only,False,False
+634,BOOK00635,Human Resource Management,Open Library only,False,False
+635,BOOK00636,Human Resource Management,Open Library only,False,False
+636,BOOK00637,Human resource management,Open Library only,False,False
+637,BOOK00638,Personnel and human resources management,Open Library only,False,False
+638,BOOK00639,Human resources management,Open Library only,False,False
+639,BOOK00640,Human resource management,Open Library only,False,False
+640,BOOK00641,Armstrong's handbook of human resource management practice,Open Library only,False,False
+641,BOOK00642,Fundamentals of human resource management,Open Library only,False,False
+642,BOOK00643,Strategic Human Resource Management,Open Library only,False,False
+643,BOOK00644,International Human Resource Management,Open Library only,False,False
+644,BOOK00645,"Human Resource Management, 16th edition",Open Library only,False,False
+645,BOOK00646,Strategic human resource management,Open Library only,False,False
+646,BOOK00647,Human Resource Management,Open Library only,False,False
+647,BOOK00648,A Handbook of Human Resource Management Practice,Open Library only,False,False
+648,BOOK00649,Human resource management,Open Library only,False,False
+649,BOOK00650,Human Resource Management,Open Library only,False,False
+650,BOOK00651,Healthcare human resource management,Open Library only,False,False
+651,BOOK00652,Human resource management,Open Library only,False,False
+652,BOOK00653,Human Resource Management,Open Library only,False,False
+653,BOOK00654,Human Resource Management,Open Library only,False,False
+654,BOOK00655,Human resource management,Open Library only,False,False
+655,BOOK00656,Fundamentals of Human Resource Management,Open Library only,False,False
+656,BOOK00657,Introduction to Human Resource Management,Open Library only,False,False
+657,BOOK00658,Human resource management,Open Library only,False,False
+658,BOOK00659,Strategic compensation,Open Library only,False,False
+659,BOOK00660,Organizational Behavior,Open Library only,False,False
+660,BOOK00661,Organizational behavior,Open Library only,False,False
+661,BOOK00662,Essentials of Organizational Behavior,Open Library only,False,False
+662,BOOK00663,Organizational behavior,Open Library only,False,False
+663,BOOK00664,Organizational behavior,Open Library only,False,False
+664,BOOK00665,Organizational behavior,Open Library only,False,False
+665,BOOK00666,International dimensions of organizational behavior,Open Library only,False,False
+666,BOOK00667,Organizational behavior,Open Library only,False,False
+667,BOOK00668,Human behavior at work,Open Library only,False,False
+668,BOOK00669,Organizational behavior and management,Open Library only,False,False
+669,BOOK00670,Managing organizational behavior,Open Library only,False,False
+670,BOOK00671,Organizational behavior,Open Library only,False,False
+671,BOOK00672,Organizational behavior,Open Library only,False,False
+672,BOOK00673,Organizational behavior,Open Library only,False,False
+673,BOOK00674,Organizational Behavior,Open Library only,False,False
+674,BOOK00675,Introduction to organizational behavior,Open Library only,False,False
+675,BOOK00676,Understanding and Managing Organizational Behavior,Open Library only,False,False
+676,BOOK00677,Organizational behavior in education,Open Library only,False,False
+677,BOOK00678,Organizational behavior,Open Library only,False,False
+678,BOOK00679,Organizational behavior,Open Library only,False,False
+679,BOOK00680,Organizational behavior,Open Library only,False,False
+680,BOOK00681,Organizational Behavior,Open Library only,False,False
+681,BOOK00682,Organizational behavior,Open Library only,False,False
+682,BOOK00683,Managing organizational behavior,Open Library only,False,False
+683,BOOK00684,Organizational behavior,Open Library only,False,False
+684,BOOK00685,Organizational behavior,Open Library only,False,False
+685,BOOK00686,Organizational behavior,Open Library only,False,False
+686,BOOK00687,Organizational behavior in health care,Open Library only,False,False
+687,BOOK00688,Organizational Behavior,Open Library only,False,False
+688,BOOK00689,Organizational behavior,Open Library only,False,False
+689,BOOK00690,Organizational behavior,Open Library only,False,False
+690,BOOK00691,Organizational behavior,Open Library only,False,False
+691,BOOK00692,"Work Motivation in Organizational Behavior, 2nd ed",Open Library only,False,False
+692,BOOK00693,Organizational behavior,Open Library only,False,False
+693,BOOK00694,Management of Organizational Behavior,Open Library only,False,False
+694,BOOK00695,International Organizational Behavior,Open Library only,False,False
+695,BOOK00696,Essentials of Organizational Behavior,Open Library only,False,False
+696,BOOK00697,Organizational behavior,Open Library only,False,False
+697,BOOK00698,Organizational Behaviour,Open Library only,False,False
+698,BOOK00699,Organizational behavior,Open Library only,False,False
+699,BOOK00700,Essentials of Organizational Behavior,Open Library only,False,False
+700,BOOK00701,Loose Leaf Organizational Behavior,Open Library only,False,False
+701,BOOK00702,Managing organizational behavior,Open Library only,False,False
+702,BOOK00703,Organizational behavior,Open Library only,False,False
+703,BOOK00704,Organizational Behavior,Open Library only,False,False
+704,BOOK00705,Organizational behavior,Open Library only,False,False
+705,BOOK00706,Organizational Behavior,Open Library only,False,False
+706,BOOK00707,International organizational behavior,Open Library only,False,False
+707,BOOK00708,Managerial Economics & Business Strategy,Open Library only,False,False
+708,BOOK00709,Your Next Five Moves,Open Library only,False,False
+709,BOOK00710,The brand gap,Open Library only,False,False
+710,BOOK00711,Developing business strategies,Open Library only,False,False
+711,BOOK00712,Business strategy,Open Library only,False,False
+712,BOOK00713,International business strategy,Open Library only,False,False
+713,BOOK00714,Your Next Five Moves,Open Library only,False,False
+714,BOOK00715,Corporate identity,Open Library only,False,False
+715,BOOK00716,Creating valuable business strategies,Open Library only,False,False
+716,BOOK00717,7 Powers,Open Library only,False,False
+717,BOOK00718,International Business Strategy,Open Library only,False,False
+718,BOOK00719,Aligning human resources and business strategy,Open Library only,False,False
+719,BOOK00720,Business strategy,Open Library only,False,False
+720,BOOK00721,Acting as a business,Open Library only,False,False
+721,BOOK00722,Opening Digital Markets,Open Library only,False,False
+722,BOOK00723,International Business Strategy,Open Library only,False,False
+723,BOOK00724,Swipe to Unlock,Open Library only,False,False
+724,BOOK00725,Media Telecommunications And Business Strategy,Open Library only,False,False
+725,BOOK00726,Business strategy,Open Library only,False,False
+726,BOOK00727,Taxes and business strategy,Open Library only,False,False
+727,BOOK00728,Global Business Strategy,Open Library only,False,False
+728,BOOK00729,The New Positioning,Open Library only,False,False
+729,BOOK00730,Managerial Economics and Business Strategy,Open Library only,False,False
+730,BOOK00731,Business Strategy,Open Library only,False,False
+731,BOOK00732,Business strategy and policy,Open Library only,False,False
+732,BOOK00733,Demand-Driven Business Strategy,Open Library only,False,False
+733,BOOK00734,The 33 Strategies of War,Open Library only,False,False
+734,BOOK00735,Taxes and business strategy,Open Library only,False,False
+735,BOOK00736,Harvard business review on green business strategy,Open Library only,False,False
+736,BOOK00737,Business strategy,Open Library only,False,False
+737,BOOK00738,Developing Business Strategies,Open Library only,False,False
+738,BOOK00739,International business,Open Library only,False,False
+739,BOOK00740,International Business Strategy and Cross-Cultural Management,Open Library only,False,False
+740,BOOK00741,Think Like a UX Researcher,Open Library only,False,False
+741,BOOK00742,Love As a Business Strategy,Open Library only,False,False
+742,BOOK00743,Business Strategy,Open Library only,False,False
+743,BOOK00744,Understanding business strategy,Open Library only,False,False
+744,BOOK00745,Digital Business,Open Library only,False,False
+745,BOOK00746,Corporate strategy,Open Library only,False,False
+746,BOOK00747,Business Strategy,Open Library only,False,False
+747,BOOK00748,Designing Identity,Open Library only,False,False
+748,BOOK00749,Managerial economics and business strategy,Open Library only,False,False
+749,BOOK00750,e-Business strategies for virtual organizations,Open Library only,False,False
+750,BOOK00751,Managing Health Care Business Strategy,Open Library only,False,False
+751,BOOK00752,Business strategies for the next-generation network,Open Library only,False,False
+752,BOOK00753,European Business Strategy,Open Library only,False,False
+753,BOOK00754,Business strategy,Open Library only,False,False
+754,BOOK00755,Learning Domain-Driven Design,Open Library only,False,False
+755,BOOK00756,International Business and Global Strategy,Open Library only,False,False
+756,BOOK00757,Instagram Business - Sell on Instagram Customer Psychology : How to Use Instagram for Business : Instagram Business Strategy : Start Business - Instagram,Open Library only,False,False
+757,BOOK00758,Financial Accounting,Open Library only,False,False
+758,BOOK00759,Managerial Accounting,Open Library only,False,False
+759,BOOK00760,Business Statistics,Open Library only,False,False
+760,BOOK00761,Statistical analysis for decision making,Open Library only,False,False
+761,BOOK00762,The managerial decision-making process,Open Library only,False,False
+762,BOOK00763,Judgment in managerial decision making,Open Library only,False,False
+763,BOOK00764,Administrative behavior,Open Library only,False,False
+764,BOOK00765,Business ethics,Open Library only,False,False
+765,BOOK00766,Business Analytics,Open Library only,False,False
+766,BOOK00767,Judgment and decision making,Open Library only,False,False
+767,BOOK00768,Curriculum improvement,Open Library only,False,False
+768,BOOK00769,The psychology of judgment and decision making,Open Library only,False,False
+769,BOOK00770,Financial accounting,Open Library only,False,False
+770,BOOK00771,Financial decision making,Open Library only,False,False
+771,BOOK00772,Executive decision making,Open Library only,False,False
+772,BOOK00773,Policy paradox,Open Library only,False,False
+773,BOOK00774,Career decision making,Open Library only,False,False
+774,BOOK00775,An introduction to management science,Open Library only,False,False
+775,BOOK00776,Argumentation and debate,Open Library only,False,False
+776,BOOK00777,Sales management,Open Library only,False,False
+777,BOOK00778,Financial Accounting,Open Library only,False,False
+778,BOOK00779,Decision making,Open Library only,False,False
+779,BOOK00780,Data analysis & decision making with Microsoft Excel,Open Library only,False,False
+780,BOOK00781,Financial Accounting,Open Library only,False,False
+781,BOOK00782,A primer on decision making,Open Library only,False,False
+782,BOOK00783,"Management Decision-Making, Big Data and Analytics",Open Library only,False,False
+783,BOOK00784,Business ethics,Open Library only,False,False
+784,BOOK00785,DECISION MAKING,Open Library only,False,False
+785,BOOK00786,Data Analytics and Decision Making,Open Library only,False,False
+786,BOOK00787,Multiple criteria decision making,Open Library only,False,False
+787,BOOK00788,Nursing Fundamentals,Open Library only,False,False
+788,BOOK00789,Fear of Missing Out,Open Library only,False,False
+789,BOOK00790,Accounting for Decision Making and Control,Open Library only,False,False
+790,BOOK00791,Accounting for managers,Open Library only,False,False
+791,BOOK00792,Radical Uncertainty,Open Library only,False,False
+792,BOOK00793,Managerial Accounting,Open Library only,False,False
+793,BOOK00794,Business ethics,Open Library only,False,False
+794,BOOK00795,Judgment and Decision-Making,Open Library only,False,False
+795,BOOK00796,Holistic management,Open Library only,False,False
+796,BOOK00797,Creative decision making,Open Library only,False,False
+797,BOOK00798,Economics,Open Library only,False,False
+798,BOOK00799,The ethical decision-making manual for helping professionals,Open Library only,False,False
+799,BOOK00800,AN INTRODUCTION TO MANAGEMENT SCIENCE,Open Library only,False,False
+800,BOOK00801,Financial Accounting,Open Library only,False,False
+801,BOOK00802,Accounting,Open Library only,False,False
+802,BOOK00803,Decision making and problem solving strategies,Open Library only,False,False
+803,BOOK00804,Managerial accounting,Open Library only,False,False
+804,BOOK00805,An Introduction to Management Science,Open Library only,False,False
+805,BOOK00806,Improve Your Communication Skills,Open Library only,False,False
+806,BOOK00807,Effective business communications,Open Library only,False,False
+807,BOOK00808,Theories of human communication,Open Library only,False,False
+808,BOOK00809,Nonviolent Communication,Open Library only,False,False
+809,BOOK00810,Introduction to communicative disorders,Open Library only,False,False
+810,BOOK00811,Wireless communications,Open Library only,False,False
+811,BOOK00812,Data Communications and Networking,Open Library only,False,False
+812,BOOK00813,Corporate communication,Open Library only,False,False
+813,BOOK00814,Electronic communication,Open Library only,False,False
+814,BOOK00815,Introducing communication theory,Open Library only,False,False
+815,BOOK00816,An introduction to communication studies,Open Library only,False,False
+816,BOOK00817,Communication Skills,Open Library only,False,False
+817,BOOK00818,Looking out/looking in,Open Library only,False,False
+818,BOOK00819,Electronic communications systems,Open Library only,False,False
+819,BOOK00820,The slave community,Open Library only,False,False
+820,BOOK00821,Human communication,Open Library only,False,False
+821,BOOK00822,Business Communication,Open Library only,False,False
+822,BOOK00823,Communicating effectively,Open Library only,False,False
+823,BOOK00824,Communication between cultures,Open Library only,False,False
+824,BOOK00825,Imagined communities,Open Library only,False,False
+825,BOOK00826,A First Look at Communication Theory,Open Library only,False,False
+826,BOOK00827,Today's isms,Open Library only,False,False
+827,BOOK00828,Interplay,Open Library only,False,False
+828,BOOK00829,Interpersonal communication,Open Library only,False,False
+829,BOOK00830,Business communication today,Open Library only,False,False
+830,BOOK00831,Fashion as communication,Open Library only,False,False
+831,BOOK00832,Communication,Open Library only,False,False
+832,BOOK00833,Visual Communication,Open Library only,False,False
+833,BOOK00834,Electronic communication systems,Open Library only,False,False
+834,BOOK00835,Digital communications,Open Library only,False,False
+835,BOOK00836,"Communication Skills, Second Edition",Open Library only,False,False
+836,BOOK00837,Digital and analog communication systems,Open Library only,False,False
+837,BOOK00838,Technical Communication,Open Library only,False,False
+838,BOOK00839,Communicating with strangers,Open Library only,False,False
+839,BOOK00840,Communication Theories,Open Library only,False,False
+840,BOOK00841,Nonverbal communication in human interaction,Open Library only,False,False
+841,BOOK00842,Business and administrative communication,Open Library only,False,False
+842,BOOK00843,The media of mass communication 11th edition,Open Library only,False,False
+843,BOOK00844,Nonverbal Communication,Open Library only,False,False
+844,BOOK00845,Modern digital and analogue communication systems,Open Library only,False,False
+845,BOOK00846,Business communication,Open Library only,False,False
+846,BOOK00847,Gendered Lives,Open Library only,False,False
+847,BOOK00848,The dynamics of mass communication,Open Library only,False,False
+848,BOOK00849,History Of Communication Study,Open Library only,False,False
+849,BOOK00850,Satellite communications,Open Library only,False,False
+850,BOOK00851,Communication 2000,Open Library only,False,False
+851,BOOK00852,The changing face of western communism,Open Library only,False,False
+852,BOOK00853,Communicating at work,Open Library only,False,False
+853,BOOK00854,Multimedia communications,Open Library only,False,False
+854,BOOK00855,Mass communication theory,Open Library only,False,False
+855,BOOK00856,Emotional Intelligence,Open Library only,False,False
+856,BOOK00857,Emotional Intelligence 2.0,Open Library only,False,False
+857,BOOK00858,Emotional Intelligence,Open Library only,False,False
+858,BOOK00859,Working with Emotional Intelligence,Open Library only,False,False
+859,BOOK00860,Emotional Intelligence,Open Library only,False,False
+860,BOOK00861,Emotional development and emotional intelligence,Open Library only,False,False
+861,BOOK00862,Emotional Intelligence : How to Improve Emotional Intelligence,Open Library only,False,False
+862,BOOK00863,Great emotional intelligence,Open Library only,False,False
+863,BOOK00864,Emotional intelligence,Open Library only,False,False
+864,BOOK00865,The brain and emotional intelligence,Open Library only,False,False
+865,BOOK00866,Emotional Intelligence Habits,Both,False,False
+866,BOOK00867,Raising your emotional intelligence,Open Library only,False,False
+867,BOOK00868,Building emotional intelligence,Open Library only,False,False
+868,BOOK00869,Emotional intelligence 101,Open Library only,False,False
+869,BOOK00870,Emotional Intelligence : 3 Books in 1,Open Library only,False,False
+870,BOOK00871,Primal leadership : realizing the power of emotional intelligence,Open Library only,False,False
+871,BOOK00872,Emotional intelligence,Open Library only,False,False
+872,BOOK00873,Emotional Intelligence,Open Library only,False,False
+873,BOOK00874,Emotional intelligence,Open Library only,False,False
+874,BOOK00875,Who's Talking?,Open Library only,False,False
+875,BOOK00876,Emotional Intelligence,Open Library only,False,False
+876,BOOK00877,Emotional Intelligence for Dummies,Open Library only,False,False
+877,BOOK00878,Emotional Intelligence at Work,Open Library only,False,False
+878,BOOK00879,The emotional intelligence quick book,Open Library only,False,False
+879,BOOK00880,Emotional intelligence at work,Open Library only,False,False
+880,BOOK00881,The language of emotional intelligence,Open Library only,False,False
+881,BOOK00882,HBR's 10 must reads on emotional intelligence,Open Library only,False,False
+882,BOOK00883,Selling with emotional intelligence,Open Library only,False,False
+883,BOOK00884,Teaching with emotional intelligence,Open Library only,False,False
+884,BOOK00885,Emotional intelligence,Open Library only,False,False
+885,BOOK00886,Achieving emotional literacy,Open Library only,False,False
+886,BOOK00887,HBR Guide to Emotional Intelligence,Open Library only,False,False
+887,BOOK00888,Manipulation Techniques,Open Library only,False,False
+888,BOOK00889,Emotional Intelligence,Open Library only,False,False
+889,BOOK00890,Emotional Intelligence (Life Balance),Open Library only,False,False
+890,BOOK00891,Bedtime Stories For Kids,Open Library only,False,False
+891,BOOK00892,What we know about emotional intelligence,Open Library only,False,False
+892,BOOK00893,Applying emotional intelligence,Open Library only,False,False
+893,BOOK00894,Change Your Life With Emotional Intelligence,Open Library only,False,False
+894,BOOK00895,Emotional Intelligence Mastery 2. 0,Open Library only,False,False
+895,BOOK00896,La iInteligencia emocional,Open Library only,False,False
+896,BOOK00897,Emotional Intelligence,Open Library only,False,False
+897,BOOK00898,Emotional Intelligence,Open Library only,False,False
+898,BOOK00899,Emotional Intelligence,Open Library only,False,False
+899,BOOK00900,Master Your Emotions,Open Library only,False,False
+900,BOOK00901,Emotional Intelligence,Open Library only,False,False
+901,BOOK00902,Communicate with emotional intelligence,Open Library only,False,False
+902,BOOK00903,Emotional Intelligence Secrets,Open Library only,False,False
+903,BOOK00904,The Science of Self Talk,Open Library only,False,False
+904,BOOK00905,Primal Leadership,Open Library only,False,False
+905,BOOK00906,Innovation Management,Open Library only,False,False
+906,BOOK00907,Innovation Management and New Product Development,Open Library only,False,False
+907,BOOK00908,Strategic Innovation Management,Open Library only,False,False
+908,BOOK00909,Innovation Management,Open Library only,False,False
+909,BOOK00910,Creativity and strategic innovation management,Open Library only,False,False
+910,BOOK00911,Innovation Management,Open Library only,False,False
+911,BOOK00912,The Oxford Handbook Of Innovation Management,Open Library only,False,False
+912,BOOK00913,Innovation management,Open Library only,False,False
+913,BOOK00914,Best Practice,Open Library only,False,False
+914,BOOK00915,The Innovator's Dilemma,Open Library only,False,False
+915,BOOK00916,SAP Billing and Revenue Innovation Management,Open Library only,False,False
+916,BOOK00917,Innovation Management:,Open Library only,False,False
+917,BOOK00918,Creativity for innovation management,Open Library only,False,False
+918,BOOK00919,Innovation management,Open Library only,False,False
+919,BOOK00920,Innovation Management,Open Library only,False,False
+920,BOOK00921,Revolution of Innovation Management,Open Library only,False,False
+921,BOOK00922,Innovation management and new product development,Open Library only,False,False
+922,BOOK00923,Global innovation management,Open Library only,False,False
+923,BOOK00924,Product Innovation Management,Open Library only,False,False
+924,BOOK00925,Innovation Management,Open Library only,False,False
+925,BOOK00926,Contextual Innovation Management,Open Library only,False,False
+926,BOOK00927,Routledge Companion to Innovation Management,Open Library only,False,False
+927,BOOK00928,Corporate Foresight and Innovation Management,Open Library only,False,False
+928,BOOK00929,Technology and Innovation Management,Open Library only,False,False
+929,BOOK00930,Encyclopedia of technology and innovation management,Open Library only,False,False
+930,BOOK00931,Information for Innovation,Open Library only,False,False
+931,BOOK00932,Innovation and Entrepreneurship,Open Library only,False,False
+932,BOOK00933,Innovative management of atrial fibrillation,Open Library only,False,False
+933,BOOK00934,Crest of the Innovation Management Research Wave,Open Library only,False,False
+934,BOOK00935,Innovation Management,Open Library only,False,False
+935,BOOK00936,Intellectual property and innovation management in small firms,Open Library only,False,False
+936,BOOK00937,Total Innovative Management Excellence,Open Library only,False,False
+937,BOOK00938,"Managing research, development and innovation",Open Library only,False,False
+938,BOOK00939,Innovation Management in Robot Society,Open Library only,False,False
+939,BOOK00940,Innovative Management Education Ecosystem,Open Library only,False,False
+940,BOOK00941,Evolution of Innovation Management,Open Library only,False,False
+941,BOOK00942,Collaborative Leadership and Innovation,Open Library only,False,False
+942,BOOK00943,The management of innovation,Open Library only,False,False
+943,BOOK00944,Open Labs and Innovation Management,Open Library only,False,False
+944,BOOK00945,Critical Perspectives on Innovation Management,Open Library only,False,False
+945,BOOK00946,"Innovation Management and New Product Development for Engineers, Volume I",Open Library only,False,False
+946,BOOK00947,Sustained Innovation Management,Open Library only,False,False
+947,BOOK00948,Innovative Management and Business Practices in Asia,Open Library only,False,False
+948,BOOK00949,Innovation Management and Growth in Emerging Economies,Open Library only,False,False
+949,BOOK00950,Innovation Management for a Resilient Digital Economy,Open Library only,False,False
+950,BOOK00951,Crisis Capable,LeadershipNow only,False,False
+951,BOOK00952,An Ordinary Man,LeadershipNow only,False,False
+952,BOOK00953,Don't Trust Your Gut,LeadershipNow only,False,False
+953,BOOK00954,Inventor of the Future,LeadershipNow only,False,False
+954,BOOK00955,The Way Forward,LeadershipNow only,False,False
+955,BOOK00956,Jump,LeadershipNow only,False,False
+956,BOOK00957,After Steve,LeadershipNow only,False,False
+957,BOOK00958,The Kingdom of Prep,LeadershipNow only,True,False
+958,BOOK00959,Build,LeadershipNow only,False,False
+959,BOOK00960,Leading with Heart,LeadershipNow only,False,False
+960,BOOK00961,Future Tense,LeadershipNow only,False,False
+961,BOOK00962,Longpath,LeadershipNow only,False,False
+962,BOOK00963,Next!,LeadershipNow only,True,True
+963,BOOK00964,The President's Man,LeadershipNow only,False,False
+964,BOOK00965,Burn the Boats,LeadershipNow only,False,False
+965,BOOK00966,Deep Purpose,LeadershipNow only,False,False
+966,BOOK00967,Do Hard Things,LeadershipNow only,False,False
+967,BOOK00968,Getting to Neutral,LeadershipNow only,False,False
+968,BOOK00969,The Power of Conflict,LeadershipNow only,False,False
+969,BOOK00970,Reunion,LeadershipNow only,False,False
+970,BOOK00971,Magic Words,LeadershipNow only,False,False
+971,BOOK00972,Deliberate Calm,LeadershipNow only,False,False
+972,BOOK00973,Leadership Is Overrated,LeadershipNow only,False,False
+973,BOOK00974,Unlocked,LeadershipNow only,False,False
+974,BOOK00975,How Work Works,LeadershipNow only,False,False
+975,BOOK00976,MoneyZen,LeadershipNow only,False,False
+976,BOOK00977,Master of Change,LeadershipNow only,False,False
+977,BOOK00978,The LEGO Story,LeadershipNow only,False,False
+978,BOOK00979,Lead Like a Marine,LeadershipNow only,False,False
+979,BOOK00980,Conflict Resilience,LeadershipNow only,False,False
+980,BOOK00981,Optimal,LeadershipNow only,False,False
+981,BOOK00982,Job Moves,LeadershipNow only,False,False
+982,BOOK00983,Turnaround Time,LeadershipNow only,False,False
+983,BOOK00984,Possible,LeadershipNow only,False,False
+984,BOOK00985,Good Judgment,LeadershipNow only,False,False
+985,BOOK00986,Inspire,LeadershipNow only,False,False
+986,BOOK00987,What's Next Is Now,LeadershipNow only,False,False
+987,BOOK00988,Learned Excellence,LeadershipNow only,False,False
+988,BOOK00989,Uptime,LeadershipNow only,False,False
+989,BOOK00990,Day Trading Attention,LeadershipNow only,False,False
+990,BOOK00991,How to Walk into a Room,LeadershipNow only,False,False
+991,BOOK00992,The Skill Code,LeadershipNow only,False,False
+992,BOOK00993,Win the Inside Game,LeadershipNow only,False,False
+993,BOOK00994,The Stress Paradox,LeadershipNow only,False,False
+994,BOOK00995,The Six Disciplines of Strategic Thinking,LeadershipNow only,False,False
+995,BOOK00996,Pivot or Die,LeadershipNow only,False,False
+996,BOOK00997,The Sweaty Startup,LeadershipNow only,False,False
+997,BOOK00998,Team Intelligence,LeadershipNow only,False,False
+998,BOOK00999,Never Lead Alone,LeadershipNow only,False,False
+999,BOOK01000,"Speak, Memorably",LeadershipNow only,False,False
+1000,BOOK01001,The AI Con,LeadershipNow only,False,False
+1001,BOOK01002,Unfiltered,LeadershipNow only,True,True
+1002,BOOK01003,The CEO Mindset,LeadershipNow only,False,False
+1003,BOOK01004,Nimitz at War,LeadershipNow only,False,False
+1004,BOOK01005,Our Least Important Asset,LeadershipNow only,False,False
+1005,BOOK01006,Glad We Met,LeadershipNow only,False,False
+1006,BOOK01007,Innovators,LeadershipNow only,False,False
+1007,BOOK01008,Emotionally Charged,LeadershipNow only,False,False
+1008,BOOK01009,Leadership from Bad to Worse,LeadershipNow only,False,False
+1009,BOOK01010,Liberalism's Last Man,LeadershipNow only,False,False
+1010,BOOK01011,More Than Pretty Boxes,LeadershipNow only,False,False
+1011,BOOK01012,The Means of Prediction,LeadershipNow only,False,False
+1012,BOOK01013,The Unaccountability Machine,LeadershipNow only,False,False
+1013,BOOK01014,Doing Meritocracy Right,LeadershipNow only,False,False
+1014,BOOK01015,Generation Why,LeadershipNow only,False,False
+1015,BOOK01016,The Entrepreneurs,LeadershipNow only,False,False
+1016,BOOK01017,Win from Within,LeadershipNow only,False,False
+1017,BOOK01018,Pause to Think,LeadershipNow only,False,False
+1018,BOOK01019,Inside IBM,LeadershipNow only,False,False
+1019,BOOK01020,Energize,LeadershipNow only,False,False
+1020,BOOK01021,Everyday Superhero,LeadershipNow only,False,False
+1021,BOOK01022,The Digital Multinational,LeadershipNow only,False,False
+1022,BOOK01023,The Work of the Future,LeadershipNow only,False,False
+1023,BOOK01024,Work without Jobs,LeadershipNow only,False,False
+1024,BOOK01025,Productive Tensions,LeadershipNow only,False,False
+1025,BOOK01026,Workforce Ecosystems,LeadershipNow only,False,False
+1026,BOOK01027,Inside the Competitor's Mindset,LeadershipNow only,False,False
+1027,BOOK01028,The Leaders You Need,LeadershipNow only,False,False
+1028,BOOK01029,The Skills-Powered Organization,LeadershipNow only,False,False
+1029,BOOK01030,Nudging,LeadershipNow only,True,True
+1030,BOOK01031,Taming Silicon Valley,LeadershipNow only,False,False
+1031,BOOK01032,Campaign of the Century,LeadershipNow only,False,False
+1032,BOOK01033,Thomas Jefferson,LeadershipNow only,False,False
+1033,BOOK01034,Adventurers,LeadershipNow only,False,False
+1034,BOOK01035,Mixed Signals,LeadershipNow only,False,False
+1035,BOOK01036,Decision Leadership,LeadershipNow only,False,False
+1036,BOOK01037,Vienna,LeadershipNow only,False,False
+1037,BOOK01038,We Need to Talk About Inflation,LeadershipNow only,False,False
+1038,BOOK01039,Making Sense of Chaos,LeadershipNow only,False,False
+1039,BOOK01040,The Corporation in the Twenty-First Century,LeadershipNow only,False,False
+1040,BOOK01041,"Inner Mastery, Outer Impact",LeadershipNow only,False,False
+1041,BOOK01042,Rising Together,LeadershipNow only,False,False
+1042,BOOK01043,Team Habits,LeadershipNow only,False,False
+1043,BOOK01044,"Bigger, Better, Bolder",LeadershipNow only,False,False
+1044,BOOK01045,The Choice Point,LeadershipNow only,False,False
+1045,BOOK01046,Flip Your Life,LeadershipNow only,False,False
+1046,BOOK01047,The 12-Week MBA,LeadershipNow only,False,False
+1047,BOOK01048,Moonshot,LeadershipNow only,False,False
+1048,BOOK01049,Ask,LeadershipNow only,False,False
+1049,BOOK01050,The Five Talents That Really Matter,LeadershipNow only,False,False
+1050,BOOK01051,Dynamic Drive,LeadershipNow only,False,False
+1051,BOOK01052,Don't Say Um,LeadershipNow only,False,False
+1052,BOOK01053,Purposeful Curiosity,LeadershipNow only,False,False
+1053,BOOK01054,Hangry,LeadershipNow only,False,False
+1054,BOOK01055,The Aspiring Leader's Guide to the Future,LeadershipNow only,False,False
+1055,BOOK01056,The Power to Change,LeadershipNow only,False,False
+1056,BOOK01057,What to Do Next,LeadershipNow only,False,False
+1057,BOOK01058,Your Future Self,LeadershipNow only,False,False
+1058,BOOK01059,The Geek Way,LeadershipNow only,False,False
+1059,BOOK01060,The Revolutionary,LeadershipNow only,True,False
+1060,BOOK01061,Blood in the Machine,LeadershipNow only,False,False
+1061,BOOK01062,Get It Done,LeadershipNow only,True,True
+1062,BOOK01063,The Problem with Change,LeadershipNow only,False,False
+1063,BOOK01064,Revenge of the Tipping Point,LeadershipNow only,False,False
+1064,BOOK01065,Disrupt Everything-and Win,LeadershipNow only,False,False
+1065,BOOK01066,The Chaos Machine,LeadershipNow only,False,False
+1066,BOOK01067,A Story is a Deal,LeadershipNow only,False,False
+1067,BOOK01068,Excessively Obsessed,LeadershipNow only,False,False
+1068,BOOK01069,Coach K,LeadershipNow only,False,False
+1069,BOOK01070,King,LeadershipNow only,False,False
+1070,BOOK01071,This Is for Everyone,LeadershipNow only,False,False
+1071,BOOK01072,Enshittification,LeadershipNow only,True,True
+1072,BOOK01073,The Extinction of Experience,LeadershipNow only,False,False
+1073,BOOK01074,The End of Burnout,LeadershipNow only,False,False
+1074,BOOK01075,The Random Factor,LeadershipNow only,False,False
+1075,BOOK01076,May Contain Lies,LeadershipNow only,False,False
+1076,BOOK01077,The Power Law,LeadershipNow only,False,False
+1077,BOOK01078,The Bill of Obligations,LeadershipNow only,False,False
+1078,BOOK01079,Mark Twain,LeadershipNow only,False,False
+1079,BOOK01080,The Secret to Transformational Leadership,LeadershipNow only,False,False
+1080,BOOK01081,Power Failure,LeadershipNow only,False,False
+1081,BOOK01082,Clear Thinking,LeadershipNow only,False,False
+1082,BOOK01083,Mind Shift,LeadershipNow only,False,False
+1083,BOOK01084,The Gift of Influence,LeadershipNow only,False,False
+1084,BOOK01085,Presidents at War,LeadershipNow only,False,False
+1085,BOOK01086,John Quincy Adams,LeadershipNow only,False,False
+1086,BOOK01087,Partnering,LeadershipNow only,False,False
+1087,BOOK01088,How Minds Change,LeadershipNow only,False,False
+1088,BOOK01089,From Strength to Strength,LeadershipNow only,False,False
+1089,BOOK01090,"Right Thing, Right Now",LeadershipNow only,False,False
+1090,BOOK01091,Wisdom Takes Work,LeadershipNow only,False,False
+1091,BOOK01092,Never Enough,LeadershipNow only,False,False
+1092,BOOK01093,How Basketball Can Save the World,LeadershipNow only,False,False
+1093,BOOK01094,You Owe You,LeadershipNow only,False,False
+1094,BOOK01095,Build for Tomorrow,LeadershipNow only,False,False
+1095,BOOK01096,Mindreader,LeadershipNow only,False,False
+1096,BOOK01097,The Earned Life,LeadershipNow only,False,False
+1097,BOOK01098,Burn Rate,LeadershipNow only,False,False
+1098,BOOK01099,Crash Landing,LeadershipNow only,False,False
+1099,BOOK01100,When We Are Seen,LeadershipNow only,False,False
+1100,BOOK01101,The Voltage Effect,LeadershipNow only,False,False
+1101,BOOK01102,How Big Things Get Done,LeadershipNow only,False,False
+1102,BOOK01103,The New Megatrends,LeadershipNow only,False,False
+1103,BOOK01104,Virtual Society,LeadershipNow only,False,False
+1104,BOOK01105,Supercommunicators,LeadershipNow only,False,False
+1105,BOOK01106,It's Not TV,LeadershipNow only,False,False
+1106,BOOK01107,1929,LeadershipNow only,False,False
+1107,BOOK01108,Battle of Ink and Ice,LeadershipNow only,False,False
+1108,BOOK01109,To Risk It All,LeadershipNow only,False,False
+1109,BOOK01110,How to Calm Your Mind,LeadershipNow only,False,False
+1110,BOOK01111,The Search,LeadershipNow only,False,False
+1111,BOOK01112,Good Arguments,LeadershipNow only,False,False
+1112,BOOK01113,How Not to Be a Politician,LeadershipNow only,False,False
+1113,BOOK01114,Optimal Illusions,LeadershipNow only,False,False
+1114,BOOK01115,Same as Ever,LeadershipNow only,False,False
+1115,BOOK01116,The Performance Paradox,LeadershipNow only,False,False
+1116,BOOK01117,Wild Problems,LeadershipNow only,False,False
+1117,BOOK01118,Unreasonable Hospitality,LeadershipNow only,True,False
+1118,BOOK01119,Ideaflow,LeadershipNow only,False,False
+1119,BOOK01120,Lead to Win,LeadershipNow only,False,False
+1120,BOOK01121,Buy Back Your Time,LeadershipNow only,False,False
+1121,BOOK01122,Quit,LeadershipNow only,False,False
+1122,BOOK01123,Shift,LeadershipNow only,False,False
+1123,BOOK01124,Managing Up,LeadershipNow only,False,False
+1124,BOOK01125,The Book of Boundaries,LeadershipNow only,False,False
+1125,BOOK01126,It's On Me,LeadershipNow only,False,False
+1126,BOOK01127,World Eaters,LeadershipNow only,False,False
+1127,BOOK01128,Life Worth Living,LeadershipNow only,False,False
+1128,BOOK01129,Untold Power,LeadershipNow only,False,False
+1129,BOOK01130,The Yellow Pad,LeadershipNow only,False,False
+1130,BOOK01131,The Big Con,LeadershipNow only,False,False
+1131,BOOK01132,Million Dollar Weekend,LeadershipNow only,True,False
+1132,BOOK01133,Look,LeadershipNow only,False,False
+1133,BOOK01134,The Experience Mindset,LeadershipNow only,False,False
+1134,BOOK01135,All In,LeadershipNow only,False,False
+1135,BOOK01136,Slow Productivity,LeadershipNow only,False,False
+1136,BOOK01137,The Way of the Champion,LeadershipNow only,False,False
+1137,BOOK01138,The Essentialism Planner,LeadershipNow only,False,False
+1138,BOOK01139,Henry V,LeadershipNow only,False,False
+1139,BOOK01140,The Creative Act,LeadershipNow only,False,False
+1140,BOOK01141,Team,LeadershipNow only,False,False
+1141,BOOK01142,Hidden Potential,LeadershipNow only,False,False
+1142,BOOK01143,Lead Like You Mean It,LeadershipNow only,False,False
+1143,BOOK01144,Excellent Advice for Living,LeadershipNow only,False,False
+1144,BOOK01145,Choose Your Enemies Wisely,LeadershipNow only,False,False
+1145,BOOK01146,Distancing,LeadershipNow only,False,False
+1146,BOOK01147,Playful,LeadershipNow only,False,False
+1147,BOOK01148,The Journey of Leadership,LeadershipNow only,False,False
+1148,BOOK01149,The Venture Mindset,LeadershipNow only,False,False
+1149,BOOK01150,You Already Know,LeadershipNow only,False,False
+1150,BOOK01151,Tiny Experiments,LeadershipNow only,False,False
+1151,BOOK01152,Primal Intelligence,LeadershipNow only,False,False
+1152,BOOK01153,The Collective Edge,LeadershipNow only,False,False
+1153,BOOK01154,The Song of Significance,LeadershipNow only,False,False
+1154,BOOK01155,The Diary of a CEO,LeadershipNow only,False,False
+1155,BOOK01156,Co-Intelligence,LeadershipNow only,False,False
+1156,BOOK01157,"Smart, Not Loud",LeadershipNow only,False,False
+1157,BOOK01158,The Next Conversation,LeadershipNow only,False,False
+1158,BOOK01159,The 5 Types of Wealth,LeadershipNow only,False,False
+1159,BOOK01160,Confident by Choice,LeadershipNow only,False,False
+1160,BOOK01161,Infectious Generosity,LeadershipNow only,False,False
+1161,BOOK01162,Just the Good Stuff,LeadershipNow only,False,False
+1162,BOOK01163,The Wealth Money Can't Buy,LeadershipNow only,False,False
+1163,BOOK01164,On Leadership,LeadershipNow only,False,False
+1164,BOOK01165,The Systems Leader,LeadershipNow only,False,False
+1165,BOOK01166,These Strange New Minds,LeadershipNow only,False,False
+1166,BOOK01167,Fired Up,LeadershipNow only,False,False
+1167,BOOK01168,Uncompete,LeadershipNow only,False,False
+1168,BOOK01169,The Thinking Machine,LeadershipNow only,False,False
+1169,BOOK01170,Resurface,LeadershipNow only,True,True
+1170,BOOK01171,On Character,LeadershipNow only,False,False
+1171,BOOK01172,What You're Made For,LeadershipNow only,False,False
+1172,BOOK01173,G-Man,LeadershipNow only,True,True
+1173,BOOK01174,The Burnout Challenge,LeadershipNow only,False,False
+1174,BOOK01175,Deeply Responsible Business,LeadershipNow only,False,False
+1175,BOOK01176,Capitalism,LeadershipNow only,False,False
+1176,BOOK01177,The Corporation and the Twentieth Century,LeadershipNow only,False,False
+1177,BOOK01178,The Power of Regret,LeadershipNow only,False,False
+1178,BOOK01179,The Nineties,LeadershipNow only,False,False
+1179,BOOK01180,In the Shadow of the Gods,LeadershipNow only,True,True
+1180,BOOK01181,The Crisis of Democratic Capitalism,LeadershipNow only,False,False
+1181,BOOK01182,Sir Henry Royce,LeadershipNow only,False,False
+1182,BOOK01183,The Conviction to Lead,LeadershipNow only,False,False
+1183,BOOK01184,Leveling Up,LeadershipNow only,False,False
+1184,BOOK01185,The Commanders,LeadershipNow only,False,False
+1185,BOOK01186,The Wise Leader,LeadershipNow only,False,False
+1186,BOOK01187,Character,LeadershipNow only,False,False
+1187,BOOK01188,Reagan,LeadershipNow only,False,False
+1188,BOOK01189,Team Emotional Intelligence 2.0,LeadershipNow only,False,False
+1189,BOOK01190,Focused As A Bee,LeadershipNow only,False,False
+1190,BOOK01191,Network Leadership,LeadershipNow only,False,False
+1191,BOOK01192,Decisions about Decisions,LeadershipNow only,False,False
+1192,BOOK01193,Redemption,LeadershipNow only,False,False
+1193,BOOK01194,Determining Leadership Potential,LeadershipNow only,False,False
+1194,BOOK01195,The Next Leadership Team,LeadershipNow only,False,False
+1195,BOOK01196,The Character Compass,LeadershipNow only,False,False
+1196,BOOK01197,The Practice of Ethical Leadership,LeadershipNow only,False,False
+1197,BOOK01198,Sentient Strategy,LeadershipNow only,False,False
+1198,BOOK01199,Everyday Leadership,LeadershipNow only,False,False
+1199,BOOK01200,Redefining Networking,LeadershipNow only,False,False
+1200,BOOK01201,Franklin D. Roosevelt and the Art of Leadership,LeadershipNow only,False,False
+1201,BOOK01202,ThinkBlink Manifesto,LeadershipNow only,False,False
+1202,BOOK01203,We Are Ambiverts Now,LeadershipNow only,False,False
+1203,BOOK01204,The Presence Principle,LeadershipNow only,False,False
+1204,BOOK01205,Leading With Values,LeadershipNow only,False,False
+1205,BOOK01206,How to be a Coffee Bean,LeadershipNow only,False,False
+1206,BOOK01207,The Power of a Positive You,LeadershipNow only,False,False
+1207,BOOK01208,Scaling Innovation,LeadershipNow only,False,False
+1208,BOOK01209,Leading in a Non-Linear World,LeadershipNow only,False,False
+1209,BOOK01210,The One Truth,LeadershipNow only,False,False
+1210,BOOK01211,The 7 Commitments of a Great Team,LeadershipNow only,False,False
+1211,BOOK01212,The Sale,LeadershipNow only,False,False
+1212,BOOK01213,The Neutrality Trap,LeadershipNow only,False,False
+1213,BOOK01214,Human-Driven Experience,LeadershipNow only,False,False
+1214,BOOK01215,The Power of One More,LeadershipNow only,False,False
+1215,BOOK01216,Difficult Decisions,LeadershipNow only,False,False
+1216,BOOK01217,Driving Results,LeadershipNow only,False,False
+1217,BOOK01218,The Imperfectionists,LeadershipNow only,False,False
+1218,BOOK01219,Amp It Up,LeadershipNow only,False,False
+1219,BOOK01220,The Mentor's Guide,LeadershipNow only,False,False
+1220,BOOK01221,Say More About That,LeadershipNow only,False,False
+1221,BOOK01222,"Move to the Edge, Declare it Center",LeadershipNow only,False,False
+1222,BOOK01223,Do It,LeadershipNow only,False,False
+1223,BOOK01224,Amplify Your Influence,LeadershipNow only,False,False
+1224,BOOK01225,Leading Wisely,LeadershipNow only,False,False
+1225,BOOK01226,Trustworthy AI,LeadershipNow only,False,False
+1226,BOOK01227,How the Future Works,LeadershipNow only,False,False
+1227,BOOK01228,Sustainable Leadership:,LeadershipNow only,False,False
+1228,BOOK01229,The Unexpected Leader,LeadershipNow only,False,False
+1229,BOOK01230,The Soul of Startups,LeadershipNow only,False,False
+1230,BOOK01231,Principal in Balance,LeadershipNow only,False,False
+1231,BOOK01232,True North,LeadershipNow only,False,False
+1232,BOOK01233,Step into the Metaverse,LeadershipNow only,False,False
+1233,BOOK01234,The Metaverse Handbook,LeadershipNow only,False,False
+1234,BOOK01235,Digital Transformation Payday,LeadershipNow only,False,False
+1235,BOOK01236,Leading with Vulnerability,LeadershipNow only,False,False
+1236,BOOK01237,Work Here Now,LeadershipNow only,False,False
+1237,BOOK01238,The Locker Room,LeadershipNow only,False,False
+1238,BOOK01239,Adaptive Resilience,LeadershipNow only,False,False
+1239,BOOK01240,Decisions Over Decimals,LeadershipNow only,False,False
+1240,BOOK01241,Navigating the Metaverse,LeadershipNow only,False,False
+1241,BOOK01242,Energy Leadership,LeadershipNow only,False,False
+1242,BOOK01243,A Cure for the Common Company,LeadershipNow only,False,False
+1243,BOOK01244,The Digital Leader,LeadershipNow only,False,False
+1244,BOOK01245,Culture Is the Way,LeadershipNow only,False,False
+1245,BOOK01246,Wise Decisions,LeadershipNow only,False,False
+1246,BOOK01247,The Ecosystem Economy,LeadershipNow only,False,False
+1247,BOOK01248,Autonomous Transformation,LeadershipNow only,False,False
+1248,BOOK01249,The Negativity Fast,LeadershipNow only,False,False
+1249,BOOK01250,To the Top,LeadershipNow only,False,False
+1250,BOOK01251,The Energy of Success,LeadershipNow only,False,False
+1251,BOOK01252,The Jeffersonians,LeadershipNow only,False,False
+1252,BOOK01253,"See, Solve, Scale",LeadershipNow only,False,False
+1253,BOOK01254,Unlikely Heroes,LeadershipNow only,False,False
+1254,BOOK01255,Talent,LeadershipNow only,False,False
+1255,BOOK01256,The Fund,LeadershipNow only,False,False
+1256,BOOK01257,Intrinsic Motivation,LeadershipNow only,False,False
+1257,BOOK01258,The Bezos Blueprint,LeadershipNow only,False,False
+1258,BOOK01259,Endure,LeadershipNow only,False,False
+1259,BOOK01260,"When They Win, You Win",LeadershipNow only,False,False
+1260,BOOK01261,The Unfair Advantage,LeadershipNow only,False,False
+1261,BOOK01262,The Perennials,LeadershipNow only,False,False
+1262,BOOK01263,The Art of Clear Thinking,LeadershipNow only,False,False
+1263,BOOK01264,The Friction Project,LeadershipNow only,False,False
+1264,BOOK01265,If You Want Something Done,LeadershipNow only,False,False
+1265,BOOK01266,Hard Truths,LeadershipNow only,False,False
+1266,BOOK01267,Your Big Leap Year,LeadershipNow only,False,False
+1267,BOOK01268,Nobody Cares About Your Career,LeadershipNow only,False,False
+1268,BOOK01269,Uncommon,LeadershipNow only,False,False
+1269,BOOK01270,Supremacy,LeadershipNow only,False,False
+1270,BOOK01271,The Difference That Makes the Difference,LeadershipNow only,False,False
+1271,BOOK01272,The Need to Lead,LeadershipNow only,False,False
+1272,BOOK01273,Master of Me,LeadershipNow only,False,False
+1273,BOOK01274,The History of Money,LeadershipNow only,False,False
+1274,BOOK01275,Radical Respect,LeadershipNow only,False,False
+1275,BOOK01276,The Four Workarounds,LeadershipNow only,False,False
+1276,BOOK01277,Upshift,LeadershipNow only,False,False
+1277,BOOK01278,Over Work,LeadershipNow only,False,False
+1278,BOOK01279,Thinking 101,LeadershipNow only,False,False
+1279,BOOK01280,How Trust Works,LeadershipNow only,False,False
+1280,BOOK01281,STFU,LeadershipNow only,False,False
+1281,BOOK01282,Activate Your Greatness,LeadershipNow only,False,False
+1282,BOOK01283,Win Every Argument,LeadershipNow only,False,False
+1283,BOOK01284,Startup Program Design,LeadershipNow only,False,False
+1284,BOOK01285,We the Leader,LeadershipNow only,False,False
+1285,BOOK01286,Change Proof,LeadershipNow only,False,False
+1286,BOOK01287,Pitch Like Hollywood,LeadershipNow only,False,False
+1287,BOOK01288,The Pursuit of Excellence,LeadershipNow only,False,False
+1288,BOOK01289,Bridge the Gap,LeadershipNow only,False,False
+1289,BOOK01290,Flip the Switch,LeadershipNow only,False,False
+1290,BOOK01291,All Are Welcome,LeadershipNow only,False,False
+1291,BOOK01292,Connectable,LeadershipNow only,False,False
+1292,BOOK01293,Win When They Say You Won't,LeadershipNow only,False,False
+1293,BOOK01294,"Better Humans, Better Performance",LeadershipNow only,False,False
+1294,BOOK01295,Thriving on Overload,LeadershipNow only,False,False
+1295,BOOK01296,Arrive and Thrive,LeadershipNow only,False,False
+1296,BOOK01297,Coaching Essentials for Managers,LeadershipNow only,False,False
+1297,BOOK01298,Decision Sprint,LeadershipNow only,False,False
+1298,BOOK01299,The Bold Ones,LeadershipNow only,True,False
+1299,BOOK01300,3 Hours a Day,LeadershipNow only,False,False
+1300,BOOK01301,Brave Together,LeadershipNow only,False,False
+1301,BOOK01302,Lead Through Anything,LeadershipNow only,False,False
+1302,BOOK01303,The Spinach King,LeadershipNow only,False,False
+1303,BOOK01304,Peacemaker,LeadershipNow only,False,False
+1304,BOOK01305,Going Infinite,LeadershipNow only,False,False
+1305,BOOK01306,The Optimist,LeadershipNow only,True,True
+1306,BOOK01307,The Mind's Mirror,LeadershipNow only,False,False
+1307,BOOK01308,The Nvidia Way,LeadershipNow only,False,False
+1308,BOOK01309,The Metaverse,LeadershipNow only,False,False
+1309,BOOK01310,The Art of Uncertainty,LeadershipNow only,False,False
+1310,BOOK01311,The Busy Brain Cure,LeadershipNow only,False,False
+1311,BOOK01312,Winston and the Windsors,LeadershipNow only,False,False
+1312,BOOK01313,Dream Chasing,LeadershipNow only,False,False
+1313,BOOK01314,The Communication Code,LeadershipNow only,False,False
+1314,BOOK01315,Flying in the Face of Fear,LeadershipNow only,False,False
+1315,BOOK01316,The Unlocked Leader,LeadershipNow only,False,False
+1316,BOOK01317,Break the Rules!,LeadershipNow only,False,False
+1317,BOOK01318,Rebooting Your Brain,LeadershipNow only,False,False
+1318,BOOK01319,Built to Beat Chaos,LeadershipNow only,False,False
+1319,BOOK01320,Speak with Confidence,LeadershipNow only,False,False
+1320,BOOK01321,Quick Confidence,LeadershipNow only,False,False
+1321,BOOK01322,Getting Over Ourselves,LeadershipNow only,False,False
+1322,BOOK01323,The Seven Crucibles,LeadershipNow only,False,False
+1323,BOOK01324,The End of Leadership as We Know It,LeadershipNow only,False,False
+1324,BOOK01325,Boundless,LeadershipNow only,False,False
+1325,BOOK01326,Leadership Revolution,LeadershipNow only,False,False
+1326,BOOK01327,The Manager's Handbook,LeadershipNow only,False,False
+1327,BOOK01328,Reimagine Inclusion,LeadershipNow only,False,False
+1328,BOOK01329,Work Different,LeadershipNow only,False,False
+1329,BOOK01330,The Reinvention Formula,LeadershipNow only,False,False
+1330,BOOK01331,The House that Cheese Built,LeadershipNow only,False,False
+1331,BOOK01332,Secrets of Next-Level Entrepreneurs,LeadershipNow only,False,False
+1332,BOOK01333,Difficult Conversations Don't Have to Be Difficult,LeadershipNow only,False,False
+1333,BOOK01334,The Upside of Disruption,LeadershipNow only,False,False
+1334,BOOK01335,The Power of Going All-In,LeadershipNow only,False,False
+1335,BOOK01336,From Conflict to Convergence,LeadershipNow only,False,False
+1336,BOOK01337,Mindshift,LeadershipNow only,False,False
+1337,BOOK01338,Rewired,LeadershipNow only,False,False
+1338,BOOK01339,Toolkit for Turbulence,LeadershipNow only,False,False
+1339,BOOK01340,Heal to Lead,LeadershipNow only,False,False
+1340,BOOK01341,Career Confidence,LeadershipNow only,False,False
+1341,BOOK01342,Productive Failure,LeadershipNow only,False,False
+1342,BOOK01343,Digital Mavericks,LeadershipNow only,False,False
+1343,BOOK01344,UnLeadership,LeadershipNow only,False,False
+1344,BOOK01345,The Power of Ownership,LeadershipNow only,False,False
+1345,BOOK01346,The Art of Encouragement,LeadershipNow only,False,False
+1346,BOOK01347,Leading Yourself,LeadershipNow only,False,False
+1347,BOOK01348,Ice Cold Leader,LeadershipNow only,False,False
+1348,BOOK01349,Mentorship Unlocked,LeadershipNow only,False,False
+1349,BOOK01350,The New CEO,LeadershipNow only,False,False
+1350,BOOK01351,Think Remarkable,LeadershipNow only,False,False
+1351,BOOK01352,The Art of Changing Course,LeadershipNow only,False,False
+1352,BOOK01353,Microwins,LeadershipNow only,False,False
+1353,BOOK01354,The Elements of Negotiation,LeadershipNow only,False,False
+1354,BOOK01355,Five Generations at Work,LeadershipNow only,False,False
+1355,BOOK01356,How to Create Innovation,LeadershipNow only,False,False
+1356,BOOK01357,The Super Upside Factor,LeadershipNow only,False,False
+1357,BOOK01358,IRREPLACEABLE,LeadershipNow only,False,False
+1358,BOOK01359,Unlock Your Leadership Story,LeadershipNow only,False,False
+1359,BOOK01360,Analytics the Right Way,LeadershipNow only,False,False
+1360,BOOK01361,What Lights You Up?,LeadershipNow only,False,False
+1361,BOOK01362,The Mentorship Edge,LeadershipNow only,False,False
+1362,BOOK01363,Your Values-Based Legacy,LeadershipNow only,False,False
+1363,BOOK01364,The Ethical Imperative,LeadershipNow only,False,False
+1364,BOOK01365,Essential,LeadershipNow only,False,False
+1365,BOOK01366,SHIFTS,LeadershipNow only,False,False
+1366,BOOK01367,Still Standing,LeadershipNow only,False,False
+1367,BOOK01368,Unforgettable Presence,LeadershipNow only,False,False
+1368,BOOK01369,Endless Customers,LeadershipNow only,False,False
+1369,BOOK01370,The Art of Self-Leadership,LeadershipNow only,False,False
+1370,BOOK01371,The Pause Principle,LeadershipNow only,False,False
+1371,BOOK01372,Connectedness,LeadershipNow only,False,False
+1372,BOOK01373,The Viking Code,LeadershipNow only,False,False
+1373,BOOK01374,Leading Relationships,LeadershipNow only,False,False
+1374,BOOK01375,Leading for Wellness,LeadershipNow only,False,False
+1375,BOOK01376,The Archetype Effect,LeadershipNow only,False,False
+1376,BOOK01377,What Matters Next,LeadershipNow only,False,False
+1377,BOOK01378,Hone,LeadershipNow only,False,False
+1378,BOOK01379,Generation AI,LeadershipNow only,False,False
+1379,BOOK01380,The Insight-Driven Leader,LeadershipNow only,False,False
+1380,BOOK01381,The ROI of Thought Leadership,LeadershipNow only,False,False
+1381,BOOK01382,Monster Transformation,LeadershipNow only,False,False
+1382,BOOK01383,The Devil Emails at Midnight,LeadershipNow only,False,False
+1383,BOOK01384,Master Your Mindset,LeadershipNow only,False,False
+1384,BOOK01385,The CEO's Guide to the Investment Galaxy,LeadershipNow only,False,False
+1385,BOOK01386,From Panic to Profit,LeadershipNow only,False,False
+1386,BOOK01387,It's Not Magic,LeadershipNow only,False,False
+1387,BOOK01388,Quick Leadership,LeadershipNow only,False,False
+1388,BOOK01389,Respect,LeadershipNow only,False,False
+1389,BOOK01390,Flow Leadership,LeadershipNow only,False,False
+1390,BOOK01391,Biohacking Leadership,LeadershipNow only,False,False
+1391,BOOK01392,Irresistible Change,LeadershipNow only,False,False
+1392,BOOK01393,Stress Nation,LeadershipNow only,False,False
+1393,BOOK01394,Perseverance Principles,LeadershipNow only,False,False
+1394,BOOK01395,How to be a Friend (In an Unfriendly World),LeadershipNow only,False,False
+1395,BOOK01396,The Success Factor,LeadershipNow only,False,False
+1396,BOOK01397,The Change Mindset,LeadershipNow only,False,False
+1397,BOOK01398,"Survive, Reset, Thrive",LeadershipNow only,False,False
+1398,BOOK01399,The Solutionists,LeadershipNow only,True,True
+1399,BOOK01400,Confident AI,LeadershipNow only,False,False
+1400,BOOK01401,The Resilient Culture,LeadershipNow only,False,False
+1401,BOOK01402,Engaging Teams,LeadershipNow only,False,False
+1402,BOOK01403,Into the Metaverse,LeadershipNow only,False,False
+1403,BOOK01404,Where Is My Office?,LeadershipNow only,False,False
+1404,BOOK01405,The Seven Games of Leadership,LeadershipNow only,False,False
+1405,BOOK01406,How to Think Like a Philosopher,LeadershipNow only,False,False
+1406,BOOK01407,How to Think Like an Economist,LeadershipNow only,False,False
+1407,BOOK01408,The World of Work to 2030,LeadershipNow only,False,False
+1408,BOOK01409,A Year of Creativity,LeadershipNow only,False,False
+1409,BOOK01410,KIND,LeadershipNow only,False,False
+1410,BOOK01411,The Stoic Capitalist,LeadershipNow only,False,False
+1411,BOOK01412,The Flexible Method,LeadershipNow only,False,False
+1412,BOOK01413,How To Be A CEO,LeadershipNow only,False,False
+1413,BOOK01414,Our Next Reality,LeadershipNow only,False,False
+1414,BOOK01415,The Power to Change,LeadershipNow only,False,False
+1415,BOOK01416,Becoming FDR,LeadershipNow only,False,False
+1416,BOOK01417,Balancing Acts,LeadershipNow only,False,False
+1417,BOOK01418,Get What You Want,LeadershipNow only,False,False
+1418,BOOK01419,Disrupting the Game,LeadershipNow only,False,False
+1419,BOOK01420,Hero on a Mission,LeadershipNow only,False,False
+1420,BOOK01421,How to Grow Your Small Business,LeadershipNow only,False,False
+1421,BOOK01422,Coach Builder,LeadershipNow only,False,False
+1422,BOOK01423,Undistracted,LeadershipNow only,False,False
+1423,BOOK01424,"Choose Your Story, Change Your Life",LeadershipNow only,False,False
+1424,BOOK01425,The Power of Potential,LeadershipNow only,False,False
+1425,BOOK01426,The Secret Society of Success,LeadershipNow only,False,False
+1426,BOOK01427,The Art of the Tale,LeadershipNow only,False,False
+1427,BOOK01428,Leading through Disruption,LeadershipNow only,False,False
+1428,BOOK01429,Come Up for Air,LeadershipNow only,False,False
+1429,BOOK01430,Overcoming Impossible,LeadershipNow only,False,False
+1430,BOOK01431,The Leader's Guide to Managing Risk,LeadershipNow only,False,False
+1431,BOOK01432,The Ultimate Guide to Developing Leaders,LeadershipNow only,False,False
+1432,BOOK01433,The Hive Mind at Work,LeadershipNow only,False,False
+1433,BOOK01434,Powerful Phrases for Dealing with Workplace Conflict,LeadershipNow only,False,False
+1434,BOOK01435,Be the Unicorn,LeadershipNow only,False,False
+1435,BOOK01436,Building a StoryBrand 2.0,LeadershipNow only,False,False
+1436,BOOK01437,Rethinking Work,LeadershipNow only,False,False
+1437,BOOK01438,Darkhorse,LeadershipNow only,False,False
+1438,BOOK01439,The Future Begins with Z,LeadershipNow only,False,False
+1439,BOOK01440,The Perfect Story,LeadershipNow only,False,False
+1440,BOOK01441,"Think This, Not That",LeadershipNow only,False,False
+1441,BOOK01442,The Charismatic Leader,LeadershipNow only,False,False
+1442,BOOK01443,What's in It for Them?,LeadershipNow only,False,False
+1443,BOOK01444,Be Your Future Self Now,LeadershipNow only,False,False
+1444,BOOK01445,The Science of Scaling,LeadershipNow only,False,False
+1445,BOOK01446,Be the Calm or Be the Storm,LeadershipNow only,False,False
+1446,BOOK01447,Limitless Expanded Edition,LeadershipNow only,False,False
+1447,BOOK01448,10x Is Easier Than 2x,LeadershipNow only,False,False
+1448,BOOK01449,Gravitas,LeadershipNow only,False,False
+1449,BOOK01450,Protect Your Peace,LeadershipNow only,True,True
+1450,BOOK01451,Success Is a Numbers Game,LeadershipNow only,False,False
+1451,BOOK01452,Breaking Bias,LeadershipNow only,False,False
+1452,BOOK01453,Intentionality,LeadershipNow only,False,False
+1453,BOOK01454,7 Rules of Self-Reliance,LeadershipNow only,False,False
+1454,BOOK01455,Unicorn Team,LeadershipNow only,False,False
+1455,BOOK01456,12 Notes,LeadershipNow only,False,False
+1456,BOOK01457,Trust Matters More Than Ever,LeadershipNow only,False,False
+1457,BOOK01458,The Compass Within,LeadershipNow only,False,False
+1458,BOOK01459,Lying Numbers,LeadershipNow only,False,False
+1459,BOOK01460,The Long View,LeadershipNow only,False,False
+1460,BOOK01461,InCredible Communication,LeadershipNow only,False,False
+1461,BOOK01462,The Awareness Code,LeadershipNow only,False,False
+1462,BOOK01463,How to Be a Founder,LeadershipNow only,False,False
+1463,BOOK01464,Leadership in Star Trek,LeadershipNow only,False,False
+1464,BOOK01465,Wanamaker's Temple,LeadershipNow only,False,False
+1465,BOOK01466,Intentional Leadership,LeadershipNow only,False,False
+1466,BOOK01467,The Trials of Harry S. Truman,LeadershipNow only,False,False
+1467,BOOK01468,How Countries Go Broke,LeadershipNow only,False,False
+1468,BOOK01469,The Founders,LeadershipNow only,False,False
+1469,BOOK01470,Chasing Automation,LeadershipNow only,False,False
+1470,BOOK01471,Design Leadership Ignited,LeadershipNow only,False,False
+1471,BOOK01472,Unleash Your Complexity Genius,LeadershipNow only,False,False
+1472,BOOK01473,Venture Meets Mission,LeadershipNow only,False,False
+1473,BOOK01474,Good Money Revolution,LeadershipNow only,False,False
+1474,BOOK01475,The Datapreneurs,LeadershipNow only,False,False
+1475,BOOK01476,Startup Story,LeadershipNow only,False,False
+1476,BOOK01477,The Mentally Strong Leader,LeadershipNow only,False,False
+1477,BOOK01478,Flying for Peanuts,LeadershipNow only,False,False
+1478,BOOK01479,Risks and Returns,LeadershipNow only,False,False
+1479,BOOK01480,The RevOps Advantage,LeadershipNow only,False,False
+1480,BOOK01481,Healthy Calling,LeadershipNow only,True,False
+1481,BOOK01482,Formed to Lead,LeadershipNow only,False,False
+1482,BOOK01483,How Leaders Lose Their Way,LeadershipNow only,False,False
+1483,BOOK01484,Understanding Organizations...Finally!,LeadershipNow only,False,False
+1484,BOOK01485,Building Better Organizations,LeadershipNow only,False,False
+1485,BOOK01486,Simple Truths of Leadership,LeadershipNow only,False,False
+1486,BOOK01487,The Revelation Conversation,LeadershipNow only,False,False
+1487,BOOK01488,From Conflict to Courage,LeadershipNow only,False,False
+1488,BOOK01489,Reach,LeadershipNow only,False,False
+1489,BOOK01490,I Wish I'd Known This,LeadershipNow only,False,False
+1490,BOOK01491,Holding the Calm,LeadershipNow only,False,False
+1491,BOOK01492,Show the Value of What You Do,LeadershipNow only,False,False
+1492,BOOK01493,The Human Side of Innovation,LeadershipNow only,False,False
+1493,BOOK01494,Communicate with Courage,LeadershipNow only,False,False
+1494,BOOK01495,Leadership Two Words at a Time,LeadershipNow only,False,False
+1495,BOOK01496,The Art of Conscious Conversations,LeadershipNow only,False,False
+1496,BOOK01497,The Long-Distance Team,LeadershipNow only,False,False
+1497,BOOK01498,Office Shock,LeadershipNow only,False,False
+1498,BOOK01499,Revolutionizing Business Operations,LeadershipNow only,False,False
+1499,BOOK01500,Why Motivating People Doesn't Work...and What Does,LeadershipNow only,False,False
+1500,BOOK01501,Take Your Company Global,LeadershipNow only,False,False
+1501,BOOK01502,Compassionate Accountability,LeadershipNow only,False,False
+1502,BOOK01503,Breakthrough Coaching,LeadershipNow only,False,False
+1503,BOOK01504,The Secret of Culture Change,LeadershipNow only,False,False
+1504,BOOK01505,The Heart of Innovation,LeadershipNow only,False,False
+1505,BOOK01506,The Possible Self,LeadershipNow only,False,False
+1506,BOOK01507,Simple Truths of Leadership Playbook,LeadershipNow only,False,False
+1507,BOOK01508,Head & Heart,LeadershipNow only,False,False
+1508,BOOK01509,The Generous Leader,LeadershipNow only,False,False
+1509,BOOK01510,Thinking at the Speed of Bias,LeadershipNow only,False,False
+1510,BOOK01511,From Founder to Future,LeadershipNow only,False,False
+1511,BOOK01512,"Human First, Leader Second",LeadershipNow only,False,False
+1512,BOOK01513,Fierce Resilience,LeadershipNow only,False,False
+1513,BOOK01514,Radical Listening,LeadershipNow only,False,False
+1514,BOOK01515,The Courage Gap,LeadershipNow only,False,False
+1515,BOOK01516,"Change Your Questions, Change Your Life:",LeadershipNow only,False,False
+1516,BOOK01517,"Change Your Questions, Change Your Life Workbook:",LeadershipNow only,False,False
+1517,BOOK01518,Smart Brevity,LeadershipNow only,False,False
+1518,BOOK01519,Champion Mindset,LeadershipNow only,False,False
+1519,BOOK01520,The Strategists,LeadershipNow only,False,False
+1520,BOOK01521,Emotional,LeadershipNow only,False,False
+1521,BOOK01522,The View from Ninety,LeadershipNow only,False,False
+1522,BOOK01523,Inside Out,LeadershipNow only,False,False
+1523,BOOK01524,The Brain-Friendly Workplace,LeadershipNow only,False,False
+1524,BOOK01525,Positive Communication for Leaders,LeadershipNow only,False,False
+1525,BOOK01526,Dancing with Disruption,LeadershipNow only,False,False
+1526,BOOK01527,The A-Ha! Method,LeadershipNow only,False,False
+1527,BOOK01528,Emotion By Design,LeadershipNow only,False,False
+1528,BOOK01529,Becoming a Changemaker,LeadershipNow only,False,False
+1529,BOOK01530,The Wisdom of the Bullfrog,LeadershipNow only,False,False
+1530,BOOK01531,Mastering Community,LeadershipNow only,False,False
+1531,BOOK01532,Seek,LeadershipNow only,False,False
+1532,BOOK01533,Hope for Cynics,LeadershipNow only,True,False
+1533,BOOK01534,Sideline CEO,LeadershipNow only,False,False
+1534,BOOK01535,Conquering Crisis,LeadershipNow only,False,False
+1535,BOOK01536,Leadership Not by the Book,LeadershipNow only,False,False
+1536,BOOK01537,For Profit,LeadershipNow only,False,False
+1537,BOOK01538,Nobody's Fool,LeadershipNow only,False,False
+1538,BOOK01539,The Self Delusion,LeadershipNow only,False,False
+1539,BOOK01540,How to Expect the Unexpected,LeadershipNow only,False,False
+1540,BOOK01541,The Quest for Character,LeadershipNow only,False,False
+1541,BOOK01542,Awaken Your Genius,LeadershipNow only,False,False
+1542,BOOK01543,For the Culture,LeadershipNow only,False,False
+1543,BOOK01544,The Crux,LeadershipNow only,False,False
+1544,BOOK01545,How to Beat a Broken Game,LeadershipNow only,False,False
+1545,BOOK01546,The Future Is Analog,LeadershipNow only,False,False
+1546,BOOK01547,The Tao of Alibaba,LeadershipNow only,False,False
+1547,BOOK01548,The Sound of the Future,LeadershipNow only,False,False
+1548,BOOK01549,Credible,LeadershipNow only,False,False
+1549,BOOK01550,The Life Cycle of a CEO,LeadershipNow only,False,False
+1550,BOOK01551,A Leader's Destiny,LeadershipNow only,False,False
+1551,BOOK01552,The Creativity Choice,LeadershipNow only,False,False
+1552,BOOK01553,Pattern Breakers,LeadershipNow only,False,False
+1553,BOOK01554,Meaningful Work,LeadershipNow only,False,False
+1554,BOOK01555,There's Got to Be a Better Way,LeadershipNow only,False,False
+1555,BOOK01556,The Dark Pattern,LeadershipNow only,False,False
+1556,BOOK01557,Manage Yourself to Lead Others,LeadershipNow only,False,False
+1557,BOOK01558,Why Managers Matter,LeadershipNow only,False,False
+1558,BOOK01559,"Warriors, Rebels, and Saints",LeadershipNow only,True,False
+1559,BOOK01560,The Greatest Capitalist Who Ever Lived,LeadershipNow only,False,False
+1560,BOOK01561,You Can Be Yourself Here,LeadershipNow only,True,True
+1561,BOOK01562,End Game First,LeadershipNow only,False,False
+1562,BOOK01563,The Learn-It-All Leader,LeadershipNow only,False,False
+1563,BOOK01564,Best Team Ever,LeadershipNow only,False,False
+1564,BOOK01565,Blindspots,LeadershipNow only,False,False
+1565,BOOK01566,The Thinker's Edge,LeadershipNow only,False,False
+1566,BOOK01567,Trust,LeadershipNow only,False,False
+1567,BOOK01568,"Go Woke, Go Broke",LeadershipNow only,False,False
+1568,BOOK01569,Nobody Is Coming to Save You,LeadershipNow only,False,False
+1569,BOOK01570,The Relationship-Driven Leader,LeadershipNow only,False,False
+1570,BOOK01571,Proactive Problem Solving,LeadershipNow only,False,False
+1571,BOOK01572,Get Pay Right,LeadershipNow only,False,False
+1572,BOOK01573,On the Edge,LeadershipNow only,False,False
+1573,BOOK01574,Blind Spot,LeadershipNow only,False,False
+1574,BOOK01575,Culture Shock,LeadershipNow only,False,False
+1575,BOOK01576,The Ravens,LeadershipNow only,False,False
+1576,BOOK01577,Lead Well,LeadershipNow only,False,False
+1577,BOOK01578,In Praise of the Office,LeadershipNow only,False,False
+1578,BOOK01579,An Unplanned Life,LeadershipNow only,False,False
+1579,BOOK01580,How to Hold Power,LeadershipNow only,False,False
+1580,BOOK01581,The Transformation Factor,LeadershipNow only,False,False
+1581,BOOK01582,Leading Lightly,LeadershipNow only,False,False
+1582,BOOK01583,Finding the Way,LeadershipNow only,False,False
+1583,BOOK01584,Elite and True,LeadershipNow only,False,False
+1584,BOOK01585,All the War They Want,LeadershipNow only,False,False
+1585,BOOK01586,Perpetual Transformation,LeadershipNow only,False,False
+1586,BOOK01587,The Peacemaker,LeadershipNow only,False,False
+1587,BOOK01588,Becoming a Master Communicator,LeadershipNow only,False,False
+1588,BOOK01589,Ignite a Shift,LeadershipNow only,False,False
+1589,BOOK01590,The Leader’s Toolbox,LeadershipNow only,False,False
+1590,BOOK01591,Leading to Succeed,LeadershipNow only,False,False
+1591,BOOK01592,The Decisive Manager,LeadershipNow only,False,False
+1592,BOOK01593,How to Win Friends and Manage Remotely,LeadershipNow only,False,False
+1593,BOOK01594,Lead Boldly,LeadershipNow only,False,False
+1594,BOOK01595,The Trifecta of Trust,LeadershipNow only,False,False
+1595,BOOK01596,The Leader's Playlist,LeadershipNow only,False,False
+1596,BOOK01597,The Unicorn Within,LeadershipNow only,False,False
+1597,BOOK01598,Stage (Not Age),LeadershipNow only,False,False
+1598,BOOK01599,Nothing Is Random,LeadershipNow only,False,False
+1599,BOOK01600,Flawed Commanders and Strategy in the Battles for Italy,LeadershipNow only,False,False
+1600,BOOK01601,Human Design For Business,LeadershipNow only,False,False
+1601,BOOK01602,The Five Rules,LeadershipNow only,False,False
+1602,BOOK01603,The Innovative Leader,LeadershipNow only,False,False
+1603,BOOK01604,Impact,LeadershipNow only,False,False
+1604,BOOK01605,One Move Makes All the Difference,LeadershipNow only,False,False
+1605,BOOK01606,I Don’t Understand,LeadershipNow only,False,False
+1606,BOOK01607,Lead With AI,LeadershipNow only,False,False
+1607,BOOK01608,Ignite All,LeadershipNow only,False,False
+1608,BOOK01609,The Open Culture Handbook,LeadershipNow only,False,False
+1609,BOOK01610,The Risk Paradox,LeadershipNow only,False,False
+1610,BOOK01611,Lead and Let Live,LeadershipNow only,False,False
+1611,BOOK01612,Beyond High Performance,LeadershipNow only,False,False
+1612,BOOK01613,Relationships at Work,LeadershipNow only,False,False
+1613,BOOK01614,Prepare for Impact,LeadershipNow only,False,False
+1614,BOOK01615,Mindstuck,LeadershipNow only,False,False
+1615,BOOK01616,Becoming Coachable,LeadershipNow only,False,False
+1616,BOOK01617,Modern Achievement,LeadershipNow only,False,False
+1617,BOOK01618,Resilience@Work,LeadershipNow only,False,False
+1618,BOOK01619,Hunting Discomfort,LeadershipNow only,False,False
+1619,BOOK01620,Leaders Leap,LeadershipNow only,False,False
+1620,BOOK01621,Angels and Entrepreneurs,LeadershipNow only,False,False
+1621,BOOK01622,No Red Lights,LeadershipNow only,False,False
+1622,BOOK01623,Stand Alone,LeadershipNow only,False,False
+1623,BOOK01624,SLAY the Bully,LeadershipNow only,False,False
+1624,BOOK01625,How the Best Did It,LeadershipNow only,False,False
+1625,BOOK01626,Grace Under Pressure,LeadershipNow only,False,False
+1626,BOOK01627,Building Trust,LeadershipNow only,False,False
+1627,BOOK01628,Turning Small Talk into Big Talk,LeadershipNow only,False,False
+1628,BOOK01629,Generosity Wins,LeadershipNow only,False,False
+1629,BOOK01630,The Perfect 10,LeadershipNow only,False,False
+1630,BOOK01631,Aliveness Mindset,LeadershipNow only,False,False
+1631,BOOK01632,Awaken Your Potential,LeadershipNow only,False,False
+1632,BOOK01633,Fire in the Hole!,LeadershipNow only,False,False
+1633,BOOK01634,Aware,LeadershipNow only,True,False
+1634,BOOK01635,The Public Relations Handbook,LeadershipNow only,False,False
+1635,BOOK01636,Straight Talk,LeadershipNow only,False,False
+1636,BOOK01637,The Art of Principled Entrepreneurship,LeadershipNow only,False,False
+1637,BOOK01638,The Leadership Secrets of Nick Saban,LeadershipNow only,False,False
+1638,BOOK01639,The New Roaring Twenties,LeadershipNow only,False,False
+1639,BOOK01640,No Point B,LeadershipNow only,False,False
+1640,BOOK01641,7 Rules of Power,LeadershipNow only,False,False
+1641,BOOK01642,Unlock Your Potential,LeadershipNow only,False,False
+1642,BOOK01643,There Is No Box,LeadershipNow only,False,False
+1643,BOOK01644,"Fall in Love with the Problem, Not the Solution",LeadershipNow only,False,False
+1644,BOOK01645,Experiential Intelligence,LeadershipNow only,False,False
+1645,BOOK01646,Never Ride a Rollercoaster Upside Down,LeadershipNow only,False,False
+1646,BOOK01647,Joy of Agility,LeadershipNow only,False,False
+1647,BOOK01648,Culture Rules,LeadershipNow only,False,False
+1648,BOOK01649,"Farther, Faster, and Far Less Drama",LeadershipNow only,False,False
+1649,BOOK01650,The Ultimate Guide to Power & Influence,LeadershipNow only,False,False
+1650,BOOK01651,The 6 Types of Working Genius,LeadershipNow only,False,False
+1651,BOOK01652,Mastering Uncertainty,LeadershipNow only,False,False
+1652,BOOK01653,The 32 Principles,LeadershipNow only,False,False
+1653,BOOK01654,The Vagrant,LeadershipNow only,False,False
+1654,BOOK01655,Fast Forward,LeadershipNow only,False,False
+1655,BOOK01656,Belonging Rules,LeadershipNow only,False,False
+1656,BOOK01657,The Idea Is the Easy Part,LeadershipNow only,False,False
+1657,BOOK01658,Ask Like an Auctioneer,LeadershipNow only,False,False
+1658,BOOK01659,Crossing the Desert,LeadershipNow only,True,True
+1659,BOOK01660,Uncommon Greatness,LeadershipNow only,False,False
+1660,BOOK01661,Irreplaceable,LeadershipNow only,False,False
+1661,BOOK01662,Making Waves,LeadershipNow only,False,False
+1662,BOOK01663,Unstoppable Mindset,LeadershipNow only,False,False
+1663,BOOK01664,The Hacker Mindset,LeadershipNow only,False,False
+1664,BOOK01665,Shine,LeadershipNow only,False,False
+1665,BOOK01666,The Score That Matters,LeadershipNow only,False,False
+1666,BOOK01667,Becoming a Self-Reliant Leader,LeadershipNow only,False,False
+1667,BOOK01668,Elevate Your Excellence,LeadershipNow only,False,False
+1668,BOOK01669,Rebel,LeadershipNow only,False,False
+1669,BOOK01670,The Entrepreneurial Mindset Advantage,LeadershipNow only,False,False
+1670,BOOK01671,Go One More,LeadershipNow only,False,False
+1671,BOOK01672,Perseverance > Endurance,LeadershipNow only,False,False
+1672,BOOK01673,Leading Giants,LeadershipNow only,False,False
+1673,BOOK01674,Detach,LeadershipNow only,False,False
+1674,BOOK01675,All Business Is Personal,LeadershipNow only,False,False
+1675,BOOK01676,Reinventing the Leader,LeadershipNow only,False,False
+1676,BOOK01677,Time to Get Real,LeadershipNow only,False,False
+1677,BOOK01678,"Founders, Keepers",LeadershipNow only,False,False
+1678,BOOK01679,Unruly,LeadershipNow only,False,False
+1679,BOOK01680,Lead Every Day,LeadershipNow only,False,False
+1680,BOOK01681,The Transformation Principles,LeadershipNow only,False,False
+1681,BOOK01682,"Small Moves, Big Life",LeadershipNow only,False,False
+1682,BOOK01683,You to the Power of Two,LeadershipNow only,False,False
+1683,BOOK01684,Building Corporate Soul,LeadershipNow only,False,False
+1684,BOOK01685,The Double Bottom Line,LeadershipNow only,True,False
+1685,BOOK01686,The Culture Climb,LeadershipNow only,False,False
+1686,BOOK01687,Don't Lead Alone,LeadershipNow only,False,False
+1687,BOOK01688,The Growth Leader,LeadershipNow only,False,False
+1688,BOOK01689,A Hidden Force,LeadershipNow only,False,False
+1689,BOOK01690,Delivering the Wow,LeadershipNow only,False,False
+1690,BOOK01691,Founded,LeadershipNow only,False,False
+1691,BOOK01692,Grow,LeadershipNow only,False,False
+1692,BOOK01693,When Grit Is Not Enough,LeadershipNow only,False,False
+1693,BOOK01694,Brand ON!,LeadershipNow only,False,False
+1694,BOOK01695,Running the Gauntlet,LeadershipNow only,False,False
+1695,BOOK01696,The Power of Culture,LeadershipNow only,False,False
+1696,BOOK01697,50 Ideas that Changed the World of Work,LeadershipNow only,False,False
+1697,BOOK01698,Habits of a Peacemaker,LeadershipNow only,False,False
+1698,BOOK01699,A Failure of Nerve in 52 Weeks,LeadershipNow only,False,False
+1699,BOOK01700,Momentum,LeadershipNow only,False,False
+1700,BOOK01701,"Mentally Fit, Powerfully Resilient, Competitively Strong",LeadershipNow only,False,False
+1701,BOOK01702,Winning for Life,LeadershipNow only,False,False
+1702,BOOK01703,Be Astonishing,LeadershipNow only,False,False
+1703,BOOK01704,Positive Influence,LeadershipNow only,False,False
+1704,BOOK01705,The Seven Tensions of Negotiation,LeadershipNow only,False,False
+1705,BOOK01706,Winning Through Failure,LeadershipNow only,False,False
+1706,BOOK01707,Stop the Shift Show,LeadershipNow only,False,False
+1707,BOOK01708,Extreme Balance,LeadershipNow only,False,False
+1708,BOOK01709,The Seismic Shift In Leadership,LeadershipNow only,False,False
+1709,BOOK01710,Your Time With The Baton,LeadershipNow only,False,False
+1710,BOOK01711,From Welfare To CEO,LeadershipNow only,False,False
+1711,BOOK01712,The Farmer’s Code,LeadershipNow only,False,False
+1712,BOOK01713,Leading for Impact,LeadershipNow only,False,False
+1713,BOOK01714,Upheaval,LeadershipNow only,False,False
+1714,BOOK01715,The Goodwill Jar,LeadershipNow only,False,False
+1715,BOOK01716,From Tension to Transformation,LeadershipNow only,False,False
+1716,BOOK01717,Leadership Shock,LeadershipNow only,False,False
+1717,BOOK01718,"Dark, Dirty, Dangerous",LeadershipNow only,False,False
+1718,BOOK01719,Change,LeadershipNow only,False,False
+1719,BOOK01720,Shackleton,LeadershipNow only,True,True
+1720,BOOK01721,Your Year of Wonders,LeadershipNow only,False,False
+1721,BOOK01722,The Gift of Lift,LeadershipNow only,False,False
+1722,BOOK01723,Take Charge of You,LeadershipNow only,False,False
+1723,BOOK01724,Talent,LeadershipNow only,False,False
+1724,BOOK01725,Irresistible,LeadershipNow only,False,False
+1725,BOOK01726,Leading Through Inflation,LeadershipNow only,False,False
+1726,BOOK01727,Wonderhell,LeadershipNow only,False,False
+1727,BOOK01728,The Power of Conscious Connection,LeadershipNow only,False,False
+1728,BOOK01729,Going on Offense,LeadershipNow only,False,False
+1729,BOOK01730,The Illusion of Innovation,LeadershipNow only,False,False
+1730,BOOK01731,Non-Obvious Thinking,LeadershipNow only,False,False
+1731,BOOK01732,Unlimited Heart,LeadershipNow only,False,False
+1732,BOOK01733,Beyond Eureka!,LeadershipNow only,True,True
+1733,BOOK01734,The Arts of Leading,LeadershipNow only,False,False
+1734,BOOK01735,The Flexibility Paradigm,LeadershipNow only,True,False
+1735,BOOK01736,Resilience That Works,LeadershipNow only,False,False
+1736,BOOK01737,The Digital Mindset,LeadershipNow only,False,False
+1737,BOOK01738,The Synergy Solution,LeadershipNow only,False,False
+1738,BOOK01739,"I, Human",LeadershipNow only,False,False
+1739,BOOK01740,Compassionate Leadership,LeadershipNow only,False,False
+1740,BOOK01741,Both/And Thinking,LeadershipNow only,False,False
+1741,BOOK01742,Getting Along,LeadershipNow only,False,False
+1742,BOOK01743,Radically Human,LeadershipNow only,False,False
+1743,BOOK01744,Smart Growth,LeadershipNow only,False,False
+1744,BOOK01745,Love + Work,LeadershipNow only,False,False
+1745,BOOK01746,The Necessary Journey,LeadershipNow only,False,False
+1746,BOOK01747,Beyond Disruption,LeadershipNow only,False,False
+1747,BOOK01748,Results,LeadershipNow only,False,False
+1748,BOOK01749,Competing in the New World of Work,LeadershipNow only,False,False
+1749,BOOK01750,Beyond Digital,LeadershipNow only,False,False
+1750,BOOK01751,The Anxious Achiever,LeadershipNow only,True,True
+1751,BOOK01752,Smarter Collaboration,LeadershipNow only,False,False
+1752,BOOK01753,Ethical Machines,LeadershipNow only,False,False
+1753,BOOK01754,Move Fast and Fix Things,LeadershipNow only,False,False
+1754,BOOK01755,The Upside of Uncertainty,LeadershipNow only,False,False
+1755,BOOK01756,Good Power,LeadershipNow only,False,False
+1756,BOOK01757,HBR at 100,LeadershipNow only,False,False
+1757,BOOK01758,Higher Ground,LeadershipNow only,False,False
+1758,BOOK01759,Energy Rising,LeadershipNow only,False,False
+1759,BOOK01760,A New Way to Think,LeadershipNow only,False,False
+1760,BOOK01761,Open Talent,LeadershipNow only,False,False
+1761,BOOK01762,Real-Time Leadership,LeadershipNow only,False,False
+1762,BOOK01763,Breaking Through,LeadershipNow only,False,False
+1763,BOOK01764,The Microstress Effect,LeadershipNow only,False,False
+1764,BOOK01765,The Case for Good Jobs,LeadershipNow only,False,False
+1765,BOOK01766,Power and Prediction,LeadershipNow only,False,False
+1766,BOOK01767,All-in On AI,LeadershipNow only,False,False
+1767,BOOK01768,The World Is Your Office,LeadershipNow only,False,False
+1768,BOOK01769,Power to the Middle,LeadershipNow only,False,False
+1769,BOOK01770,The Emotionally Intelligent Team,LeadershipNow only,False,False
+1770,BOOK01771,The Leap to Leader,LeadershipNow only,False,False
+1771,BOOK01772,Never Not Working,LeadershipNow only,False,False
+1772,BOOK01773,Bridgebuilders,LeadershipNow only,False,False
+1773,BOOK01774,Know What Matters,LeadershipNow only,False,False
+1774,BOOK01775,Smart Rivals,LeadershipNow only,False,False
+1775,BOOK01776,Why Are We Here?,LeadershipNow only,False,False
+1776,BOOK01777,The AI-Savvy Leader,LeadershipNow only,False,False
+1777,BOOK01778,The Age of Outrage,LeadershipNow only,False,False
+1778,BOOK01779,Mindmasters,LeadershipNow only,False,False
+1779,BOOK01780,Employment Is Dead,LeadershipNow only,False,False
+1780,BOOK01781,The Harvard Business Review Sales Management Handbook,LeadershipNow only,False,False
+1781,BOOK01782,"Bosses, Coworkers, and Building Great Work Relationships",LeadershipNow only,False,False
+1782,BOOK01783,Triple Fit Strategy,LeadershipNow only,False,False
+1783,BOOK01784,Leadership Unblocked,LeadershipNow only,False,False
+1784,BOOK01785,How Leaders Learn,LeadershipNow only,False,False
+1785,BOOK01786,Leading Through,LeadershipNow only,False,False
+1786,BOOK01787,The Growth Dilemma,LeadershipNow only,False,False
+1787,BOOK01788,G.O.A.T. Wisdom,LeadershipNow only,False,False
+1788,BOOK01789,HBR Daily Leader,LeadershipNow only,False,False
+1789,BOOK01790,Don't Be Yourself,LeadershipNow only,False,False
+1790,BOOK01791,Rebooting Tech Culture,LeadershipNow only,False,False
+1791,BOOK01792,Where Leadership Begins,LeadershipNow only,False,False
+1792,BOOK01793,Mighty,LeadershipNow only,False,False
+1793,BOOK01794,Stay Sane in an Insane World,LeadershipNow only,False,False
+1794,BOOK01795,Fluke,LeadershipNow only,False,False
+1795,BOOK01796,Look Again,LeadershipNow only,False,False
+1796,BOOK01797,Principles,LeadershipNow only,False,False
+1797,BOOK01798,"Think Faster, Talk Smarter",LeadershipNow only,False,False
+1798,BOOK01799,The Dealmaker,LeadershipNow only,True,True
+1799,BOOK01800,Woodrow Wilson,LeadershipNow only,False,False
+1800,BOOK01801,You're the Boss,LeadershipNow only,False,False
+1801,BOOK01802,Lean Learning,LeadershipNow only,False,False
+1802,BOOK01803,How to Get Along with Anyone,LeadershipNow only,False,False
+1803,BOOK01804,The PARA Method,LeadershipNow only,False,False
+1804,BOOK01805,Mastering AI,LeadershipNow only,False,False
+1805,BOOK01806,Ping,LeadershipNow only,False,False
+1806,BOOK01807,Reset,LeadershipNow only,False,False
+1807,BOOK01808,Last Call for Bud Light,LeadershipNow only,False,False
+1808,BOOK01809,Click,LeadershipNow only,False,False
+1809,BOOK01810,Never Stop,LeadershipNow only,False,False
+1810,BOOK01811,A CEO for All Seasons,LeadershipNow only,False,False
+1811,BOOK01812,In the Arena,LeadershipNow only,False,False
+1812,BOOK01813,Sailing Upwind,LeadershipNow only,False,False
+1813,BOOK01814,The Servant Leadership from the Middle,LeadershipNow only,False,False
+1814,BOOK01815,The Genius of Empathy,LeadershipNow only,False,False
+1815,BOOK01816,Robert E. Lee on Leadership,LeadershipNow only,False,False
+1816,BOOK01817,Adaptive Listening,LeadershipNow only,False,False
+1817,BOOK01818,How to Untie a Balloon,LeadershipNow only,False,False
+1818,BOOK01819,The Truth (And Lies!) Of Entrepreneurship,LeadershipNow only,False,False
+1819,BOOK01820,"Right Leader, Right Time",LeadershipNow only,False,False
+1820,BOOK01821,Elevate Your Team,LeadershipNow only,False,False
+1821,BOOK01822,Who Does What By How Much?,LeadershipNow only,False,False
+1822,BOOK01823,One Drop of Poison,LeadershipNow only,False,False
+1823,BOOK01824,The 3.3 Rule,LeadershipNow only,False,False
+1824,BOOK01825,Your Next Big Idea,LeadershipNow only,False,False
+1825,BOOK01826,Turns,LeadershipNow only,False,False
+1826,BOOK01827,The Visionary Leader,LeadershipNow only,False,False
+1827,BOOK01828,The Unconquerable Game,LeadershipNow only,False,False
+1828,BOOK01829,Leadership Starts with You,LeadershipNow only,False,False
+1829,BOOK01830,Committed,LeadershipNow only,True,True
+1830,BOOK01831,Developing Coaching Leaders,LeadershipNow only,False,False
+1831,BOOK01832,Dancing with Disruption,LeadershipNow only,False,False
+1832,BOOK01833,The Resilience Mindset,LeadershipNow only,False,False
+1833,BOOK01834,The Emotionally Strong Leader,LeadershipNow only,False,False
+1834,BOOK01835,Leading to Greatness,LeadershipNow only,False,False
+1835,BOOK01836,Leading Inclusion,LeadershipNow only,False,False
+1836,BOOK01837,How to Work with (Almost) Anyone,LeadershipNow only,False,False
+1837,BOOK01838,Positive Chaos,LeadershipNow only,False,False
+1838,BOOK01839,Say What They Can't Unhear,LeadershipNow only,False,False
+1839,BOOK01840,Lean Marketing,LeadershipNow only,False,False
+1840,BOOK01841,"Good Team, Bad Team",LeadershipNow only,False,False
+1841,BOOK01842,We're Gonna Need Cake,LeadershipNow only,False,False
+1842,BOOK01843,The Empathy Dilemma,LeadershipNow only,False,False
+1843,BOOK01844,Exceptional Experiences,LeadershipNow only,False,False
+1844,BOOK01845,Starting a StartUp,LeadershipNow only,False,False
+1845,BOOK01846,The Success Complex,LeadershipNow only,False,False
+1846,BOOK01847,Collabor(h)ate,LeadershipNow only,True,False
+1847,BOOK01848,Top of Heart,LeadershipNow only,False,False
+1848,BOOK01849,Move by Move,LeadershipNow only,False,False
+1849,BOOK01850,"Why listen to, work with and follow you?",LeadershipNow only,False,False
+1850,BOOK01851,Be Different,LeadershipNow only,False,False
+1851,BOOK01852,Hidden Genius,LeadershipNow only,False,False
+1852,BOOK01853,The Psychology of Leadership,LeadershipNow only,False,False
+1853,BOOK01854,The Next Crisis,LeadershipNow only,False,False
+1854,BOOK01855,Pitch,LeadershipNow only,False,False
+1855,BOOK01856,The Not To Do List,LeadershipNow only,False,False
+1856,BOOK01857,When Everyone Leads,LeadershipNow only,False,False
+1857,BOOK01858,How Organizations Should Work,LeadershipNow only,False,False
+1858,BOOK01859,You're the Leader. Now What?,LeadershipNow only,False,False
+1859,BOOK01860,The Career Workbook,LeadershipNow only,False,False
+1860,BOOK01861,De-Positioning,LeadershipNow only,False,False
+1861,BOOK01862,Positive Influence,LeadershipNow only,False,False
+1862,BOOK01863,Disruptable,LeadershipNow only,False,False
+1863,BOOK01864,Get Off the X,LeadershipNow only,False,False
+1864,BOOK01865,The Legacy Navigator,LeadershipNow only,False,False
+1865,BOOK01866,Wiring the Winning Organization,LeadershipNow only,False,False
+1866,BOOK01867,"Wrong Fit, Right Fit",LeadershipNow only,False,False
+1867,BOOK01868,Civility Rules!,LeadershipNow only,False,False
+1868,BOOK01869,Outfocus,LeadershipNow only,False,False
+1869,BOOK01870,Leading with Light,LeadershipNow only,False,False
+1870,BOOK01871,The Rules of Mentorship,LeadershipNow only,False,False
+1871,BOOK01872,Promotions Are So Yesterday,LeadershipNow only,False,False
+1872,BOOK01873,Smart Leadership,LeadershipNow only,False,False
+1873,BOOK01874,Unconditional Power,LeadershipNow only,False,False
+1874,BOOK01875,Scaling People,LeadershipNow only,False,False
+1875,BOOK01876,Poor Charlie’s Almanack,LeadershipNow only,False,False
+1876,BOOK01877,Imaginable,LeadershipNow only,False,False
+1877,BOOK01878,Make It Count,LeadershipNow only,False,False
+1878,BOOK01879,The Most Unlikely Leader,LeadershipNow only,False,False
+1879,BOOK01880,Beyond the Sea,LeadershipNow only,False,False
+1880,BOOK01881,The FUD Factor,LeadershipNow only,False,False
+1881,BOOK01882,Start. Scale. Exit. Repeat.,LeadershipNow only,False,False
+1882,BOOK01883,The Leadership Pause,LeadershipNow only,False,False
+1883,BOOK01884,The #PACE Process for Early Career Success,LeadershipNow only,False,False
+1884,BOOK01885,Hacking the Corporate Jungle,LeadershipNow only,False,False
+1885,BOOK01886,Performance Feedback Strategies,LeadershipNow only,False,False
+1886,BOOK01887,Ideas on a Deadline,LeadershipNow only,False,False
+1887,BOOK01888,Leading With Care in a Tough World,LeadershipNow only,False,False
+1888,BOOK01889,The Long Game,LeadershipNow only,False,False
+1889,BOOK01890,Your Company Is Your Castle,LeadershipNow only,False,False
+1890,BOOK01891,Settle for More,LeadershipNow only,False,False
+1891,BOOK01892,Levi's Unbuttoned,LeadershipNow only,False,False
+1892,BOOK01893,The Accidental Network,LeadershipNow only,False,False
+1893,BOOK01894,Scaling Smart,LeadershipNow only,False,False
+1894,BOOK01895,ReLeader,LeadershipNow only,False,False
+1895,BOOK01896,The Steady Leader,LeadershipNow only,False,False
+1896,BOOK01897,American Rascal,LeadershipNow only,False,False
+1897,BOOK01898,The Wolves of K Street,LeadershipNow only,False,False
+1898,BOOK01899,The Right Call,LeadershipNow only,False,False
+1899,BOOK01900,Watergate,LeadershipNow only,False,False
+1900,BOOK01901,A Man of Iron,LeadershipNow only,False,False
+1901,BOOK01902,Trust and Inspire,LeadershipNow only,False,False
+1902,BOOK01903,On Power,LeadershipNow only,False,False
+1903,BOOK01904,Tomorrowmind,LeadershipNow only,False,False
+1904,BOOK01905,The Winner's Curse,LeadershipNow only,False,False
+1905,BOOK01906,Making Numbers Count,LeadershipNow only,False,False
+1906,BOOK01907,The Power of Crisis,LeadershipNow only,False,False
+1907,BOOK01908,When Women Lead,LeadershipNow only,False,False
+1908,BOOK01909,Cultures of Growth,LeadershipNow only,False,False
+1909,BOOK01910,Up Close and All In,LeadershipNow only,False,False
+1910,BOOK01911,CEO Excellence,LeadershipNow only,False,False
+1911,BOOK01912,Elon Musk,LeadershipNow only,False,False
+1912,BOOK01913,Anatomy of a Breakthrough,LeadershipNow only,False,False
+1913,BOOK01914,Surf When You Can,LeadershipNow only,False,False
+1914,BOOK01915,Right Kind of Wrong,LeadershipNow only,False,False
+1915,BOOK01916,Live Life in Crescendo,LeadershipNow only,False,False
+1916,BOOK01917,Make No Small Plans,LeadershipNow only,False,False
+1917,BOOK01918,Influence Is Your Superpower,LeadershipNow only,False,False
+1918,BOOK01919,Strong Ground,LeadershipNow only,False,False
+1919,BOOK01920,Make Possibilities Happen,LeadershipNow only,False,False
+1920,BOOK01921,Assembling Tomorrow,LeadershipNow only,False,False
+1921,BOOK01922,The New China Playbook,LeadershipNow only,False,False
+1922,BOOK01923,Unscripted,LeadershipNow only,False,False
+1923,BOOK01924,Stewards of the Future,LeadershipNow only,False,False
+1924,BOOK01925,Collaborative Advantage,LeadershipNow only,False,False
+1925,BOOK01926,Leading Organizational Transformation,LeadershipNow only,False,False
+1926,BOOK01927,When McKinsey Comes to Town,LeadershipNow only,False,False
+1927,BOOK01928,"Remove, Replace, Restart",LeadershipNow only,False,False
+1928,BOOK01929,The Art of Slicing Work,LeadershipNow only,False,False
+1929,BOOK01930,Family Reins,LeadershipNow only,True,False
+1930,BOOK01931,Areté,LeadershipNow only,False,False
+1931,BOOK01932,Become a Super Leader,LeadershipNow only,False,False
+1932,BOOK01933,Leadership Legacy,LeadershipNow only,False,False
+1933,BOOK01934,Leadership by Example,LeadershipNow only,False,False
+1934,BOOK01935,Profit with Presence,LeadershipNow only,False,False
+1935,BOOK01936,Leading with Significance,LeadershipNow only,False,False
+1936,BOOK01937,Fixing Work,LeadershipNow only,False,False
+1937,BOOK01938,How to Make a Few Billion Dollars,LeadershipNow only,False,False
+1938,BOOK01939,A New Kind of Diversity,LeadershipNow only,False,False
+1939,BOOK01940,Becoming More,LeadershipNow only,True,True
+1940,BOOK01941,The 16 Undeniable Laws of Communication,LeadershipNow only,False,False
+1941,BOOK01942,Rebel Leadership,LeadershipNow only,False,False
+1942,BOOK01943,High Road Leadership,LeadershipNow only,False,False
+1943,BOOK01944,Knowledge Mindfulness,LeadershipNow only,False,False
+1944,BOOK01945,"Results, Not Reports",LeadershipNow only,False,False
+1945,BOOK01946,The Success Paradox,LeadershipNow only,False,False
+1946,BOOK01947,Get It Together,LeadershipNow only,True,True
+1947,BOOK01948,The CQ Edge,LeadershipNow only,False,False
+1948,BOOK01949,Leading What Matters Most,LeadershipNow only,False,False
+1949,BOOK01950,deComplify,LeadershipNow only,False,False
+1950,BOOK01951,Self Less,LeadershipNow only,False,False
+1951,BOOK01952,Get Clear Career Assessment,LeadershipNow only,False,False
+1952,BOOK01953,The 80/20 CEO,LeadershipNow only,False,False
+1953,BOOK01954,Passion Struck,LeadershipNow only,False,False
+1954,BOOK01955,The Gouge!,LeadershipNow only,False,False
+1955,BOOK01956,The Soil of Leadership,LeadershipNow only,False,False
+1956,BOOK01957,The Virtue Proposition,LeadershipNow only,True,False
+1957,BOOK01958,The Purposeful Decision Maker,LeadershipNow only,False,False
+1958,BOOK01959,Brilliant Leadership,LeadershipNow only,False,False
+1959,BOOK01960,The Reset Mindset,LeadershipNow only,False,False
+1960,BOOK01961,The Turnaround Leader,LeadershipNow only,False,False
+1961,BOOK01962,The Unconventional Entrepreneur,LeadershipNow only,False,False
+1962,BOOK01963,The Nine,LeadershipNow only,False,False
+1963,BOOK01964,Executive Presence,LeadershipNow only,False,False
+1964,BOOK01965,The Conscious Workplace,LeadershipNow only,False,False
+1965,BOOK01966,Life on the X,LeadershipNow only,False,False
+1966,BOOK01967,The Shortcut,LeadershipNow only,True,True
+1967,BOOK01968,Conquer Your Culture,LeadershipNow only,False,False
+1968,BOOK01969,Strategy Realized - The Business Hierarchy of Needs,LeadershipNow only,False,False
+1969,BOOK01970,The 9th Stratum,LeadershipNow only,False,False
+1970,BOOK01971,Can't Tame a Mongoose,LeadershipNow only,False,False
+1971,BOOK01972,Meta-Leadership,LeadershipNow only,False,False
+1972,BOOK01973,Get Scalable,LeadershipNow only,False,False
+1973,BOOK01974,Burned Out to Lit Up,LeadershipNow only,False,False
+1974,BOOK01975,Tell Me My Story,LeadershipNow only,False,False
+1975,BOOK01976,Synergea,LeadershipNow only,False,False
+1976,BOOK01977,The Seven Frequencies of Communication,LeadershipNow only,False,False
+1977,BOOK01978,Why Innovation Fails,LeadershipNow only,False,False
+1978,BOOK01979,AI Snake Oil,LeadershipNow only,False,False
+1979,BOOK01980,Front-Line Leadership,LeadershipNow only,False,False
+1980,BOOK01981,The New Emotional Intelligence,LeadershipNow only,False,False
+1981,BOOK01982,Human Edge in the AI Age,LeadershipNow only,False,False
+1982,BOOK01983,Read Your Mind,LeadershipNow only,False,False
+1983,BOOK01984,Influence Elevated,LeadershipNow only,False,False
+1984,BOOK01985,Creating Excellence,LeadershipNow only,False,False
+1985,BOOK01986,Build Something,LeadershipNow only,False,False
+1986,BOOK01987,Break The Mold,LeadershipNow only,False,False
+1987,BOOK01988,Visualize,LeadershipNow only,True,True
+1988,BOOK01989,Curative Culture,LeadershipNow only,False,False
+1989,BOOK01990,Professional Careers by Design,LeadershipNow only,False,False
+1990,BOOK01991,Always Squeezing Lemons,LeadershipNow only,True,True
+1991,BOOK01992,Reflecting on History,LeadershipNow only,False,False
+1992,BOOK01993,Team Lead Model of Self-Leadership,LeadershipNow only,False,False
+1993,BOOK01994,Conflict Is an Opportunity,LeadershipNow only,False,False
+1994,BOOK01995,The Journey To Reinvention,LeadershipNow only,False,False
+1995,BOOK01996,I See You!,LeadershipNow only,False,False
+1996,BOOK01997,The Bravery Effect,LeadershipNow only,False,False
+1997,BOOK01998,Honing the Human Edge,LeadershipNow only,False,False
+1998,BOOK01999,How to Make a Few More Billion Dollars,LeadershipNow only,False,False
+1999,BOOK02000,A New Kind of Diversity,LeadershipNow only,False,False
+2000,BOOK02001,Culture Matters,LeadershipNow only,False,False
+2001,BOOK02002,How to Work with Complicated People,LeadershipNow only,False,False
+2002,BOOK02003,Firm Feedback in a Fragile World,LeadershipNow only,False,False
+2003,BOOK02004,Time is Now,LeadershipNow only,False,False
+2004,BOOK02005,Seeing Around Corners,LeadershipNow only,False,False
+2005,BOOK02006,Beyond the Hammer,LeadershipNow only,False,False
+2006,BOOK02007,Undoing Urgency,LeadershipNow only,False,False
+2007,BOOK02008,The AI Ecosystems Revolution,LeadershipNow only,False,False
+2008,BOOK02009,Less than One Percent,LeadershipNow only,True,True
+2009,BOOK02010,The Detour CEO,LeadershipNow only,False,False
+2010,BOOK02011,Deep Future,LeadershipNow only,False,False
+2011,BOOK02012,Sharp,LeadershipNow only,True,True
+2012,BOOK02013,Build a Business You Love,LeadershipNow only,False,False
+2013,BOOK02014,Outsmart the Learning Curve,LeadershipNow only,False,False
+2014,BOOK02015,All the Presidents' Money,LeadershipNow only,False,False
+2015,BOOK02016,Behind Closed Doors,LeadershipNow only,False,False
+2016,BOOK02017,Creative Insecurity,LeadershipNow only,False,False
+2017,BOOK02018,The Relatable Leader,LeadershipNow only,False,False
+2018,BOOK02019,Walk Your Talk,LeadershipNow only,False,False
+2019,BOOK02020,Question to Learn,LeadershipNow only,False,False
+2020,BOOK02021,Presencing,LeadershipNow only,True,True
+2021,BOOK02022,The Win-Win Workplace,LeadershipNow only,False,False
+2022,BOOK02023,The Science of Leadership,LeadershipNow only,False,False
+2023,BOOK02024,The Laughter Factor,LeadershipNow only,False,False
+2024,BOOK02025,Humble Inquiry,LeadershipNow only,False,False
+2025,BOOK02026,Trust at a Distance,LeadershipNow only,False,False
+2026,BOOK02027,The Power of Employee Well-Being,LeadershipNow only,False,False
+2027,BOOK02028,Think Your Way to the Top,LeadershipNow only,False,False
+2028,BOOK02029,Lessons from the Admiral,LeadershipNow only,False,False
+2029,BOOK02030,Shoveling $h!t,LeadershipNow only,False,False
+2030,BOOK02031,Masters of Uncertainty,LeadershipNow only,False,False
+2031,BOOK02032,The Secure Leader,LeadershipNow only,False,False
+2032,BOOK02033,The Seismic Shift in You,LeadershipNow only,False,False
+2033,BOOK02034,Next Play,LeadershipNow only,False,False
+2034,BOOK02035,Relationship Currency,LeadershipNow only,False,False
+2035,BOOK02036,Stay at Risk and Live Forever,LeadershipNow only,False,False
+2036,BOOK02037,The Tao of Leadership,LeadershipNow only,False,False
+2037,BOOK02038,"Believer, Bulldog, Coach",LeadershipNow only,False,False
+2038,BOOK02039,The Power of Mattering,LeadershipNow only,False,False
+2039,BOOK02040,There's Nothing Like This,LeadershipNow only,False,False
+2040,BOOK02041,Blindspotting,LeadershipNow only,False,False
+2041,BOOK02042,The Activator Advantage,LeadershipNow only,False,False
+2042,BOOK02043,More Human,LeadershipNow only,False,False
+2043,BOOK02044,Bag Man,LeadershipNow only,False,False
+2044,BOOK02045,Culture Design,LeadershipNow only,False,False
+2045,BOOK02046,Another Way,LeadershipNow only,False,False
+2046,BOOK02047,The Octopus Organization,LeadershipNow only,False,False
+2047,BOOK02048,The Happiness Files,LeadershipNow only,False,False
+2048,BOOK02049,Superagency,LeadershipNow only,False,False
+2049,BOOK02050,This Is Strategy,LeadershipNow only,False,False
+2050,BOOK02051,The Overthinker's Guide to Making Decisions,LeadershipNow only,False,False
+2051,BOOK02052,Transcend,LeadershipNow only,False,False
+2052,BOOK02053,Seeing Around Corners,LeadershipNow only,False,False
+2053,BOOK02054,Six Dimes and a Nickel,LeadershipNow only,False,False
+2054,BOOK02055,Extraordinary Transformation,LeadershipNow only,False,False
+2055,BOOK02056,Becoming a Leader Worth Following,LeadershipNow only,False,False
+2056,BOOK02057,Always Learning,LeadershipNow only,False,False
+2057,BOOK02058,Left and Right of the Boom,LeadershipNow only,False,False
+2058,BOOK02059,Mega Thinking,LeadershipNow only,False,False
+2059,BOOK02060,Ready to Win,LeadershipNow only,False,False
+2060,BOOK02061,The Wellness Ethic,LeadershipNow only,False,False
+2061,BOOK02062,A Platform Mindset,LeadershipNow only,False,False
+2062,BOOK02063,The Most Powerful Sentence of All Time,LeadershipNow only,False,False
+2063,BOOK02064,Soul Venture,LeadershipNow only,False,False
+2064,BOOK02065,Soulgery,LeadershipNow only,True,True
+2065,BOOK02066,I Can Fit That In,LeadershipNow only,False,False
+2066,BOOK02067,Break The Bottle,LeadershipNow only,False,False

@@ -1,0 +1,11 @@
+component,top_terms,top_weights
+LSA_1,"management, leadership, business, organizational, economics, personnel, business economics, strategic, personnel management, planning","0.508, 0.285, 0.246, 0.197, 0.176, 0.160, 0.157, 0.156, 0.143, 0.129"
+LSA_2,"leadership, servant, servant leadership, executive, team, executive leadership, team leadership, leadership development, development, transformational leadership","0.771, 0.183, 0.182, 0.140, 0.121, 0.117, 0.110, 0.109, 0.099, 0.077"
+LSA_3,"personnel, personnel management, human, human resource, resource management, resource, management, leadership, gary, gary dessler","0.312, 0.287, 0.286, 0.266, 0.265, 0.252, 0.151, 0.133, 0.099, 0.088"
+LSA_4,"emotional, intelligence, emotional intelligence, behavior, organizational, organizational behavior, personnel, psychology, personnel management, human","0.401, 0.380, 0.363, 0.248, 0.245, 0.243, 0.116, 0.102, 0.100, 0.074"
+LSA_5,"emotional, intelligence, emotional intelligence, operations, production, operations management, strategic, planning, david, management","0.393, 0.371, 0.356, 0.124, 0.121, 0.112, 0.111, 0.092, 0.088, 0.085"
+LSA_6,"operations, production, operations management, project management, project, production management, management, production operations, organizational, organizational behavior","0.312, 0.308, 0.285, 0.220, 0.219, 0.201, 0.182, 0.117, 0.100, 0.085"
+LSA_7,"project, project management, technology, management, change, guide, management institute, projektmanagement, management project, institute","0.490, 0.489, 0.080, 0.071, 0.065, 0.064, 0.060, 0.059, 0.059, 0.058"
+LSA_8,"david, change, change management, servant, servant leadership, organizational, michael, organizational change, leader, strategic","0.597, 0.276, 0.160, 0.137, 0.136, 0.126, 0.116, 0.113, 0.108, 0.108"
+LSA_9,"change, change management, innovation, organizational change, innovation management, innovations, management, technological, technological innovations, executive","0.435, 0.268, 0.205, 0.201, 0.160, 0.140, 0.133, 0.122, 0.116, 0.068"
+LSA_10,"servant, servant leadership, project management, project, religion, christian, christianity, leadership christianity, organizational, christian leadership","0.481, 0.478, 0.085, 0.084, 0.076, 0.076, 0.067, 0.066, 0.060, 0.049"

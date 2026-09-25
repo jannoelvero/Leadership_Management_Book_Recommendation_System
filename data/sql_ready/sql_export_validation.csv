@@ -1,0 +1,10 @@
+table,original_rows,reloaded_rows,row_match,file_exists
+books,2067,2067,True,True
+authors,2281,2281,True,True
+book_authors,2566,2566,True,True
+categories,2187,2187,True,True
+book_categories,5926,5926,True,True
+book_editions,1120,1120,True,True
+book_metrics,950,950,True,True
+data_sources,2,2,True,True
+source_records,2070,2070,True,True

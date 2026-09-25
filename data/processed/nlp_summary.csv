@@ -1,0 +1,10 @@
+metric,value
+books,2067.0
+core_features,1816.0
+enriched_features,5130.0
+core_nonzero_values,9372.0
+enriched_nonzero_values,29372.0
+core_sparsity_pct,99.75032448226696
+enriched_sparsity_pct,99.72300260946405
+core_zero_vectors,42.0
+enriched_zero_vectors,27.0

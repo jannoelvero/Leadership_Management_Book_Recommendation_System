@@ -1,0 +1,146 @@
+cluster,cluster_label,cluster_size,rank,book_id,title,authors,distance_to_centroid,source_group,first_publish_year,publication_year_observed,average_rating,ratings_count,cover_url
+0,Entrepreneurial and Growth Mindset,82,1,BOOK02062,A Platform Mindset,['Marcus Fontoura'],0.379655207798998,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9798991762328.jpg
+0,Entrepreneurial and Growth Mindset,82,2,BOOK01663,Unstoppable Mindset,['Alden Mills'],0.379655207798998,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781637744840.jpg
+0,Entrepreneurial and Growth Mindset,82,3,BOOK01664,The Hacker Mindset,['Garrett Gee'],0.379655207798998,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781637744864.jpg
+0,Entrepreneurial and Growth Mindset,82,4,BOOK01631,Aliveness Mindset,['Jack Craven'],0.379655207798998,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781637632611.jpg
+0,Entrepreneurial and Growth Mindset,82,5,BOOK01670,The Entrepreneurial Mindset Advantage,['Gary G. Schoeniger'],0.5248351718326929,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781637745779.jpg
+1,Organizational Behavior,56,1,BOOK00674,Organizational Behavior,"['Christopher P. Neck', 'Jeffery D. Houghton', 'Emma L. Murray']",0.0918318583036126,Open Library only,2015,,,,https://covers.openlibrary.org/b/id/8904889-L.jpg
+1,Organizational Behavior,56,2,BOOK00703,Organizational behavior,"['Afsaneh Nahavandi', 'Ali R. Malekzadeh']",0.0918318583036126,Open Library only,1998,,,,https://covers.openlibrary.org/b/id/90010-L.jpg
+1,Organizational Behavior,56,3,BOOK00688,Organizational Behavior,['Ricky W. Griffin'],0.0918318583036126,Open Library only,1986,,,,https://covers.openlibrary.org/b/id/1325242-L.jpg
+1,Organizational Behavior,56,4,BOOK00679,Organizational behavior,"['Angelo Kinicki', 'Robert Kreitner']",0.0918318583036126,Open Library only,2003,,,,https://covers.openlibrary.org/b/id/8271863-L.jpg
+1,Organizational Behavior,56,5,BOOK00706,Organizational Behavior,"['Mary Uhl-Bien', 'Ronald F. Piccolo', 'Schermerhorn, John R., Jr.']",0.0988526970701203,Open Library only,2013,,,,https://covers.openlibrary.org/b/id/13985922-L.jpg
+2,Team Leadership,33,1,BOOK00146,Team leadership,['John Apps'],0.0890972977631574,Open Library only,1999,,,,
+2,Team Leadership,33,2,BOOK00157,Team Leadership,['Drikus Kriek'],0.0890972977631574,Open Library only,2018,,,,
+2,Team Leadership,33,3,BOOK00172,Team Leadership,"['Geoff Ribbens', 'Mark Abraham', 'Alistair Cumming']",0.0890972977631574,Open Library only,2024,,,,
+2,Team Leadership,33,4,BOOK00187,Team Leadership Questionnaire,"['D. Kayes', 'Anna Kayes']",0.1355849517779157,Open Library only,2011,,,,
+2,Team Leadership,33,5,BOOK00170,Strategic Team Leadership,['Peter Saul'],0.1864428805196867,Open Library only,1992,,,,
+3,Future Thinking and Personal Development,70,1,BOOK01924,Stewards of the Future,['Helle Bank Jorgensen'],0.4682012757224728,LeadershipNow only,,2022,,,https://www.leadershipnow.com/leadershop/images/9781988025766.jpg
+3,Future Thinking and Personal Development,70,2,BOOK00961,Future Tense,['Tracy Dennis-Tiwary'],0.4682012757224728,LeadershipNow only,,2022,,,https://www.leadershipnow.com/leadershop/images/9780063062108.jpg
+3,Future Thinking and Personal Development,70,3,BOOK00954,Inventor of the Future,['Alec Nevala-Lee'],0.4682012757224728,LeadershipNow only,,2022,,,https://www.leadershipnow.com/leadershop/images/9780062947222.jpg
+3,Future Thinking and Personal Development,70,4,BOOK01444,Be Your Future Self Now,['Dr. Benjamin Hardy'],0.5406086107886696,LeadershipNow only,,2022,,,https://www.leadershipnow.com/leadershop/images/9781401967574.jpg
+3,Future Thinking and Personal Development,70,5,BOOK01058,Your Future Self,['Hal Hershfield'],0.5406086107886696,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9780316421256.jpg
+4,Decision Making,33,1,BOOK00785,DECISION MAKING,['Irving L. Janis'],0.0941026347649047,Open Library only,1979,,,,https://covers.openlibrary.org/b/id/18888-L.jpg
+4,Decision Making,33,2,BOOK00797,Creative decision making,['H. B. Gelatt'],0.2308910006234504,Open Library only,1991,,,,https://covers.openlibrary.org/b/id/1889121-L.jpg
+4,Decision Making,33,3,BOOK00767,Judgment and decision making,"['Peter Juslin', 'Henry Montgomery']",0.2801403592996012,Open Library only,1999,,,,https://covers.openlibrary.org/b/id/4696115-L.jpg
+4,Decision Making,33,4,BOOK00762,The managerial decision-making process,['E. Frank Harrison'],0.2836304667799891,Open Library only,1975,,,,https://covers.openlibrary.org/b/id/1197022-L.jpg
+4,Decision Making,33,5,BOOK00769,The psychology of judgment and decision making,['Scott Plous'],0.3221289641590328,Open Library only,1993,,,,https://covers.openlibrary.org/b/id/55087-L.jpg
+5,Leader Identity and Practice,33,1,BOOK01859,You're the Leader. Now What?,['Richard Winters'],0.0267077881307744,LeadershipNow only,,2022,,,https://www.leadershipnow.com/leadershop/images/9781893005709.jpg
+5,Leader Identity and Practice,33,2,BOOK01285,We the Leader,['Jeffrey Spahn'],0.0267077881307744,LeadershipNow only,,2022,,,https://www.leadershipnow.com/leadershop/images/9781260474978.jpg
+5,Leader Identity and Practice,33,3,BOOK01676,Reinventing the Leader,['Gui Loureiro and Carlos E. Marin'],0.0267077881307744,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9781637746806.jpg
+5,Leader Identity and Practice,33,4,BOOK02018,The Relatable Leader,['Rachel DeAlto'],0.0267077881307744,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9798888458983.jpg
+5,Leader Identity and Practice,33,5,BOOK02032,The Secure Leader,['Jaime Goff'],0.0267077881307744,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9798891384316.jpg
+6,Communication,47,1,BOOK01461,InCredible Communication,['Steven Lewis and Rebecca Weintraub'],0.1210296676279177,LeadershipNow only,,2022,,,https://www.leadershipnow.com/leadershop/images/9781472991720.jpg
+6,Communication,47,2,BOOK00832,Communication,"['William J. Seiler', 'Melissa L. Beall']",0.2737052390262482,Open Library only,1995,,,,https://covers.openlibrary.org/b/id/6822321-L.jpg
+6,Communication,47,3,BOOK00813,Corporate communication,['Paul A. Argenti'],0.3507218307395103,Open Library only,1994,,5.0,1.0,https://covers.openlibrary.org/b/id/65390-L.jpg
+6,Communication,47,4,BOOK00824,Communication between cultures,"['Larry A. Samovar', 'Portar McDaniel Samovar', 'Richard E. Porter']",0.357654832341136,Open Library only,1991,,3.5,2.0,https://covers.openlibrary.org/b/id/4036878-L.jpg
+6,Communication,47,5,BOOK00830,Business communication today,['Courtland L. Bovée'],0.3638760253915666,Open Library only,1989,,4.0,4.0,https://covers.openlibrary.org/b/id/7134604-L.jpg
+7,Broad Leadership and Success,185,1,BOOK01820,"Right Leader, Right Time",['Robert Jordan and Olivia Wagner'],0.6013536615674315,LeadershipNow only,,2022,,,https://www.leadershipnow.com/leadershop/images/9781722510565.jpg
+7,Broad Leadership and Success,185,2,BOOK01572,Get Pay Right,['Kent Plunkett and Heather Bussing'],0.6997322590027555,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781586446581.jpg
+7,Broad Leadership and Success,185,3,BOOK01899,The Right Call,['Sally Jenkins'],0.6997322590027555,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9781982122553.jpg
+7,Broad Leadership and Success,185,4,BOOK02058,Left and Right of the Boom,['Rob Campbell'],0.6997322590027555,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9798990712607.jpg
+7,Broad Leadership and Success,185,5,BOOK00240,Servant-leadership across cultures,['Alfons Trompenaars'],0.7176527993487767,Open Library only,2009,,,,https://covers.openlibrary.org/b/id/6420818-L.jpg
+8,Servant Leadership,42,1,BOOK00278,Servant Leadership,['John Wallace Whitehead'],0.0641310486204672,Open Library only,2019,,,,
+8,Servant Leadership,42,2,BOOK00250,Servant Leadership,"['Michael Rucker', 'Holly Spence']",0.0641310486204672,Open Library only,2019,,,,
+8,Servant Leadership,42,3,BOOK00246,Servant leadership,['Dirk van Dierendonck'],0.097388886087654,Open Library only,2010,,,,https://covers.openlibrary.org/b/id/9845502-L.jpg
+8,Servant Leadership,42,4,BOOK00070,Servant Leadership,"['Dirk van Dierendonck', 'K. Patterson']",0.1163093967830818,Open Library only,2010,,,,
+8,Servant Leadership,42,5,BOOK00275,The spirit of servant-leadership,['Robert K. Greenleaf Center. International Conference on Servant-Leadership'],0.1560937309203396,Open Library only,2011,,,,
+9,Change Management,42,1,BOOK00424,Change management,"['Jeffrey M. Hiatt', 'Timothy J. Creasey']",0.1408054451904914,Open Library only,2003,,,,https://covers.openlibrary.org/b/id/955409-L.jpg
+9,Change Management,42,2,BOOK00432,Change Management,"['Klaus Doppler', 'Christoph Lauterburg']",0.1589340927288389,Open Library only,2014,,,,https://covers.openlibrary.org/b/id/10129545-L.jpg
+9,Change Management,42,3,BOOK01719,Change,"['Curtis Bateman, Marche Pleshette, Andy Cindrich and Christi Phillips']",0.2245727101805686,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9781642507946.jpg
+9,Change Management,42,4,BOOK01286,Change Proof,['Adam Markel'],0.2245727101805686,LeadershipNow only,,2022,,,https://www.leadershipnow.com/leadershop/images/9781264258987.jpg
+9,Change Management,42,5,BOOK00441,Strategic Change Management Strategic Change Management,['Djamel Eddine Laouisset'],0.2857685580268729,Open Library only,2008,,,,
+10,Leadership Development,53,1,BOOK00087,Leadership development,['Lee Barr'],0.2219447910584449,Open Library only,1994,,,,https://covers.openlibrary.org/b/id/3944180-L.jpg
+10,Leadership Development,53,2,BOOK00081,Leadership Development,['Manuel London'],0.2452495205395339,Open Library only,2001,,,,
+10,Leadership Development,53,3,BOOK00096,Leadership development,['Abdullahi Sheikh Ali'],0.2452495205395339,Open Library only,1980,,,,
+10,Leadership Development,53,4,BOOK00093,Leadership Development,['Ideal Curtis'],0.2452495205395339,Open Library only,2011,,,,
+10,Leadership Development,53,5,BOOK00078,Future of Leadership Development,"['Susan Elaine Murphy', 'Ronald E. Riggio']",0.3253966070616351,Open Library only,2003,,,,
+11,Organizational Culture and Trust,184,1,BOOK01245,Culture Is the Way,['Matt Mayberry'],0.5200357285193168,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9781119913658.jpg
+11,Organizational Culture and Trust,184,2,BOOK01989,Curative Culture,['Douglas K Shaw'],0.6155263593221498,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9798319152701.jpg
+11,Organizational Culture and Trust,184,3,BOOK01968,Conquer Your Culture,['David Komar'],0.6155263593221498,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9788987216415.jpg
+11,Organizational Culture and Trust,184,4,BOOK01543,For the Culture,['Marcus Collins'],0.6155263593221498,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9781541700963.jpg
+11,Organizational Culture and Trust,184,5,BOOK02001,Culture Matters,['Jenni Catron'],0.6330061309448813,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9798887100364.jpg
+12,Information Technology Management,18,1,BOOK00527,Information Technology Project Management,['Kathy Schwalbe'],0.2249773228477781,Open Library only,1999,,5.0,1.0,https://covers.openlibrary.org/b/id/5451502-L.jpg
+12,Information Technology Management,18,2,BOOK00563,Project management,['Paul C. Tinnirello'],0.2287580447684851,Open Library only,2000,,,,https://covers.openlibrary.org/b/id/13089392-L.jpg
+12,Information Technology Management,18,3,BOOK00931,Information for Innovation,['Stuart Macdonald'],0.2435815525115973,Open Library only,1998,,,,https://covers.openlibrary.org/b/id/130253-L.jpg
+12,Information Technology Management,18,4,BOOK00582,Enterprise Performance Management Done Right,['Ron Dimon'],0.258828075932858,Open Library only,2013,,,,https://covers.openlibrary.org/b/id/7811376-L.jpg
+12,Information Technology Management,18,5,BOOK00430,Making sense of change management,"['Esther Cameron', 'Mike Green']",0.2649562995976864,Open Library only,2004,,,,https://covers.openlibrary.org/b/id/491122-L.jpg
+13,General Business and Management,72,1,BOOK00011,Leadership,['Elesa Zehndorfer'],0.2862283952233591,Open Library only,2013,,5.0,1.0,https://covers.openlibrary.org/b/id/13806636-L.jpg
+13,General Business and Management,72,2,BOOK00055,Full range leadership development,['John J. Sosik'],0.3345175534390999,Open Library only,2010,,,,https://covers.openlibrary.org/b/id/9233648-L.jpg
+13,General Business and Management,72,3,BOOK00444,Agile Change Management,['Melanie Franklin'],0.3720781447603413,Open Library only,2014,,,,https://covers.openlibrary.org/b/id/13912355-L.jpg
+13,General Business and Management,72,4,BOOK00437,Managing change,"['Todd Jick', 'Maury Peiperl', 'Todd D. Jick']",0.4268863810729528,Open Library only,1993,,3.5,2.0,https://covers.openlibrary.org/b/id/1153520-L.jpg
+13,General Business and Management,72,5,BOOK00927,Routledge Companion to Innovation Management,"['Jin Chen', 'Poh Kam Wong', 'Eric Viardot', 'Alexander Brem']",0.4353302517243038,Open Library only,2019,,,,
+14,Performance Management,41,1,BOOK00592,Performance Management,['Susan Hutchinson'],0.1599615977162162,Open Library only,2013,,,,https://covers.openlibrary.org/b/id/13736661-L.jpg
+14,Performance Management,41,2,BOOK00573,Managing performance,"['Michael Armstrong', 'Angela Baron']",0.2673103512381534,Open Library only,2005,,,,https://covers.openlibrary.org/b/id/2027589-L.jpg
+14,Performance Management,41,3,BOOK00569,Performance management systems,['Arup Varma'],0.2775809061670238,Open Library only,2008,,5.0,1.0,https://covers.openlibrary.org/b/id/10226628-L.jpg
+14,Performance Management,41,4,BOOK00593,Performance management,['Robert Bacal'],0.3083227859475451,Open Library only,2012,,,,https://covers.openlibrary.org/b/id/11030412-L.jpg
+14,Performance Management,41,5,BOOK00587,Performance management,['Robert Bacal'],0.33435382346569,Open Library only,1999,,,,https://covers.openlibrary.org/b/id/55960-L.jpg
+15,Workplace and Generational Dynamics,27,1,BOOK01355,Five Generations at Work,['Rebecca Robins and Patrick Dunne'],0.0364180146877878,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781394252206.jpg
+15,Workplace and Generational Dynamics,27,2,BOOK01237,Work Here Now,['Melissa Swift'],0.0364180146877878,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9781119895275.jpg
+15,Workplace and Generational Dynamics,27,3,BOOK01278,Over Work,['Brigid Schulte'],0.0364180146877878,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781250801722.jpg
+15,Workplace and Generational Dynamics,27,4,BOOK01837,How to Work with (Almost) Anyone,['Michael Bungay Stanier'],0.0364180146877878,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9781774582657.jpg
+15,Workplace and Generational Dynamics,27,5,BOOK01437,Rethinking Work,['Rishad Tobaccowala'],0.0364180146877878,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9781400249305.jpg
+16,Leading Self and Others,23,1,BOOK01673,Leading Giants,['Dave Durand'],0.0291772387595589,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9781637746332.jpg
+16,Leading Self and Others,23,2,BOOK01786,Leading Through,"['Kim B. Clark, Jonathan R. Clark and Erin E. Clark']",0.0291772387595589,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781647827618.jpg
+16,Leading Self and Others,23,3,BOOK01236,Leading with Vulnerability,['Jacob Morgan'],0.0291772387595589,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9781119895244.jpg
+16,Leading Self and Others,23,4,BOOK01347,Leading Yourself,['Elizabeth Lotardo'],0.0291772387595589,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781394238705.jpg
+16,Leading Self and Others,23,5,BOOK01374,Leading Relationships,['Steve McClatchy'],0.3381317618309758,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9781394289387.jpg
+17,People Management,28,1,BOOK00377,People Management,['Gerardus Blokdyk'],0.1030464952707037,Open Library only,2018,,,,
+17,People Management,28,2,BOOK00358,People Management,['Rus Slater'],0.1459637945152837,Open Library only,2010,,,,https://covers.openlibrary.org/b/id/9113400-L.jpg
+17,People Management,28,3,BOOK00345,People management,"['David Rees', 'Richard McBain']",0.1459637945152837,Open Library only,2003,,,,https://covers.openlibrary.org/b/id/2392407-L.jpg
+17,People Management,28,4,BOOK00376,Effective people management,['Patricia Wellington'],0.2726445549461388,Open Library only,2011,,,,
+17,People Management,28,5,BOOK00372,Sustainable People Management,['Morgan Orioha'],0.2898431834594797,Open Library only,2021,,,,
+18,Emotional Intelligence,50,1,BOOK00858,Emotional Intelligence,['Daniela GOLEMAN'],0.0451105943715819,Open Library only,2019,,4.3333335,3.0,https://covers.openlibrary.org/b/id/13262112-L.jpg
+18,Emotional Intelligence,50,2,BOOK00876,Emotional Intelligence,['Modern Psychology Publishing'],0.0451105943715819,Open Library only,2019,,,,https://covers.openlibrary.org/b/id/13893546-L.jpg
+18,Emotional Intelligence,50,3,BOOK00897,Emotional Intelligence,['Daniel Coleman'],0.0451105943715819,Open Library only,1998,,,,
+18,Emotional Intelligence,50,4,BOOK00873,Emotional Intelligence,['Tanvir Shakil'],0.0451105943715819,Open Library only,2019,,,,
+18,Emotional Intelligence,50,5,BOOK00889,Emotional Intelligence,['James W. Williams'],0.0451105943715819,Open Library only,2019,,4.0,1.0,https://covers.openlibrary.org/b/id/10490525-L.jpg
+19,Executive Leadership,39,1,BOOK00124,Executive leadership,['Edutext.'],0.0877321924314894,Open Library only,1971,,,,
+19,Executive Leadership,39,2,BOOK00129,Police Executive Leadership,['Donald G. Hanna'],0.0877321924314894,Open Library only,1990,,,,https://covers.openlibrary.org/b/id/1627049-L.jpg
+19,Executive Leadership,39,3,BOOK00126,Executive leadership,['Joseph A. Olmstead'],0.1791588843710265,Open Library only,2000,,,,https://covers.openlibrary.org/b/id/1629853-L.jpg
+19,Executive Leadership,39,4,BOOK00125,Executive Leadership,['Ph D. Joseph Olmstead'],0.1791588843710265,Open Library only,2010,,,,
+19,Executive Leadership,39,5,BOOK00121,Executive leadership,['William N. Egan'],0.222470465237174,Open Library only,1960,,,,
+20,Human Resource Management,57,1,BOOK00284,Human Resource management,['Gary Dessler'],0.0424025902494101,Open Library only,1994,,4.125,8.0,https://covers.openlibrary.org/b/id/9334439-L.jpg
+20,Human Resource Management,57,2,BOOK00652,Human resource management,['Gary Dessler'],0.0424025902494101,Open Library only,2006,,,,https://covers.openlibrary.org/b/id/9264184-L.jpg
+20,Human Resource Management,57,3,BOOK00650,Human Resource Management,['Raymond A. Noe'],0.0424025902494101,Open Library only,1999,,,,https://covers.openlibrary.org/b/id/5027729-L.jpg
+20,Human Resource Management,57,4,BOOK00649,Human resource management,['Robert L. Mathis'],0.0424025902494101,Open Library only,1994,,,,https://covers.openlibrary.org/b/id/3853271-L.jpg
+20,Human Resource Management,57,5,BOOK00647,Human Resource Management,"['Ronan Carbery', 'Christine Cross']",0.0424025902494101,Open Library only,2013,,,,https://covers.openlibrary.org/b/id/9172088-L.jpg
+21,Innovation Management,45,1,BOOK00935,Innovation Management,['Rasmus Koss Hartmann'],0.2417222422018317,Open Library only,2025,,,,
+21,Innovation Management,45,2,BOOK00925,Innovation Management,"['Carolina Machado', 'J. Paulo Davim']",0.2639237860795389,Open Library only,2015,,,,
+21,Innovation Management,45,3,BOOK00919,Innovation management,"['Shlomo Maital', 'D V R Seshadri']",0.2729668863190704,Open Library only,2007,,5.0,1.0,https://covers.openlibrary.org/b/id/1429604-L.jpg
+21,Innovation Management,45,4,BOOK00939,Innovation Management in Robot Society,['Kristian Wasén'],0.2966379770831785,Open Library only,2015,,,,
+21,Innovation Management,45,5,BOOK00921,Revolution of Innovation Management,"['Alexander Brem', 'Eric Viardot']",0.2985638134400954,Open Library only,2016,,,,https://covers.openlibrary.org/b/id/10091640-L.jpg
+22,Power and Influence,27,1,BOOK02039,The Power of Mattering,['Zach Mercurio'],0.0228136290794498,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9798892790123.jpg
+22,Power and Influence,27,2,BOOK01903,On Power,['Mark R. Levin'],0.0228136290794498,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9781982146191.jpg
+22,Power and Influence,27,3,BOOK01683,You to the Power of Two,['Joseph Bradley and Don Tapscott'],0.0228136290794498,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9781637747841.jpg
+22,Power and Influence,27,4,BOOK01129,Untold Power,['Rebecca Boggs Roberts'],0.0228136290794498,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9780593489994.jpg
+22,Power and Influence,27,5,BOOK01178,The Power of Regret,['Daniel H. Pink'],0.0228136290794498,LeadershipNow only,,2022,,,https://www.leadershipnow.com/leadershop/images/9780735210653.jpg
+23,Project Management,47,1,BOOK00540,Project management,['Jeffrey K. Pinto'],0.0658977383891388,Open Library only,2007,,,,https://covers.openlibrary.org/b/id/10125165-L.jpg
+23,Project Management,47,2,BOOK00532,Project Management,['Jeffrey K. Pinto'],0.0658977383891388,Open Library only,2006,,,,https://covers.openlibrary.org/b/id/14424212-L.jpg
+23,Project Management,47,3,BOOK00552,Project Management,"['Clifford F. Gray', 'Erik W. Larson']",0.0658977383891388,Open Library only,2002,,,,https://covers.openlibrary.org/b/id/57500-L.jpg
+23,Project Management,47,4,BOOK00549,Contemporary Project Management,"['Timothy Kloppenborg', 'Kathryn Wells', 'Vittal S. Anantatmula']",0.1459986929172602,Open Library only,2012,,,,https://covers.openlibrary.org/b/id/13464227-L.jpg
+23,Project Management,47,5,BOOK00561,Project Management Absolute Beginner's Guide,['Greg Horine'],0.1710616989065121,Open Library only,2012,,,,https://covers.openlibrary.org/b/id/10097024-L.jpg
+24,Operations Management,49,1,BOOK00513,Operations Management,['Terry Hill'],0.0817810184479874,Open Library only,2000,,,,https://covers.openlibrary.org/b/id/1180585-L.jpg
+24,Operations Management,49,2,BOOK00485,Operations management,['Jay Heizer'],0.0817810184479874,Open Library only,1999,,,,https://covers.openlibrary.org/b/id/2323632-L.jpg
+24,Operations Management,49,3,BOOK00495,Restaurant operations management,"['Jack D. Ninemeier', 'David K. Hayes']",0.0902541311595418,Open Library only,2005,,,,https://covers.openlibrary.org/b/id/1106477-L.jpg
+24,Operations Management,49,4,BOOK00512,Production and operations management,['Jay Heizer'],0.1198939697346291,Open Library only,1988,,5.0,1.0,https://covers.openlibrary.org/b/id/7109780-L.jpg
+24,Operations Management,49,5,BOOK00489,Production and operations management,['Raymond R. Mayer'],0.1198939697346291,Open Library only,1975,,,,https://covers.openlibrary.org/b/id/4468138-L.jpg
+25,Transformational Leadership,108,1,BOOK00003,Kepemimpinan =,['Karjadi M.'],0.0896789013673665,Open Library only,1977,,1.0,1.0,https://covers.openlibrary.org/b/id/14420782-L.jpg
+25,Transformational Leadership,108,2,BOOK00973,Leadership Is Overrated,['Kyle Buckett and Chris Mefford'],0.0896789013673665,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9780063209909.jpg
+25,Transformational Leadership,108,3,BOOK01956,The Soil of Leadership,['Britt Yamamoto'],0.0896789013673665,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9788891380554.jpg
+25,Transformational Leadership,108,4,BOOK01829,Leadership Starts with You,['Whitney Breer'],0.0896789013673665,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9781737943976.jpg
+25,Transformational Leadership,108,5,BOOK01164,On Leadership,['Tony Blair'],0.0896789013673665,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9780593799796.jpg
+26,Contemporary Leadership Practice,26,1,BOOK01607,Lead With AI,['Amir Elkabir'],0.0782496153641036,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781637425930.jpg
+26,Contemporary Leadership Practice,26,2,BOOK01482,Formed to Lead,['Jason Jensen'],0.1548830528638992,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9781514009901.jpg
+26,Contemporary Leadership Practice,26,3,BOOK00999,Never Lead Alone,['Keith Ferrazzi'],0.1548830528638992,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9780063412576.jpg
+26,Contemporary Leadership Practice,26,4,BOOK01594,Lead Boldly,['Hugh Blane'],0.1548830528638992,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781632652119.jpg
+26,Contemporary Leadership Practice,26,5,BOOK01577,Lead Well,['Paula Davis'],0.1548830528638992,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9781613631898.jpg
+27,Strategic Management and Planning,82,1,BOOK00389,Strategic management,"['Samuel C. Certo', 'J.Paul Peter']",0.209959137199106,Open Library only,1988,,,,https://covers.openlibrary.org/b/id/4004709-L.jpg
+27,Strategic Management and Planning,82,2,BOOK00423,Strategic management,['Richard L. Lynch'],0.2528015487204892,Open Library only,2008,,,,https://covers.openlibrary.org/b/id/12292192-L.jpg
+27,Strategic Management and Planning,82,3,BOOK00382,Strategic management,['Frank T. Rothaermel'],0.2707180466564419,Open Library only,2012,,1.0,1.0,https://covers.openlibrary.org/b/id/12653650-L.jpg
+27,Strategic Management and Planning,82,4,BOOK00405,Strategic management,['Allen C. Amason'],0.2721939265047159,Open Library only,2011,,,,https://covers.openlibrary.org/b/id/12713229-L.jpg
+27,Strategic Management and Planning,82,5,BOOK00385,Strategic Management,['Fred David'],0.2777734613573236,Open Library only,2001,,4.0,1.0,https://covers.openlibrary.org/b/id/87789-L.jpg
+28,CEO and Executive Transformation,285,1,BOOK01534,Sideline CEO,['Marty Smith / Foreword by Tim Tebow'],0.6865921173330172,LeadershipNow only,,2023,,,https://www.leadershipnow.com/leadershop/images/9781538758380.jpg
+28,CEO and Executive Transformation,285,2,BOOK01413,How To Be A CEO,['Ben Renshaw'],0.6865921173330172,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781399809795.jpg
+28,CEO and Executive Transformation,285,3,BOOK01711,From Welfare To CEO,['Korena Keys'],0.6865921173330172,LeadershipNow only,,2024,,,https://www.leadershipnow.com/leadershop/images/9781642255942.jpg
+28,CEO and Executive Transformation,285,4,BOOK02010,The Detour CEO,['Paul Perreault'],0.6865921173330172,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9798887506524.jpg
+28,CEO and Executive Transformation,285,5,BOOK01811,A CEO for All Seasons,"['Carolyn Dewar, Scott Keller, Vikram Malhotra and Kurt Strovink']",0.6865921173330172,LeadershipNow only,,2025,,,https://www.leadershipnow.com/leadershop/images/9781668098349.jpg

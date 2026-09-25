@@ -1,0 +1,44 @@
+{
+    "production_recommender": {
+        "representation": "Enriched TF-IDF",
+        "ranking_method": "Cosine Similarity",
+        "catalog_size": 2067,
+        "eligible_books": 2040,
+        "catalog_coverage_pct": 97.532656
+    },
+    "semantic_representation": {
+        "method": "Truncated SVD / LSA",
+        "representation": "Enriched",
+        "dimensions": 200,
+        "similarity_spearman_rho": 0.515777,
+        "top10_neighbor_preservation_pct": 57.966667
+    },
+    "topic_model": {
+        "method": "K-Means",
+        "clusters": 29,
+        "books_clustered": 1884,
+        "role": "Supplementary topic metadata"
+    },
+    "neural_network": {
+        "method": "Autoencoder",
+        "architecture": "200-128-64-32-64-128-200",
+        "latent_dimensions": 32,
+        "test_mse_improvement_pct": 82.247979,
+        "similarity_spearman_rho": 0.1074673,
+        "top10_neighbor_preservation_pct": 42.7451,
+        "role": "Experimental"
+    },
+    "natural_language_retrieval": {
+        "enabled": true,
+        "representation": "Enriched TF-IDF",
+        "ranking_method": "Cosine Similarity",
+        "diagnostic_queries": 6,
+        "robustness_tests": 4
+    },
+    "llm_layer": {
+        "mode": "offline_grounding",
+        "live_api_enabled": false,
+        "role": "Optional grounded explanation",
+        "grounding_books": 2067
+    }
+}

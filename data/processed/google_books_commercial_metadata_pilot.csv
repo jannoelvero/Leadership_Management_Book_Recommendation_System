@@ -1,0 +1,11 @@
+book_id,query_isbn,leadwise_title,google_volume_id,google_title,saleability,market_country,list_price_amount,list_price_currency,retail_price_amount,retail_price_currency,buy_link,query_status,http_status
+BOOK00001,9780028639123,Principle-Centered Leadership,,,,,,,,,,http_error,429
+BOOK00002,9780130323125,Leadership in Organizations,,,,,,,,,,http_error,429
+BOOK00004,9780551006515,Spiritual leadership,,,,,,,,,,http_error,429
+BOOK00005,9780761919254,Leadership,,,,,,,,,,http_error,429
+BOOK00006,9780785261360,The 21 Irrefutable Laws of Leadership,,,,,,,,,,http_error,429
+BOOK00007,9780761925668,Leadership,,,,,,,,,,http_error,429
+BOOK00008,9780029018101,Leadership and performance beyond expectations,,,,,,,,,,http_error,429
+BOOK00009,9781250192455,A Higher Loyalty,,,,,,,,,,http_error,429
+BOOK00010,9780141030067,Leadership and Self Deception,,,,,,,,,,http_error,429
+BOOK00011,9780367374822,Leadership,,,,,,,,,,http_error,429

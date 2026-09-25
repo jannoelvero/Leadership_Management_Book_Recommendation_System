@@ -1,0 +1,59 @@
+# =========================================================
+# LeadWise — Git exclusions
+# =========================================================
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+.virtual_documents/
+
+# IDE / local tooling
+.vscode/
+.idea/
+.agents/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local databases and database journals
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-shm
+*.db-wal
+
+# LeadWise runtime/user data
+data/app/
+
+# Logs / temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*~
+
+# Tableau temporary lock files
+.~*.twb
+.~*.twbr
+.~*.twbx
+
+# OS / editor artifacts
+Thumbs.db
