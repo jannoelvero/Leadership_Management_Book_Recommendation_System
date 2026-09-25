@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.57.3 — Secure Super Admin Bootstrap — Administrative Governance & Internal Analytics
+# Version 18.57.4 — Complete Cloud Database Bootstrap — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -122,6 +122,149 @@ def migrate_admin_schema():
             connection.execute(
                 "ALTER TABLE users ADD COLUMN role TEXT NOT NULL DEFAULT 'reader'"
             )
+
+        # 18.57.4: complete fresh-cloud bootstrap for Reader-facing operational
+        # tables referenced by the Admin Control Center. Streamlit Community
+        # Cloud Reader and Admin apps do not share a local SQLite filesystem.
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS user_library (
+                library_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                book_id TEXT NOT NULL,
+                reading_status TEXT NOT NULL DEFAULT 'Want to Read',
+                personal_rating REAL,
+                private_notes TEXT,
+                key_takeaways TEXT,
+                practical_application TEXT,
+                date_finished TEXT,
+                saved_at TEXT NOT NULL,
+                updated_at TEXT NOT NULL,
+                UNIQUE(user_id, book_id),
+                FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE
+            )
+            """
+        )
+
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS user_reviews (
+                review_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                book_id TEXT NOT NULL,
+                rating REAL,
+                review_text TEXT,
+                created_at TEXT NOT NULL,
+                updated_at TEXT NOT NULL,
+                is_published INTEGER NOT NULL DEFAULT 0,
+                published_at TEXT,
+                UNIQUE(user_id, book_id),
+                FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE
+            )
+            """
+        )
+
+        # Non-destructive compatibility migrations for databases created by
+        # earlier LeadWise Reader builds.
+        library_columns = {
+            row["name"] for row in connection.execute(
+                "PRAGMA table_info(user_library)"
+            ).fetchall()
+        }
+        for column_name, column_type in {
+            "key_takeaways": "TEXT",
+            "practical_application": "TEXT",
+            "date_finished": "TEXT",
+        }.items():
+            if column_name not in library_columns:
+                connection.execute(
+                    f"ALTER TABLE user_library ADD COLUMN {column_name} {column_type}"
+                )
+
+        review_columns = {
+            row["name"] for row in connection.execute(
+                "PRAGMA table_info(user_reviews)"
+            ).fetchall()
+        }
+        for column_name, column_type in {
+            "is_published": "INTEGER NOT NULL DEFAULT 0",
+            "published_at": "TEXT",
+        }.items():
+            if column_name not in review_columns:
+                connection.execute(
+                    f"ALTER TABLE user_reviews ADD COLUMN {column_name} {column_type}"
+                )
+
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS leadwise_feedback (
+                feedback_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                feedback_type TEXT NOT NULL,
+                subject TEXT,
+                message TEXT NOT NULL,
+                contact_email TEXT,
+                created_at TEXT NOT NULL,
+                status TEXT NOT NULL DEFAULT 'New',
+                FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE SET NULL
+            )
+            """
+        )
+
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS ask_leadwise_queries (
+                query_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                query_text TEXT NOT NULL,
+                intent TEXT NOT NULL,
+                result_count INTEGER NOT NULL DEFAULT 0,
+                top_book_id TEXT,
+                created_at TEXT NOT NULL,
+                FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE SET NULL
+            )
+            """
+        )
+
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS leadwise_inquiries (
+                inquiry_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                inquiry_type TEXT NOT NULL,
+                full_name TEXT,
+                email TEXT,
+                subject TEXT,
+                message TEXT NOT NULL,
+                suggested_title TEXT,
+                suggested_author TEXT,
+                suggested_isbn_or_link TEXT,
+                related_book_id TEXT,
+                created_at TEXT NOT NULL,
+                status TEXT NOT NULL DEFAULT 'New',
+                FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE SET NULL
+            )
+            """
+        )
+
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS featured_reading (
+                feature_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                book_id TEXT NOT NULL,
+                feature_message TEXT,
+                display_order INTEGER NOT NULL DEFAULT 1,
+                start_date TEXT,
+                end_date TEXT,
+                is_active INTEGER NOT NULL DEFAULT 1,
+                created_by INTEGER,
+                created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                updated_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY(created_by) REFERENCES users(user_id) ON DELETE SET NULL
+            )
+            """
+        )
+
         connection.execute(
             """
             CREATE TABLE IF NOT EXISTS leadwise_events (
