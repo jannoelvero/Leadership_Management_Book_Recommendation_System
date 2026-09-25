@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.57.1 — Portable Deployment Foundation — Administrative Governance & Internal Analytics
+# Version 18.57.2 — Cloud SQLite Bootstrap Fix — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -97,6 +97,24 @@ def db_connection():
 
 def migrate_admin_schema():
     with db_connection() as connection:
+        # 18.57.2: bootstrap the base users table before Admin-only migrations.
+        # Streamlit Community Cloud deploys the Reader and Admin as separate
+        # app instances, so the Admin cannot assume the Reader has already
+        # created the local SQLite schema.
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS users (
+                user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                full_name TEXT NOT NULL,
+                email TEXT NOT NULL UNIQUE COLLATE NOCASE,
+                password_hash TEXT NOT NULL,
+                password_salt TEXT NOT NULL,
+                created_at TEXT NOT NULL,
+                is_active INTEGER NOT NULL DEFAULT 1
+            )
+            """
+        )
+
         user_columns = {
             row["name"] for row in connection.execute("PRAGMA table_info(users)").fetchall()
         }
