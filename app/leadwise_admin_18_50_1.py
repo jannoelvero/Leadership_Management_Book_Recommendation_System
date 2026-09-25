@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.57.2 — Cloud SQLite Bootstrap Fix — Administrative Governance & Internal Analytics
+# Version 18.57.3 — Secure Super Admin Bootstrap — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -307,6 +307,108 @@ def hash_password(password, salt_hex):
         "sha256", password.encode("utf-8"), salt, PBKDF2_ITERATIONS
     )
     return digest.hex()
+
+
+def _bootstrap_secret(name):
+    """Read a bootstrap value from Streamlit secrets first, then environment."""
+    value = ""
+    try:
+        value = st.secrets.get(name, "")
+    except Exception:
+        value = ""
+    return str(value or os.getenv(name, "")).strip()
+
+
+def bootstrap_super_admin():
+    """Create the first Super Admin only when none exists.
+
+    Credentials are supplied through Streamlit Secrets or environment variables.
+    No plaintext bootstrap password is stored in the database or source code.
+    """
+    with db_connection() as connection:
+        existing = connection.execute(
+            """
+            SELECT COUNT(*) AS n
+            FROM users
+            WHERE role = 'super_admin'
+              AND is_active = 1
+              AND COALESCE(admin_account_status, 'Active') = 'Active'
+            """
+        ).fetchone()
+
+        if existing and int(existing["n"] or 0) > 0:
+            return False
+
+    full_name = _bootstrap_secret("LEADWISE_SUPER_ADMIN_NAME")
+    email = _bootstrap_secret("LEADWISE_SUPER_ADMIN_EMAIL").lower()
+    password = _bootstrap_secret("LEADWISE_SUPER_ADMIN_PASSWORD")
+
+    # Missing secrets are allowed: the Admin login page remains available,
+    # but no bootstrap account is created.
+    if not full_name or not email or not password:
+        return False
+
+    if "@" not in email or "." not in email.split("@")[-1]:
+        raise RuntimeError("LEADWISE_SUPER_ADMIN_EMAIL is not a valid email address.")
+
+    if len(password) < 8:
+        raise RuntimeError(
+            "LEADWISE_SUPER_ADMIN_PASSWORD must contain at least 8 characters."
+        )
+
+    salt_hex = secrets.token_bytes(16).hex()
+    password_hash = hash_password(password, salt_hex)
+    now = datetime.now(timezone.utc).isoformat()
+
+    with db_connection() as connection:
+        # Re-check inside the write transaction to keep the bootstrap idempotent.
+        existing_super = connection.execute(
+            """
+            SELECT user_id
+            FROM users
+            WHERE role = 'super_admin'
+              AND is_active = 1
+              AND COALESCE(admin_account_status, 'Active') = 'Active'
+            LIMIT 1
+            """
+        ).fetchone()
+        if existing_super:
+            return False
+
+        existing_email = connection.execute(
+            "SELECT user_id FROM users WHERE lower(email) = lower(?)",
+            (email,),
+        ).fetchone()
+
+        if existing_email:
+            connection.execute(
+                """
+                UPDATE users
+                SET full_name = ?,
+                    password_hash = ?,
+                    password_salt = ?,
+                    role = 'super_admin',
+                    is_active = 1,
+                    admin_account_status = 'Active',
+                    admin_status_note = 'Secure bootstrap promotion'
+                WHERE user_id = ?
+                """,
+                (full_name, password_hash, salt_hex, int(existing_email["user_id"])),
+            )
+        else:
+            connection.execute(
+                """
+                INSERT INTO users
+                    (full_name, email, password_hash, password_salt,
+                     created_at, is_active, role, admin_account_status,
+                     admin_status_note)
+                VALUES (?, ?, ?, ?, ?, 1, 'super_admin', 'Active',
+                        'Secure bootstrap account')
+                """,
+                (full_name, email, password_hash, salt_hex, now),
+            )
+
+    return True
 
 
 def authenticate_admin(email, password):
@@ -1133,6 +1235,7 @@ def dataframe(query, params=()):
 
 
 migrate_admin_schema()
+bootstrap_super_admin()
 
 # -----------------------------
 # Authentication gate
