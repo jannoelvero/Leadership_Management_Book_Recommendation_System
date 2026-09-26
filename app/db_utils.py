@@ -17,6 +17,42 @@ import sqlite3
 POSTGRES_BACKENDS = {"postgres", "postgresql"}
 
 
+def _read_setting(name, default=""):
+    """Read one database setting from Streamlit secrets, then environment."""
+    try:
+        import streamlit as st
+
+        value = st.secrets.get(name, default)
+        if value is not None and str(value).strip() != "":
+            return str(value).strip()
+    except Exception:
+        pass
+
+    value = os.getenv(name, default)
+    return str(value or default).strip()
+
+
+def get_postgres_components():
+    """Return PostgreSQL connection components when configured separately.
+
+    Separate settings avoid URL encoding problems in passwords and are the
+    preferred Streamlit Community Cloud configuration for LeadWise 18.58.1.
+    """
+    values = {
+        "host": _read_setting("DATABASE_HOST"),
+        "port": _read_setting("DATABASE_PORT", "5432"),
+        "dbname": _read_setting("DATABASE_NAME", "postgres"),
+        "user": _read_setting("DATABASE_USER"),
+        "password": _read_setting("DATABASE_PASSWORD"),
+        "sslmode": _read_setting("DATABASE_SSLMODE", "require"),
+    }
+
+    required = ("host", "dbname", "user", "password")
+    if all(values[name] for name in required):
+        return values
+    return None
+
+
 def get_database_url(explicit_url=""):
     """Return DATABASE_URL from an explicit value, Streamlit secrets, or env."""
     value = str(explicit_url or "").strip()
@@ -32,7 +68,16 @@ def get_database_url(explicit_url=""):
     except Exception:
         pass
 
-    return os.getenv("DATABASE_URL", "").strip()
+    value = os.getenv("DATABASE_URL", "").strip()
+    if value:
+        return value
+
+    # A non-secret marker lets existing Reader/Admin code recognize that
+    # PostgreSQL is configured through separate connection components.
+    if get_postgres_components():
+        return "postgresql://configured-from-components"
+
+    return ""
 
 
 def get_database_backend(database_url=""):
@@ -150,8 +195,9 @@ def connect_database(sqlite_path, database_url=""):
     PostgreSQL is used when DATABASE_URL is present.
     """
     resolved_url = get_database_url(database_url)
+    components = get_postgres_components()
 
-    if resolved_url:
+    if resolved_url or components:
         try:
             import psycopg
             from psycopg.rows import dict_row
@@ -161,11 +207,26 @@ def connect_database(sqlite_path, database_url=""):
                 "Add psycopg[binary] to requirements.txt."
             ) from exc
 
-        raw_connection = psycopg.connect(
-            resolved_url,
-            row_factory=dict_row,
-            autocommit=False,
-        )
+        if components:
+            raw_connection = psycopg.connect(
+                host=components["host"],
+                port=int(components["port"]),
+                dbname=components["dbname"],
+                user=components["user"],
+                password=components["password"],
+                sslmode=components["sslmode"],
+                connect_timeout=10,
+                row_factory=dict_row,
+                autocommit=False,
+            )
+        else:
+            raw_connection = psycopg.connect(
+                resolved_url,
+                connect_timeout=10,
+                row_factory=dict_row,
+                autocommit=False,
+            )
+
         return LeadWiseConnection(raw_connection, "postgresql")
 
     path = Path(sqlite_path).expanduser()
