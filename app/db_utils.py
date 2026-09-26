@@ -1,12 +1,14 @@
 """LeadWise shared database compatibility utilities.
 
-Version 18.58.0
+Version 18.58.2
 
 Local development uses SQLite.
-Cloud deployment uses PostgreSQL when DATABASE_URL is configured.
+Cloud deployment uses PostgreSQL when either:
+1. Separate PostgreSQL component settings are configured, or
+2. DATABASE_URL is configured.
 
-This module intentionally contains only database compatibility logic. It does not
-create or mutate the PostgreSQL schema. The Supabase schema is managed separately.
+Component settings are preferred because they avoid URL encoding problems.
+This module never creates or mutates the PostgreSQL schema.
 """
 
 from pathlib import Path
@@ -17,8 +19,8 @@ import sqlite3
 POSTGRES_BACKENDS = {"postgres", "postgresql"}
 
 
-def _read_setting(name, default=""):
-    """Read one database setting from Streamlit secrets, then environment."""
+def _streamlit_secret(name, default=""):
+    """Read a top-level Streamlit secret without exposing its value."""
     try:
         import streamlit as st
 
@@ -27,71 +29,133 @@ def _read_setting(name, default=""):
             return str(value).strip()
     except Exception:
         pass
+    return ""
 
-    value = os.getenv(name, default)
-    return str(value or default).strip()
+
+def _nested_streamlit_secret(section_name, key_name, default=""):
+    """Read a nested Streamlit secret such as [database] host = '...'."""
+    try:
+        import streamlit as st
+
+        section = st.secrets.get(section_name, {})
+        if section:
+            value = section.get(key_name, default)
+            if value is not None and str(value).strip() != "":
+                return str(value).strip()
+    except Exception:
+        pass
+    return ""
+
+
+def _read_setting(name, default="", nested_keys=()):
+    """Read one setting from top-level secrets, nested secrets, then env."""
+    value = _streamlit_secret(name)
+    if value:
+        return value
+
+    for section_name, key_name in nested_keys:
+        value = _nested_streamlit_secret(section_name, key_name)
+        if value:
+            return value
+
+    value = os.getenv(name, "")
+    if value is not None and str(value).strip() != "":
+        return str(value).strip()
+
+    return str(default or "").strip()
+
+
+def _component_values():
+    """Return PostgreSQL component values with safe defaults."""
+    return {
+        "host": _read_setting(
+            "DATABASE_HOST",
+            nested_keys=(("database", "host"), ("postgres", "host")),
+        ),
+        "port": _read_setting(
+            "DATABASE_PORT",
+            "5432",
+            nested_keys=(("database", "port"), ("postgres", "port")),
+        ),
+        "dbname": _read_setting(
+            "DATABASE_NAME",
+            "postgres",
+            nested_keys=(
+                ("database", "name"),
+                ("database", "dbname"),
+                ("postgres", "name"),
+                ("postgres", "dbname"),
+            ),
+        ),
+        "user": _read_setting(
+            "DATABASE_USER",
+            nested_keys=(("database", "user"), ("postgres", "user")),
+        ),
+        "password": _read_setting(
+            "DATABASE_PASSWORD",
+            nested_keys=(("database", "password"), ("postgres", "password")),
+        ),
+        "sslmode": _read_setting(
+            "DATABASE_SSLMODE",
+            "require",
+            nested_keys=(("database", "sslmode"), ("postgres", "sslmode")),
+        ),
+    }
+
+
+def get_postgres_component_status():
+    """Return safe component presence information without secret values."""
+    values = _component_values()
+    required = {
+        "DATABASE_HOST": values["host"],
+        "DATABASE_USER": values["user"],
+        "DATABASE_PASSWORD": values["password"],
+    }
+    present = [name for name, value in required.items() if value]
+    missing = [name for name, value in required.items() if not value]
+    return {
+        "any_present": bool(present),
+        "complete": not missing,
+        "present": present,
+        "missing": missing,
+    }
 
 
 def get_postgres_components():
-    """Return PostgreSQL connection components when configured separately.
-
-    Separate settings avoid URL encoding problems in passwords and are the
-    preferred Streamlit Community Cloud configuration for LeadWise 18.58.1.
-    """
-    values = {
-        "host": _read_setting("DATABASE_HOST"),
-        "port": _read_setting("DATABASE_PORT", "5432"),
-        "dbname": _read_setting("DATABASE_NAME", "postgres"),
-        "user": _read_setting("DATABASE_USER"),
-        "password": _read_setting("DATABASE_PASSWORD"),
-        "sslmode": _read_setting("DATABASE_SSLMODE", "require"),
-    }
-
-    required = ("host", "dbname", "user", "password")
-    if all(values[name] for name in required):
+    """Return PostgreSQL components only when the required values are complete."""
+    values = _component_values()
+    if values["host"] and values["user"] and values["password"]:
         return values
     return None
 
 
 def get_database_url(explicit_url=""):
-    """Return DATABASE_URL from an explicit value, Streamlit secrets, or env."""
+    """Return DATABASE_URL only. Component configuration is handled separately."""
     value = str(explicit_url or "").strip()
-    if value:
+    if value and value != "postgresql://configured-from-components":
         return value
 
-    try:
-        import streamlit as st
-
-        value = str(st.secrets.get("DATABASE_URL", "") or "").strip()
-        if value:
-            return value
-    except Exception:
-        pass
+    value = _streamlit_secret("DATABASE_URL")
+    if value:
+        return value
 
     value = os.getenv("DATABASE_URL", "").strip()
     if value:
         return value
 
-    # A non-secret marker lets existing Reader/Admin code recognize that
-    # PostgreSQL is configured through separate connection components.
-    if get_postgres_components():
-        return "postgresql://configured-from-components"
-
     return ""
 
 
 def get_database_backend(database_url=""):
-    """Return 'postgresql' when a database URL exists, otherwise 'sqlite'."""
-    return "postgresql" if get_database_url(database_url) else "sqlite"
+    """Return the active database backend name."""
+    status = get_postgres_component_status()
+    if status["any_present"] or get_database_url(database_url):
+        return "postgresql"
+    return "sqlite"
 
 
 def _translate_qmark_sql(sql):
-    """Convert SQLite qmark placeholders to psycopg %s placeholders.
-
-    Question marks inside quoted SQL string literals or quoted identifiers are
-    preserved. LeadWise uses qmark placeholders throughout its validated SQLite
-    code, so translating them centrally avoids rewriting every query.
-    """
+    """Convert SQLite qmark placeholders to psycopg %s placeholders."""
     text = str(sql)
     output = []
     i = 0
@@ -140,7 +204,6 @@ def _translate_qmark_sql(sql):
 
 
 def row_to_dict(row):
-    """Convert a SQLite Row or PostgreSQL dict row into a regular dictionary."""
     if row is None:
         return None
     if isinstance(row, dict):
@@ -149,7 +212,6 @@ def row_to_dict(row):
 
 
 def rows_to_dicts(rows):
-    """Convert database rows into a list of regular dictionaries."""
     return [row_to_dict(row) for row in rows]
 
 
@@ -189,15 +251,27 @@ class LeadWiseConnection:
 
 
 def connect_database(sqlite_path, database_url=""):
-    """Open the current LeadWise database backend.
+    """Open SQLite locally or PostgreSQL in cloud.
 
-    SQLite is used when DATABASE_URL is absent.
-    PostgreSQL is used when DATABASE_URL is present.
+    Separate PostgreSQL components are always preferred over DATABASE_URL.
+    If component configuration is partial, fail with the exact missing secret
+    names instead of silently falling back to a stale DATABASE_URL.
     """
-    resolved_url = get_database_url(database_url)
+    component_status = get_postgres_component_status()
     components = get_postgres_components()
+    resolved_url = get_database_url(database_url)
 
-    if resolved_url or components:
+    if component_status["any_present"] and not component_status["complete"]:
+        missing = ", ".join(component_status["missing"])
+        raise RuntimeError(
+            "LeadWise PostgreSQL component configuration is incomplete. "
+            f"Missing Streamlit secret(s): {missing}. "
+            "Use DATABASE_HOST, DATABASE_USER, and DATABASE_PASSWORD at the top "
+            "level of Streamlit Secrets. DATABASE_PORT, DATABASE_NAME, and "
+            "DATABASE_SSLMODE are optional because LeadWise supplies safe defaults."
+        )
+
+    if components or resolved_url:
         try:
             import psycopg
             from psycopg.rows import dict_row
@@ -239,19 +313,16 @@ def connect_database(sqlite_path, database_url=""):
 
 
 def fetch_one(connection, sql, params=None):
-    """Execute a query and return one row as a regular dictionary."""
     row = connection.execute(sql, params).fetchone()
     return row_to_dict(row)
 
 
 def fetch_all(connection, sql, params=None):
-    """Execute a query and return all rows as regular dictionaries."""
     rows = connection.execute(sql, params).fetchall()
     return rows_to_dicts(rows)
 
 
 def query_dataframe(connection, sql, params=None):
-    """Execute a query and return a pandas DataFrame without SQLAlchemy."""
     import pandas as pd
 
     rows = fetch_all(connection, sql, params)
@@ -259,7 +330,6 @@ def query_dataframe(connection, sql, params=None):
 
 
 def insert_returning_id(connection, sql, params, id_column):
-    """Execute an INSERT and return its generated identity value."""
     if connection.backend == "postgresql":
         query = str(sql).strip().rstrip(";")
         if " returning " not in query.lower():
@@ -275,7 +345,6 @@ def insert_returning_id(connection, sql, params, id_column):
 
 
 def get_table_columns(connection, table_name):
-    """Return column names for one table on either supported backend."""
     table_name = str(table_name).strip()
 
     if connection.backend == "postgresql":
@@ -296,11 +365,6 @@ def get_table_columns(connection, table_name):
 
 
 def validate_required_schema(connection, expected_schema):
-    """Validate required tables and columns without mutating the database.
-
-    expected_schema must be a mapping of table name to an iterable of required
-    column names. Returns a list of readable validation errors.
-    """
     problems = []
 
     for table_name, required_columns in expected_schema.items():
@@ -319,7 +383,6 @@ def validate_required_schema(connection, expected_schema):
 
 
 def is_integrity_error(error):
-    """Return True for SQLite or PostgreSQL integrity constraint errors."""
     if isinstance(error, sqlite3.IntegrityError):
         return True
 
