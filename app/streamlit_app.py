@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.58.0 — Shared Cloud Database Integration
+# Version 18.58.1 — Shared Cloud Database Backend Verification
 # =========================================================
 
 import sys
@@ -31,6 +31,7 @@ from db_utils import (
     connect_database,
     get_database_backend,
     get_database_url,
+    get_postgres_component_status,
     insert_returning_id,
     is_integrity_error,
     query_dataframe,
@@ -1505,6 +1506,12 @@ def complete_pending_library_save(user):
 
 initialize_user_database()
 
+# 18.58.1: safe runtime backend verification.
+# This exposes only backend/status labels, never credentials.
+with get_user_connection() as _backend_check_connection:
+    ACTIVE_DATABASE_BACKEND = _backend_check_connection.backend
+POSTGRES_COMPONENT_STATUS = get_postgres_component_status()
+
 
 # =========================================================
 # IMPORT PATH
@@ -1529,6 +1536,18 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+_backend_label = (
+    "Supabase PostgreSQL"
+    if ACTIVE_DATABASE_BACKEND == "postgresql"
+    else "SQLite"
+)
+st.sidebar.caption(f"Database backend: {_backend_label}")
+if ACTIVE_DATABASE_BACKEND == "sqlite":
+    _secret_label = (
+        "Detected" if POSTGRES_COMPONENT_STATUS.get("complete") else "Not detected"
+    )
+    st.sidebar.caption(f"PostgreSQL component secrets: {_secret_label}")
 
 
 # =========================================================
