@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.58.1 — PostgreSQL Retirement Analytics Compatibility — Administrative Governance & Internal Analytics
+# Version 18.58.2 — Inbox Reply Workflow — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -10,6 +10,8 @@ import hmac
 import secrets
 import re
 import html
+import urllib.request
+import urllib.error
 from datetime import datetime, timezone
 
 import pandas as pd
@@ -116,7 +118,12 @@ ADMIN_REQUIRED_SCHEMA = {
     "leadwise_inquiries": {
         "inquiry_id", "user_id", "inquiry_type", "full_name", "email", "subject",
         "message", "suggested_title", "suggested_author", "suggested_isbn_or_link",
-        "related_book_id", "created_at", "status",
+        "related_book_id", "created_at", "status", "replied_at", "replied_by",
+    },
+    "leadwise_inquiry_replies": {
+        "reply_id", "inquiry_id", "admin_user_id", "reply_message",
+        "sent_to_email", "delivery_status", "external_message_id",
+        "created_at", "sent_at",
     },
     "featured_reading": {
         "feature_id", "book_id", "feature_message", "display_order", "start_date",
@@ -328,9 +335,55 @@ def migrate_admin_schema():
                 related_book_id TEXT,
                 created_at TEXT NOT NULL,
                 status TEXT NOT NULL DEFAULT 'New',
-                FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE SET NULL
+                replied_at TEXT,
+                replied_by INTEGER,
+                FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE SET NULL,
+                FOREIGN KEY(replied_by) REFERENCES users(user_id) ON DELETE SET NULL
             )
             """
+        )
+
+        inquiry_columns = {
+            row["name"]
+            for row in connection.execute(
+                "PRAGMA table_info(leadwise_inquiries)"
+            ).fetchall()
+        }
+        if "replied_at" not in inquiry_columns:
+            connection.execute(
+                "ALTER TABLE leadwise_inquiries ADD COLUMN replied_at TEXT"
+            )
+        if "replied_by" not in inquiry_columns:
+            connection.execute(
+                "ALTER TABLE leadwise_inquiries ADD COLUMN replied_by INTEGER"
+            )
+
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS leadwise_inquiry_replies (
+                reply_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                inquiry_id INTEGER NOT NULL,
+                admin_user_id INTEGER,
+                reply_message TEXT NOT NULL,
+                sent_to_email TEXT,
+                delivery_status TEXT NOT NULL DEFAULT 'Pending',
+                external_message_id TEXT,
+                created_at TEXT NOT NULL,
+                sent_at TEXT,
+                FOREIGN KEY(inquiry_id) REFERENCES leadwise_inquiries(inquiry_id)
+                    ON DELETE CASCADE,
+                FOREIGN KEY(admin_user_id) REFERENCES users(user_id)
+                    ON DELETE SET NULL
+            )
+            """
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_inquiry_id "
+            "ON leadwise_inquiry_replies(inquiry_id)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_created_at "
+            "ON leadwise_inquiry_replies(created_at)"
         )
 
         connection.execute(
@@ -546,6 +599,242 @@ def _bootstrap_secret(name):
     except Exception:
         value = ""
     return str(value or os.getenv(name, "")).strip()
+
+
+
+def _leadwise_email_settings():
+    """Return transactional email settings without exposing secret values."""
+    api_key = _bootstrap_secret("RESEND_API_KEY")
+    from_email = _bootstrap_secret("LEADWISE_REPLY_FROM_EMAIL")
+    from_name = _bootstrap_secret("LEADWISE_REPLY_FROM_NAME") or "LeadWise"
+    return {
+        "api_key": api_key,
+        "from_email": from_email,
+        "from_name": from_name,
+        "configured": bool(api_key and from_email),
+    }
+
+
+def _valid_email_address(value):
+    email_value = str(value or "").strip()
+    return (
+        bool(email_value)
+        and "@" in email_value
+        and "." in email_value.split("@")[-1]
+    )
+
+
+def send_inquiry_reply_email(inquiry, reply_message):
+    """Send one inquiry reply through Resend's HTTPS Email API."""
+    reply_message = str(reply_message or "").strip()
+    recipient = str(inquiry.get("email") or "").strip()
+
+    if not reply_message:
+        return False, None, "Enter a reply before sending.", False
+
+    if not _valid_email_address(recipient):
+        return False, None, "This inquiry does not have a valid reply email address.", False
+
+    settings = _leadwise_email_settings()
+    if not settings["configured"]:
+        return (
+            False,
+            None,
+            (
+                "Email delivery is not configured yet. Add RESEND_API_KEY and "
+                "LEADWISE_REPLY_FROM_EMAIL to the Admin Streamlit secrets."
+            ),
+            False,
+        )
+
+    original_subject = str(inquiry.get("subject") or "").strip()
+    subject = original_subject or "Your LeadWise inquiry"
+    if not subject.lower().startswith("re:"):
+        subject = f"Re: {subject}"
+
+    sender_name = settings["from_name"].replace("\n", " ").strip() or "LeadWise"
+    from_value = f"{sender_name} <{settings['from_email']}>"
+
+    recipient_name = html.escape(
+        str(inquiry.get("full_name") or "").strip() or "Reader"
+    )
+    safe_reply = html.escape(reply_message).replace("\n", "<br>")
+    safe_original = html.escape(str(inquiry.get("message") or "")).replace(
+        "\n", "<br>"
+    )
+    safe_sender_name = html.escape(sender_name)
+
+    html_body = (
+        f"<p>Hello {recipient_name},</p>"
+        f"<p>{safe_reply}</p>"
+        f"<p>Regards,<br>{safe_sender_name}</p>"
+        "<hr>"
+        "<p style='color:#66788A;font-size:12px;'>"
+        "Your original LeadWise inquiry:</p>"
+        f"<blockquote>{safe_original}</blockquote>"
+    )
+
+    text_body = (
+        f"Hello {str(inquiry.get('full_name') or '').strip() or 'Reader'},\n\n"
+        f"{reply_message}\n\n"
+        f"Regards,\n{sender_name}\n\n"
+        "Your original LeadWise inquiry:\n"
+        f"{str(inquiry.get('message') or '').strip()}"
+    )
+
+    payload = {
+        "from": from_value,
+        "to": [recipient],
+        "subject": subject,
+        "html": html_body,
+        "text": text_body,
+    }
+
+    inquiry_id = int(inquiry["inquiry_id"])
+    fingerprint = hashlib.sha256(reply_message.encode("utf-8")).hexdigest()[:24]
+    idempotency_key = f"leadwise-inquiry-{inquiry_id}-{fingerprint}"
+
+    request = urllib.request.Request(
+        "https://api.resend.com/emails",
+        data=json.dumps(payload).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {settings['api_key']}",
+            "Content-Type": "application/json",
+            "Idempotency-Key": idempotency_key,
+        },
+    )
+
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            response_body = response.read().decode("utf-8", errors="replace")
+            response_data = json.loads(response_body or "{}")
+            external_message_id = str(response_data.get("id") or "").strip()
+            if not external_message_id:
+                return (
+                    False,
+                    None,
+                    "The email provider accepted the request but returned no message ID.",
+                    True,
+                )
+            return True, external_message_id, "Reply email sent.", True
+
+    except urllib.error.HTTPError as exc:
+        try:
+            error_body = exc.read().decode("utf-8", errors="replace")
+            error_data = json.loads(error_body or "{}")
+            provider_message = (
+                error_data.get("message")
+                or error_data.get("name")
+                or f"HTTP {exc.code}"
+            )
+        except Exception:
+            provider_message = f"HTTP {exc.code}"
+
+        return (
+            False,
+            None,
+            f"Email provider rejected the message: {provider_message}",
+            True,
+        )
+
+    except Exception as exc:
+        return (
+            False,
+            None,
+            f"Email delivery failed: {type(exc).__name__}.",
+            True,
+        )
+
+
+def record_inquiry_reply(
+    inquiry_id,
+    reply_message,
+    sent_to_email,
+    delivery_status,
+    external_message_id=None,
+):
+    """Persist an Admin reply attempt and update the inquiry when sent."""
+    actor = admin_user()
+    if not actor:
+        raise RuntimeError("An authenticated administrator is required.")
+
+    now = datetime.now(timezone.utc).isoformat()
+    sent_at = now if delivery_status == "Sent" else None
+
+    with db_connection() as connection:
+        reply_id = insert_returning_id(
+            connection,
+            """
+            INSERT INTO leadwise_inquiry_replies
+                (inquiry_id, admin_user_id, reply_message, sent_to_email,
+                 delivery_status, external_message_id, created_at, sent_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                int(inquiry_id),
+                int(actor["user_id"]),
+                str(reply_message).strip(),
+                str(sent_to_email or "").strip() or None,
+                str(delivery_status),
+                external_message_id,
+                now,
+                sent_at,
+            ),
+            "reply_id",
+        )
+
+        if delivery_status == "Sent":
+            connection.execute(
+                """
+                UPDATE leadwise_inquiries
+                SET status='Replied', replied_at=?, replied_by=?
+                WHERE inquiry_id=?
+                """,
+                (now, int(actor["user_id"]), int(inquiry_id)),
+            )
+
+    log_admin_action(
+        "inquiry_reply_sent" if delivery_status == "Sent" else "inquiry_reply_failed",
+        "inquiry",
+        str(inquiry_id),
+        (
+            f"reply_id={reply_id}; delivery_status={delivery_status}; "
+            f"sent_to={str(sent_to_email or '').strip()}"
+        ),
+    )
+    return reply_id
+
+
+def update_inquiry_status(inquiry_id, status):
+    allowed_statuses = {"New", "In Progress", "Replied", "Closed"}
+    if status not in allowed_statuses:
+        return False, "Invalid inquiry status."
+
+    actor = admin_user()
+    if not actor:
+        return False, "Administrator authentication is required."
+
+    with db_connection() as connection:
+        exists = connection.execute(
+            "SELECT inquiry_id FROM leadwise_inquiries WHERE inquiry_id=?",
+            (int(inquiry_id),),
+        ).fetchone()
+        if not exists:
+            return False, "Inquiry not found."
+
+        connection.execute(
+            "UPDATE leadwise_inquiries SET status=? WHERE inquiry_id=?",
+            (status, int(inquiry_id)),
+        )
+
+    log_admin_action(
+        "inquiry_status_updated",
+        "inquiry",
+        str(inquiry_id),
+        f"status={status}",
+    )
+    return True, f"Inquiry marked {status}."
 
 
 def bootstrap_super_admin():
@@ -1923,16 +2212,231 @@ elif section == "Ask LeadWise":
 
 elif section == "Inbox":
     st.subheader("LeadWise Inbox")
+    st.caption(
+        "Review reader inquiries, reply by email, track response history, "
+        "and manage inquiry status."
+    )
+
+    inbox_notice = st.session_state.pop("leadwise_inbox_notice", None)
+    if inbox_notice:
+        st.success(inbox_notice)
+
     inbox = dataframe(
         """
         SELECT inquiry_id, inquiry_type, full_name, email, subject, message,
-               related_book_id, status, created_at
+               related_book_id, status, created_at, replied_at, replied_by
         FROM leadwise_inquiries
         WHERE inquiry_type <> 'Suggest a Book'
         ORDER BY inquiry_id DESC
         """
     )
-    st.dataframe(inbox, use_container_width=True, hide_index=True)
+
+    if inbox.empty:
+        st.info("There are no reader inquiries in the Inbox.")
+    else:
+        inbox_display = inbox[
+            [
+                "inquiry_id",
+                "inquiry_type",
+                "full_name",
+                "email",
+                "subject",
+                "status",
+                "created_at",
+                "replied_at",
+            ]
+        ].copy()
+        st.dataframe(inbox_display, use_container_width=True, hide_index=True)
+
+        inquiry_ids = inbox["inquiry_id"].astype(int).tolist()
+        selected_inquiry_id = st.selectbox(
+            "Open inquiry",
+            inquiry_ids,
+            format_func=lambda inquiry_id: (
+                f"#{inquiry_id} · "
+                + str(
+                    inbox.loc[
+                        inbox["inquiry_id"].astype(int) == int(inquiry_id),
+                        "subject",
+                    ].iloc[0]
+                    or "No subject"
+                )
+            ),
+            key="leadwise_inbox_selected_inquiry",
+        )
+
+        selected_row = inbox[
+            inbox["inquiry_id"].astype(int) == int(selected_inquiry_id)
+        ].iloc[0]
+        inquiry = selected_row.to_dict()
+
+        st.markdown("### Inquiry")
+        with st.container(border=True):
+            meta1, meta2, meta3 = st.columns(3)
+            meta1.markdown(
+                "**Type:** "
+                + html.escape(str(inquiry.get("inquiry_type") or ""))
+            )
+            meta2.markdown(
+                "**Status:** "
+                + html.escape(str(inquiry.get("status") or ""))
+            )
+            meta3.markdown(
+                "**Received:** "
+                + html.escape(str(inquiry.get("created_at") or ""))
+            )
+
+            st.markdown(
+                "**From:** "
+                + html.escape(str(inquiry.get("full_name") or "Guest"))
+            )
+            st.markdown(
+                "**Email:** "
+                + html.escape(str(inquiry.get("email") or "Not provided"))
+            )
+            st.markdown(
+                "**Subject:** "
+                + html.escape(str(inquiry.get("subject") or "No subject"))
+            )
+            st.markdown("**Message**")
+            st.write(str(inquiry.get("message") or ""))
+
+        st.markdown("### Reply history")
+        reply_history = dataframe(
+            """
+            SELECT r.reply_id,
+                   COALESCE(u.full_name, 'Former / unavailable administrator')
+                       AS administrator,
+                   r.reply_message,
+                   r.sent_to_email,
+                   r.delivery_status,
+                   r.external_message_id,
+                   r.created_at,
+                   r.sent_at
+            FROM leadwise_inquiry_replies r
+            LEFT JOIN users u ON u.user_id = r.admin_user_id
+            WHERE r.inquiry_id=?
+            ORDER BY r.reply_id DESC
+            """,
+            (int(selected_inquiry_id),),
+        )
+
+        if reply_history.empty:
+            st.caption("No Admin replies have been recorded for this inquiry.")
+        else:
+            for _, reply in reply_history.iterrows():
+                with st.container(border=True):
+                    h1, h2, h3 = st.columns([1.5, 1, 1.5])
+                    h1.markdown(
+                        "**Admin:** "
+                        + html.escape(str(reply["administrator"]))
+                    )
+                    h2.markdown(
+                        "**Status:** "
+                        + html.escape(str(reply["delivery_status"]))
+                    )
+                    h3.markdown(
+                        "**Sent:** "
+                        + html.escape(
+                            str(reply["sent_at"] or reply["created_at"])
+                        )
+                    )
+                    st.write(str(reply["reply_message"] or ""))
+                    if str(reply.get("external_message_id") or "").strip():
+                        st.caption(
+                            "Provider message ID: "
+                            + str(reply["external_message_id"])
+                        )
+
+        st.markdown("### Respond")
+        recipient_email = str(inquiry.get("email") or "").strip()
+        email_settings = _leadwise_email_settings()
+
+        if not _valid_email_address(recipient_email):
+            st.warning(
+                "This inquiry does not contain a valid email address, so LeadWise "
+                "cannot send an external reply."
+            )
+        elif not email_settings["configured"]:
+            st.warning(
+                "Email delivery is not configured yet. Add RESEND_API_KEY and "
+                "LEADWISE_REPLY_FROM_EMAIL to the Admin Streamlit secrets. "
+                "LEADWISE_REPLY_FROM_NAME is optional."
+            )
+        else:
+            st.caption(
+                "Reply delivery is configured. The API key remains in Streamlit "
+                "Secrets and is never displayed in the Admin interface."
+            )
+
+        with st.form(
+            f"leadwise_inquiry_reply_form_{int(selected_inquiry_id)}",
+            clear_on_submit=True,
+        ):
+            reply_message = st.text_area(
+                "Reply",
+                placeholder="Write the response that will be emailed to the reader...",
+                height=180,
+            )
+            send_reply = st.form_submit_button(
+                "Send Reply",
+                use_container_width=True,
+            )
+
+        if send_reply:
+            if not str(reply_message or "").strip():
+                st.warning("Enter a reply before sending.")
+            else:
+                ok, external_id, send_message, attempted = send_inquiry_reply_email(
+                    inquiry,
+                    reply_message,
+                )
+
+                if attempted:
+                    record_inquiry_reply(
+                        selected_inquiry_id,
+                        reply_message,
+                        recipient_email,
+                        "Sent" if ok else "Failed",
+                        external_id,
+                    )
+
+                if ok:
+                    st.session_state["leadwise_inbox_notice"] = (
+                        f"Reply sent to {recipient_email}. Inquiry marked Replied."
+                    )
+                    st.rerun()
+                else:
+                    st.error(send_message)
+
+        with st.expander("Update inquiry status", expanded=False):
+            status_options = ["New", "In Progress", "Replied", "Closed"]
+            current_status = str(inquiry.get("status") or "New")
+            default_status_index = (
+                status_options.index(current_status)
+                if current_status in status_options
+                else 0
+            )
+            new_status = st.selectbox(
+                "Status",
+                status_options,
+                index=default_status_index,
+                key=f"inquiry_status_{int(selected_inquiry_id)}",
+            )
+            if st.button(
+                "Update Status",
+                key=f"update_inquiry_status_{int(selected_inquiry_id)}",
+                use_container_width=True,
+            ):
+                ok, status_message = update_inquiry_status(
+                    selected_inquiry_id,
+                    new_status,
+                )
+                if ok:
+                    st.session_state["leadwise_inbox_notice"] = status_message
+                    st.rerun()
+                else:
+                    st.error(status_message)
 
 elif section == "Book Suggestions":
     st.subheader("Book Suggestions")
