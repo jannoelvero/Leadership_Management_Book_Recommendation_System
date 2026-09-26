@@ -1,6 +1,6 @@
 """LeadWise shared database compatibility utilities.
 
-Version 18.58.2
+Version 18.58.3
 
 Local development uses SQLite.
 Cloud deployment uses PostgreSQL when either:
@@ -223,8 +223,24 @@ class LeadWiseConnection:
         self.backend = backend
 
     def execute(self, sql, params=None):
-        params = () if params is None else params
         query = _translate_qmark_sql(sql) if self.backend == "postgresql" else sql
+
+        # Important for psycopg:
+        # When a query has no parameters, do not pass an empty tuple.
+        # Psycopg treats percent signs in SQL text as parameter markers whenever
+        # a params object is supplied. This breaks valid SQL such as:
+        # LIKE 'administrator_%'
+        if params is None:
+            return self.raw_connection.execute(query)
+
+        try:
+            has_params = len(params) > 0
+        except TypeError:
+            has_params = True
+
+        if not has_params:
+            return self.raw_connection.execute(query)
+
         return self.raw_connection.execute(query, params)
 
     def commit(self):
