@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.58.0 — Shared Cloud Database Integration — Administrative Governance & Internal Analytics
+# Version 18.58.1 — PostgreSQL Retirement Analytics Compatibility — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -1758,29 +1758,50 @@ elif section == "Internal Operations":
 
 
         st.markdown("#### Catalog Retirement Analytics")
-        retirement_summary = dataframe("""
-            SELECT
-                CASE
-                    WHEN details LIKE '%reason_category=%'
-                    THEN substr(
-                        details,
-                        instr(details,'reason_category=') + length('reason_category='),
-                        CASE
-                            WHEN instr(substr(details,instr(details,'reason_category=') + length('reason_category=')),';') > 0
-                            THEN instr(substr(details,instr(details,'reason_category=') + length('reason_category=')),';') - 1
-                            ELSE length(details)
-                        END
-                    )
-                    WHEN details LIKE '%reason=%'
-                    THEN 'Legacy / Unstructured'
-                    ELSE 'Not Recorded'
-                END AS retirement_reason,
-                COUNT(*) AS retired_books
+
+        # 18.58.1: backend-neutral retirement reason parsing.
+        # The previous SQL used SQLite instr(), which is not available in PostgreSQL.
+        retirement_details = dataframe("""
+            SELECT details
             FROM admin_audit_log
             WHERE action='catalog_book_retired'
-            GROUP BY retirement_reason
-            ORDER BY retired_books DESC
         """)
+
+        if retirement_details.empty:
+            retirement_summary = pd.DataFrame(
+                columns=["retirement_reason", "retired_books"]
+            )
+        else:
+            def _retirement_reason_from_details(value):
+                details_text = str(value or "")
+
+                if "reason_category=" in details_text:
+                    reason = details_text.split("reason_category=", 1)[1]
+                    reason = reason.split(";", 1)[0].strip()
+                    return reason or "Not Recorded"
+
+                if "reason=" in details_text:
+                    return "Legacy / Unstructured"
+
+                return "Not Recorded"
+
+            retirement_details["retirement_reason"] = (
+                retirement_details["details"]
+                .apply(_retirement_reason_from_details)
+            )
+
+            retirement_summary = (
+                retirement_details
+                .groupby("retirement_reason", dropna=False)
+                .size()
+                .reset_index(name="retired_books")
+                .sort_values(
+                    ["retired_books", "retirement_reason"],
+                    ascending=[False, True],
+                )
+                .reset_index(drop=True)
+            )
+
         if retirement_summary.empty:
             st.caption("No approved book retirements have been recorded yet.")
         else:
