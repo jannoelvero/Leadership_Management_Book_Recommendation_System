@@ -1537,18 +1537,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-_backend_label = (
-    "Supabase PostgreSQL"
-    if ACTIVE_DATABASE_BACKEND == "postgresql"
-    else "SQLite"
-)
-st.sidebar.caption(f"Database backend: {_backend_label}")
-if ACTIVE_DATABASE_BACKEND == "sqlite":
-    _secret_label = (
-        "Detected" if POSTGRES_COMPONENT_STATUS.get("complete") else "Not detected"
-    )
-    st.sidebar.caption(f"PostgreSQL component secrets: {_secret_label}")
-
 
 # =========================================================
 # THEME
