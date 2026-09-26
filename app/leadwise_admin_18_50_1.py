@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.57.4 — Complete Cloud Database Bootstrap — Administrative Governance & Internal Analytics
+# Version 18.58.0 — Shared Cloud Database Integration — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -17,6 +17,16 @@ import streamlit as st
 import joblib
 import numpy as np
 from scipy.sparse import csr_matrix
+
+from db_utils import (
+    connect_database,
+    get_database_url,
+    get_database_backend,
+    validate_required_schema,
+    query_dataframe,
+    insert_returning_id,
+    get_table_columns,
+)
 
 APP_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = APP_DIR.parent if APP_DIR.name == "app" else APP_DIR
@@ -37,8 +47,8 @@ USER_DB_PATH = Path(
         str(USER_DATA_DIR / "leadwise_users.db"),
     )
 ).expanduser()
-DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
-DATABASE_BACKEND = "external" if DATABASE_URL else "sqlite"
+DATABASE_URL = get_database_url()
+DATABASE_BACKEND = get_database_backend(DATABASE_URL)
 
 PBKDF2_ITERATIONS = 310_000
 CATALOG_CSV_PATH = PROJECT_ROOT / "data" / "processed" / "leadwise_streamlit_catalog.csv"
@@ -76,27 +86,103 @@ st.markdown(
 )
 
 
-def db_connection():
-    """Return the Admin application's current database connection.
+ADMIN_REQUIRED_SCHEMA = {
+    "users": {
+        "user_id", "full_name", "email", "password_hash", "password_salt",
+        "created_at", "is_active", "role", "admin_account_status",
+        "admin_status_note", "admin_status_changed_at", "admin_status_changed_by",
+    },
+    "user_library": {
+        "library_id", "user_id", "book_id", "reading_status", "personal_rating",
+        "private_notes", "key_takeaways", "practical_application", "date_finished",
+        "saved_at", "updated_at",
+    },
+    "user_reviews": {
+        "review_id", "user_id", "book_id", "rating", "review_text",
+        "created_at", "updated_at", "is_published", "published_at",
+    },
+    "leadwise_events": {
+        "event_id", "user_id", "session_id", "event_type", "page", "book_id",
+        "related_book_id", "query_id", "metadata_json", "created_at",
+    },
+    "leadwise_feedback": {
+        "feedback_id", "user_id", "feedback_type", "subject", "message",
+        "contact_email", "created_at", "status",
+    },
+    "ask_leadwise_queries": {
+        "query_id", "user_id", "query_text", "intent", "result_count",
+        "top_book_id", "created_at",
+    },
+    "leadwise_inquiries": {
+        "inquiry_id", "user_id", "inquiry_type", "full_name", "email", "subject",
+        "message", "suggested_title", "suggested_author", "suggested_isbn_or_link",
+        "related_book_id", "created_at", "status",
+    },
+    "featured_reading": {
+        "feature_id", "book_id", "feature_message", "display_order", "start_date",
+        "end_date", "is_active", "created_by", "created_at", "updated_at",
+    },
+    "live_catalog_books": {
+        "live_book_id", "book_id", "base_book_id", "record_origin", "title",
+        "authors", "description", "publisher", "publication_date", "publication_year",
+        "isbn10", "isbn13", "page_count", "categories", "language", "cover_url",
+        "source_url", "source_type", "source_rating", "source_rating_count",
+        "catalog_status", "intelligence_status", "admin_note", "created_by",
+        "updated_by", "created_at", "updated_at",
+    },
+    "catalog_book_overrides": {
+        "override_id", "book_id", "title", "authors", "description", "publisher",
+        "publication_date", "publication_year", "isbn10", "isbn13", "page_count",
+        "categories", "language", "cover_url", "source_url", "source_type",
+        "source_rating", "source_rating_count", "catalog_status", "admin_note",
+        "updated_by", "updated_at",
+    },
+    "catalog_change_requests": {
+        "request_id", "book_id", "record_type", "action_type", "before_json",
+        "proposed_json", "reason", "status", "requested_by", "requested_at",
+        "reviewed_by", "reviewed_at", "review_note",
+    },
+    "recommendation_book_vectors": {
+        "book_id", "feature_indices_json", "feature_values_json", "feature_count",
+        "vector_norm", "vectorizer_features", "processed_at", "processing_status",
+        "processing_error", "vectorizer_version",
+    },
+    "recommendation_processing_history": {
+        "history_id", "book_id", "action_type", "outcome", "feature_count",
+        "vector_norm", "vectorizer_features", "vectorizer_version", "message",
+        "processed_by", "processed_at",
+    },
+    "admin_access_requests": {
+        "request_id", "full_name", "email", "organization_position", "reason",
+        "password_hash", "password_salt", "requested_role", "status",
+        "reviewed_by", "reviewed_at", "admin_note", "created_at",
+    },
+    "admin_audit_log": {
+        "audit_id", "admin_user_id", "action", "entity_type", "entity_id",
+        "details", "created_at",
+    },
+}
 
-    18.57.1 keeps the validated SQLite implementation active while allowing
-    deployment environments to override the writable SQLite location.
-    """
-    if DATABASE_URL:
-        raise RuntimeError(
-            "DATABASE_URL is configured, but this Admin build still uses "
-            "the validated SQLite backend. Remove DATABASE_URL for the "
-            "current deployment or upgrade to the shared-database adapter."
-        )
-    USER_DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    connection = sqlite3.connect(USER_DB_PATH)
-    connection.row_factory = sqlite3.Row
-    connection.execute("PRAGMA foreign_keys = ON")
-    return connection
+
+def db_connection():
+    """Return the active LeadWise Admin database connection."""
+    return connect_database(USER_DB_PATH, DATABASE_URL)
 
 
 def migrate_admin_schema():
+    """Initialize local SQLite or validate the shared Supabase schema.
+
+    PostgreSQL mode never creates or alters the shared schema.
+    """
     with db_connection() as connection:
+        if connection.backend == "postgresql":
+            problems = validate_required_schema(connection, ADMIN_REQUIRED_SCHEMA)
+            if problems:
+                raise RuntimeError(
+                    "LeadWise PostgreSQL schema validation failed: "
+                    + " | ".join(problems)
+                )
+            return
         # 18.57.2: bootstrap the base users table before Admin-only migrations.
         # Streamlit Community Cloud deploys the Reader and Admin as separate
         # app instances, so the Admin cannot assume the Reader has already
@@ -945,16 +1031,17 @@ def submit_catalog_change_request(book_id, record_type, action_type, before, pro
         ).fetchone()
         if pending:
             return False,f"A pending request already exists for {book_id}."
-        cur=connection.execute(
+        rid = insert_returning_id(
+            connection,
             """INSERT INTO catalog_change_requests
                (book_id,record_type,action_type,before_json,proposed_json,reason,
                 status,requested_by,requested_at)
                VALUES (?,?,?,?,?,?,'Pending',?,?)""",
             (str(book_id),str(record_type),str(action_type),
              json.dumps(before or {},default=str),json.dumps(proposed or {},default=str),
-             reason,int(actor["user_id"]),now)
+             reason,int(actor["user_id"]),now),
+            "request_id",
         )
-        rid=cur.lastrowid
     log_admin_action("catalog_change_requested","book",str(book_id),
                      f"request_id={rid}; action={action_type}; reason={reason}")
     return True,f"Change request #{rid} submitted for Super Admin approval."
@@ -1007,7 +1094,8 @@ def record_super_admin_catalog_action(book_id, record_type, action_type, before,
     now=datetime.now(timezone.utc).isoformat()
     reason=str(reason or "").strip() or "Super Admin direct action"
     with db_connection() as connection:
-        cur=connection.execute(
+        request_id = insert_returning_id(
+            connection,
             """INSERT INTO catalog_change_requests
                (book_id,record_type,action_type,before_json,proposed_json,reason,
                 status,requested_by,requested_at,reviewed_by,reviewed_at,review_note)
@@ -1018,9 +1106,9 @@ def record_super_admin_catalog_action(book_id, record_type, action_type, before,
                 json.dumps(proposed or {},default=str),
                 reason,int(actor["user_id"]),now,int(actor["user_id"]),now,
                 "Super Admin Direct Action — self-authorized and applied."
-            )
+            ),
+            "request_id",
         )
-        request_id=cur.lastrowid
     log_admin_action(
         "catalog_super_admin_direct_action","book",str(book_id),
         f"request_id={request_id}; action={action_type}; reason={reason}"
@@ -1369,12 +1457,20 @@ def log_admin_action(action, entity_type=None, entity_id=None, details=None):
 def scalar(query, params=()):
     with db_connection() as connection:
         row = connection.execute(query, params).fetchone()
-    return row[0] if row else 0
+    if not row:
+        return 0
+    if isinstance(row, dict):
+        return next(iter(row.values()), 0)
+    try:
+        return row[0]
+    except Exception:
+        values = list(dict(row).values())
+        return values[0] if values else 0
 
 
 def dataframe(query, params=()):
     with db_connection() as connection:
-        return pd.read_sql_query(query, connection, params=params)
+        return query_dataframe(connection, query, params)
 
 
 migrate_admin_schema()
@@ -2472,6 +2568,19 @@ elif section == "Catalog Management":
 
     def _ensure_recommendation_vector_table():
         with db_connection() as conn:
+            if conn.backend == "postgresql":
+                required = {
+                    "recommendation_book_vectors": ADMIN_REQUIRED_SCHEMA["recommendation_book_vectors"],
+                    "recommendation_processing_history": ADMIN_REQUIRED_SCHEMA["recommendation_processing_history"],
+                    "live_catalog_books": ADMIN_REQUIRED_SCHEMA["live_catalog_books"],
+                }
+                problems = validate_required_schema(conn, required)
+                if problems:
+                    raise RuntimeError(
+                        "LeadWise recommendation schema validation failed: "
+                        + " | ".join(problems)
+                    )
+                return
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS recommendation_book_vectors (
                     book_id TEXT PRIMARY KEY,
@@ -3436,23 +3545,33 @@ elif section == "Featured Reading":
         "Featured Reading is editorial curation and remains separate from personalized ML recommendations."
     )
 
-    # Self-migrating shared table: safe for the existing LeadWise SQLite database.
+    # Local SQLite can self-initialize. PostgreSQL uses the validated shared schema.
     with db_connection() as conn:
-        conn.execute("""
-            CREATE TABLE IF NOT EXISTS featured_reading (
-                feature_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                book_id TEXT NOT NULL,
-                feature_message TEXT,
-                display_order INTEGER NOT NULL DEFAULT 1,
-                start_date TEXT,
-                end_date TEXT,
-                is_active INTEGER NOT NULL DEFAULT 1,
-                created_by INTEGER,
-                created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-                updated_at TEXT DEFAULT CURRENT_TIMESTAMP
+        if conn.backend == "sqlite":
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS featured_reading (
+                    feature_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    book_id TEXT NOT NULL,
+                    feature_message TEXT,
+                    display_order INTEGER NOT NULL DEFAULT 1,
+                    start_date TEXT,
+                    end_date TEXT,
+                    is_active INTEGER NOT NULL DEFAULT 1,
+                    created_by INTEGER,
+                    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TEXT DEFAULT CURRENT_TIMESTAMP
+                )
+            """)
+            conn.commit()
+        else:
+            problems = validate_required_schema(
+                conn, {"featured_reading": ADMIN_REQUIRED_SCHEMA["featured_reading"]}
             )
-        """)
-        conn.commit()
+            if problems:
+                raise RuntimeError(
+                    "LeadWise Featured Reading schema validation failed: "
+                    + " | ".join(problems)
+                )
 
     frozen_catalog, _ = load_frozen_catalog()
 
@@ -3621,12 +3740,20 @@ elif section == "Featured Reading":
 
 elif section == "System Monitoring":
     st.subheader("System Monitoring")
-    db_exists = USER_DB_PATH.exists()
-    db_size = USER_DB_PATH.stat().st_size if db_exists else 0
-    c1, c2, c3 = st.columns(3)
-    c1.metric("Database", "Available" if db_exists else "Missing")
-    c2.metric("SQLite Size", f"{db_size / 1024:.1f} KB" if db_exists else "—")
-    c3.metric("Admin Role", "Authorized")
+    if DATABASE_BACKEND == "postgresql":
+        with db_connection() as connection:
+            connection.execute("SELECT 1 AS ok").fetchone()
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Database", "Available")
+        c2.metric("Backend", "Supabase PostgreSQL")
+        c3.metric("Admin Role", "Authorized")
+    else:
+        db_exists = USER_DB_PATH.exists()
+        db_size = USER_DB_PATH.stat().st_size if db_exists else 0
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Database", "Available" if db_exists else "Missing")
+        c2.metric("SQLite Size", f"{db_size / 1024:.1f} KB" if db_exists else "—")
+        c3.metric("Admin Role", "Authorized")
 
     st.markdown("**Privacy boundary**")
     st.success(
