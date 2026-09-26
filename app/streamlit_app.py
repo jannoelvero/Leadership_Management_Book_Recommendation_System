@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.58.1 — Shared Cloud Database Backend Verification
+# Version 18.58.2 — Chatbot Minimize Button Layout Fix
 # =========================================================
 
 import sys
@@ -1318,8 +1318,10 @@ def render_floating_ask_leadwise():
             background: transparent !important;
         }
 
-        /* Expanded chatbot stays fixed to the same bottom-right corner. */
-        div[data-testid="stColumn"]:has(.st-key-close_leadwise_chat) {
+        /* Expanded chatbot stays fixed to the same bottom-right corner.
+           Use a dedicated marker so the nested column that holds the × button
+           is not accidentally positioned as the entire floating panel. */
+        div[data-testid="stColumn"]:has(.leadwise-expanded-chat-marker) {
             position: fixed !important;
             right: 24px !important;
             bottom: 24px !important;
@@ -1335,6 +1337,10 @@ def render_floating_ask_leadwise():
             border-radius: 18px !important;
             padding: 12px !important;
             box-shadow: 0 18px 55px rgba(11, 31, 51, 0.30) !important;
+        }
+
+        .leadwise-expanded-chat-marker {
+            display: none;
         }
 
         /* LeadWise 18.49.6 — high-visibility assistant */
@@ -1398,7 +1404,7 @@ def render_floating_ask_leadwise():
                 width: 210px !important;
                 min-width: 210px !important;
             }
-            div[data-testid="stColumn"]:has(.st-key-close_leadwise_chat) {
+            div[data-testid="stColumn"]:has(.leadwise-expanded-chat-marker) {
                 position: fixed !important;
                 right: 12px !important;
                 bottom: 12px !important;
@@ -1473,6 +1479,10 @@ def render_floating_ask_leadwise():
             unsafe_allow_html=True,
         )
     else:
+        st.markdown(
+            '<div class="leadwise-expanded-chat-marker"></div>',
+            unsafe_allow_html=True,
+        )
         top_left, top_right = st.columns([5, 1])
         with top_left:
             st.markdown('<div class="leadwise-chat-heading">Ask LeadWise</div>', unsafe_allow_html=True)
@@ -1536,6 +1546,18 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+_backend_label = (
+    "Supabase PostgreSQL"
+    if ACTIVE_DATABASE_BACKEND == "postgresql"
+    else "SQLite"
+)
+st.sidebar.caption(f"Database backend: {_backend_label}")
+if ACTIVE_DATABASE_BACKEND == "sqlite":
+    _secret_label = (
+        "Detected" if POSTGRES_COMPONENT_STATUS.get("complete") else "Not detected"
+    )
+    st.sidebar.caption(f"PostgreSQL component secrets: {_secret_label}")
 
 
 # =========================================================
