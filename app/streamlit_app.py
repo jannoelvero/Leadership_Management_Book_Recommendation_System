@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.57.3 — Sidebar Authentication Visibility Fix
+# Version 18.58.0 — Shared Cloud Database Integration
 # =========================================================
 
 import sys
@@ -13,7 +13,6 @@ import uuid
 import ast
 import html
 import base64
-import sqlite3
 import hashlib
 import hmac
 import secrets
@@ -27,6 +26,16 @@ import streamlit as st
 
 from scipy.sparse import load_npz, csr_matrix, vstack
 from sklearn.metrics.pairwise import cosine_similarity
+
+from db_utils import (
+    connect_database,
+    get_database_backend,
+    get_database_url,
+    insert_returning_id,
+    is_integrity_error,
+    query_dataframe,
+    validate_required_schema,
+)
 
 
 # =========================================================
@@ -64,14 +73,13 @@ USER_DB_PATH = Path(
     )
 ).expanduser()
 
-DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
-DATABASE_BACKEND = "external" if DATABASE_URL else "sqlite"
+DATABASE_URL = get_database_url()
+DATABASE_BACKEND = get_database_backend(DATABASE_URL)
 
-# 18.57.1 deliberately keeps SQLite as the active backend so
-# the proven local application continues to work unchanged.
-# DATABASE_URL is detected now for future PostgreSQL/Supabase/
-# Cloud SQL integration, but is not activated until the
-# database adapter is implemented and tested.
+# 18.58.0 keeps SQLite as the local default and activates PostgreSQL
+# only when DATABASE_URL is supplied through Streamlit secrets or the
+# environment. Reader and Admin can therefore share Supabase in cloud
+# while the validated local SQLite workflow remains available.
 
 
 # =========================================================
@@ -81,33 +89,85 @@ DATABASE_BACKEND = "external" if DATABASE_URL else "sqlite"
 PBKDF2_ITERATIONS = 310_000
 
 
+READER_REQUIRED_SCHEMA = {
+    "users": {
+        "user_id", "full_name", "email", "password_hash", "password_salt",
+        "created_at", "is_active", "role",
+    },
+    "user_library": {
+        "library_id", "user_id", "book_id", "reading_status", "personal_rating",
+        "private_notes", "key_takeaways", "practical_application", "date_finished",
+        "saved_at", "updated_at",
+    },
+    "user_reviews": {
+        "review_id", "user_id", "book_id", "rating", "review_text",
+        "created_at", "updated_at", "is_published", "published_at",
+    },
+    "leadwise_events": {
+        "event_id", "user_id", "session_id", "event_type", "page", "book_id",
+        "related_book_id", "query_id", "metadata_json", "created_at",
+    },
+    "leadwise_feedback": {
+        "feedback_id", "user_id", "feedback_type", "subject", "message",
+        "contact_email", "created_at", "status",
+    },
+    "ask_leadwise_queries": {
+        "query_id", "user_id", "query_text", "intent", "result_count",
+        "top_book_id", "created_at",
+    },
+    "leadwise_inquiries": {
+        "inquiry_id", "user_id", "inquiry_type", "full_name", "email", "subject",
+        "message", "suggested_title", "suggested_author", "suggested_isbn_or_link",
+        "related_book_id", "created_at", "status",
+    },
+    "featured_reading": {
+        "feature_id", "book_id", "feature_message", "display_order", "start_date",
+        "end_date", "is_active", "created_by", "created_at", "updated_at",
+    },
+    "live_catalog_books": {
+        "live_book_id", "book_id", "base_book_id", "record_origin", "title",
+        "authors", "description", "publisher", "publication_date", "publication_year",
+        "isbn10", "isbn13", "page_count", "categories", "language", "cover_url",
+        "source_url", "source_type", "source_rating", "source_rating_count",
+        "catalog_status", "intelligence_status", "admin_note", "created_by",
+        "updated_by", "created_at", "updated_at",
+    },
+    "catalog_book_overrides": {
+        "override_id", "book_id", "title", "authors", "description", "publisher",
+        "publication_date", "publication_year", "isbn10", "isbn13", "page_count",
+        "categories", "language", "cover_url", "source_url", "source_type",
+        "source_rating", "source_rating_count", "catalog_status", "admin_note",
+        "updated_by", "updated_at",
+    },
+    "recommendation_book_vectors": {
+        "book_id", "feature_indices_json", "feature_values_json", "feature_count",
+        "vector_norm", "vectorizer_features", "processed_at", "processing_status",
+        "processing_error", "vectorizer_version",
+    },
+}
+
+
 def get_user_connection():
-    """Return the current application database connection.
-
-    18.57.1 keeps the validated SQLite implementation active.
-    The path can now be supplied by the deployment environment,
-    which removes the assumption that writable state must live
-    inside the repository's data/app directory.
-    """
-    if DATABASE_URL:
-        # Fail explicitly rather than silently treating a future
-        # cloud DATABASE_URL as SQLite before the PostgreSQL
-        # adapter is implemented.
-        raise RuntimeError(
-            "DATABASE_URL is configured, but this Reader build still uses "
-            "the validated SQLite backend. Remove DATABASE_URL for the "
-            "current deployment or upgrade to the shared-database adapter."
-        )
-
-    USER_DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    connection = sqlite3.connect(USER_DB_PATH)
-    connection.row_factory = sqlite3.Row
-    connection.execute("PRAGMA foreign_keys = ON")
-    return connection
+    """Return the active LeadWise Reader database connection."""
+    return connect_database(USER_DB_PATH, DATABASE_URL)
 
 
 def initialize_user_database():
+    """Initialize local SQLite or validate the existing Supabase schema.
+
+    PostgreSQL mode is validation only. The shared Supabase schema is managed
+    separately and is never recreated by the Reader application.
+    """
     with get_user_connection() as connection:
+        if connection.backend == "postgresql":
+            problems = validate_required_schema(connection, READER_REQUIRED_SCHEMA)
+            if problems:
+                raise RuntimeError(
+                    "LeadWise PostgreSQL schema validation failed: "
+                    + " | ".join(problems)
+                )
+            return
+
         connection.execute(
             """
             CREATE TABLE IF NOT EXISTS users (
@@ -121,7 +181,7 @@ def initialize_user_database():
             )
             """
         )
-        # 18.50.1: role-based access. Existing accounts remain readers.
+
         user_columns = {
             row["name"] for row in connection.execute("PRAGMA table_info(users)").fetchall()
         }
@@ -162,10 +222,22 @@ def initialize_user_database():
             )
             """
         )
-        connection.execute("CREATE INDEX IF NOT EXISTS idx_leadwise_events_created_at ON leadwise_events(created_at)")
-        connection.execute("CREATE INDEX IF NOT EXISTS idx_leadwise_events_event_type ON leadwise_events(event_type)")
-        connection.execute("CREATE INDEX IF NOT EXISTS idx_leadwise_events_user_id ON leadwise_events(user_id)")
-        connection.execute("CREATE INDEX IF NOT EXISTS idx_leadwise_events_session_id ON leadwise_events(session_id)")
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_leadwise_events_created_at "
+            "ON leadwise_events(created_at)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_leadwise_events_event_type "
+            "ON leadwise_events(event_type)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_leadwise_events_user_id "
+            "ON leadwise_events(user_id)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_leadwise_events_session_id "
+            "ON leadwise_events(session_id)"
+        )
 
         connection.execute(
             """
@@ -199,10 +271,9 @@ def initialize_user_database():
             """
         )
 
-
-        # Non-destructive schema migration for the 18.47.3 reading journal.
         existing_columns = {
-            row["name"] for row in connection.execute("PRAGMA table_info(user_library)").fetchall()
+            row["name"]
+            for row in connection.execute("PRAGMA table_info(user_library)").fetchall()
         }
         journal_columns = {
             "key_takeaways": "TEXT",
@@ -215,9 +286,9 @@ def initialize_user_database():
                     f"ALTER TABLE user_library ADD COLUMN {column_name} {column_type}"
                 )
 
-        # 18.48: community-review publication controls. Existing reviews remain private.
         review_columns = {
-            row["name"] for row in connection.execute("PRAGMA table_info(user_reviews)").fetchall()
+            row["name"]
+            for row in connection.execute("PRAGMA table_info(user_reviews)").fetchall()
         }
         community_columns = {
             "is_published": "INTEGER NOT NULL DEFAULT 0",
@@ -245,8 +316,6 @@ def initialize_user_database():
             """
         )
 
-
-        # 18.49: Ask LeadWise query analytics and inquiry intake.
         connection.execute(
             """
             CREATE TABLE IF NOT EXISTS ask_leadwise_queries (
@@ -261,6 +330,7 @@ def initialize_user_database():
             )
             """
         )
+
         connection.execute(
             """
             CREATE TABLE IF NOT EXISTS featured_reading (
@@ -303,16 +373,16 @@ def initialize_user_database():
 
 def get_active_featured_reading():
     """Return Admin-curated books that are active for today's Reader Home page."""
-    today = date.today().isoformat()
     with get_user_connection() as connection:
+        today = date.today() if connection.backend == "postgresql" else date.today().isoformat()
         rows = connection.execute(
             """
             SELECT feature_id, book_id, feature_message, display_order,
                    start_date, end_date, created_at
             FROM featured_reading
             WHERE is_active = 1
-              AND (start_date IS NULL OR TRIM(start_date) = '' OR start_date <= ?)
-              AND (end_date IS NULL OR TRIM(end_date) = '' OR end_date >= ?)
+              AND (start_date IS NULL OR TRIM(CAST(start_date AS TEXT)) = '' OR start_date <= ?)
+              AND (end_date IS NULL OR TRIM(CAST(end_date AS TEXT)) = '' OR end_date >= ?)
             ORDER BY display_order ASC, feature_id DESC
             """,
             (today, today),
@@ -349,20 +419,27 @@ def create_user(full_name, email, password):
     if len(password) < 8:
         return False, "Password must contain at least 8 characters."
     password_hash, password_salt = hash_password(password)
-    created_at = datetime.now(timezone.utc).isoformat()
     try:
         with get_user_connection() as connection:
-            cursor = connection.execute(
+            created_at = (
+                datetime.now(timezone.utc)
+                if connection.backend == "postgresql"
+                else datetime.now(timezone.utc).isoformat()
+            )
+            user_id = insert_returning_id(
+                connection,
                 """
                 INSERT INTO users
                     (full_name, email, password_hash, password_salt, created_at, role)
                 VALUES (?, ?, ?, ?, ?, 'reader')
                 """,
                 (full_name, email, password_hash, password_salt, created_at),
+                "user_id",
             )
-            user_id = cursor.lastrowid
-    except sqlite3.IntegrityError:
-        return False, "An account with this email already exists."
+    except Exception as exc:
+        if is_integrity_error(exc):
+            return False, "An account with this email already exists."
+        raise
     return True, {"user_id": user_id, "full_name": full_name, "email": email, "role": "reader"}
 
 
@@ -423,7 +500,11 @@ def track_event(event_type, page=None, book_id=None, related_book_id=None,
                 user_id, _analytics_session_id(), str(event_type), page,
                 book_id, related_book_id, query_id,
                 json.dumps(safe_metadata, ensure_ascii=False, default=str),
-                datetime.now(timezone.utc).isoformat(),
+                (
+                    datetime.now(timezone.utc)
+                    if connection.backend == "postgresql"
+                    else datetime.now(timezone.utc).isoformat()
+                ),
             ),
         )
 
@@ -467,8 +548,12 @@ def get_library_entry(user_id, book_id):
 def save_library_book(user_id, book_id, reading_status="Want to Read"):
     if reading_status not in READING_STATUSES:
         reading_status = "Want to Read"
-    now = datetime.now(timezone.utc).isoformat()
     with get_user_connection() as connection:
+        now = (
+            datetime.now(timezone.utc)
+            if connection.backend == "postgresql"
+            else datetime.now(timezone.utc).isoformat()
+        )
         connection.execute(
             """
             INSERT INTO user_library
@@ -487,8 +572,12 @@ def update_library_status(user_id, book_id, reading_status):
     """Update one signed-in user's reading status and return the persisted entry."""
     if reading_status not in READING_STATUSES:
         raise ValueError("Invalid reading status.")
-    now = datetime.now(timezone.utc).isoformat()
     with get_user_connection() as connection:
+        now = (
+            datetime.now(timezone.utc)
+            if connection.backend == "postgresql"
+            else datetime.now(timezone.utc).isoformat()
+        )
         existing = connection.execute(
             "SELECT reading_status, date_finished FROM user_library WHERE user_id = ? AND book_id = ?",
             (int(user_id), str(book_id)),
@@ -497,7 +586,11 @@ def update_library_status(user_id, book_id, reading_status):
             return None
         finished_date = existing["date_finished"]
         if reading_status == "Finished" and not finished_date:
-            finished_date = date.today().isoformat()
+            finished_date = (
+                date.today()
+                if connection.backend == "postgresql"
+                else date.today().isoformat()
+            )
         connection.execute(
             """
             UPDATE user_library
@@ -542,9 +635,20 @@ def save_reading_journal(
     date_finished=None,
 ):
     """Persist a signed-in reader's private journal and personal review evidence."""
-    now = datetime.now(timezone.utc).isoformat()
     rating_value = None if personal_rating in (None, 0, "") else float(personal_rating)
     with get_user_connection() as connection:
+        now = (
+            datetime.now(timezone.utc)
+            if connection.backend == "postgresql"
+            else datetime.now(timezone.utc).isoformat()
+        )
+        if connection.backend == "postgresql" and isinstance(date_finished, str) and date_finished:
+            try:
+                date_finished = date.fromisoformat(date_finished[:10])
+            except ValueError:
+                pass
+        elif connection.backend == "sqlite" and hasattr(date_finished, "isoformat"):
+            date_finished = date_finished.isoformat()
         connection.execute(
             """
             UPDATE user_library
@@ -599,8 +703,12 @@ def get_review_publication(user_id, book_id):
 
 
 def set_review_publication(user_id, book_id, publish):
-    now = datetime.now(timezone.utc).isoformat()
     with get_user_connection() as connection:
+        now = (
+            datetime.now(timezone.utc)
+            if connection.backend == "postgresql"
+            else datetime.now(timezone.utc).isoformat()
+        )
         row = connection.execute(
             "SELECT rating, review_text FROM user_reviews WHERE user_id = ? AND book_id = ?",
             (int(user_id), str(book_id)),
@@ -688,9 +796,13 @@ def save_leadwise_feedback(user, feedback_type, subject, message, contact_email)
     message = str(message or "").strip()
     if not message:
         return False
-    now = datetime.now(timezone.utc).isoformat()
     user_id = int(user["user_id"]) if user else None
     with get_user_connection() as connection:
+        now = (
+            datetime.now(timezone.utc)
+            if connection.backend == "postgresql"
+            else datetime.now(timezone.utc).isoformat()
+        )
         connection.execute(
             """
             INSERT INTO leadwise_feedback
@@ -741,7 +853,11 @@ def log_ask_leadwise_query(user, query_text, intent, results):
             """,
             (
                 user_id, query_text, str(intent), result_count, top_book_id,
-                datetime.now(timezone.utc).isoformat(),
+                (
+                    datetime.now(timezone.utc)
+                    if connection.backend == "postgresql"
+                    else datetime.now(timezone.utc).isoformat()
+                ),
             ),
         )
 
@@ -773,7 +889,11 @@ def save_leadwise_inquiry(
                 str(suggested_title or "").strip(), str(suggested_author or "").strip(),
                 str(suggested_isbn_or_link or "").strip(),
                 str(related_book_id) if related_book_id else None,
-                datetime.now(timezone.utc).isoformat(),
+                (
+                    datetime.now(timezone.utc)
+                    if connection.backend == "postgresql"
+                    else datetime.now(timezone.utc).isoformat()
+                ),
             ),
         )
     return True, "Your inquiry has been saved to LeadWise."
@@ -2448,6 +2568,20 @@ def _live_safe_text(value):
     return str(value).strip()
 
 def _ensure_live_catalog_tables(connection):
+    if connection.backend == "postgresql":
+        required = {
+            "live_catalog_books": READER_REQUIRED_SCHEMA["live_catalog_books"],
+            "recommendation_book_vectors": READER_REQUIRED_SCHEMA["recommendation_book_vectors"],
+            "catalog_book_overrides": READER_REQUIRED_SCHEMA["catalog_book_overrides"],
+        }
+        problems = validate_required_schema(connection, required)
+        if problems:
+            raise RuntimeError(
+                "LeadWise live catalog schema validation failed: "
+                + " | ".join(problems)
+            )
+        return
+
     connection.execute("""CREATE TABLE IF NOT EXISTS live_catalog_books (
         live_book_id INTEGER PRIMARY KEY AUTOINCREMENT, book_id TEXT NOT NULL UNIQUE,
         base_book_id TEXT, record_origin TEXT NOT NULL DEFAULT 'admin', title TEXT NOT NULL,
@@ -2462,7 +2596,7 @@ def _ensure_live_catalog_tables(connection):
         feature_values_json TEXT NOT NULL, feature_count INTEGER NOT NULL,
         vector_norm REAL NOT NULL, vectorizer_features INTEGER NOT NULL,
         processed_at TEXT NOT NULL, processing_status TEXT NOT NULL DEFAULT 'Ready',
-        processing_error TEXT)""")
+        processing_error TEXT, vectorizer_version TEXT)""")
     connection.execute("""CREATE TABLE IF NOT EXISTS catalog_book_overrides (
         override_id INTEGER PRIMARY KEY AUTOINCREMENT, book_id TEXT NOT NULL UNIQUE,
         title TEXT, authors TEXT, description TEXT, publisher TEXT, publication_date TEXT,
@@ -2475,9 +2609,11 @@ def build_live_reader_catalog(frozen_catalog):
     base=frozen_catalog.copy()
     with get_user_connection() as connection:
         _ensure_live_catalog_tables(connection)
-        overrides=pd.read_sql_query("SELECT * FROM catalog_book_overrides",connection)
-        additions=pd.read_sql_query(
-            "SELECT * FROM live_catalog_books WHERE catalog_status='Published'",connection)
+        overrides=query_dataframe(connection, "SELECT * FROM catalog_book_overrides")
+        additions=query_dataframe(
+            connection,
+            "SELECT * FROM live_catalog_books WHERE catalog_status='Published'",
+        )
 
     if not overrides.empty and "book_id" in base.columns:
         ovmap=overrides.set_index("book_id").to_dict("index")
@@ -2548,7 +2684,9 @@ def build_runtime_recommendation_universe(base_catalog, base_matrix):
         """).fetchall()
         hidden_ids={str(x["book_id"]) for x in hidden_rows}
 
-        ready=pd.read_sql_query("""
+        ready=query_dataframe(
+            connection,
+            """
             SELECT l.*,v.feature_indices_json,v.feature_values_json,
                    v.vectorizer_features,v.processed_at
             FROM live_catalog_books l
@@ -2557,7 +2695,8 @@ def build_runtime_recommendation_universe(base_catalog, base_matrix):
               AND l.intelligence_status='Ready'
               AND v.processing_status='Ready'
             ORDER BY l.live_book_id
-        """,connection)
+            """,
+        )
 
     keep_mask=~base_catalog["book_id"].astype(str).isin(hidden_ids)
     kept_positions=[i for i,keep in enumerate(keep_mask.tolist()) if keep]
@@ -2625,20 +2764,18 @@ runtime_nonzero_mask = recommendation_matrix.getnnz(axis=1) > 0
 runtime_searchable_vector_count = int(runtime_nonzero_mask.sum())
 
 
-# Reader synchronization diagnostics. These values are read from the same SQLite
-# database used by the Admin Portal whenever both apps run from the same project.
+# Reader synchronization diagnostics. Reader and Admin now read the same
+# operational database in cloud, while local development can continue with SQLite.
 with get_user_connection() as _catalog_sync_connection:
     _ensure_live_catalog_tables(_catalog_sync_connection)
-    READER_PUBLISHED_ADMIN_BOOKS = int(
-        _catalog_sync_connection.execute(
-            "SELECT COUNT(*) FROM live_catalog_books WHERE catalog_status='Published'"
-        ).fetchone()[0]
-    )
-    READER_DRAFT_ADMIN_BOOKS = int(
-        _catalog_sync_connection.execute(
-            "SELECT COUNT(*) FROM live_catalog_books WHERE catalog_status='Draft'"
-        ).fetchone()[0]
-    )
+    _published_row = _catalog_sync_connection.execute(
+        "SELECT COUNT(*) AS n FROM live_catalog_books WHERE catalog_status='Published'"
+    ).fetchone()
+    _draft_row = _catalog_sync_connection.execute(
+        "SELECT COUNT(*) AS n FROM live_catalog_books WHERE catalog_status='Draft'"
+    ).fetchone()
+    READER_PUBLISHED_ADMIN_BOOKS = int(_published_row["n"] or 0)
+    READER_DRAFT_ADMIN_BOOKS = int(_draft_row["n"] or 0)
 
 # =========================================================
 # CONSTANTS
