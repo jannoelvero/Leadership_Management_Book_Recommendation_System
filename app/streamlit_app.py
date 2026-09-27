@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.58.4 — Signed-In Navigation Visibility
+# Version 18.58.5 — Threaded Support Conversations
 # =========================================================
 
 import sys
@@ -122,9 +122,9 @@ READER_REQUIRED_SCHEMA = {
         "related_book_id", "created_at", "status", "replied_at", "replied_by",
     },
     "leadwise_inquiry_replies": {
-        "reply_id", "inquiry_id", "admin_user_id", "reply_message",
-        "sent_to_email", "delivery_status", "external_message_id",
-        "created_at", "sent_at",
+        "reply_id", "inquiry_id", "admin_user_id", "reader_user_id",
+        "sender_type", "reply_message", "sent_to_email", "delivery_status",
+        "external_message_id", "created_at", "sent_at", "read_at",
     },
     "featured_reading": {
         "feature_id", "book_id", "feature_message", "display_order", "start_date",
@@ -399,19 +399,42 @@ def initialize_user_database():
                 reply_id INTEGER PRIMARY KEY AUTOINCREMENT,
                 inquiry_id INTEGER NOT NULL,
                 admin_user_id INTEGER,
+                reader_user_id INTEGER,
+                sender_type TEXT NOT NULL DEFAULT 'admin',
                 reply_message TEXT NOT NULL,
                 sent_to_email TEXT,
                 delivery_status TEXT NOT NULL DEFAULT 'Pending',
                 external_message_id TEXT,
                 created_at TEXT NOT NULL,
                 sent_at TEXT,
+                read_at TEXT,
                 FOREIGN KEY(inquiry_id) REFERENCES leadwise_inquiries(inquiry_id)
                     ON DELETE CASCADE,
                 FOREIGN KEY(admin_user_id) REFERENCES users(user_id)
+                    ON DELETE SET NULL,
+                FOREIGN KEY(reader_user_id) REFERENCES users(user_id)
                     ON DELETE SET NULL
             )
             """
         )
+
+        reply_columns = {
+            row["name"]
+            for row in connection.execute(
+                "PRAGMA table_info(leadwise_inquiry_replies)"
+            ).fetchall()
+        }
+        for column_name, column_type in {
+            "reader_user_id": "INTEGER",
+            "sender_type": "TEXT NOT NULL DEFAULT 'admin'",
+            "read_at": "TEXT",
+        }.items():
+            if column_name not in reply_columns:
+                connection.execute(
+                    f"ALTER TABLE leadwise_inquiry_replies "
+                    f"ADD COLUMN {column_name} {column_type}"
+                )
+
         connection.execute(
             "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_inquiry_id "
             "ON leadwise_inquiry_replies(inquiry_id)"
@@ -419,6 +442,14 @@ def initialize_user_database():
         connection.execute(
             "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_created_at "
             "ON leadwise_inquiry_replies(created_at)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_sender_type "
+            "ON leadwise_inquiry_replies(sender_type)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_reader_user_id "
+            "ON leadwise_inquiry_replies(reader_user_id)"
         )
 
 
@@ -960,7 +991,7 @@ def save_leadwise_inquiry(
 
 
 def get_reader_support_threads(user_id):
-    """Return one signed-in reader's inquiries and LeadWise replies."""
+    """Return one signed-in reader's complete support conversation history."""
     with get_user_connection() as connection:
         rows = connection.execute(
             """
@@ -973,10 +1004,14 @@ def get_reader_support_threads(user_id):
                 i.created_at AS inquiry_created_at,
                 i.replied_at,
                 r.reply_id,
+                r.sender_type,
+                r.reader_user_id,
+                r.admin_user_id,
                 r.reply_message,
                 r.delivery_status,
                 r.created_at AS reply_created_at,
-                r.sent_at
+                r.sent_at,
+                r.read_at
             FROM leadwise_inquiries i
             LEFT JOIN leadwise_inquiry_replies r
               ON r.inquiry_id = i.inquiry_id
@@ -986,6 +1021,92 @@ def get_reader_support_threads(user_id):
             (int(user_id),),
         ).fetchall()
     return pd.DataFrame([dict(row) for row in rows])
+
+
+def save_reader_thread_reply(user_id, inquiry_id, reply_message):
+    """Append a reader follow-up to an existing inquiry thread."""
+    reply_message = str(reply_message or "").strip()
+    if not reply_message:
+        return False, "Enter a message before sending."
+
+    with get_user_connection() as connection:
+        inquiry = connection.execute(
+            """
+            SELECT inquiry_id, user_id, status
+            FROM leadwise_inquiries
+            WHERE inquiry_id=? AND user_id=?
+            """,
+            (int(inquiry_id), int(user_id)),
+        ).fetchone()
+
+        if inquiry is None:
+            return False, "This conversation could not be found for your account."
+
+        now = (
+            datetime.now(timezone.utc)
+            if connection.backend == "postgresql"
+            else datetime.now(timezone.utc).isoformat()
+        )
+
+        connection.execute(
+            """
+            INSERT INTO leadwise_inquiry_replies
+                (inquiry_id, admin_user_id, reader_user_id, sender_type,
+                 reply_message, sent_to_email, delivery_status,
+                 external_message_id, created_at, sent_at, read_at)
+            VALUES (?, NULL, ?, 'reader', ?, NULL, 'In-App',
+                    NULL, ?, ?, NULL)
+            """,
+            (
+                int(inquiry_id),
+                int(user_id),
+                reply_message,
+                now,
+                now,
+            ),
+        )
+
+        connection.execute(
+            """
+            UPDATE leadwise_inquiries
+            SET status='In Progress'
+            WHERE inquiry_id=? AND user_id=?
+            """,
+            (int(inquiry_id), int(user_id)),
+        )
+
+    track_event(
+        "support_reader_follow_up",
+        page="My Messages",
+        metadata={"inquiry_id": int(inquiry_id)},
+        user=signed_in_user(),
+    )
+    return True, "Your follow-up was sent to LeadWise."
+
+
+def mark_admin_thread_messages_read(user_id, inquiry_id):
+    """Mark Admin messages as read when the Reader opens the conversation."""
+    with get_user_connection() as connection:
+        now = (
+            datetime.now(timezone.utc)
+            if connection.backend == "postgresql"
+            else datetime.now(timezone.utc).isoformat()
+        )
+        connection.execute(
+            """
+            UPDATE leadwise_inquiry_replies
+            SET read_at=?
+            WHERE inquiry_id=?
+              AND sender_type='admin'
+              AND read_at IS NULL
+              AND inquiry_id IN (
+                  SELECT inquiry_id
+                  FROM leadwise_inquiries
+                  WHERE inquiry_id=? AND user_id=?
+              )
+            """,
+            (now, int(inquiry_id), int(inquiry_id), int(user_id)),
+        )
 
 
 def ask_leadwise(query, top_n=5):
@@ -5892,7 +6013,7 @@ with main_col:
         render_page_header(
             "Support",
             "My Messages",
-            "Your LeadWise inquiries and responses from the administrator team.",
+            "Continue your LeadWise support conversations without creating a new inquiry.",
         )
 
         current_user = signed_in_user()
@@ -5900,20 +6021,58 @@ with main_col:
         if current_user is None:
             st.info(
                 "My Messages is an account feature. Sign in or create an account "
-                "to receive LeadWise responses inside the Reader app."
+                "to view and continue your LeadWise conversations."
             )
         else:
+            reader_notice = st.session_state.pop(
+                "leadwise_reader_message_notice", None
+            )
+            if reader_notice:
+                st.success(reader_notice)
+
             threads = get_reader_support_threads(current_user["user_id"])
 
             if threads.empty:
                 st.info(
                     "You have no support conversations yet. Use Ask LeadWise → "
-                    "Feedback & Contact to send an inquiry."
+                    "Feedback & Contact to send your first inquiry."
                 )
             else:
+                unique_threads = (
+                    threads[
+                        [
+                            "inquiry_id",
+                            "subject",
+                            "inquiry_type",
+                            "status",
+                            "inquiry_created_at",
+                        ]
+                    ]
+                    .drop_duplicates(subset=["inquiry_id"])
+                    .copy()
+                )
+
+                unread_admin = threads[
+                    threads["reply_id"].notna()
+                    & threads["sender_type"].fillna("").astype(str).eq("admin")
+                    & threads["read_at"].isna()
+                ]
+                unread_count = int(len(unread_admin))
+                active_count = int(
+                    unique_threads["status"]
+                    .fillna("")
+                    .isin(["New", "In Progress", "Replied"])
+                    .sum()
+                )
+
+                k1, k2, k3 = st.columns(3)
+                k1.metric("Conversations", len(unique_threads))
+                k2.metric("Active", active_count)
+                k3.metric("Unread LeadWise Replies", unread_count)
+
                 st.caption(
-                    "Replies are stored in the shared LeadWise database and become "
-                    "available here when you return to or refresh the Reader app."
+                    "Each inquiry remains one conversation thread. Follow-up messages "
+                    "stay under the same inquiry for a complete support history."
                 )
 
                 for inquiry_id, thread in threads.groupby(
@@ -5921,46 +6080,102 @@ with main_col:
                 ):
                     first = thread.iloc[0]
                     subject = str(first.get("subject") or "").strip() or "No subject"
-                    inquiry_type = str(first.get("inquiry_type") or "General Inquiry")
+                    inquiry_type = str(
+                        first.get("inquiry_type") or "General Inquiry"
+                    )
                     status = str(first.get("status") or "New")
                     received = str(first.get("inquiry_created_at") or "")
 
-                    with st.container(border=True):
-                        head1, head2 = st.columns([3, 1])
-                        with head1:
-                            st.markdown(
-                                f"### {html.escape(subject)}"
-                            )
-                            st.caption(
-                                f"{html.escape(inquiry_type)} · Submitted {html.escape(received)}"
-                            )
-                        with head2:
-                            st.markdown(
-                                f"**Status:** {html.escape(status)}"
-                            )
+                    unread_thread = thread[
+                        thread["reply_id"].notna()
+                        & thread["sender_type"].fillna("").astype(str).eq("admin")
+                        & thread["read_at"].isna()
+                    ]
+                    unread_marker = (
+                        f" · {len(unread_thread)} unread"
+                        if not unread_thread.empty
+                        else ""
+                    )
 
-                        st.markdown("**Your message**")
-                        st.write(str(first.get("message") or ""))
+                    with st.expander(
+                        f"#{int(inquiry_id)} · {subject} · {status}{unread_marker}",
+                        expanded=not unread_thread.empty,
+                    ):
+                        mark_admin_thread_messages_read(
+                            current_user["user_id"],
+                            inquiry_id,
+                        )
 
-                        replies = thread[thread["reply_id"].notna()].copy()
-                        if replies.empty:
+                        st.caption(
+                            f"{html.escape(inquiry_type)} · "
+                            f"Started {html.escape(received)}"
+                        )
+
+                        with st.container(border=True):
+                            st.markdown("**You · Initial inquiry**")
+                            st.write(str(first.get("message") or ""))
+                            st.caption(received)
+
+                        messages = thread[
+                            thread["reply_id"].notna()
+                        ].copy()
+
+                        if messages.empty:
                             st.caption(
-                                "LeadWise has not replied to this inquiry yet."
+                                "LeadWise has not replied to this conversation yet."
                             )
                         else:
-                            st.markdown("**LeadWise response**")
-                            for _, reply in replies.iterrows():
+                            for _, message in messages.iterrows():
+                                sender_type = str(
+                                    message.get("sender_type") or "admin"
+                                ).strip().lower()
+                                message_time = (
+                                    message.get("sent_at")
+                                    or message.get("reply_created_at")
+                                    or ""
+                                )
+
                                 with st.container(border=True):
-                                    st.write(str(reply.get("reply_message") or ""))
-                                    reply_time = (
-                                        reply.get("sent_at")
-                                        or reply.get("reply_created_at")
-                                        or ""
+                                    if sender_type == "reader":
+                                        st.markdown("**You · Follow-up**")
+                                    else:
+                                        st.markdown("**LeadWise Support**")
+                                    st.write(
+                                        str(message.get("reply_message") or "")
                                     )
-                                    st.caption(
-                                        "LeadWise Support · "
-                                        + str(reply_time)
-                                    )
+                                    st.caption(str(message_time))
+
+                        st.markdown("#### Reply to this conversation")
+                        with st.form(
+                            f"reader_thread_reply_form_{int(inquiry_id)}",
+                            clear_on_submit=True,
+                        ):
+                            reader_reply = st.text_area(
+                                "Message",
+                                placeholder=(
+                                    "Write your follow-up message to LeadWise..."
+                                ),
+                                height=110,
+                                key=f"reader_thread_reply_text_{int(inquiry_id)}",
+                            )
+                            send_reader_reply = st.form_submit_button(
+                                "Send Reply",
+                                use_container_width=True,
+                            )
+
+                        if send_reader_reply:
+                            ok, message = save_reader_thread_reply(
+                                current_user["user_id"],
+                                inquiry_id,
+                                reader_reply,
+                            )
+                            if ok:
+                                st.session_state[
+                                    "leadwise_reader_message_notice"
+                                ] = message
+                                st.rerun()
+                            else:
+                                st.warning(message)
 
     # =========================================================
     # READER INSIGHTS

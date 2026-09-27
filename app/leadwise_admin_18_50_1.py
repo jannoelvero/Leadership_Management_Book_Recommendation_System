@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.58.3 — In-App Inbox Replies — Administrative Governance & Internal Analytics
+# Version 18.58.5 — Threaded Support Conversations — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -121,9 +121,9 @@ ADMIN_REQUIRED_SCHEMA = {
         "related_book_id", "created_at", "status", "replied_at", "replied_by",
     },
     "leadwise_inquiry_replies": {
-        "reply_id", "inquiry_id", "admin_user_id", "reply_message",
-        "sent_to_email", "delivery_status", "external_message_id",
-        "created_at", "sent_at",
+        "reply_id", "inquiry_id", "admin_user_id", "reader_user_id",
+        "sender_type", "reply_message", "sent_to_email", "delivery_status",
+        "external_message_id", "created_at", "sent_at", "read_at",
     },
     "featured_reading": {
         "feature_id", "book_id", "feature_message", "display_order", "start_date",
@@ -364,19 +364,42 @@ def migrate_admin_schema():
                 reply_id INTEGER PRIMARY KEY AUTOINCREMENT,
                 inquiry_id INTEGER NOT NULL,
                 admin_user_id INTEGER,
+                reader_user_id INTEGER,
+                sender_type TEXT NOT NULL DEFAULT 'admin',
                 reply_message TEXT NOT NULL,
                 sent_to_email TEXT,
                 delivery_status TEXT NOT NULL DEFAULT 'Pending',
                 external_message_id TEXT,
                 created_at TEXT NOT NULL,
                 sent_at TEXT,
+                read_at TEXT,
                 FOREIGN KEY(inquiry_id) REFERENCES leadwise_inquiries(inquiry_id)
                     ON DELETE CASCADE,
                 FOREIGN KEY(admin_user_id) REFERENCES users(user_id)
+                    ON DELETE SET NULL,
+                FOREIGN KEY(reader_user_id) REFERENCES users(user_id)
                     ON DELETE SET NULL
             )
             """
         )
+
+        reply_columns = {
+            row["name"]
+            for row in connection.execute(
+                "PRAGMA table_info(leadwise_inquiry_replies)"
+            ).fetchall()
+        }
+        for column_name, column_type in {
+            "reader_user_id": "INTEGER",
+            "sender_type": "TEXT NOT NULL DEFAULT 'admin'",
+            "read_at": "TEXT",
+        }.items():
+            if column_name not in reply_columns:
+                connection.execute(
+                    f"ALTER TABLE leadwise_inquiry_replies "
+                    f"ADD COLUMN {column_name} {column_type}"
+                )
+
         connection.execute(
             "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_inquiry_id "
             "ON leadwise_inquiry_replies(inquiry_id)"
@@ -384,6 +407,14 @@ def migrate_admin_schema():
         connection.execute(
             "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_created_at "
             "ON leadwise_inquiry_replies(created_at)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_sender_type "
+            "ON leadwise_inquiry_replies(sender_type)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_reader_user_id "
+            "ON leadwise_inquiry_replies(reader_user_id)"
         )
 
         connection.execute(
@@ -768,9 +799,10 @@ def record_inquiry_reply(
             connection,
             """
             INSERT INTO leadwise_inquiry_replies
-                (inquiry_id, admin_user_id, reply_message, sent_to_email,
-                 delivery_status, external_message_id, created_at, sent_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                (inquiry_id, admin_user_id, reader_user_id, sender_type,
+                 reply_message, sent_to_email, delivery_status,
+                 external_message_id, created_at, sent_at, read_at)
+            VALUES (?, ?, NULL, 'admin', ?, ?, ?, ?, ?, ?, NULL)
             """,
             (
                 int(inquiry_id),
@@ -812,6 +844,22 @@ def record_inquiry_reply(
         ),
     )
     return reply_id
+
+
+def mark_reader_thread_messages_read(inquiry_id):
+    """Mark Reader follow-ups as read when an Admin opens the conversation."""
+    with db_connection() as connection:
+        now = datetime.now(timezone.utc).isoformat()
+        connection.execute(
+            """
+            UPDATE leadwise_inquiry_replies
+            SET read_at=?
+            WHERE inquiry_id=?
+              AND sender_type='reader'
+              AND read_at IS NULL
+            """,
+            (now, int(inquiry_id)),
+        )
 
 
 def update_inquiry_status(inquiry_id, status):
@@ -2221,13 +2269,50 @@ elif section == "Ask LeadWise":
 elif section == "Inbox":
     st.subheader("LeadWise Inbox")
     st.caption(
-        "Review reader inquiries, send in-app responses to registered readers, "
-        "use email as an optional fallback, and manage inquiry status."
+        "Threaded Reader support conversations. Follow-ups remain under the same "
+        "inquiry for clearer audit history and support analytics."
     )
 
     inbox_notice = st.session_state.pop("leadwise_inbox_notice", None)
     if inbox_notice:
         st.success(inbox_notice)
+
+    total_threads = scalar(
+        """
+        SELECT COUNT(*)
+        FROM leadwise_inquiries
+        WHERE inquiry_type <> 'Suggest a Book'
+        """
+    )
+    open_threads = scalar(
+        """
+        SELECT COUNT(*)
+        FROM leadwise_inquiries
+        WHERE inquiry_type <> 'Suggest a Book'
+          AND status IN ('New','In Progress')
+        """
+    )
+    reader_followups = scalar(
+        """
+        SELECT COUNT(*)
+        FROM leadwise_inquiry_replies
+        WHERE sender_type='reader'
+        """
+    )
+    unread_reader_messages = scalar(
+        """
+        SELECT COUNT(*)
+        FROM leadwise_inquiry_replies
+        WHERE sender_type='reader'
+          AND read_at IS NULL
+        """
+    )
+
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("Conversations", f"{total_threads:,}")
+    m2.metric("Open / In Progress", f"{open_threads:,}")
+    m3.metric("Reader Follow-ups", f"{reader_followups:,}")
+    m4.metric("Unread Reader Messages", f"{unread_reader_messages:,}")
 
     inbox = dataframe(
         """
@@ -2235,13 +2320,30 @@ elif section == "Inbox":
                related_book_id, status, created_at, replied_at, replied_by
         FROM leadwise_inquiries
         WHERE inquiry_type <> 'Suggest a Book'
-        ORDER BY inquiry_id DESC
+        ORDER BY
+            CASE
+                WHEN status='In Progress' THEN 0
+                WHEN status='New' THEN 1
+                WHEN status='Replied' THEN 2
+                ELSE 3
+            END,
+            inquiry_id DESC
         """
     )
 
     if inbox.empty:
         st.info("There are no reader inquiries in the Inbox.")
     else:
+        unread_by_inquiry = dataframe(
+            """
+            SELECT inquiry_id, COUNT(*) AS unread_reader_messages
+            FROM leadwise_inquiry_replies
+            WHERE sender_type='reader'
+              AND read_at IS NULL
+            GROUP BY inquiry_id
+            """
+        )
+
         inbox_display = inbox[
             [
                 "inquiry_id",
@@ -2254,11 +2356,27 @@ elif section == "Inbox":
                 "replied_at",
             ]
         ].copy()
+
+        if not unread_by_inquiry.empty:
+            inbox_display = inbox_display.merge(
+                unread_by_inquiry,
+                on="inquiry_id",
+                how="left",
+            )
+        else:
+            inbox_display["unread_reader_messages"] = 0
+
+        inbox_display["unread_reader_messages"] = (
+            inbox_display["unread_reader_messages"]
+            .fillna(0)
+            .astype(int)
+        )
+
         st.dataframe(inbox_display, use_container_width=True, hide_index=True)
 
         inquiry_ids = inbox["inquiry_id"].astype(int).tolist()
         selected_inquiry_id = st.selectbox(
-            "Open inquiry",
+            "Open conversation",
             inquiry_ids,
             format_func=lambda inquiry_id: (
                 f"#{inquiry_id} · "
@@ -2269,6 +2387,14 @@ elif section == "Inbox":
                     ].iloc[0]
                     or "No subject"
                 )
+                + " · "
+                + str(
+                    inbox.loc[
+                        inbox["inquiry_id"].astype(int) == int(inquiry_id),
+                        "status",
+                    ].iloc[0]
+                    or "New"
+                )
             ),
             key="leadwise_inbox_selected_inquiry",
         )
@@ -2278,7 +2404,9 @@ elif section == "Inbox":
         ].iloc[0]
         inquiry = selected_row.to_dict()
 
-        st.markdown("### Inquiry")
+        mark_reader_thread_messages_read(selected_inquiry_id)
+
+        st.markdown("### Conversation")
         with st.container(border=True):
             meta1, meta2, meta3 = st.columns(3)
             meta1.markdown(
@@ -2290,12 +2418,12 @@ elif section == "Inbox":
                 + html.escape(str(inquiry.get("status") or ""))
             )
             meta3.markdown(
-                "**Received:** "
+                "**Started:** "
                 + html.escape(str(inquiry.get("created_at") or ""))
             )
 
             st.markdown(
-                "**From:** "
+                "**Reader:** "
                 + html.escape(str(inquiry.get("full_name") or "Guest"))
             )
             st.markdown(
@@ -2306,54 +2434,93 @@ elif section == "Inbox":
                 "**Subject:** "
                 + html.escape(str(inquiry.get("subject") or "No subject"))
             )
-            st.markdown("**Message**")
-            st.write(str(inquiry.get("message") or ""))
 
-        st.markdown("### Reply history")
-        reply_history = dataframe(
+        with st.container(border=True):
+            st.markdown("**Reader · Initial inquiry**")
+            st.write(str(inquiry.get("message") or ""))
+            st.caption(str(inquiry.get("created_at") or ""))
+
+        conversation_history = dataframe(
             """
-            SELECT r.reply_id,
-                   COALESCE(u.full_name, 'Former / unavailable administrator')
-                       AS administrator,
-                   r.reply_message,
-                   r.sent_to_email,
-                   r.delivery_status,
-                   r.external_message_id,
-                   r.created_at,
-                   r.sent_at
+            SELECT
+                r.reply_id,
+                r.sender_type,
+                r.reader_user_id,
+                r.admin_user_id,
+                COALESCE(admin_user.full_name,
+                         'Former / unavailable administrator') AS administrator,
+                COALESCE(reader_user.full_name,
+                         'Reader') AS reader_name,
+                r.reply_message,
+                r.sent_to_email,
+                r.delivery_status,
+                r.external_message_id,
+                r.created_at,
+                r.sent_at,
+                r.read_at
             FROM leadwise_inquiry_replies r
-            LEFT JOIN users u ON u.user_id = r.admin_user_id
+            LEFT JOIN users admin_user
+              ON admin_user.user_id = r.admin_user_id
+            LEFT JOIN users reader_user
+              ON reader_user.user_id = r.reader_user_id
             WHERE r.inquiry_id=?
-            ORDER BY r.reply_id DESC
+            ORDER BY r.reply_id ASC
             """,
             (int(selected_inquiry_id),),
         )
 
-        if reply_history.empty:
-            st.caption("No Admin replies have been recorded for this inquiry.")
+        if conversation_history.empty:
+            st.caption("No follow-up messages have been recorded yet.")
         else:
-            for _, reply in reply_history.iterrows():
+            for _, message in conversation_history.iterrows():
+                sender_type = str(
+                    message.get("sender_type") or "admin"
+                ).strip().lower()
+                message_time = (
+                    message.get("sent_at")
+                    or message.get("created_at")
+                    or ""
+                )
+
                 with st.container(border=True):
-                    h1, h2, h3 = st.columns([1.5, 1, 1.5])
-                    h1.markdown(
-                        "**Admin:** "
-                        + html.escape(str(reply["administrator"]))
+                    if sender_type == "reader":
+                        st.markdown(
+                            "**Reader · "
+                            + html.escape(str(message.get("reader_name") or "Reader"))
+                            + "**"
+                        )
+                    else:
+                        st.markdown(
+                            "**LeadWise Admin · "
+                            + html.escape(
+                                str(
+                                    message.get("administrator")
+                                    or "Administrator"
+                                )
+                            )
+                            + "**"
+                        )
+
+                    st.write(str(message.get("reply_message") or ""))
+
+                    status_text = str(
+                        message.get("delivery_status") or ""
                     )
-                    h2.markdown(
-                        "**Status:** "
-                        + html.escape(str(reply["delivery_status"]))
-                    )
-                    h3.markdown(
-                        "**Sent:** "
-                        + html.escape(
-                            str(reply["sent_at"] or reply["created_at"])
+                    st.caption(
+                        f"{message_time}"
+                        + (
+                            f" · {status_text}"
+                            if status_text
+                            else ""
                         )
                     )
-                    st.write(str(reply["reply_message"] or ""))
-                    if str(reply.get("external_message_id") or "").strip():
+
+                    if str(
+                        message.get("external_message_id") or ""
+                    ).strip():
                         st.caption(
                             "Provider message ID: "
-                            + str(reply["external_message_id"])
+                            + str(message["external_message_id"])
                         )
 
         st.markdown("### Respond")
@@ -2369,8 +2536,8 @@ elif section == "Inbox":
 
         if has_reader_account:
             st.success(
-                "In-app delivery is available. This inquiry is linked to a "
-                "registered LeadWise Reader account."
+                "In-app delivery is available. The response will remain in this "
+                "conversation and appear in the Reader's My Messages page."
             )
 
             with st.form(
@@ -2380,8 +2547,7 @@ elif section == "Inbox":
                 reply_message = st.text_area(
                     "Reply",
                     placeholder=(
-                        "Write the response that will appear in the reader's "
-                        "My Messages page..."
+                        "Write the response that will continue this conversation..."
                     ),
                     height=180,
                 )
@@ -2402,8 +2568,7 @@ elif section == "Inbox":
                         None,
                     )
                     st.session_state["leadwise_inbox_notice"] = (
-                        "In-app reply sent. The reader can now view it in "
-                        "My Messages. Inquiry marked Replied."
+                        "In-app reply sent. The conversation is now marked Replied."
                     )
                     st.rerun()
 
@@ -2413,8 +2578,8 @@ elif section == "Inbox":
             ):
                 with st.expander("Optional email copy", expanded=False):
                     st.caption(
-                        "Email delivery is configured. This is optional because "
-                        "the registered reader already receives the response in-app."
+                        "Email is optional because the registered reader already "
+                        "receives the response in My Messages."
                     )
                     with st.form(
                         f"leadwise_optional_email_reply_form_{int(selected_inquiry_id)}",
@@ -2458,25 +2623,22 @@ elif section == "Inbox":
 
         else:
             st.warning(
-                "This inquiry was submitted as a guest, so there is no Reader "
-                "account where an in-app response can be delivered."
+                "This conversation belongs to a guest inquiry. There is no "
+                "Reader account for in-app delivery."
             )
 
             if not _valid_email_address(recipient_email):
                 st.info(
-                    "No valid email address is available. The inquiry can still "
-                    "be managed internally, but the sender cannot receive a reply "
-                    "after leaving the app."
+                    "No valid email address is available. The conversation can "
+                    "still be managed internally, but the guest cannot receive "
+                    "a response after leaving the app."
                 )
             elif not email_settings["configured"]:
                 st.info(
-                    "Email delivery is not configured. For guest inquiries, "
-                    "a verified external email sender is required to deliver a response."
+                    "Email delivery is not configured. Guest responses require "
+                    "an external email sender."
                 )
             else:
-                st.caption(
-                    "Email delivery is configured for this guest inquiry."
-                )
                 with st.form(
                     f"leadwise_guest_email_reply_form_{int(selected_inquiry_id)}",
                     clear_on_submit=True,
@@ -2514,13 +2676,13 @@ elif section == "Inbox":
                         if ok:
                             st.session_state["leadwise_inbox_notice"] = (
                                 f"Reply sent to {recipient_email}. "
-                                "Inquiry marked Replied."
+                                "Conversation marked Replied."
                             )
                             st.rerun()
                         else:
                             st.error(send_message)
 
-        with st.expander("Update inquiry status", expanded=False):
+        with st.expander("Update conversation status", expanded=False):
             status_options = ["New", "In Progress", "Replied", "Closed"]
             current_status = str(inquiry.get("status") or "New")
             default_status_index = (
@@ -2535,8 +2697,8 @@ elif section == "Inbox":
                 key=f"inquiry_status_{int(selected_inquiry_id)}",
             )
             if st.button(
-                "Update Status",
-                key=f"update_inquiry_status_{int(selected_inquiry_id)}",
+                "Save Status",
+                key=f"save_inquiry_status_{int(selected_inquiry_id)}",
                 use_container_width=True,
             ):
                 ok, status_message = update_inquiry_status(
