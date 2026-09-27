@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.58.6 — Reader Account & Authentication Analytics — Administrative Governance & Internal Analytics
+# Version 18.58.7 — Reader Analytics Role Classification — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -1995,34 +1995,82 @@ elif section == "Usage Analytics":
         "and passwords are not stored as analytics events."
     )
 
-    total_events = scalar("SELECT COUNT(*) FROM leadwise_events")
-    sessions = scalar("SELECT COUNT(DISTINCT session_id) FROM leadwise_events")
-    signed_in_users = scalar("SELECT COUNT(DISTINCT user_id) FROM leadwise_events WHERE user_id IS NOT NULL")
-    page_views = scalar("SELECT COUNT(*) FROM leadwise_events WHERE event_type = 'page_view'")
-    assistant_queries = scalar("SELECT COUNT(*) FROM leadwise_events WHERE event_type = 'ask_leadwise_query'")
+    total_events = scalar("""
+        SELECT COUNT(*)
+        FROM leadwise_events e
+        LEFT JOIN users u ON u.user_id=e.user_id
+        WHERE e.user_id IS NULL OR u.role='reader'
+    """)
+    sessions = scalar("""
+        SELECT COUNT(DISTINCT e.session_id)
+        FROM leadwise_events e
+        LEFT JOIN users u ON u.user_id=e.user_id
+        WHERE e.user_id IS NULL OR u.role='reader'
+    """)
+    signed_in_users = scalar("""
+        SELECT COUNT(DISTINCT e.user_id)
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE u.role='reader'
+    """)
+    page_views = scalar("""
+        SELECT COUNT(*)
+        FROM leadwise_events e
+        LEFT JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type='page_view'
+          AND (e.user_id IS NULL OR u.role='reader')
+    """)
+    assistant_queries = scalar("""
+        SELECT COUNT(*)
+        FROM leadwise_events e
+        LEFT JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type='ask_leadwise_query'
+          AND (e.user_id IS NULL OR u.role='reader')
+    """)
     registered_readers = scalar("SELECT COUNT(*) FROM users WHERE role='reader'")
-    recorded_sign_ins = scalar(
-        "SELECT COUNT(*) FROM leadwise_events WHERE event_type='reader_sign_in'"
-    )
+    recorded_sign_ins = scalar("""
+        SELECT COUNT(*)
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type='reader_sign_in'
+          AND u.role='reader'
+    """)
+    guest_sessions = scalar("""
+        SELECT COUNT(DISTINCT session_id)
+        FROM leadwise_events
+        WHERE user_id IS NULL
+    """)
 
     c1, c2, c3, c4, c5 = st.columns(5)
-    c1.metric("Tracked Events", f"{total_events:,}")
-    c2.metric("Sessions", f"{sessions:,}")
+    c1.metric("Tracked Reader/Guest Events", f"{total_events:,}")
+    c2.metric("Reader/Guest Sessions", f"{sessions:,}")
     c3.metric("Active Signed-in Readers", f"{signed_in_users:,}")
     c4.metric("Page Views", f"{page_views:,}")
     c5.metric("Ask LeadWise", f"{assistant_queries:,}")
 
-    a1, a2 = st.columns(2)
+    a1, a2, a3 = st.columns(3)
     a1.metric("Registered Readers", f"{registered_readers:,}")
-    a2.metric("Recorded Sign Ins", f"{recorded_sign_ins:,}")
+    a2.metric("Recorded Reader Sign Ins", f"{recorded_sign_ins:,}")
+    a3.metric("Guest Sessions", f"{guest_sessions:,}")
+
+    st.caption(
+        "Reader analytics includes registered Reader accounts and guest activity. "
+        "Admin and Super Admin accounts are excluded from Reader metrics."
+    )
 
     st.markdown("### Feature usage")
     feature_usage = dataframe("""
-        SELECT event_type, COUNT(*) AS events,
-               COUNT(DISTINCT session_id) AS sessions,
-               COUNT(DISTINCT user_id) AS signed_in_readers
-        FROM leadwise_events
-        GROUP BY event_type
+        SELECT
+            e.event_type,
+            COUNT(*) AS events,
+            COUNT(DISTINCT e.session_id) AS sessions,
+            COUNT(DISTINCT CASE
+                WHEN u.role='reader' THEN e.user_id
+            END) AS signed_in_readers
+        FROM leadwise_events e
+        LEFT JOIN users u ON u.user_id=e.user_id
+        WHERE e.user_id IS NULL OR u.role='reader'
+        GROUP BY e.event_type
         ORDER BY events DESC
     """)
     st.dataframe(feature_usage, use_container_width=True, hide_index=True)
@@ -2031,12 +2079,15 @@ elif section == "Usage Analytics":
     with left:
         st.markdown("### Page activity")
         pages = dataframe("""
-            SELECT COALESCE(page, 'Unknown') AS page,
-                   COUNT(*) AS events,
-                   COUNT(DISTINCT session_id) AS sessions
-            FROM leadwise_events
-            WHERE event_type = 'page_view'
-            GROUP BY page
+            SELECT
+                COALESCE(e.page, 'Unknown') AS page,
+                COUNT(*) AS events,
+                COUNT(DISTINCT e.session_id) AS sessions
+            FROM leadwise_events e
+            LEFT JOIN users u ON u.user_id=e.user_id
+            WHERE e.event_type='page_view'
+              AND (e.user_id IS NULL OR u.role='reader')
+            GROUP BY e.page
             ORDER BY events DESC
         """)
         st.dataframe(pages, use_container_width=True, hide_index=True)
@@ -2044,28 +2095,46 @@ elif section == "Usage Analytics":
     with right:
         st.markdown("### Ask LeadWise usage")
         ask_usage = dataframe("""
-            SELECT intent, COUNT(*) AS questions,
-                   COUNT(DISTINCT user_id) AS signed_in_readers
-            FROM ask_leadwise_queries
-            GROUP BY intent
+            SELECT
+                q.intent,
+                COUNT(*) AS questions,
+                COUNT(DISTINCT CASE
+                    WHEN u.role='reader' THEN q.user_id
+                END) AS signed_in_readers
+            FROM ask_leadwise_queries q
+            LEFT JOIN users u ON u.user_id=q.user_id
+            WHERE q.user_id IS NULL OR u.role='reader'
+            GROUP BY q.intent
             ORDER BY questions DESC
         """)
         st.dataframe(ask_usage, use_container_width=True, hide_index=True)
 
-    st.markdown("### Recent events")
+    st.markdown("### Recent Reader and Guest events")
     recent_events = dataframe("""
-        SELECT event_id, user_id, session_id, event_type, page,
-               book_id, related_book_id, created_at
-        FROM leadwise_events
-        ORDER BY event_id DESC
+        SELECT
+            e.event_id,
+            e.user_id,
+            CASE
+                WHEN e.user_id IS NULL THEN 'Guest'
+                ELSE 'Reader'
+            END AS account_type,
+            e.session_id,
+            e.event_type,
+            e.page,
+            e.book_id,
+            e.related_book_id,
+            e.created_at
+        FROM leadwise_events e
+        LEFT JOIN users u ON u.user_id=e.user_id
+        WHERE e.user_id IS NULL OR u.role='reader'
+        ORDER BY e.event_id DESC
         LIMIT 200
     """)
     st.dataframe(recent_events, use_container_width=True, hide_index=True)
 
     st.info(
-        "The central event layer is active. Additional recommendation, book-view, "
-        "comparison and library-action events will be connected as those UI actions "
-        "are upgraded."
+        "Reader-facing analytics now separates registered Readers from guests and "
+        "excludes Admin and Super Admin accounts from Reader metrics."
     )
 
 elif section == "Internal Operations":
@@ -2286,16 +2355,19 @@ elif section == "Users":
     total_sign_ins = scalar(
         """
         SELECT COUNT(*)
-        FROM leadwise_events
-        WHERE event_type='reader_sign_in'
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type='reader_sign_in'
+          AND u.role='reader'
         """
     )
     readers_with_recorded_sign_in = scalar(
         """
-        SELECT COUNT(DISTINCT user_id)
-        FROM leadwise_events
-        WHERE event_type='reader_sign_in'
-          AND user_id IS NOT NULL
+        SELECT COUNT(DISTINCT e.user_id)
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type='reader_sign_in'
+          AND u.role='reader'
         """
     )
 
@@ -2443,10 +2515,9 @@ elif section == "Users":
                 e.related_book_id,
                 e.created_at
             FROM leadwise_events e
-            LEFT JOIN users u
+            JOIN users u
               ON u.user_id=e.user_id
-            WHERE e.user_id IS NOT NULL
-              AND (u.role='reader' OR u.role IS NULL)
+            WHERE u.role='reader'
             ORDER BY e.event_id DESC
             LIMIT 500
             """
@@ -4804,4 +4875,4 @@ elif section == "System Monitoring":
     st.dataframe(audit, use_container_width=True, hide_index=True)
 
 st.markdown("---")
-st.caption("LeadWise Administrator · Role-protected operational interface · 18.56.1")
+st.caption("LeadWise Administrator · Role-protected operational interface · 18.58.7")

@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.58.6 — Reader Account & Authentication Analytics
+# Version 18.58.7 — Reader Analytics Role Classification
 # =========================================================
 
 import sys
@@ -546,7 +546,11 @@ def authenticate_user(email, password):
         "user_id": row["user_id"],
         "full_name": row["full_name"],
         "email": row["email"],
-        "role": row["role"] if row["role"] in {"reader", "admin"} else "reader",
+        "role": (
+            row["role"]
+            if row["role"] in {"reader", "admin", "super_admin"}
+            else "reader"
+        ),
     }
 
 
