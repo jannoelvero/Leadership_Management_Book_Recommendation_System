@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.58.2 — Inbox Reply Workflow — Administrative Governance & Internal Analytics
+# Version 18.58.3 — In-App Inbox Replies — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -754,13 +754,14 @@ def record_inquiry_reply(
     delivery_status,
     external_message_id=None,
 ):
-    """Persist an Admin reply attempt and update the inquiry when sent."""
+    """Persist an Admin reply and update the inquiry when delivery succeeds."""
     actor = admin_user()
     if not actor:
         raise RuntimeError("An authenticated administrator is required.")
 
     now = datetime.now(timezone.utc).isoformat()
-    sent_at = now if delivery_status == "Sent" else None
+    delivered = delivery_status in {"Sent", "In-App"}
+    sent_at = now if delivered else None
 
     with db_connection() as connection:
         reply_id = insert_returning_id(
@@ -784,7 +785,7 @@ def record_inquiry_reply(
             "reply_id",
         )
 
-        if delivery_status == "Sent":
+        if delivered:
             connection.execute(
                 """
                 UPDATE leadwise_inquiries
@@ -794,8 +795,15 @@ def record_inquiry_reply(
                 (now, int(actor["user_id"]), int(inquiry_id)),
             )
 
+    if delivery_status == "Sent":
+        audit_action = "inquiry_reply_sent"
+    elif delivery_status == "In-App":
+        audit_action = "inquiry_reply_in_app"
+    else:
+        audit_action = "inquiry_reply_failed"
+
     log_admin_action(
-        "inquiry_reply_sent" if delivery_status == "Sent" else "inquiry_reply_failed",
+        audit_action,
         "inquiry",
         str(inquiry_id),
         (
@@ -2213,8 +2221,8 @@ elif section == "Ask LeadWise":
 elif section == "Inbox":
     st.subheader("LeadWise Inbox")
     st.caption(
-        "Review reader inquiries, reply by email, track response history, "
-        "and manage inquiry status."
+        "Review reader inquiries, send in-app responses to registered readers, "
+        "use email as an optional fallback, and manage inquiry status."
     )
 
     inbox_notice = st.session_state.pop("leadwise_inbox_notice", None)
@@ -2223,7 +2231,7 @@ elif section == "Inbox":
 
     inbox = dataframe(
         """
-        SELECT inquiry_id, inquiry_type, full_name, email, subject, message,
+        SELECT inquiry_id, user_id, inquiry_type, full_name, email, subject, message,
                related_book_id, status, created_at, replied_at, replied_by
         FROM leadwise_inquiries
         WHERE inquiry_type <> 'Suggest a Book'
@@ -2352,62 +2360,165 @@ elif section == "Inbox":
         recipient_email = str(inquiry.get("email") or "").strip()
         email_settings = _leadwise_email_settings()
 
-        if not _valid_email_address(recipient_email):
-            st.warning(
-                "This inquiry does not contain a valid email address, so LeadWise "
-                "cannot send an external reply."
-            )
-        elif not email_settings["configured"]:
-            st.warning(
-                "Email delivery is not configured yet. Add RESEND_API_KEY and "
-                "LEADWISE_REPLY_FROM_EMAIL to the Admin Streamlit secrets. "
-                "LEADWISE_REPLY_FROM_NAME is optional."
-            )
-        else:
-            st.caption(
-                "Reply delivery is configured. The API key remains in Streamlit "
-                "Secrets and is never displayed in the Admin interface."
+        raw_user_id = inquiry.get("user_id")
+        has_reader_account = (
+            raw_user_id is not None
+            and not pd.isna(raw_user_id)
+            and str(raw_user_id).strip() != ""
+        )
+
+        if has_reader_account:
+            st.success(
+                "In-app delivery is available. This inquiry is linked to a "
+                "registered LeadWise Reader account."
             )
 
-        with st.form(
-            f"leadwise_inquiry_reply_form_{int(selected_inquiry_id)}",
-            clear_on_submit=True,
-        ):
-            reply_message = st.text_area(
-                "Reply",
-                placeholder="Write the response that will be emailed to the reader...",
-                height=180,
-            )
-            send_reply = st.form_submit_button(
-                "Send Reply",
-                use_container_width=True,
-            )
-
-        if send_reply:
-            if not str(reply_message or "").strip():
-                st.warning("Enter a reply before sending.")
-            else:
-                ok, external_id, send_message, attempted = send_inquiry_reply_email(
-                    inquiry,
-                    reply_message,
+            with st.form(
+                f"leadwise_inquiry_in_app_reply_form_{int(selected_inquiry_id)}",
+                clear_on_submit=True,
+            ):
+                reply_message = st.text_area(
+                    "Reply",
+                    placeholder=(
+                        "Write the response that will appear in the reader's "
+                        "My Messages page..."
+                    ),
+                    height=180,
+                )
+                send_reply = st.form_submit_button(
+                    "Send In-App Reply",
+                    use_container_width=True,
                 )
 
-                if attempted:
+            if send_reply:
+                if not str(reply_message or "").strip():
+                    st.warning("Enter a reply before sending.")
+                else:
                     record_inquiry_reply(
                         selected_inquiry_id,
                         reply_message,
-                        recipient_email,
-                        "Sent" if ok else "Failed",
-                        external_id,
+                        None,
+                        "In-App",
+                        None,
                     )
-
-                if ok:
                     st.session_state["leadwise_inbox_notice"] = (
-                        f"Reply sent to {recipient_email}. Inquiry marked Replied."
+                        "In-app reply sent. The reader can now view it in "
+                        "My Messages. Inquiry marked Replied."
                     )
                     st.rerun()
-                else:
-                    st.error(send_message)
+
+            if (
+                email_settings["configured"]
+                and _valid_email_address(recipient_email)
+            ):
+                with st.expander("Optional email copy", expanded=False):
+                    st.caption(
+                        "Email delivery is configured. This is optional because "
+                        "the registered reader already receives the response in-app."
+                    )
+                    with st.form(
+                        f"leadwise_optional_email_reply_form_{int(selected_inquiry_id)}",
+                        clear_on_submit=True,
+                    ):
+                        email_reply_message = st.text_area(
+                            "Email reply",
+                            placeholder="Write the email copy...",
+                            height=140,
+                        )
+                        send_email_copy = st.form_submit_button(
+                            "Send Email Copy",
+                            use_container_width=True,
+                        )
+
+                    if send_email_copy:
+                        if not str(email_reply_message or "").strip():
+                            st.warning("Enter an email reply before sending.")
+                        else:
+                            ok, external_id, send_message, attempted = (
+                                send_inquiry_reply_email(
+                                    inquiry,
+                                    email_reply_message,
+                                )
+                            )
+                            if attempted:
+                                record_inquiry_reply(
+                                    selected_inquiry_id,
+                                    email_reply_message,
+                                    recipient_email,
+                                    "Sent" if ok else "Failed",
+                                    external_id,
+                                )
+                            if ok:
+                                st.session_state["leadwise_inbox_notice"] = (
+                                    f"Email copy sent to {recipient_email}."
+                                )
+                                st.rerun()
+                            else:
+                                st.error(send_message)
+
+        else:
+            st.warning(
+                "This inquiry was submitted as a guest, so there is no Reader "
+                "account where an in-app response can be delivered."
+            )
+
+            if not _valid_email_address(recipient_email):
+                st.info(
+                    "No valid email address is available. The inquiry can still "
+                    "be managed internally, but the sender cannot receive a reply "
+                    "after leaving the app."
+                )
+            elif not email_settings["configured"]:
+                st.info(
+                    "Email delivery is not configured. For guest inquiries, "
+                    "a verified external email sender is required to deliver a response."
+                )
+            else:
+                st.caption(
+                    "Email delivery is configured for this guest inquiry."
+                )
+                with st.form(
+                    f"leadwise_guest_email_reply_form_{int(selected_inquiry_id)}",
+                    clear_on_submit=True,
+                ):
+                    reply_message = st.text_area(
+                        "Email reply",
+                        placeholder="Write the response that will be emailed to the sender...",
+                        height=180,
+                    )
+                    send_reply = st.form_submit_button(
+                        "Send Email Reply",
+                        use_container_width=True,
+                    )
+
+                if send_reply:
+                    if not str(reply_message or "").strip():
+                        st.warning("Enter a reply before sending.")
+                    else:
+                        ok, external_id, send_message, attempted = (
+                            send_inquiry_reply_email(
+                                inquiry,
+                                reply_message,
+                            )
+                        )
+
+                        if attempted:
+                            record_inquiry_reply(
+                                selected_inquiry_id,
+                                reply_message,
+                                recipient_email,
+                                "Sent" if ok else "Failed",
+                                external_id,
+                            )
+
+                        if ok:
+                            st.session_state["leadwise_inbox_notice"] = (
+                                f"Reply sent to {recipient_email}. "
+                                "Inquiry marked Replied."
+                            )
+                            st.rerun()
+                        else:
+                            st.error(send_message)
 
         with st.expander("Update inquiry status", expanded=False):
             status_options = ["New", "In Progress", "Replied", "Closed"]

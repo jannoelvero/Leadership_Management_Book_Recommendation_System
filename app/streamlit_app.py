@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.58.2 — Chatbot Minimize Button Layout Fix
+# Version 18.58.3 — In-App Support Messaging
 # =========================================================
 
 import sys
@@ -119,7 +119,12 @@ READER_REQUIRED_SCHEMA = {
     "leadwise_inquiries": {
         "inquiry_id", "user_id", "inquiry_type", "full_name", "email", "subject",
         "message", "suggested_title", "suggested_author", "suggested_isbn_or_link",
-        "related_book_id", "created_at", "status",
+        "related_book_id", "created_at", "status", "replied_at", "replied_by",
+    },
+    "leadwise_inquiry_replies": {
+        "reply_id", "inquiry_id", "admin_user_id", "reply_message",
+        "sent_to_email", "delivery_status", "external_message_id",
+        "created_at", "sent_at",
     },
     "featured_reading": {
         "feature_id", "book_id", "feature_message", "display_order", "start_date",
@@ -365,9 +370,55 @@ def initialize_user_database():
                 related_book_id TEXT,
                 created_at TEXT NOT NULL,
                 status TEXT NOT NULL DEFAULT 'New',
-                FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE SET NULL
+                replied_at TEXT,
+                replied_by INTEGER,
+                FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE SET NULL,
+                FOREIGN KEY(replied_by) REFERENCES users(user_id) ON DELETE SET NULL
             )
             """
+        )
+
+        inquiry_columns = {
+            row["name"]
+            for row in connection.execute(
+                "PRAGMA table_info(leadwise_inquiries)"
+            ).fetchall()
+        }
+        if "replied_at" not in inquiry_columns:
+            connection.execute(
+                "ALTER TABLE leadwise_inquiries ADD COLUMN replied_at TEXT"
+            )
+        if "replied_by" not in inquiry_columns:
+            connection.execute(
+                "ALTER TABLE leadwise_inquiries ADD COLUMN replied_by INTEGER"
+            )
+
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS leadwise_inquiry_replies (
+                reply_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                inquiry_id INTEGER NOT NULL,
+                admin_user_id INTEGER,
+                reply_message TEXT NOT NULL,
+                sent_to_email TEXT,
+                delivery_status TEXT NOT NULL DEFAULT 'Pending',
+                external_message_id TEXT,
+                created_at TEXT NOT NULL,
+                sent_at TEXT,
+                FOREIGN KEY(inquiry_id) REFERENCES leadwise_inquiries(inquiry_id)
+                    ON DELETE CASCADE,
+                FOREIGN KEY(admin_user_id) REFERENCES users(user_id)
+                    ON DELETE SET NULL
+            )
+            """
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_inquiry_id "
+            "ON leadwise_inquiry_replies(inquiry_id)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_inquiry_replies_created_at "
+            "ON leadwise_inquiry_replies(created_at)"
         )
 
 
@@ -897,7 +948,44 @@ def save_leadwise_inquiry(
                 ),
             ),
         )
-    return True, "Your inquiry has been saved to LeadWise."
+    if user:
+        return True, (
+            "Your inquiry has been sent to LeadWise. "
+            "Replies will appear in My Messages."
+        )
+    return True, (
+        "Your inquiry has been saved to LeadWise. "
+        "Sign in before future inquiries if you want to receive replies in My Messages."
+    )
+
+
+def get_reader_support_threads(user_id):
+    """Return one signed-in reader's inquiries and LeadWise replies."""
+    with get_user_connection() as connection:
+        rows = connection.execute(
+            """
+            SELECT
+                i.inquiry_id,
+                i.inquiry_type,
+                i.subject,
+                i.message,
+                i.status,
+                i.created_at AS inquiry_created_at,
+                i.replied_at,
+                r.reply_id,
+                r.reply_message,
+                r.delivery_status,
+                r.created_at AS reply_created_at,
+                r.sent_at
+            FROM leadwise_inquiries i
+            LEFT JOIN leadwise_inquiry_replies r
+              ON r.inquiry_id = i.inquiry_id
+            WHERE i.user_id = ?
+            ORDER BY i.inquiry_id DESC, r.reply_id ASC
+            """,
+            (int(user_id),),
+        ).fetchall()
+    return pd.DataFrame([dict(row) for row in rows])
 
 
 def ask_leadwise(query, top_n=5):
@@ -1196,6 +1284,17 @@ def render_ask_leadwise_panel():
         default_name = current_user["full_name"] if current_user else ""
         default_email = current_user["email"] if current_user else ""
 
+        if current_user:
+            st.caption(
+                "You are signed in. LeadWise responses to this inquiry will appear "
+                "in My Messages."
+            )
+        else:
+            st.caption(
+                "Guest inquiries can be submitted, but in-app responses require "
+                "a signed-in LeadWise account."
+            )
+
         with st.form("leadwise_unified_contact_form", clear_on_submit=True):
             full_name = st.text_input(
                 "Full name",
@@ -1281,7 +1380,12 @@ def render_ask_leadwise_panel():
                         "assistant",
                         (
                             f"Thank you, {str(full_name).strip()}. Your **{inquiry_type}** "
-                            "has been recorded with status **New** for LeadWise review."
+                            "has been recorded with status **New** for LeadWise review. "
+                            + (
+                                "You can check **My Messages** for the response."
+                                if current_user
+                                else "Sign in before future inquiries to receive responses in **My Messages**."
+                            )
                         ),
                     )
                     st.session_state["leadwise_contact_open"] = False
@@ -4160,6 +4264,7 @@ DR. JAN
             "Discover Books",
             "Compare Books",
             "My Library",
+            "My Messages",
             "Reader Insights",
         ],
         label_visibility="collapsed",
@@ -5757,6 +5862,85 @@ with main_col:
                                             "Reading reflection saved privately. It is not included in Reader Insights."
                                         )
                                     st.rerun()
+
+    # =========================================================
+    # MY MESSAGES
+    # =========================================================
+
+    elif page == "My Messages":
+
+        render_page_header(
+            "Support",
+            "My Messages",
+            "Your LeadWise inquiries and responses from the administrator team.",
+        )
+
+        current_user = signed_in_user()
+
+        if current_user is None:
+            st.info(
+                "My Messages is an account feature. Sign in or create an account "
+                "to receive LeadWise responses inside the Reader app."
+            )
+        else:
+            threads = get_reader_support_threads(current_user["user_id"])
+
+            if threads.empty:
+                st.info(
+                    "You have no support conversations yet. Use Ask LeadWise → "
+                    "Feedback & Contact to send an inquiry."
+                )
+            else:
+                st.caption(
+                    "Replies are stored in the shared LeadWise database and become "
+                    "available here when you return to or refresh the Reader app."
+                )
+
+                for inquiry_id, thread in threads.groupby(
+                    "inquiry_id", sort=False, dropna=False
+                ):
+                    first = thread.iloc[0]
+                    subject = str(first.get("subject") or "").strip() or "No subject"
+                    inquiry_type = str(first.get("inquiry_type") or "General Inquiry")
+                    status = str(first.get("status") or "New")
+                    received = str(first.get("inquiry_created_at") or "")
+
+                    with st.container(border=True):
+                        head1, head2 = st.columns([3, 1])
+                        with head1:
+                            st.markdown(
+                                f"### {html.escape(subject)}"
+                            )
+                            st.caption(
+                                f"{html.escape(inquiry_type)} · Submitted {html.escape(received)}"
+                            )
+                        with head2:
+                            st.markdown(
+                                f"**Status:** {html.escape(status)}"
+                            )
+
+                        st.markdown("**Your message**")
+                        st.write(str(first.get("message") or ""))
+
+                        replies = thread[thread["reply_id"].notna()].copy()
+                        if replies.empty:
+                            st.caption(
+                                "LeadWise has not replied to this inquiry yet."
+                            )
+                        else:
+                            st.markdown("**LeadWise response**")
+                            for _, reply in replies.iterrows():
+                                with st.container(border=True):
+                                    st.write(str(reply.get("reply_message") or ""))
+                                    reply_time = (
+                                        reply.get("sent_at")
+                                        or reply.get("reply_created_at")
+                                        or ""
+                                    )
+                                    st.caption(
+                                        "LeadWise Support · "
+                                        + str(reply_time)
+                                    )
 
     # =========================================================
     # READER INSIGHTS
