@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.58.7 — Reader Analytics Role Classification — Administrative Governance & Internal Analytics
+# Version 18.58.8 — Supabase PostgreSQL Required Mode — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -51,6 +51,16 @@ USER_DB_PATH = Path(
 ).expanduser()
 DATABASE_URL = get_database_url()
 DATABASE_BACKEND = get_database_backend(DATABASE_URL)
+
+# 18.58.8: the Admin Control Center must use the same shared Supabase
+# PostgreSQL database as the Reader. Silent SQLite fallback is disabled.
+if DATABASE_BACKEND != "postgresql":
+    raise RuntimeError(
+        "LeadWise Admin requires Supabase PostgreSQL. "
+        "No PostgreSQL configuration was detected. Configure DATABASE_HOST, "
+        "DATABASE_USER and DATABASE_PASSWORD in Streamlit Secrets or in the "
+        "local .streamlit/secrets.toml file. SQLite fallback is disabled."
+    )
 
 PBKDF2_ITERATIONS = 310_000
 CATALOG_CSV_PATH = PROJECT_ROOT / "data" / "processed" / "leadwise_streamlit_catalog.csv"
@@ -172,8 +182,15 @@ ADMIN_REQUIRED_SCHEMA = {
 
 
 def db_connection():
-    """Return the active LeadWise Admin database connection."""
-    return connect_database(USER_DB_PATH, DATABASE_URL)
+    """Return the required shared Supabase PostgreSQL connection."""
+    connection = connect_database(USER_DB_PATH, DATABASE_URL)
+    if connection.backend != "postgresql":
+        connection.close()
+        raise RuntimeError(
+            "LeadWise Admin requires Supabase PostgreSQL. "
+            "SQLite fallback is disabled in version 18.58.8."
+        )
+    return connection
 
 
 def migrate_admin_schema():
@@ -4840,20 +4857,15 @@ elif section == "Featured Reading":
 
 elif section == "System Monitoring":
     st.subheader("System Monitoring")
-    if DATABASE_BACKEND == "postgresql":
-        with db_connection() as connection:
-            connection.execute("SELECT 1 AS ok").fetchone()
-        c1, c2, c3 = st.columns(3)
-        c1.metric("Database", "Available")
-        c2.metric("Backend", "Supabase PostgreSQL")
-        c3.metric("Admin Role", "Authorized")
-    else:
-        db_exists = USER_DB_PATH.exists()
-        db_size = USER_DB_PATH.stat().st_size if db_exists else 0
-        c1, c2, c3 = st.columns(3)
-        c1.metric("Database", "Available" if db_exists else "Missing")
-        c2.metric("SQLite Size", f"{db_size / 1024:.1f} KB" if db_exists else "—")
-        c3.metric("Admin Role", "Authorized")
+    with db_connection() as connection:
+        connection.execute("SELECT 1 AS ok").fetchone()
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Database", "Available")
+    c2.metric("Backend", "Supabase PostgreSQL")
+    c3.metric("Admin Role", "Authorized")
+    st.caption(
+        "Shared database mode is enforced. SQLite fallback is disabled."
+    )
 
     st.markdown("**Privacy boundary**")
     st.success(
@@ -4875,4 +4887,4 @@ elif section == "System Monitoring":
     st.dataframe(audit, use_container_width=True, hide_index=True)
 
 st.markdown("---")
-st.caption("LeadWise Administrator · Role-protected operational interface · 18.58.7")
+st.caption("LeadWise Administrator · Role-protected operational interface · 18.58.8")

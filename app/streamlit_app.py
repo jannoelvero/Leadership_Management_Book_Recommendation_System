@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.58.7 — Reader Analytics Role Classification
+# Version 18.58.8 — Supabase PostgreSQL Required Mode
 # =========================================================
 
 import sys
@@ -76,11 +76,19 @@ USER_DB_PATH = Path(
 
 DATABASE_URL = get_database_url()
 DATABASE_BACKEND = get_database_backend(DATABASE_URL)
+POSTGRES_COMPONENT_STATUS = get_postgres_component_status()
 
-# 18.58.0 keeps SQLite as the local default and activates PostgreSQL
-# only when DATABASE_URL is supplied through Streamlit secrets or the
-# environment. Reader and Admin can therefore share Supabase in cloud
-# while the validated local SQLite workflow remains available.
+# 18.58.8: operational Reader data must use the shared Supabase PostgreSQL
+# database. Silent SQLite fallback is disabled to prevent accounts, messages,
+# reviews, analytics and library activity from being written to an isolated
+# local database by mistake.
+if DATABASE_BACKEND != "postgresql":
+    raise RuntimeError(
+        "LeadWise Reader requires Supabase PostgreSQL. "
+        "No PostgreSQL configuration was detected. Configure DATABASE_HOST, "
+        "DATABASE_USER and DATABASE_PASSWORD in Streamlit Secrets or in the "
+        "local .streamlit/secrets.toml file. SQLite fallback is disabled."
+    )
 
 
 # =========================================================
@@ -154,8 +162,15 @@ READER_REQUIRED_SCHEMA = {
 
 
 def get_user_connection():
-    """Return the active LeadWise Reader database connection."""
-    return connect_database(USER_DB_PATH, DATABASE_URL)
+    """Return the required shared Supabase PostgreSQL connection."""
+    connection = connect_database(USER_DB_PATH, DATABASE_URL)
+    if connection.backend != "postgresql":
+        connection.close()
+        raise RuntimeError(
+            "LeadWise Reader requires Supabase PostgreSQL. "
+            "SQLite fallback is disabled in version 18.58.8."
+        )
+    return connection
 
 
 def initialize_user_database():
@@ -1749,7 +1764,11 @@ initialize_user_database()
 # This exposes only backend/status labels, never credentials.
 with get_user_connection() as _backend_check_connection:
     ACTIVE_DATABASE_BACKEND = _backend_check_connection.backend
-POSTGRES_COMPONENT_STATUS = get_postgres_component_status()
+    if ACTIVE_DATABASE_BACKEND != "postgresql":
+        raise RuntimeError(
+            "LeadWise Reader requires Supabase PostgreSQL. "
+            "SQLite fallback is disabled in version 18.58.8."
+        )
 
 
 # =========================================================
@@ -1776,17 +1795,8 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-_backend_label = (
-    "Supabase PostgreSQL"
-    if ACTIVE_DATABASE_BACKEND == "postgresql"
-    else "SQLite"
-)
-st.sidebar.caption(f"Database backend: {_backend_label}")
-if ACTIVE_DATABASE_BACKEND == "sqlite":
-    _secret_label = (
-        "Detected" if POSTGRES_COMPONENT_STATUS.get("complete") else "Not detected"
-    )
-    st.sidebar.caption(f"PostgreSQL component secrets: {_secret_label}")
+st.sidebar.caption("Database backend: Supabase PostgreSQL")
+st.sidebar.caption("Shared operational database: Connected")
 
 
 # =========================================================
