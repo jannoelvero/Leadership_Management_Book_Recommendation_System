@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.58.5 — Threaded Support Conversations
+# Version 18.58.6 — Reader Account & Authentication Analytics
 # =========================================================
 
 import sys
@@ -4427,6 +4427,11 @@ DR. JAN
             use_container_width=True,
             key="sidebar_sign_out",
         ):
+            track_event(
+                "reader_sign_out",
+                page="Authentication",
+                user=current_user,
+            )
             sign_out_user()
             st.rerun()
     else:
@@ -4459,6 +4464,11 @@ DR. JAN
                     user = authenticate_user(signin_email, signin_password)
                     if user:
                         sign_in_user(user)
+                        track_event(
+                            "reader_sign_in",
+                            page="Authentication",
+                            user=user,
+                        )
                         complete_pending_library_save(user)
                         st.success("Signed in successfully.")
                         st.rerun()
@@ -4505,6 +4515,11 @@ DR. JAN
                         )
                         if created:
                             sign_in_user(result)
+                            track_event(
+                                "reader_signup",
+                                page="Authentication",
+                                user=result,
+                            )
                             complete_pending_library_save(result)
                             st.success("Account created. You are now signed in.")
                             st.rerun()

@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.58.5 — Threaded Support Conversations — Administrative Governance & Internal Analytics
+# Version 18.58.6 — Reader Account & Authentication Analytics — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -2000,6 +2000,10 @@ elif section == "Usage Analytics":
     signed_in_users = scalar("SELECT COUNT(DISTINCT user_id) FROM leadwise_events WHERE user_id IS NOT NULL")
     page_views = scalar("SELECT COUNT(*) FROM leadwise_events WHERE event_type = 'page_view'")
     assistant_queries = scalar("SELECT COUNT(*) FROM leadwise_events WHERE event_type = 'ask_leadwise_query'")
+    registered_readers = scalar("SELECT COUNT(*) FROM users WHERE role='reader'")
+    recorded_sign_ins = scalar(
+        "SELECT COUNT(*) FROM leadwise_events WHERE event_type='reader_sign_in'"
+    )
 
     c1, c2, c3, c4, c5 = st.columns(5)
     c1.metric("Tracked Events", f"{total_events:,}")
@@ -2007,6 +2011,10 @@ elif section == "Usage Analytics":
     c3.metric("Active Signed-in Readers", f"{signed_in_users:,}")
     c4.metric("Page Views", f"{page_views:,}")
     c5.metric("Ask LeadWise", f"{assistant_queries:,}")
+
+    a1, a2 = st.columns(2)
+    a1.metric("Registered Readers", f"{registered_readers:,}")
+    a2.metric("Recorded Sign Ins", f"{recorded_sign_ins:,}")
 
     st.markdown("### Feature usage")
     feature_usage = dataframe("""
@@ -2210,21 +2218,244 @@ elif section == "Internal Operations":
         st.dataframe(audit,use_container_width=True,hide_index=True)
 
 elif section == "Users":
-    st.subheader("Users")
-    st.caption("Administrative account monitoring. Private reading notes are not exposed here.")
-    users = dataframe(
+    st.subheader("Reader Accounts")
+    st.caption(
+        "Registered-reader monitoring and authentication analytics. "
+        "Private notes, takeaways, practical applications and passwords are never shown here."
+    )
+
+    reader_accounts = dataframe(
         """
-        SELECT u.user_id, u.full_name, u.email, u.role, u.is_active, u.created_at,
-               COUNT(DISTINCT l.library_id) AS saved_books,
-               COUNT(DISTINCT CASE WHEN r.is_published = 1 THEN r.review_id END) AS published_reviews
+        SELECT
+            u.user_id,
+            u.full_name,
+            u.email,
+            u.is_active,
+            u.created_at AS registered_at,
+            COUNT(DISTINCT CASE
+                WHEN e.event_type='reader_sign_in' THEN e.event_id
+            END) AS sign_in_count,
+            MAX(CASE
+                WHEN e.event_type='reader_sign_in' THEN e.created_at
+            END) AS last_sign_in,
+            MAX(e.created_at) AS last_activity,
+            COUNT(DISTINCT l.library_id) AS saved_books,
+            COUNT(DISTINCT CASE
+                WHEN r.is_published=1 THEN r.review_id
+            END) AS published_reviews,
+            COUNT(DISTINCT i.inquiry_id) AS support_conversations
         FROM users u
-        LEFT JOIN user_library l ON l.user_id = u.user_id
-        LEFT JOIN user_reviews r ON r.user_id = u.user_id
-        GROUP BY u.user_id
+        LEFT JOIN leadwise_events e
+          ON e.user_id=u.user_id
+        LEFT JOIN user_library l
+          ON l.user_id=u.user_id
+        LEFT JOIN user_reviews r
+          ON r.user_id=u.user_id
+        LEFT JOIN leadwise_inquiries i
+          ON i.user_id=u.user_id
+        WHERE u.role='reader'
+        GROUP BY
+            u.user_id,
+            u.full_name,
+            u.email,
+            u.is_active,
+            u.created_at
         ORDER BY u.user_id DESC
         """
     )
-    st.dataframe(users, use_container_width=True, hide_index=True)
+
+    total_readers = int(len(reader_accounts))
+    active_readers = (
+        int(reader_accounts["is_active"].fillna(0).astype(int).eq(1).sum())
+        if not reader_accounts.empty
+        else 0
+    )
+
+    registered_today = 0
+    if not reader_accounts.empty:
+        registration_times = pd.to_datetime(
+            reader_accounts["registered_at"],
+            errors="coerce",
+            utc=True,
+        )
+        today_utc = pd.Timestamp.now(tz="UTC").date()
+        registered_today = int(
+            registration_times.dt.date.eq(today_utc).fillna(False).sum()
+        )
+
+    total_sign_ins = scalar(
+        """
+        SELECT COUNT(*)
+        FROM leadwise_events
+        WHERE event_type='reader_sign_in'
+        """
+    )
+    readers_with_recorded_sign_in = scalar(
+        """
+        SELECT COUNT(DISTINCT user_id)
+        FROM leadwise_events
+        WHERE event_type='reader_sign_in'
+          AND user_id IS NOT NULL
+        """
+    )
+
+    k1, k2, k3, k4, k5 = st.columns(5)
+    k1.metric("Registered Readers", f"{total_readers:,}")
+    k2.metric("Active Accounts", f"{active_readers:,}")
+    k3.metric("New Today", f"{registered_today:,}")
+    k4.metric("Recorded Sign Ins", f"{total_sign_ins:,}")
+    k5.metric(
+        "Readers With Sign In Activity",
+        f"{readers_with_recorded_sign_in:,}",
+    )
+
+    st.info(
+        "Registration history is available for all Reader accounts from the users table. "
+        "Successful sign-in event tracking starts with Reader version 18.58.6, "
+        "so sign-ins that occurred before this deployment cannot be reconstructed."
+    )
+
+    accounts_tab, registrations_tab, signins_tab, activity_tab = st.tabs(
+        [
+            "Reader Accounts",
+            "Registration Activity",
+            "Sign In Activity",
+            "Recent Reader Activity",
+        ]
+    )
+
+    with accounts_tab:
+        st.markdown("### Reader account directory")
+        if reader_accounts.empty:
+            st.info("No registered Reader accounts are available yet.")
+        else:
+            account_display = reader_accounts.copy()
+            account_display["account_status"] = account_display[
+                "is_active"
+            ].fillna(0).astype(int).map(
+                {1: "Active", 0: "Inactive"}
+            )
+
+            account_display = account_display[
+                [
+                    "user_id",
+                    "full_name",
+                    "email",
+                    "account_status",
+                    "registered_at",
+                    "sign_in_count",
+                    "last_sign_in",
+                    "last_activity",
+                    "saved_books",
+                    "published_reviews",
+                    "support_conversations",
+                ]
+            ]
+            st.dataframe(
+                account_display,
+                use_container_width=True,
+                hide_index=True,
+            )
+
+    with registrations_tab:
+        st.markdown("### Registration activity")
+        registrations = dataframe(
+            """
+            SELECT
+                user_id,
+                full_name,
+                email,
+                is_active,
+                created_at AS registered_at
+            FROM users
+            WHERE role='reader'
+            ORDER BY created_at DESC, user_id DESC
+            """
+        )
+
+        if registrations.empty:
+            st.info("No Reader registrations have been recorded yet.")
+        else:
+            registrations["account_status"] = (
+                registrations["is_active"]
+                .fillna(0)
+                .astype(int)
+                .map({1: "Active", 0: "Inactive"})
+            )
+            st.dataframe(
+                registrations[
+                    [
+                        "user_id",
+                        "full_name",
+                        "email",
+                        "account_status",
+                        "registered_at",
+                    ]
+                ],
+                use_container_width=True,
+                hide_index=True,
+            )
+
+    with signins_tab:
+        st.markdown("### Successful sign-in activity")
+        signins = dataframe(
+            """
+            SELECT
+                e.event_id,
+                e.user_id,
+                u.full_name,
+                u.email,
+                e.session_id,
+                e.created_at AS signed_in_at
+            FROM leadwise_events e
+            JOIN users u
+              ON u.user_id=e.user_id
+            WHERE e.event_type='reader_sign_in'
+              AND u.role='reader'
+            ORDER BY e.created_at DESC, e.event_id DESC
+            LIMIT 1000
+            """
+        )
+
+        if signins.empty:
+            st.info(
+                "No successful Reader sign-ins have been recorded since "
+                "authentication analytics was enabled."
+            )
+        else:
+            st.dataframe(
+                signins,
+                use_container_width=True,
+                hide_index=True,
+            )
+
+    with activity_tab:
+        st.markdown("### Recent Reader activity")
+        recent_reader_activity = dataframe(
+            """
+            SELECT
+                e.event_id,
+                e.user_id,
+                COALESCE(u.full_name, 'Guest') AS reader,
+                e.event_type,
+                e.page,
+                e.book_id,
+                e.related_book_id,
+                e.created_at
+            FROM leadwise_events e
+            LEFT JOIN users u
+              ON u.user_id=e.user_id
+            WHERE e.user_id IS NOT NULL
+              AND (u.role='reader' OR u.role IS NULL)
+            ORDER BY e.event_id DESC
+            LIMIT 500
+            """
+        )
+        st.dataframe(
+            recent_reader_activity,
+            use_container_width=True,
+            hide_index=True,
+        )
 
 elif section == "Reader Insights":
     st.subheader("Published Reader Insights")
