@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.58.3 — In-App Support Messaging
+# Version 18.58.4 — Signed-In Navigation Visibility
 # =========================================================
 
 import sys
@@ -4256,25 +4256,45 @@ DR. JAN
         "### Navigation"
     )
 
+    current_user = signed_in_user()
+
+    # 18.58.4: account-only sections are hidden from guests.
+    guest_navigation = [
+        "Home",
+        "Discover Books",
+        "Compare Books",
+    ]
+    signed_in_navigation = guest_navigation + [
+        "My Library",
+        "My Messages",
+        "Reader Insights",
+    ]
+
+    navigation_options = (
+        signed_in_navigation
+        if current_user
+        else guest_navigation
+    )
+
+    # If a user signs out while viewing an account-only page,
+    # safely return the navigation state to Home before creating
+    # the radio widget with the reduced guest option set.
+    if (
+        not current_user
+        and st.session_state.get("leadwise_navigation")
+        not in navigation_options
+    ):
+        st.session_state["leadwise_navigation"] = "Home"
 
     page = st.radio(
         "Choose a section",
-        [
-            "Home",
-            "Discover Books",
-            "Compare Books",
-            "My Library",
-            "My Messages",
-            "Reader Insights",
-        ],
+        navigation_options,
         label_visibility="collapsed",
         key="leadwise_navigation",
     )
 
 
     st.markdown("---")
-
-    current_user = signed_in_user()
 
     if current_user:
         st.markdown(
@@ -4291,8 +4311,8 @@ DR. JAN
     else:
         st.markdown("**Guest mode**")
         st.caption(
-            "Discover, compare, and use Ask LeadWise without an account. "
-            "Sign in to use your personal library."
+            "Browse Home, Discover Books, and Compare Books as a guest. "
+            "Sign in to access My Library, My Messages, and Reader Insights."
         )
         with st.expander("Sign In / Create Account", expanded=bool(st.session_state.get("open_auth_panel", False))):
             auth_tab_signin, auth_tab_create = st.tabs(
