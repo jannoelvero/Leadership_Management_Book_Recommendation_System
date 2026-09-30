@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.59.1 — Verified Free eBook Management — Administrative Governance & Internal Analytics
+# Version 18.59.4 — Free eBook Engagement Analytics — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -3130,6 +3130,280 @@ elif section == "Usage Analytics":
             ORDER BY questions DESC
         """)
         st.dataframe(ask_usage, use_container_width=True, hide_index=True)
+
+    st.markdown("### Free eBook Engagement")
+    st.caption(
+        "Tracks signed-in Reader search and access activity for the free eBook feature. "
+        "Download metrics represent download-link requests/intent because the actual file "
+        "is delivered by the external provider."
+    )
+
+    free_searches = scalar("""
+        SELECT COUNT(*)
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type='free_ebook_search'
+          AND u.role='reader'
+    """)
+    free_reads = scalar("""
+        SELECT COUNT(*)
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type IN (
+            'free_ebook_live_read',
+            'free_ebook_read',
+            'free_ebook_external_read_intent'
+        )
+          AND u.role='reader'
+    """)
+    free_download_intents = scalar("""
+        SELECT COUNT(*)
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type='free_ebook_download_intent'
+          AND u.role='reader'
+    """)
+    free_catalog_saves = scalar("""
+        SELECT COUNT(*)
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type='free_ebook_catalog_save'
+          AND u.role='reader'
+    """)
+    free_readers = scalar("""
+        SELECT COUNT(DISTINCT e.user_id)
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type IN (
+            'free_ebook_search',
+            'free_ebook_live_read',
+            'free_ebook_read',
+            'free_ebook_external_read_intent',
+            'free_ebook_download_intent',
+            'free_ebook_catalog_save'
+        )
+          AND u.role='reader'
+    """)
+
+    f1, f2, f3, f4, f5 = st.columns(5)
+    f1.metric("Free eBook Searches", f"{free_searches:,}")
+    f2.metric("Read / Open Intents", f"{free_reads:,}")
+    f3.metric("Download Intents", f"{free_download_intents:,}")
+    f4.metric("Catalog Saves", f"{free_catalog_saves:,}")
+    f5.metric("Readers Using eBooks", f"{free_readers:,}")
+
+    ebook_left, ebook_right = st.columns(2)
+
+    with ebook_left:
+        st.markdown("#### Most searched terms")
+        ebook_search_terms = dataframe("""
+            SELECT
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'query'), '') AS search_term,
+                COUNT(*) AS searches,
+                COUNT(DISTINCT e.user_id) AS readers
+            FROM leadwise_events e
+            JOIN users u ON u.user_id=e.user_id
+            WHERE e.event_type='free_ebook_search'
+              AND u.role='reader'
+              AND NULLIF(TRIM(e.metadata_json::jsonb ->> 'query'), '') IS NOT NULL
+            GROUP BY NULLIF(TRIM(e.metadata_json::jsonb ->> 'query'), '')
+            ORDER BY searches DESC, search_term ASC
+            LIMIT 25
+        """)
+        st.dataframe(
+            ebook_search_terms,
+            use_container_width=True,
+            hide_index=True,
+        )
+
+    with ebook_right:
+        st.markdown("#### Provider engagement")
+        ebook_providers = dataframe("""
+            SELECT
+                COALESCE(
+                    NULLIF(TRIM(e.metadata_json::jsonb ->> 'provider'), ''),
+                    'Unknown'
+                ) AS provider,
+                COUNT(*) FILTER (
+                    WHERE e.event_type IN (
+                        'free_ebook_live_read',
+                        'free_ebook_read',
+                        'free_ebook_external_read_intent'
+                    )
+                ) AS read_open_intents,
+                COUNT(*) FILTER (
+                    WHERE e.event_type='free_ebook_download_intent'
+                ) AS download_intents,
+                COUNT(*) FILTER (
+                    WHERE e.event_type='free_ebook_catalog_save'
+                ) AS catalog_saves,
+                COUNT(DISTINCT e.user_id) AS readers
+            FROM leadwise_events e
+            JOIN users u ON u.user_id=e.user_id
+            WHERE e.event_type IN (
+                'free_ebook_live_read',
+                'free_ebook_read',
+                'free_ebook_external_read_intent',
+                'free_ebook_download_intent',
+                'free_ebook_catalog_save'
+            )
+              AND u.role='reader'
+            GROUP BY COALESCE(
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'provider'), ''),
+                'Unknown'
+            )
+            ORDER BY
+                (
+                    COUNT(*) FILTER (
+                        WHERE e.event_type IN (
+                            'free_ebook_live_read',
+                            'free_ebook_read',
+                            'free_ebook_external_read_intent'
+                        )
+                    )
+                    +
+                    COUNT(*) FILTER (
+                        WHERE e.event_type='free_ebook_download_intent'
+                    )
+                ) DESC,
+                provider ASC
+        """)
+        st.dataframe(
+            ebook_providers,
+            use_container_width=True,
+            hide_index=True,
+        )
+
+    st.markdown("#### Most opened / download-requested free eBooks")
+    ebook_titles = dataframe("""
+        SELECT
+            COALESCE(
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'title'), ''),
+                NULLIF(TRIM(e.book_id), ''),
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'source_id'), ''),
+                'Unknown item'
+            ) AS ebook,
+            COALESCE(
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'provider'), ''),
+                'Verified LeadWise source'
+            ) AS provider,
+            COUNT(*) FILTER (
+                WHERE e.event_type IN (
+                    'free_ebook_live_read',
+                    'free_ebook_read',
+                    'free_ebook_external_read_intent'
+                )
+            ) AS read_open_intents,
+            COUNT(*) FILTER (
+                WHERE e.event_type='free_ebook_download_intent'
+            ) AS download_intents,
+            COUNT(DISTINCT e.user_id) AS readers
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type IN (
+            'free_ebook_live_read',
+            'free_ebook_read',
+            'free_ebook_external_read_intent',
+            'free_ebook_download_intent'
+        )
+          AND u.role='reader'
+        GROUP BY
+            COALESCE(
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'title'), ''),
+                NULLIF(TRIM(e.book_id), ''),
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'source_id'), ''),
+                'Unknown item'
+            ),
+            COALESCE(
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'provider'), ''),
+                'Verified LeadWise source'
+            )
+        ORDER BY
+            (
+                COUNT(*) FILTER (
+                    WHERE e.event_type IN (
+                        'free_ebook_live_read',
+                        'free_ebook_read',
+                        'free_ebook_external_read_intent'
+                    )
+                )
+                +
+                COUNT(*) FILTER (
+                    WHERE e.event_type='free_ebook_download_intent'
+                )
+            ) DESC,
+            ebook ASC
+        LIMIT 30
+    """)
+    st.dataframe(
+        ebook_titles,
+        use_container_width=True,
+        hide_index=True,
+    )
+
+    format_usage = dataframe("""
+        SELECT
+            COALESCE(
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'format'), ''),
+                'Not specified'
+            ) AS format,
+            COUNT(*) AS download_intents,
+            COUNT(DISTINCT e.user_id) AS readers
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type='free_ebook_download_intent'
+          AND u.role='reader'
+        GROUP BY COALESCE(
+            NULLIF(TRIM(e.metadata_json::jsonb ->> 'format'), ''),
+            'Not specified'
+        )
+        ORDER BY download_intents DESC, format ASC
+    """)
+    if not format_usage.empty:
+        st.markdown("#### Requested download formats")
+        st.dataframe(
+            format_usage,
+            use_container_width=True,
+            hide_index=True,
+        )
+
+    recent_ebook_events = dataframe("""
+        SELECT
+            e.event_id,
+            e.user_id,
+            e.event_type,
+            COALESCE(
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'provider'), ''),
+                'Verified LeadWise source'
+            ) AS provider,
+            COALESCE(
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'title'), ''),
+                NULLIF(TRIM(e.book_id), ''),
+                NULLIF(TRIM(e.metadata_json::jsonb ->> 'source_id'), '')
+            ) AS ebook,
+            NULLIF(TRIM(e.metadata_json::jsonb ->> 'format'), '') AS format,
+            NULLIF(TRIM(e.metadata_json::jsonb ->> 'query'), '') AS search_query,
+            e.created_at
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type IN (
+            'free_ebook_search',
+            'free_ebook_live_read',
+            'free_ebook_read',
+            'free_ebook_external_read_intent',
+            'free_ebook_download_intent',
+            'free_ebook_catalog_save'
+        )
+          AND u.role='reader'
+        ORDER BY e.event_id DESC
+        LIMIT 100
+    """)
+    st.markdown("#### Recent free eBook activity")
+    st.dataframe(
+        recent_ebook_events,
+        use_container_width=True,
+        hide_index=True,
+    )
 
     st.markdown("### Recent Reader and Guest events")
     recent_events = dataframe("""

@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.59.3 — Gutenberg + Open Library Free eBook Search
+# Version 18.59.4 — Free eBook Engagement Analytics
 # =========================================================
 
 import sys
@@ -1301,6 +1301,9 @@ def render_free_ebook_search_result(result, current_user, index):
     thumbnail = _commerce_text(result.get("thumbnail"), "")
     first_publish_year = result.get("first_publish_year")
     download_count = result.get("download_count")
+    interaction_key = hashlib.sha256(
+        f"{source}|{source_id}|{index}".encode("utf-8")
+    ).hexdigest()[:16]
 
     with st.container(border=True):
         cover_col, info_col = st.columns([1, 3.2])
@@ -1363,7 +1366,11 @@ def render_free_ebook_search_result(result, current_user, index):
                             "free_ebook_catalog_save",
                             page="My Library",
                             book_id=matched_book_id,
-                            metadata={"provider": source, "source_id": source_id},
+                            metadata={
+                                "provider": source,
+                                "source_id": source_id,
+                                "title": title,
+                            },
                             user=current_user,
                         )
                         st.success("Matching LeadWise book saved to My Library.")
@@ -1381,7 +1388,12 @@ def render_free_ebook_search_result(result, current_user, index):
                     track_event(
                         "free_ebook_live_read",
                         page="My Library",
-                        metadata={"provider": source, "source_id": source_id},
+                        metadata={
+                            "provider": source,
+                            "source_id": source_id,
+                            "title": title,
+                            "access_mode": "embedded",
+                        },
                         user=current_user,
                     )
                     viewer_token = f"{source}|{source_id}"
@@ -1391,43 +1403,104 @@ def render_free_ebook_search_result(result, current_user, index):
                     )
                     st.rerun()
             elif read_url:
-                st.link_button(
-                    "Read at Source ↗",
-                    read_url,
+                if st.button(
+                    "Open Reader Link",
+                    key=f"free_external_read_{interaction_key}",
                     use_container_width=True,
-                )
+                ):
+                    track_event(
+                        "free_ebook_external_read_intent",
+                        page="My Library",
+                        metadata={
+                            "provider": source,
+                            "source_id": source_id,
+                            "title": title,
+                            "access_mode": "external",
+                        },
+                        user=current_user,
+                    )
+                    st.session_state[
+                        f"free_external_read_link_{interaction_key}"
+                    ] = True
+
+                if st.session_state.get(
+                    f"free_external_read_link_{interaction_key}", False
+                ):
+                    st.link_button(
+                        "Continue to Provider ↗",
+                        read_url,
+                        use_container_width=True,
+                    )
             else:
                 st.caption("Reader unavailable")
 
         with action_columns[1]:
-            if epub_url:
-                st.link_button(
-                    "EPUB Download ↗",
-                    epub_url,
+            download_url_1 = epub_url or text_url
+            download_format_1 = "EPUB" if epub_url else ("TEXT" if text_url else "")
+            if download_url_1:
+                if st.button(
+                    f"Get {download_format_1} Link",
+                    key=f"free_download_1_{interaction_key}",
                     use_container_width=True,
-                )
-            elif text_url:
-                st.link_button(
-                    "Text Download ↗",
-                    text_url,
-                    use_container_width=True,
-                )
+                ):
+                    track_event(
+                        "free_ebook_download_intent",
+                        page="My Library",
+                        metadata={
+                            "provider": source,
+                            "source_id": source_id,
+                            "title": title,
+                            "format": download_format_1,
+                        },
+                        user=current_user,
+                    )
+                    st.session_state[
+                        f"free_download_1_link_{interaction_key}"
+                    ] = True
+
+                if st.session_state.get(
+                    f"free_download_1_link_{interaction_key}", False
+                ):
+                    st.link_button(
+                        f"Open {download_format_1} ↗",
+                        download_url_1,
+                        use_container_width=True,
+                    )
             else:
                 st.caption("No EPUB/Text link")
 
         with action_columns[2]:
-            if pdf_url:
-                st.link_button(
-                    "PDF Download ↗",
-                    pdf_url,
+            download_url_2 = pdf_url or kindle_url
+            download_format_2 = "PDF" if pdf_url else ("KINDLE" if kindle_url else "")
+            if download_url_2:
+                if st.button(
+                    f"Get {download_format_2} Link",
+                    key=f"free_download_2_{interaction_key}",
                     use_container_width=True,
-                )
-            elif kindle_url:
-                st.link_button(
-                    "Kindle File ↗",
-                    kindle_url,
-                    use_container_width=True,
-                )
+                ):
+                    track_event(
+                        "free_ebook_download_intent",
+                        page="My Library",
+                        metadata={
+                            "provider": source,
+                            "source_id": source_id,
+                            "title": title,
+                            "format": download_format_2,
+                        },
+                        user=current_user,
+                    )
+                    st.session_state[
+                        f"free_download_2_link_{interaction_key}"
+                    ] = True
+
+                if st.session_state.get(
+                    f"free_download_2_link_{interaction_key}", False
+                ):
+                    st.link_button(
+                        f"Open {download_format_2} ↗",
+                        download_url_2,
+                        use_container_width=True,
+                    )
             else:
                 st.caption("No PDF/Kindle link")
 
@@ -1527,6 +1600,9 @@ def render_free_ebook_search(current_user):
                         )
                         if enabled
                     ],
+                    "result_count": len(
+                        st.session_state.get("free_ebook_search_results", {}).get("items", [])
+                    ),
                 },
                 user=current_user,
             )
