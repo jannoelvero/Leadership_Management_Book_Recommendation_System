@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.59.2 — Searchable Free eBook Library
+# Version 18.59.3 — Gutenberg + Open Library Free eBook Search
 # =========================================================
 
 import sys
@@ -869,32 +869,177 @@ def google_books_lookup_for_reader(book):
 
 
 
-@st.cache_data(ttl=3600, show_spinner=False)
-def search_google_free_ebooks(query, api_key="", max_results=12):
-    """Search Google Books for full-view free eBooks."""
+@st.cache_data(ttl=21600, show_spinner=False)
+def _search_gutendex_cached(query, max_results=10):
+    """Search Project Gutenberg metadata through Gutendex without an API key."""
     query = str(query or "").strip()
     if not query:
-        return {"ok": False, "error": "Enter a title, author, subject, or ISBN.", "items": []}
+        return {"ok": False, "source": "Project Gutenberg", "error": "Enter a search term.", "items": []}
 
     try:
         max_results = max(1, min(int(max_results), 20))
     except (TypeError, ValueError):
-        max_results = 12
+        max_results = 10
 
-    params = {
-        "q": query,
-        "filter": "free-ebooks",
-        "printType": "books",
-        "projection": "full",
-        "maxResults": max_results,
+    result_map = {}
+    errors = []
+
+    # Gutendex `search` covers title/author; `topic` covers subjects/bookshelves.
+    for parameter_name in ("search", "topic"):
+        params = {
+            parameter_name: query,
+            "copyright": "false",
+            "sort": "popular",
+        }
+        url = "https://gutendex.com/books?" + urllib.parse.urlencode(params)
+        request = urllib.request.Request(
+            url,
+            headers={"User-Agent": "LeadWise/18.59.3"},
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=12) as response:
+                payload = json.loads(response.read().decode("utf-8", errors="replace"))
+        except urllib.error.HTTPError as exc:
+            errors.append(f"HTTP {exc.code}")
+            continue
+        except urllib.error.URLError:
+            errors.append("service unreachable")
+            continue
+        except Exception as exc:
+            errors.append(type(exc).__name__)
+            continue
+
+        for item in payload.get("results") or []:
+            try:
+                gutenberg_id = int(item.get("id"))
+            except (TypeError, ValueError):
+                continue
+
+            # `copyright=false` means Gutendex lists it as public domain in the U.S.
+            if item.get("copyright") is not False:
+                continue
+
+            formats = item.get("formats") or {}
+
+            def _format_url(exact=None, startswith=None):
+                if exact and formats.get(exact):
+                    return str(formats.get(exact) or "").strip()
+                if startswith:
+                    for mime, candidate_url in formats.items():
+                        if str(mime).lower().startswith(startswith.lower()) and candidate_url:
+                            return str(candidate_url).strip()
+                return ""
+
+            html_url = _format_url(exact="text/html") or _format_url(startswith="text/html")
+            epub_url = _format_url(exact="application/epub+zip")
+            kindle_url = _format_url(exact="application/x-mobipocket-ebook")
+            text_url = (
+                _format_url(exact="text/plain; charset=utf-8")
+                or _format_url(exact="text/plain; charset=us-ascii")
+                or _format_url(startswith="text/plain")
+            )
+            cover_url = _format_url(exact="image/jpeg")
+
+            author_names = [
+                str(person.get("name") or "").strip()
+                for person in (item.get("authors") or [])
+                if str(person.get("name") or "").strip()
+            ]
+            subjects = [
+                str(value).strip()
+                for value in (item.get("subjects") or [])
+                if str(value).strip()
+            ]
+            bookshelves = [
+                str(value).strip()
+                for value in (item.get("bookshelves") or [])
+                if str(value).strip()
+            ]
+            summaries = [
+                str(value).strip()
+                for value in (item.get("summaries") or [])
+                if str(value).strip()
+            ]
+
+            result_map[gutenberg_id] = {
+                "source": "Project Gutenberg",
+                "source_id": str(gutenberg_id),
+                "title": str(item.get("title") or "Untitled").strip(),
+                "authors": ", ".join(author_names),
+                "description": summaries[0] if summaries else "",
+                "subjects": subjects[:8],
+                "bookshelves": bookshelves[:6],
+                "languages": [str(v).upper() for v in (item.get("languages") or [])],
+                "thumbnail": cover_url,
+                "rights_label": "Not restricted by U.S. copyright law (per Project Gutenberg/Gutendex)",
+                "rights_note": (
+                    "Project Gutenberg copyright determinations are U.S.-based. "
+                    "Readers outside the United States should check local copyright law."
+                ),
+                "source_url": f"https://www.gutenberg.org/ebooks/{gutenberg_id}",
+                "read_url": html_url,
+                "embed_url": html_url,
+                "epub_url": epub_url,
+                "pdf_url": "",
+                "kindle_url": kindle_url,
+                "text_url": text_url,
+                "download_count": int(item.get("download_count") or 0),
+                "public_domain_us": True,
+                "open_access": True,
+            }
+
+            if len(result_map) >= max_results:
+                break
+
+        if len(result_map) >= max_results:
+            break
+
+    items = list(result_map.values())[:max_results]
+    if items:
+        return {
+            "ok": True,
+            "source": "Project Gutenberg",
+            "error": "",
+            "items": items,
+        }
+
+    return {
+        "ok": False if errors else True,
+        "source": "Project Gutenberg",
+        "error": (
+            "Project Gutenberg search is temporarily unavailable."
+            if errors
+            else ""
+        ),
+        "items": [],
     }
-    if api_key:
-        params["key"] = api_key
 
-    url = "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(params)
+
+@st.cache_data(ttl=21600, show_spinner=False)
+def _search_open_library_public_cached(query, max_results=10):
+    """Search Open Library for records indexed with public eBook access."""
+    query = str(query or "").strip()
+    if not query:
+        return {"ok": False, "source": "Open Library", "error": "Enter a search term.", "items": []}
+
+    try:
+        max_results = max(1, min(int(max_results), 20))
+    except (TypeError, ValueError):
+        max_results = 10
+
+    solr_query = f"({query}) AND ebook_access:public"
+    params = {
+        "q": solr_query,
+        "fields": (
+            "key,title,author_name,first_publish_year,cover_i,isbn,ia,"
+            "ebook_access,public_scan_b"
+        ),
+        "limit": max_results,
+    }
+    url = "https://openlibrary.org/search.json?" + urllib.parse.urlencode(params)
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "LeadWise/18.59.2"},
+        headers={"User-Agent": "LeadWise/18.59.3"},
     )
 
     try:
@@ -903,94 +1048,109 @@ def search_google_free_ebooks(query, api_key="", max_results=12):
     except urllib.error.HTTPError as exc:
         return {
             "ok": False,
-            "error": f"Google Books returned HTTP {exc.code}.",
+            "source": "Open Library",
+            "error": (
+                "Open Library is temporarily rate-limited."
+                if exc.code == 429
+                else f"Open Library returned HTTP {exc.code}."
+            ),
             "items": [],
         }
     except urllib.error.URLError:
         return {
             "ok": False,
-            "error": "Google Books could not be reached.",
+            "source": "Open Library",
+            "error": "Open Library could not be reached.",
             "items": [],
         }
     except Exception as exc:
         return {
             "ok": False,
-            "error": f"Google Books search failed: {type(exc).__name__}.",
+            "source": "Open Library",
+            "error": f"Open Library search failed: {type(exc).__name__}.",
             "items": [],
         }
 
     results = []
-    for item in payload.get("items") or []:
-        info = item.get("volumeInfo") or {}
-        access = item.get("accessInfo") or {}
-        epub = access.get("epub") or {}
-        pdf = access.get("pdf") or {}
-        identifiers = info.get("industryIdentifiers") or []
+    for doc in payload.get("docs") or []:
+        if str(doc.get("ebook_access") or "").lower() != "public":
+            continue
 
-        isbn10 = ""
-        isbn13 = ""
-        for identifier in identifiers:
-            kind = str(identifier.get("type") or "").upper()
-            value = str(identifier.get("identifier") or "").strip()
-            if kind == "ISBN_10" and not isbn10:
-                isbn10 = value
-            elif kind == "ISBN_13" and not isbn13:
-                isbn13 = value
+        work_key = str(doc.get("key") or "").strip()
+        if work_key and not work_key.startswith("/"):
+            work_key = "/" + work_key
 
-        image_links = info.get("imageLinks") or {}
-        thumbnail = str(
-            image_links.get("thumbnail")
-            or image_links.get("smallThumbnail")
-            or ""
-        ).strip()
-        if thumbnail.startswith("http://"):
-            thumbnail = "https://" + thumbnail[len("http://"):]
+        ia_values = [
+            str(value).strip()
+            for value in (doc.get("ia") or [])
+            if str(value).strip()
+        ]
+        archive_id = ia_values[0] if ia_values else ""
 
-        volume_id = str(item.get("id") or "").strip()
-        web_reader_link = str(access.get("webReaderLink") or "").strip()
-        preview_link = str(info.get("previewLink") or "").strip()
-        info_link = str(info.get("infoLink") or "").strip()
+        cover_id = doc.get("cover_i")
+        cover_url = (
+            f"https://covers.openlibrary.org/b/id/{cover_id}-M.jpg"
+            if cover_id
+            else ""
+        )
 
-        result = {
-            "volume_id": volume_id,
-            "title": str(info.get("title") or "Untitled").strip(),
-            "authors": ", ".join(info.get("authors") or []),
-            "publisher": str(info.get("publisher") or "").strip(),
-            "published_date": str(info.get("publishedDate") or "").strip(),
-            "description": str(info.get("description") or "").strip(),
-            "categories": ", ".join(info.get("categories") or []),
-            "isbn10": isbn10,
-            "isbn13": isbn13,
-            "thumbnail": thumbnail,
-            "country_code": str(access.get("country") or "").upper(),
-            "viewability": str(access.get("viewability") or "").upper(),
-            "public_domain": bool(access.get("publicDomain")),
-            "embeddable": bool(access.get("embeddable")),
-            "web_reader_link": web_reader_link,
-            "preview_link": preview_link,
-            "info_link": info_link,
-            "epub_available": bool(epub.get("isAvailable")),
-            "epub_download_link": str(epub.get("downloadLink") or "").strip(),
-            "pdf_available": bool(pdf.get("isAvailable")),
-            "pdf_download_link": str(pdf.get("downloadLink") or "").strip(),
-        }
+        isbn_values = [
+            _normalize_isbn_for_match(value)
+            for value in (doc.get("isbn") or [])
+            if _normalize_isbn_for_match(value)
+        ]
+        isbn10 = next((v for v in isbn_values if len(v) == 10), "")
+        isbn13 = next((v for v in isbn_values if len(v) == 13), "")
 
-        # The free-ebooks filter is already full-view free access. Keep only
-        # results that still expose an official reader or download route.
-        if (
-            result["web_reader_link"]
-            or result["preview_link"]
-            or result["epub_download_link"]
-            or result["pdf_download_link"]
-        ):
-            results.append(result)
+        source_url = f"https://openlibrary.org{work_key}" if work_key else ""
+        archive_url = (
+            f"https://archive.org/details/{urllib.parse.quote(archive_id)}"
+            if archive_id
+            else ""
+        )
+        embed_url = (
+            f"https://archive.org/embed/{urllib.parse.quote(archive_id)}"
+            if archive_id
+            else ""
+        )
+
+        results.append(
+            {
+                "source": "Open Library",
+                "source_id": work_key or archive_id,
+                "title": str(doc.get("title") or "Untitled").strip(),
+                "authors": ", ".join(doc.get("author_name") or []),
+                "description": "",
+                "subjects": [],
+                "bookshelves": [],
+                "languages": [],
+                "thumbnail": cover_url,
+                "rights_label": "Public eBook access in Open Library index",
+                "rights_note": (
+                    "Open Library availability is catalog/index metadata. "
+                    "The source page remains authoritative for current access."
+                ),
+                "source_url": source_url,
+                "read_url": archive_url or source_url,
+                "embed_url": embed_url,
+                "epub_url": "",
+                "pdf_url": "",
+                "kindle_url": "",
+                "text_url": "",
+                "download_count": None,
+                "public_domain_us": bool(doc.get("public_scan_b")),
+                "open_access": True,
+                "first_publish_year": doc.get("first_publish_year"),
+                "isbn10": isbn10,
+                "isbn13": isbn13,
+            }
+        )
 
     return {
         "ok": True,
+        "source": "Open Library",
         "error": "",
-        "items": results,
-        "total_items": int(payload.get("totalItems") or 0),
-        "api_key_configured": bool(api_key),
+        "items": results[:max_results],
     }
 
 
@@ -998,8 +1158,8 @@ def _normalize_isbn_for_match(value):
     return re.sub(r"[^0-9Xx]", "", str(value or "")).upper()
 
 
-def find_leadwise_catalog_match_for_google(result):
-    """Match a Google Books result to the LeadWise catalog using ISBN first."""
+def find_leadwise_catalog_match_for_free_ebook(result):
+    """Match a free-eBook result to the LeadWise catalog using ISBN then title/author."""
     if not isinstance(result, dict):
         return None
 
@@ -1015,14 +1175,11 @@ def find_leadwise_catalog_match_for_google(result):
     if candidate_isbns:
         for _, row in app_catalog.iterrows():
             row_isbn10, row_isbn13 = _reader_book_isbns(row)
-            row_isbns = set(row_isbn10 + row_isbn13)
-            if candidate_isbns.intersection(row_isbns):
+            if candidate_isbns.intersection(set(row_isbn10 + row_isbn13)):
                 return row
 
     requested_title = _bookstore_normalize_text(result.get("title"))
-    requested_authors = set(
-        _bookstore_normalize_text(result.get("authors")).split()
-    )
+    requested_authors = set(_bookstore_normalize_text(result.get("authors")).split())
     if not requested_title:
         return None
 
@@ -1044,58 +1201,111 @@ def find_leadwise_catalog_match_for_google(result):
     return None
 
 
-def render_google_books_embedded_viewer(volume_id, viewer_key):
-    """Render the official Google Books Embedded Viewer inside LeadWise."""
-    volume_id = str(volume_id or "").strip()
-    if not volume_id:
-        st.warning("Google Books did not return a usable volume ID for this edition.")
+def _interleave_source_results(source_payloads, max_results):
+    """Mix successful providers so one source does not crowd out the other."""
+    lists = [
+        list(payload.get("items") or [])
+        for payload in source_payloads
+        if payload.get("ok") and payload.get("items")
+    ]
+    combined = []
+    index = 0
+    while len(combined) < max_results and any(index < len(items) for items in lists):
+        for items in lists:
+            if index < len(items):
+                combined.append(items[index])
+                if len(combined) >= max_results:
+                    break
+        index += 1
+    return combined
+
+
+def search_legal_free_ebooks(query, use_gutenberg=True, use_open_library=True, max_results=10):
+    """Search the selected no-key legal/open eBook providers."""
+    query = str(query or "").strip()
+    if not query:
+        return {"ok": False, "error": "Enter a title, author, subject, or ISBN.", "items": [], "sources": []}
+
+    try:
+        max_results = max(1, min(int(max_results), 20))
+    except (TypeError, ValueError):
+        max_results = 10
+
+    selected_count = int(bool(use_gutenberg)) + int(bool(use_open_library))
+    if selected_count == 0:
+        return {
+            "ok": False,
+            "error": "Select at least one free eBook source.",
+            "items": [],
+            "sources": [],
+        }
+
+    per_source = max(5, max_results)
+
+    payloads = []
+    if use_gutenberg:
+        payloads.append(_search_gutendex_cached(query, per_source))
+    if use_open_library:
+        payloads.append(_search_open_library_public_cached(query, per_source))
+
+    items = _interleave_source_results(payloads, max_results)
+    successful_sources = [
+        payload.get("source")
+        for payload in payloads
+        if payload.get("ok")
+    ]
+    source_errors = [
+        f"{payload.get('source')}: {payload.get('error')}"
+        for payload in payloads
+        if payload.get("error")
+    ]
+
+    return {
+        "ok": bool(successful_sources),
+        "error": " | ".join(source_errors),
+        "items": items,
+        "sources": successful_sources,
+    }
+
+
+def render_free_ebook_embedded_viewer(result, viewer_key):
+    """Keep supported public readers inside the LeadWise page."""
+    source = str(result.get("source") or "")
+    embed_url = str(result.get("embed_url") or "").strip()
+    if not embed_url:
+        st.warning("This provider did not return an embeddable reader for this edition.")
         return
 
-    safe_div_id = re.sub(r"[^A-Za-z0-9_-]", "_", f"gbooks_{viewer_key}_{volume_id}")
-    volume_js = json.dumps(volume_id)
-    html_block = f"""
-    <div id="{safe_div_id}" style="width:100%;height:720px;"></div>
-    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
-    <script type="text/javascript">
-      google.books.load();
-      function initializeLeadWiseViewer() {{
-        var viewer = new google.books.DefaultViewer(
-          document.getElementById({json.dumps(safe_div_id)})
-        );
-        viewer.load({volume_js});
-      }}
-      google.books.setOnLoadCallback(initializeLeadWiseViewer);
-    </script>
-    """
-    components.html(html_block, height=740, scrolling=False)
+    if source in {"Project Gutenberg", "Open Library"}:
+        components.iframe(embed_url, height=760, scrolling=True)
+    else:
+        st.warning("Embedded reading is not available for this provider.")
 
 
 def render_free_ebook_search_result(result, current_user, index):
-    """Render one account-only Google Books free-eBook result."""
+    """Render one no-key legal/open free-eBook search result."""
+    source = _commerce_text(result.get("source"), "Free eBook source")
+    source_id = _commerce_text(result.get("source_id"), str(index))
     title = _commerce_text(result.get("title"), "Untitled")
     authors = _commerce_text(result.get("authors"), "Author not available")
-    publisher = _commerce_text(result.get("publisher"), "")
-    published_date = _commerce_text(result.get("published_date"), "")
     description = _commerce_text(result.get("description"), "")
-    categories = _commerce_text(result.get("categories"), "")
-    country = _commerce_text(result.get("country_code"), "")
-    public_domain = bool(result.get("public_domain"))
-    embeddable = bool(result.get("embeddable"))
-    volume_id = str(result.get("volume_id") or "").strip()
-    reader_url = str(
-        result.get("web_reader_link")
-        or result.get("preview_link")
-        or ""
-    ).strip()
-    epub_url = str(result.get("epub_download_link") or "").strip()
-    pdf_url = str(result.get("pdf_download_link") or "").strip()
-    info_url = str(result.get("info_link") or "").strip()
+    rights_label = _commerce_text(result.get("rights_label"), "Access information from provider")
+    rights_note = _commerce_text(result.get("rights_note"), "")
+    source_url = _commerce_text(result.get("source_url"), "")
+    read_url = _commerce_text(result.get("read_url"), "")
+    embed_url = _commerce_text(result.get("embed_url"), "")
+    epub_url = _commerce_text(result.get("epub_url"), "")
+    pdf_url = _commerce_text(result.get("pdf_url"), "")
+    kindle_url = _commerce_text(result.get("kindle_url"), "")
+    text_url = _commerce_text(result.get("text_url"), "")
+    thumbnail = _commerce_text(result.get("thumbnail"), "")
+    first_publish_year = result.get("first_publish_year")
+    download_count = result.get("download_count")
 
     with st.container(border=True):
         cover_col, info_col = st.columns([1, 3.2])
 
         with cover_col:
-            thumbnail = str(result.get("thumbnail") or "").strip()
             if thumbnail:
                 st.image(thumbnail, use_container_width=True)
             else:
@@ -1104,26 +1314,25 @@ def render_free_ebook_search_result(result, current_user, index):
         with info_col:
             st.markdown(f"### {title}")
             st.write(f"**Author:** {authors}")
+            st.caption(f"Source: {source}")
 
             meta_bits = []
-            if publisher:
-                meta_bits.append(publisher)
-            if published_date:
-                meta_bits.append(published_date)
-            if country:
-                meta_bits.append(f"Access market: {country}")
+            if first_publish_year:
+                meta_bits.append(f"First published: {first_publish_year}")
+            if isinstance(download_count, int):
+                meta_bits.append(f"Gutenberg downloads: {download_count:,}")
             if meta_bits:
                 st.caption(" · ".join(meta_bits))
 
-            if categories:
-                st.caption(f"Subjects: {categories}")
+            st.info(rights_label)
+            if rights_note:
+                st.caption(rights_note)
 
-            if public_domain:
-                st.success("Google Books identifies this edition as Public Domain.")
-            else:
-                st.info(
-                    "Google Books lists this result through its free-eBooks/full-view access filter."
-                )
+            subjects = result.get("subjects") or []
+            bookshelves = result.get("bookshelves") or []
+            topic_labels = [str(v) for v in subjects[:4]] + [str(v) for v in bookshelves[:2]]
+            if topic_labels:
+                st.caption("Topics: " + " · ".join(topic_labels))
 
             if description:
                 short_description = description
@@ -1131,17 +1340,7 @@ def render_free_ebook_search_result(result, current_user, index):
                     short_description = short_description[:647].rstrip() + "..."
                 st.write(short_description)
 
-            formats = []
-            if result.get("epub_available"):
-                formats.append("EPUB")
-            if result.get("pdf_available"):
-                formats.append("PDF")
-            if embeddable:
-                formats.append("Embedded Reader")
-            if formats:
-                st.caption("Available access: " + " · ".join(formats))
-
-            catalog_match = find_leadwise_catalog_match_for_google(result)
+            catalog_match = find_leadwise_catalog_match_for_free_ebook(result)
             if catalog_match is not None:
                 matched_book_id = str(catalog_match.get("book_id") or "").strip()
                 existing = get_library_entry(current_user["user_id"], matched_book_id)
@@ -1152,7 +1351,7 @@ def render_free_ebook_search_result(result, current_user, index):
                 elif matched_book_id:
                     if st.button(
                         "Save Matching Book to My Library",
-                        key=f"free_search_save_{index}_{matched_book_id}",
+                        key=f"free_search_save_{source}_{index}_{matched_book_id}",
                         use_container_width=True,
                     ):
                         save_library_book(
@@ -1164,7 +1363,7 @@ def render_free_ebook_search_result(result, current_user, index):
                             "free_ebook_catalog_save",
                             page="My Library",
                             book_id=matched_book_id,
-                            metadata={"provider": "Google Books", "volume_id": volume_id},
+                            metadata={"provider": source, "source_id": source_id},
                             user=current_user,
                         )
                         st.success("Matching LeadWise book saved to My Library.")
@@ -1173,27 +1372,28 @@ def render_free_ebook_search_result(result, current_user, index):
         action_columns = st.columns(4)
 
         with action_columns[0]:
-            if embeddable and volume_id:
+            if embed_url:
                 if st.button(
                     "Read in LeadWise",
-                    key=f"free_search_read_{index}_{volume_id}",
+                    key=f"free_search_read_{source}_{index}_{source_id}",
                     use_container_width=True,
                 ):
                     track_event(
                         "free_ebook_live_read",
                         page="My Library",
-                        metadata={"provider": "Google Books", "volume_id": volume_id},
+                        metadata={"provider": source, "source_id": source_id},
                         user=current_user,
                     )
+                    viewer_token = f"{source}|{source_id}"
                     current = st.session_state.get("free_ebook_search_viewer")
                     st.session_state["free_ebook_search_viewer"] = (
-                        None if current == volume_id else volume_id
+                        None if current == viewer_token else viewer_token
                     )
                     st.rerun()
-            elif reader_url:
+            elif read_url:
                 st.link_button(
-                    "Read on Google Books ↗",
-                    reader_url,
+                    "Read at Source ↗",
+                    read_url,
                     use_container_width=True,
                 )
             else:
@@ -1206,8 +1406,14 @@ def render_free_ebook_search_result(result, current_user, index):
                     epub_url,
                     use_container_width=True,
                 )
+            elif text_url:
+                st.link_button(
+                    "Text Download ↗",
+                    text_url,
+                    use_container_width=True,
+                )
             else:
-                st.caption("No EPUB download")
+                st.caption("No EPUB/Text link")
 
         with action_columns[2]:
             if pdf_url:
@@ -1216,46 +1422,72 @@ def render_free_ebook_search_result(result, current_user, index):
                     pdf_url,
                     use_container_width=True,
                 )
+            elif kindle_url:
+                st.link_button(
+                    "Kindle File ↗",
+                    kindle_url,
+                    use_container_width=True,
+                )
             else:
-                st.caption("No PDF download")
+                st.caption("No PDF/Kindle link")
 
         with action_columns[3]:
-            source_link = info_url or reader_url
-            if source_link:
+            if source_url:
                 st.link_button(
-                    "Google Books ↗",
-                    source_link,
+                    f"{source} ↗",
+                    source_url,
                     use_container_width=True,
                 )
 
-        if st.session_state.get("free_ebook_search_viewer") == volume_id:
+        viewer_token = f"{source}|{source_id}"
+        if st.session_state.get("free_ebook_search_viewer") == viewer_token:
             st.markdown("#### LeadWise eBook Reader")
-            st.caption(
-                "This official Google Books viewer stays inside the LeadWise page. "
-                "Download links, when offered by Google Books, open the provider route "
-                "without replacing your LeadWise session."
-            )
-            render_google_books_embedded_viewer(
-                volume_id,
+            if source == "Project Gutenberg":
+                st.caption(
+                    "This displays the provider-hosted Project Gutenberg edition inside LeadWise. "
+                    "Project Gutenberg copyright determinations are U.S.-based; readers elsewhere "
+                    "should check local copyright law before downloading or reusing a work."
+                )
+            else:
+                st.caption(
+                    "This displays the provider-hosted Internet Archive/Open Library reader inside "
+                    "LeadWise. The provider remains authoritative for current access."
+                )
+            render_free_ebook_embedded_viewer(
+                result,
                 viewer_key=f"{index}_{current_user['user_id']}",
             )
 
 
 def render_free_ebook_search(current_user):
-    """Account-only live search for legal Google Books free eBooks."""
+    """Account-only no-key search across Project Gutenberg and Open Library."""
     st.markdown("### Search Free eBooks")
     st.caption(
-        "Search Google Books full-view free eBooks by title, author, subject, or ISBN. "
-        "Reading stays inside LeadWise when Google permits embedding. "
-        "Downloads are shown only when Google Books provides an official download link."
+        "Search Project Gutenberg and Open Library without a paid API key. "
+        "LeadWise shows only Project Gutenberg records marked unrestricted by U.S. copyright "
+        "in Gutendex and Open Library records indexed with public eBook access."
     )
 
     with st.form("leadwise_free_ebook_search_form"):
         search_query = st.text_input(
             "Search free eBooks",
             value=st.session_state.get("free_ebook_search_query", ""),
-            placeholder="Example: leadership, Peter Drucker, strategy, ISBN...",
+            placeholder="Example: leadership, strategy, Peter Drucker, ISBN...",
         )
+        source_col1, source_col2 = st.columns(2)
+        with source_col1:
+            use_gutenberg = st.checkbox(
+                "Project Gutenberg",
+                value=True,
+                key="free_ebook_use_gutenberg",
+            )
+        with source_col2:
+            use_open_library = st.checkbox(
+                "Open Library",
+                value=True,
+                key="free_ebook_use_open_library",
+            )
+
         result_count = st.selectbox(
             "Results",
             [5, 10, 15, 20],
@@ -1263,7 +1495,7 @@ def render_free_ebook_search(current_user):
             key="free_ebook_search_count",
         )
         search_clicked = st.form_submit_button(
-            "Search Legal Free eBooks",
+            "Search Free eBooks",
             use_container_width=True,
         )
 
@@ -1271,44 +1503,70 @@ def render_free_ebook_search(current_user):
         clean_query = str(search_query or "").strip()
         if not clean_query:
             st.warning("Enter a title, author, subject, or ISBN.")
+        elif not use_gutenberg and not use_open_library:
+            st.warning("Select Project Gutenberg, Open Library, or both.")
         else:
             st.session_state["free_ebook_search_query"] = clean_query
-            with st.spinner("Searching Google Books free eBooks..."):
-                st.session_state["free_ebook_search_results"] = search_google_free_ebooks(
+            with st.spinner("Searching free eBook sources..."):
+                st.session_state["free_ebook_search_results"] = search_legal_free_ebooks(
                     clean_query,
-                    _reader_secret("GOOGLE_BOOKS_API_KEY"),
+                    use_gutenberg=use_gutenberg,
+                    use_open_library=use_open_library,
                     max_results=result_count,
                 )
             track_event(
                 "free_ebook_search",
                 page="My Library",
-                metadata={"query": clean_query, "provider": "Google Books"},
+                metadata={
+                    "query": clean_query,
+                    "providers": [
+                        provider
+                        for provider, enabled in (
+                            ("Project Gutenberg", use_gutenberg),
+                            ("Open Library", use_open_library),
+                        )
+                        if enabled
+                    ],
+                },
                 user=current_user,
             )
 
     search_payload = st.session_state.get("free_ebook_search_results")
     if not isinstance(search_payload, dict):
         st.info(
-            "Enter a search above to find legal free eBooks. "
-            "This search is available only to signed-in LeadWise accounts."
+            "Enter a search above to find free/open eBooks. "
+            "No Google API key is required."
         )
         return
 
+    if search_payload.get("error"):
+        st.warning(search_payload["error"])
+
     if not search_payload.get("ok"):
-        st.warning(search_payload.get("error") or "Free eBook search could not be completed.")
+        st.info(
+            "The selected providers are temporarily unavailable. "
+            "Try again later or select the other source."
+        )
         return
 
     items = search_payload.get("items") or []
     if not items:
         st.info(
-            "No full-view free eBooks were returned for this search. "
+            "No matching public/free eBooks were returned. "
             "Try another title, author, subject, or ISBN."
         )
         return
 
+    sources = search_payload.get("sources") or []
+    if sources:
+        st.caption(
+            f"{len(items):,} result(s) shown · Sources responding: "
+            + ", ".join(sources)
+        )
+
     st.caption(
-        f"{len(items):,} result(s) shown from Google Books. "
-        "Availability and download rights can vary by country."
+        "Access conditions can vary by jurisdiction. LeadWise does not mirror or host "
+        "the eBook files; reading and download routes remain with the source provider."
     )
 
     for index, result in enumerate(items):
