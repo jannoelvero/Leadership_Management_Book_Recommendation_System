@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.59.0 — Google Books + Amazon Commerce Lookup — Administrative Governance & Internal Analytics
+# Version 18.59.1 — Verified Free eBook Management — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -187,6 +187,14 @@ ADMIN_REQUIRED_SCHEMA = {
         "last_checked_at", "admin_note", "created_by", "updated_by",
         "created_at", "updated_at",
     },
+    "book_free_ebook_sources": {
+        "ebook_source_id", "book_id", "provider_name", "provider_item_id",
+        "source_url", "read_url", "embed_url", "download_url", "file_format",
+        "access_type", "license_label", "license_url", "country_code",
+        "is_downloadable", "is_embeddable", "requires_leadwise_account",
+        "is_active", "is_verified", "last_checked_at", "admin_note",
+        "created_by", "updated_by", "created_at", "updated_at",
+    },
 }
 
 
@@ -197,7 +205,7 @@ def db_connection():
         connection.close()
         raise RuntimeError(
             "LeadWise Admin requires Supabase PostgreSQL. "
-            "SQLite fallback is disabled in version 18.59.0."
+            "SQLite fallback is disabled in version 18.59.1."
         )
     return connection
 
@@ -1919,7 +1927,7 @@ def google_books_lookup(title, authors="", isbn10="", isbn13=""):
         url = "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(params)
         request = urllib.request.Request(
             url,
-            headers={"User-Agent": "LeadWise/18.59.0"},
+            headers={"User-Agent": "LeadWise/18.59.1"},
         )
 
         try:
@@ -1959,6 +1967,9 @@ def google_books_lookup(title, authors="", isbn10="", isbn13=""):
 
     info = best_item.get("volumeInfo") or {}
     sale = best_item.get("saleInfo") or {}
+    access = best_item.get("accessInfo") or {}
+    epub_access = access.get("epub") or {}
+    pdf_access = access.get("pdf") or {}
     identifiers = info.get("industryIdentifiers") or []
     isbn10_value = ""
     isbn13_value = ""
@@ -2004,6 +2015,14 @@ def google_books_lookup(title, authors="", isbn10="", isbn13=""):
         "info_link": info_link,
         "preview_link": preview_link,
         "saleability": saleability,
+        "viewability": str(access.get("viewability") or "").upper(),
+        "embeddable": bool(access.get("embeddable")),
+        "public_domain": bool(access.get("publicDomain")),
+        "web_reader_link": str(access.get("webReaderLink") or "").strip(),
+        "epub_available": bool(epub_access.get("isAvailable")),
+        "epub_download_link": str(epub_access.get("downloadLink") or "").strip(),
+        "pdf_available": bool(pdf_access.get("isAvailable")),
+        "pdf_download_link": str(pdf_access.get("downloadLink") or "").strip(),
         "matched_by": matched_by,
         "checked_at": datetime.now(timezone.utc).isoformat(),
         "api_key_configured": bool(api_key),
@@ -2472,6 +2491,310 @@ def get_commerce_offers():
     )
 
 
+
+def get_free_ebook_sources():
+    return dataframe(
+        """
+        SELECT
+            ebook_source_id, book_id, provider_name, provider_item_id,
+            source_url, read_url, embed_url, download_url, file_format,
+            access_type, license_label, license_url, country_code,
+            is_downloadable, is_embeddable, requires_leadwise_account,
+            is_active, is_verified, last_checked_at, admin_note,
+            created_by, updated_by, created_at, updated_at
+        FROM book_free_ebook_sources
+        ORDER BY updated_at DESC, ebook_source_id DESC
+        """
+    )
+
+
+def _ebook_clean_text(value):
+    if value is None:
+        return ""
+    try:
+        if pd.isna(value):
+            return ""
+    except Exception:
+        pass
+    return str(value).strip()
+
+
+def _ebook_payload(
+    book_id,
+    provider_name,
+    provider_item_id,
+    source_url,
+    read_url,
+    embed_url,
+    download_url,
+    file_format,
+    access_type,
+    license_label,
+    license_url,
+    country_code,
+    is_downloadable,
+    is_embeddable,
+    requires_leadwise_account,
+    is_active,
+    is_verified,
+    checked_now,
+    admin_note,
+):
+    book_id = _ebook_clean_text(book_id)
+    provider_name = _ebook_clean_text(provider_name)
+    source_url = _ebook_clean_text(source_url)
+    license_label = _ebook_clean_text(license_label)
+
+    if not book_id:
+        raise ValueError("Choose a LeadWise book.")
+    if not provider_name:
+        raise ValueError("Provider name is required.")
+    if not source_url:
+        raise ValueError("Source URL is required.")
+    if not re.match(r"^https?://", source_url, flags=re.I):
+        raise ValueError("Source URL must start with http:// or https://.")
+    if not license_label:
+        raise ValueError("License / rights basis is required before a source can be saved.")
+
+    clean_read = _ebook_clean_text(read_url)
+    clean_embed = _ebook_clean_text(embed_url)
+    clean_download = _ebook_clean_text(download_url)
+    clean_license_url = _ebook_clean_text(license_url)
+    for label, url in (
+        ("Read URL", clean_read),
+        ("Embed URL", clean_embed),
+        ("Download URL", clean_download),
+        ("License URL", clean_license_url),
+    ):
+        if url and not re.match(r"^https?://", url, flags=re.I):
+            raise ValueError(f"{label} must start with http:// or https://.")
+
+    if bool(is_downloadable) and not clean_download:
+        raise ValueError("A downloadable source requires a Download URL.")
+    if bool(is_embeddable) and not (clean_embed or clean_read):
+        raise ValueError("An embeddable source requires an Embed URL or Read URL.")
+    if bool(is_verified) and not license_label:
+        raise ValueError("Verified sources must have a documented license / rights basis.")
+
+    return {
+        "book_id": book_id,
+        "provider_name": provider_name,
+        "provider_item_id": _ebook_clean_text(provider_item_id) or None,
+        "source_url": source_url,
+        "read_url": clean_read or None,
+        "embed_url": clean_embed or None,
+        "download_url": clean_download or None,
+        "file_format": _ebook_clean_text(file_format) or None,
+        "access_type": _ebook_clean_text(access_type) or "Free access",
+        "license_label": license_label,
+        "license_url": clean_license_url or None,
+        "country_code": _ebook_clean_text(country_code).upper() or None,
+        "is_downloadable": bool(is_downloadable),
+        "is_embeddable": bool(is_embeddable),
+        "requires_leadwise_account": bool(requires_leadwise_account),
+        "is_active": bool(is_active),
+        "is_verified": bool(is_verified),
+        "last_checked_at": datetime.now(timezone.utc) if checked_now else None,
+        "admin_note": _ebook_clean_text(admin_note) or None,
+    }
+
+
+def create_free_ebook_source(payload):
+    actor = admin_user()
+    if not actor:
+        raise RuntimeError("Administrator authentication is required.")
+    now = datetime.now(timezone.utc)
+    with db_connection() as connection:
+        source_id = insert_returning_id(
+            connection,
+            """
+            INSERT INTO book_free_ebook_sources
+                (book_id, provider_name, provider_item_id, source_url,
+                 read_url, embed_url, download_url, file_format, access_type,
+                 license_label, license_url, country_code, is_downloadable,
+                 is_embeddable, requires_leadwise_account, is_active,
+                 is_verified, last_checked_at, admin_note, created_by,
+                 updated_by, created_at, updated_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                payload["book_id"], payload["provider_name"], payload["provider_item_id"],
+                payload["source_url"], payload["read_url"], payload["embed_url"],
+                payload["download_url"], payload["file_format"], payload["access_type"],
+                payload["license_label"], payload["license_url"], payload["country_code"],
+                payload["is_downloadable"], payload["is_embeddable"],
+                payload["requires_leadwise_account"], payload["is_active"],
+                payload["is_verified"], payload["last_checked_at"], payload["admin_note"],
+                int(actor["user_id"]), int(actor["user_id"]), now, now,
+            ),
+            "ebook_source_id",
+        )
+    log_admin_action(
+        "free_ebook_source_created",
+        "free_ebook_source",
+        str(source_id),
+        json.dumps(
+            {
+                "book_id": payload["book_id"],
+                "provider": payload["provider_name"],
+                "access_type": payload["access_type"],
+                "license": payload["license_label"],
+                "verified": payload["is_verified"],
+            },
+            ensure_ascii=False,
+            default=str,
+        ),
+    )
+    return source_id
+
+
+def update_free_ebook_source(source_id, payload):
+    actor = admin_user()
+    if not actor:
+        raise RuntimeError("Administrator authentication is required.")
+    now = datetime.now(timezone.utc)
+    with db_connection() as connection:
+        before_row = connection.execute(
+            "SELECT * FROM book_free_ebook_sources WHERE ebook_source_id=?",
+            (int(source_id),),
+        ).fetchone()
+        if not before_row:
+            raise RuntimeError("Free eBook source was not found.")
+        before = dict(before_row)
+        last_checked_at = (
+            payload["last_checked_at"]
+            if payload["last_checked_at"] is not None
+            else before.get("last_checked_at")
+        )
+        connection.execute(
+            """
+            UPDATE book_free_ebook_sources
+            SET book_id=?, provider_name=?, provider_item_id=?, source_url=?,
+                read_url=?, embed_url=?, download_url=?, file_format=?,
+                access_type=?, license_label=?, license_url=?, country_code=?,
+                is_downloadable=?, is_embeddable=?, requires_leadwise_account=?,
+                is_active=?, is_verified=?, last_checked_at=?, admin_note=?,
+                updated_by=?, updated_at=?
+            WHERE ebook_source_id=?
+            """,
+            (
+                payload["book_id"], payload["provider_name"], payload["provider_item_id"],
+                payload["source_url"], payload["read_url"], payload["embed_url"],
+                payload["download_url"], payload["file_format"], payload["access_type"],
+                payload["license_label"], payload["license_url"], payload["country_code"],
+                payload["is_downloadable"], payload["is_embeddable"],
+                payload["requires_leadwise_account"], payload["is_active"],
+                payload["is_verified"], last_checked_at, payload["admin_note"],
+                int(actor["user_id"]), now, int(source_id),
+            ),
+        )
+    log_admin_action(
+        "free_ebook_source_updated",
+        "free_ebook_source",
+        str(source_id),
+        json.dumps(
+            {
+                "before_verified": before.get("is_verified"),
+                "after_verified": payload["is_verified"],
+                "provider": payload["provider_name"],
+                "book_id": payload["book_id"],
+            },
+            ensure_ascii=False,
+            default=str,
+        ),
+    )
+
+
+def _google_lookup_has_free_ebook(lookup):
+    if not lookup or not lookup.get("found"):
+        return False
+    authorized_free = bool(lookup.get("public_domain")) or str(
+        lookup.get("saleability") or ""
+    ).upper() == "FREE"
+    has_reader = bool(lookup.get("web_reader_link"))
+    has_download = bool(
+        lookup.get("epub_download_link") or lookup.get("pdf_download_link")
+    )
+    return authorized_free and (has_reader or has_download)
+
+
+def sync_google_free_ebook_source(book_record, lookup):
+    if not _google_lookup_has_free_ebook(lookup):
+        raise ValueError(
+            "Google Books did not identify this record as public-domain or provider-authorized free access."
+        )
+
+    actor = admin_user()
+    if not actor:
+        raise RuntimeError("Administrator authentication is required.")
+
+    book_id = str(book_record.get("book_id") or "").strip()
+    if not book_id:
+        raise ValueError("The selected book has no LeadWise Book ID.")
+
+    public_domain = bool(lookup.get("public_domain"))
+    read_url = str(lookup.get("web_reader_link") or lookup.get("preview_link") or "").strip()
+    download_url = str(
+        lookup.get("epub_download_link")
+        or lookup.get("pdf_download_link")
+        or ""
+    ).strip()
+    if lookup.get("epub_download_link"):
+        file_format = "EPUB"
+    elif lookup.get("pdf_download_link"):
+        file_format = "PDF"
+    else:
+        file_format = "Online reader"
+
+    payload = _ebook_payload(
+        book_id=book_id,
+        provider_name="Google Books",
+        provider_item_id=str(lookup.get("volume_id") or ""),
+        source_url=str(
+            lookup.get("info_link")
+            or lookup.get("preview_link")
+            or read_url
+            or download_url
+        ),
+        read_url=read_url,
+        embed_url=read_url if bool(lookup.get("embeddable")) else "",
+        download_url=download_url,
+        file_format=file_format,
+        access_type="Public Domain" if public_domain else "Free Authorized",
+        license_label="Public Domain" if public_domain else "Google Books provider-authorized free access",
+        license_url=str(lookup.get("info_link") or ""),
+        country_code=str(lookup.get("country_code") or ""),
+        is_downloadable=bool(download_url),
+        is_embeddable=bool(lookup.get("embeddable")) and bool(read_url),
+        requires_leadwise_account=True,
+        is_active=True,
+        is_verified=True,
+        checked_now=True,
+        admin_note="Automatically synchronized from Google Books free-access metadata.",
+    )
+
+    with db_connection() as connection:
+        existing = connection.execute(
+            """
+            SELECT ebook_source_id
+            FROM book_free_ebook_sources
+            WHERE book_id=?
+              AND LOWER(provider_name)=LOWER('Google Books')
+              AND COALESCE(provider_item_id, '')=?
+            ORDER BY ebook_source_id DESC
+            LIMIT 1
+            """,
+            (book_id, str(payload.get("provider_item_id") or "")),
+        ).fetchone()
+
+    if existing:
+        source_id = int(existing["ebook_source_id"])
+        update_free_ebook_source(source_id, payload)
+        return source_id, "updated"
+
+    return create_free_ebook_source(payload), "created"
+
+
 def log_admin_action(action, entity_type=None, entity_id=None, details=None):
     user = admin_user()
     if not user:
@@ -2603,6 +2926,7 @@ with st.sidebar:
                 "Book Suggestions",
                 "Catalog Management",
                 "Commerce Management",
+                "Free eBook Management",
                 "Featured Reading",
                 "Admin Management",
                 "System Monitoring",
@@ -2619,6 +2943,7 @@ with st.sidebar:
                 "Book Suggestions",
                 "Catalog Management",
                 "Commerce Management",
+                "Free eBook Management",
                 "System Monitoring",
             ]
         ),
@@ -6161,6 +6486,390 @@ elif section == "Commerce Management":
     )
 
 
+elif section == "Free eBook Management":
+    st.subheader("Free eBook Management")
+    st.caption(
+        "Manage verified legal free eBook access for signed-in Reader accounts. "
+        "Only sources with a documented public-domain, open-access, or provider-authorized "
+        "rights basis should be marked Verified."
+    )
+
+    ebook_sources = get_free_ebook_sources()
+    book_directory = build_commerce_book_directory()
+
+    total_sources = int(len(ebook_sources))
+    active_sources = (
+        int(ebook_sources["is_active"].fillna(False).astype(bool).sum())
+        if not ebook_sources.empty else 0
+    )
+    verified_sources = (
+        int(ebook_sources["is_verified"].fillna(False).astype(bool).sum())
+        if not ebook_sources.empty else 0
+    )
+    downloadable_sources = (
+        int(ebook_sources["is_downloadable"].fillna(False).astype(bool).sum())
+        if not ebook_sources.empty else 0
+    )
+    books_with_sources = (
+        int(ebook_sources["book_id"].astype(str).nunique())
+        if not ebook_sources.empty else 0
+    )
+
+    e1, e2, e3, e4, e5 = st.columns(5)
+    e1.metric("Free eBook Sources", f"{total_sources:,}")
+    e2.metric("Active", f"{active_sources:,}")
+    e3.metric("Verified", f"{verified_sources:,}")
+    e4.metric("Downloadable", f"{downloadable_sources:,}")
+    e5.metric("Books Covered", f"{books_with_sources:,}")
+
+    directory_tab, google_tab, add_tab, update_tab = st.tabs(
+        ["Source Directory", "Google Free Lookup", "Add Legal Source", "Update Source"]
+    )
+
+    with directory_tab:
+        st.markdown("### Verified/free eBook source directory")
+        if ebook_sources.empty:
+            st.info("No free eBook sources have been added yet.")
+        else:
+            display = ebook_sources.copy()
+            if not book_directory.empty:
+                display = display.merge(
+                    book_directory[["book_id", "title", "authors"]],
+                    on="book_id",
+                    how="left",
+                )
+            else:
+                display["title"] = ""
+                display["authors"] = ""
+
+            query = st.text_input(
+                "Search free eBook sources",
+                placeholder="Title, author, Book ID, provider or license...",
+                key="ebook_directory_search",
+            ).strip().lower()
+            if query:
+                search_text = (
+                    display["book_id"].fillna("").astype(str) + " "
+                    + display["title"].fillna("").astype(str) + " "
+                    + display["authors"].fillna("").astype(str) + " "
+                    + display["provider_name"].fillna("").astype(str) + " "
+                    + display["license_label"].fillna("").astype(str)
+                ).str.lower()
+                display = display[search_text.str.contains(query, regex=False)]
+
+            st.dataframe(
+                display[[
+                    "ebook_source_id", "book_id", "title", "authors",
+                    "provider_name", "file_format", "access_type", "license_label",
+                    "country_code", "is_downloadable", "is_embeddable",
+                    "is_active", "is_verified", "last_checked_at", "updated_at",
+                ]],
+                use_container_width=True,
+                hide_index=True,
+            )
+
+    with google_tab:
+        st.markdown("### Google Books free-access lookup")
+        st.caption(
+            "LeadWise will save a Google Books free eBook source only when the API identifies "
+            "the record as Public Domain or FREE and supplies a reader/download link."
+        )
+
+        if book_directory.empty:
+            st.error("The LeadWise book directory is unavailable.")
+        else:
+            google_search = st.text_input(
+                "Find a LeadWise book",
+                placeholder="Title, author, Book ID or ISBN",
+                key="ebook_google_book_search",
+            ).strip().lower()
+            candidates = book_directory.copy()
+            if google_search:
+                search_text = (
+                    candidates["book_id"].fillna("").astype(str) + " "
+                    + candidates["title"].fillna("").astype(str) + " "
+                    + candidates["authors"].fillna("").astype(str) + " "
+                    + candidates["isbn10"].fillna("").astype(str) + " "
+                    + candidates["isbn13"].fillna("").astype(str)
+                ).str.lower()
+                candidates = candidates[search_text.str.contains(google_search, regex=False)]
+            candidates = candidates.head(100)
+
+            if candidates.empty:
+                st.warning("No matching LeadWise books found.")
+            else:
+                candidate_ids = candidates["book_id"].tolist()
+
+                def _ebook_google_label(book_id):
+                    row = candidates[candidates["book_id"] == book_id].iloc[0]
+                    return f"{str(row.get('title') or 'Untitled')} · {str(row.get('authors') or 'Unknown author')} · {book_id}"
+
+                google_book_id = st.selectbox(
+                    "Book",
+                    candidate_ids,
+                    format_func=_ebook_google_label,
+                    key="ebook_google_selected_book",
+                )
+                google_book = candidates[candidates["book_id"] == google_book_id].iloc[0].to_dict()
+
+                if st.button(
+                    "Check Google Books for Legal Free Access",
+                    key="ebook_google_lookup_button",
+                    use_container_width=True,
+                ):
+                    with st.spinner("Checking Google Books free-access metadata..."):
+                        st.session_state["ebook_google_lookup"] = google_books_lookup(
+                            google_book.get("title", ""),
+                            google_book.get("authors", ""),
+                            google_book.get("isbn10", ""),
+                            google_book.get("isbn13", ""),
+                        )
+                        st.session_state["ebook_google_lookup_book_id"] = google_book_id
+
+                lookup = st.session_state.get("ebook_google_lookup")
+                lookup_book_id = st.session_state.get("ebook_google_lookup_book_id")
+                if lookup_book_id != google_book_id:
+                    lookup = None
+
+                if lookup:
+                    if not lookup.get("found"):
+                        st.warning(lookup.get("error") or "No Google Books match was found.")
+                    else:
+                        authorized = _google_lookup_has_free_ebook(lookup)
+                        st.markdown(f"**Matched title:** {lookup.get('title') or 'Not available'}")
+                        st.write(f"**Saleability:** {lookup.get('saleability') or 'Unknown'}")
+                        st.write(f"**Viewability:** {lookup.get('viewability') or 'Unknown'}")
+                        st.write(f"**Public domain:** {'Yes' if lookup.get('public_domain') else 'No'}")
+                        st.write(f"**Embeddable:** {'Yes' if lookup.get('embeddable') else 'No'}")
+                        st.write(f"**EPUB available:** {'Yes' if lookup.get('epub_available') else 'No'}")
+                        st.write(f"**PDF available:** {'Yes' if lookup.get('pdf_available') else 'No'}")
+
+                        if authorized:
+                            st.success(
+                                "Google Books identifies this edition as legal free access and supplied a reader or download route."
+                            )
+                            if st.button(
+                                "Save / Refresh Free eBook Source",
+                                key="ebook_google_sync_button",
+                                use_container_width=True,
+                            ):
+                                try:
+                                    source_id, action = sync_google_free_ebook_source(google_book, lookup)
+                                    st.success(f"Free eBook source #{source_id} {action} in Supabase.")
+                                    st.rerun()
+                                except Exception as exc:
+                                    st.error(str(exc))
+                        else:
+                            st.info(
+                                "This match is not being saved as a free eBook because Google did not identify it as Public Domain/FREE with a usable reader or download link."
+                            )
+
+    with add_tab:
+        st.markdown("### Add a verified legal source")
+        st.warning(
+            "Do not add unauthorized copies. Mark Verified only after confirming the source's public-domain, open-access, or provider-authorized rights basis."
+        )
+        if book_directory.empty:
+            st.error("The LeadWise book directory is unavailable.")
+        else:
+            add_search = st.text_input(
+                "Find a book",
+                placeholder="Title, author, Book ID or ISBN",
+                key="ebook_add_book_search",
+            ).strip().lower()
+            candidates = book_directory.copy()
+            if add_search:
+                search_text = (
+                    candidates["book_id"].fillna("").astype(str) + " "
+                    + candidates["title"].fillna("").astype(str) + " "
+                    + candidates["authors"].fillna("").astype(str) + " "
+                    + candidates["isbn10"].fillna("").astype(str) + " "
+                    + candidates["isbn13"].fillna("").astype(str)
+                ).str.lower()
+                candidates = candidates[search_text.str.contains(add_search, regex=False)]
+            candidates = candidates.head(100)
+            if candidates.empty:
+                st.warning("No matching books found.")
+            else:
+                candidate_ids = candidates["book_id"].tolist()
+
+                def _ebook_add_label(book_id):
+                    row = candidates[candidates["book_id"] == book_id].iloc[0]
+                    return f"{str(row.get('title') or 'Untitled')} · {str(row.get('authors') or 'Unknown author')} · {book_id}"
+
+                selected_book_id = st.selectbox(
+                    "Book",
+                    candidate_ids,
+                    format_func=_ebook_add_label,
+                    key="ebook_add_book_id",
+                )
+
+                with st.form("ebook_add_source_form"):
+                    provider_name = st.selectbox(
+                        "Provider *",
+                        [
+                            "Project Gutenberg",
+                            "Standard Ebooks",
+                            "Google Books",
+                            "Open Library / Internet Archive",
+                            "OAPEN / DOAB",
+                            "Other verified legal source",
+                        ],
+                    )
+                    provider_item_id = st.text_input("Provider item ID (optional)")
+                    source_url = st.text_input("Source / landing page URL *", placeholder="https://...")
+                    read_url = st.text_input("Read URL (optional)", placeholder="https://...")
+                    embed_url = st.text_input("Embed URL (optional)", placeholder="https://...")
+                    download_url = st.text_input("Direct download URL (optional)", placeholder="https://...")
+
+                    c1, c2, c3 = st.columns(3)
+                    with c1:
+                        file_format = st.text_input("Format", placeholder="EPUB, PDF, HTML")
+                    with c2:
+                        access_type = st.selectbox(
+                            "Access type",
+                            ["Public Domain", "Open Access", "Free Authorized", "Borrow / Read Online"],
+                        )
+                    with c3:
+                        country_code = st.text_input("Country code", placeholder="US", max_chars=3)
+
+                    license_label = st.text_input(
+                        "License / rights basis *",
+                        placeholder="Public Domain, CC BY 4.0, provider-authorized free access...",
+                    )
+                    license_url = st.text_input("License / rights URL (recommended)", placeholder="https://...")
+
+                    f1, f2, f3 = st.columns(3)
+                    with f1:
+                        is_downloadable = st.checkbox("Downloadable", value=False)
+                    with f2:
+                        is_embeddable = st.checkbox("Embeddable in LeadWise", value=False)
+                    with f3:
+                        requires_account = st.checkbox("Requires LeadWise account", value=True, disabled=True)
+
+                    s1, s2, s3 = st.columns(3)
+                    with s1:
+                        is_active = st.checkbox("Active", value=True)
+                    with s2:
+                        is_verified = st.checkbox("Verified legal source", value=False)
+                    with s3:
+                        checked_now = st.checkbox("Checked now", value=True)
+
+                    admin_note = st.text_area("Admin note (optional)")
+                    save_source = st.form_submit_button("Add Free eBook Source", use_container_width=True)
+
+                if save_source:
+                    try:
+                        payload = _ebook_payload(
+                            selected_book_id, provider_name, provider_item_id,
+                            source_url, read_url, embed_url, download_url,
+                            file_format, access_type, license_label, license_url,
+                            country_code, is_downloadable, is_embeddable,
+                            True, is_active, is_verified, checked_now, admin_note,
+                        )
+                        source_id = create_free_ebook_source(payload)
+                        st.success(f"Free eBook source #{source_id} added.")
+                        st.rerun()
+                    except Exception as exc:
+                        st.error(str(exc))
+
+    with update_tab:
+        st.markdown("### Update an existing source")
+        if ebook_sources.empty:
+            st.info("There are no free eBook sources to update yet.")
+        else:
+            source_ids = ebook_sources["ebook_source_id"].astype(int).tolist()
+
+            def _ebook_source_label(source_id):
+                row = ebook_sources[
+                    ebook_sources["ebook_source_id"].astype(int).eq(int(source_id))
+                ].iloc[0]
+                return f"#{source_id} · {row.get('provider_name') or ''} · {row.get('book_id') or ''}"
+
+            source_id = st.selectbox(
+                "Source",
+                source_ids,
+                format_func=_ebook_source_label,
+                key="ebook_update_source_id",
+            )
+            source = ebook_sources[
+                ebook_sources["ebook_source_id"].astype(int).eq(int(source_id))
+            ].iloc[0]
+
+            directory_ids = book_directory["book_id"].tolist()
+            current_book_id = str(source.get("book_id") or "")
+            default_book_index = directory_ids.index(current_book_id) if current_book_id in directory_ids else 0
+
+            def _ebook_update_book_label(book_id):
+                row = book_directory[book_directory["book_id"] == book_id].iloc[0]
+                return f"{str(row.get('title') or 'Untitled')} · {str(row.get('authors') or 'Unknown author')} · {book_id}"
+
+            update_book_id = st.selectbox(
+                "Linked LeadWise book",
+                directory_ids,
+                index=default_book_index,
+                format_func=_ebook_update_book_label,
+                key=f"ebook_update_book_{source_id}",
+            )
+
+            with st.form(f"ebook_update_form_{source_id}"):
+                provider_name = st.text_input("Provider *", value=str(source.get("provider_name") or ""))
+                provider_item_id = st.text_input("Provider item ID", value=str(source.get("provider_item_id") or ""))
+                source_url = st.text_input("Source / landing page URL *", value=str(source.get("source_url") or ""))
+                read_url = st.text_input("Read URL", value=str(source.get("read_url") or ""))
+                embed_url = st.text_input("Embed URL", value=str(source.get("embed_url") or ""))
+                download_url = st.text_input("Download URL", value=str(source.get("download_url") or ""))
+
+                c1, c2, c3 = st.columns(3)
+                with c1:
+                    file_format = st.text_input("Format", value=str(source.get("file_format") or ""))
+                with c2:
+                    access_type = st.text_input("Access type", value=str(source.get("access_type") or ""))
+                with c3:
+                    country_code = st.text_input("Country code", value=str(source.get("country_code") or ""), max_chars=3)
+
+                license_label = st.text_input("License / rights basis *", value=str(source.get("license_label") or ""))
+                license_url = st.text_input("License / rights URL", value=str(source.get("license_url") or ""))
+
+                f1, f2, f3 = st.columns(3)
+                with f1:
+                    is_downloadable = st.checkbox("Downloadable", value=bool(source.get("is_downloadable")))
+                with f2:
+                    is_embeddable = st.checkbox("Embeddable in LeadWise", value=bool(source.get("is_embeddable")))
+                with f3:
+                    requires_account = st.checkbox("Requires LeadWise account", value=True, disabled=True)
+
+                s1, s2, s3 = st.columns(3)
+                with s1:
+                    is_active = st.checkbox("Active", value=bool(source.get("is_active")))
+                with s2:
+                    is_verified = st.checkbox("Verified legal source", value=bool(source.get("is_verified")))
+                with s3:
+                    checked_now = st.checkbox("Update last checked to now", value=False)
+
+                admin_note = st.text_area("Admin note", value=str(source.get("admin_note") or ""))
+                update_source = st.form_submit_button("Save Free eBook Update", use_container_width=True)
+
+            if update_source:
+                try:
+                    payload = _ebook_payload(
+                        update_book_id, provider_name, provider_item_id,
+                        source_url, read_url, embed_url, download_url,
+                        file_format, access_type, license_label, license_url,
+                        country_code, is_downloadable, is_embeddable,
+                        True, is_active, is_verified, checked_now, admin_note,
+                    )
+                    update_free_ebook_source(source_id, payload)
+                    st.success(f"Free eBook source #{source_id} updated.")
+                    st.rerun()
+                except Exception as exc:
+                    st.error(str(exc))
+
+    st.info(
+        "Reader access is account-only. The Reader app displays only sources that are both Active and Verified."
+    )
+
+
 elif section == "Featured Reading":
     st.title("Featured Reading")
     st.caption(
@@ -6393,4 +7102,4 @@ elif section == "System Monitoring":
     st.dataframe(audit, use_container_width=True, hide_index=True)
 
 st.markdown("---")
-st.caption("LeadWise Administrator · Role-protected operational interface · 18.59.0")
+st.caption("LeadWise Administrator · Role-protected operational interface · 18.59.1")

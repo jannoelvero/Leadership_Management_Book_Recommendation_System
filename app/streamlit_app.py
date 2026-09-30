@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.59.0 — Live Google Books + Amazon Compare Integration
+# Version 18.59.1 — Verified Free eBook Library Access
 # =========================================================
 
 import sys
@@ -26,6 +26,7 @@ import joblib
 import numpy as np
 import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
 
 from scipy.sparse import load_npz, csr_matrix, vstack
 from sklearn.metrics.pairwise import cosine_similarity
@@ -81,7 +82,7 @@ DATABASE_URL = get_database_url()
 DATABASE_BACKEND = get_database_backend(DATABASE_URL)
 POSTGRES_COMPONENT_STATUS = get_postgres_component_status()
 
-# 18.59.0: operational Reader data must use the shared Supabase PostgreSQL
+# 18.59.1: operational Reader data must use the shared Supabase PostgreSQL
 # database. Silent SQLite fallback is disabled to prevent accounts, messages,
 # reviews, analytics and library activity from being written to an isolated
 # local database by mistake.
@@ -169,6 +170,14 @@ READER_REQUIRED_SCHEMA = {
         "last_checked_at", "admin_note", "created_by", "updated_by",
         "created_at", "updated_at",
     },
+    "book_free_ebook_sources": {
+        "ebook_source_id", "book_id", "provider_name", "provider_item_id",
+        "source_url", "read_url", "embed_url", "download_url", "file_format",
+        "access_type", "license_label", "license_url", "country_code",
+        "is_downloadable", "is_embeddable", "requires_leadwise_account",
+        "is_active", "is_verified", "last_checked_at", "admin_note",
+        "created_by", "updated_by", "created_at", "updated_at",
+    },
 }
 
 
@@ -179,7 +188,7 @@ def get_user_connection():
         connection.close()
         raise RuntimeError(
             "LeadWise Reader requires Supabase PostgreSQL. "
-            "SQLite fallback is disabled in version 18.59.0."
+            "SQLite fallback is disabled in version 18.59.1."
         )
     return connection
 
@@ -756,7 +765,7 @@ def _google_books_lookup_cached(title, authors, isbn10, isbn13, api_key):
         if api_key:
             params["key"] = api_key
         url = "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(params)
-        request = urllib.request.Request(url, headers={"User-Agent": "LeadWise/18.59.0"})
+        request = urllib.request.Request(url, headers={"User-Agent": "LeadWise/18.59.1"})
 
         try:
             with urllib.request.urlopen(request, timeout=10) as response:
@@ -789,6 +798,9 @@ def _google_books_lookup_cached(title, authors, isbn10, isbn13, api_key):
 
     info = best_item.get("volumeInfo") or {}
     sale = best_item.get("saleInfo") or {}
+    access = best_item.get("accessInfo") or {}
+    epub_access = access.get("epub") or {}
+    pdf_access = access.get("pdf") or {}
     retail_price = sale.get("retailPrice") or {}
     list_price = sale.get("listPrice") or {}
     price = retail_price.get("amount")
@@ -832,6 +844,14 @@ def _google_books_lookup_cached(title, authors, isbn10, isbn13, api_key):
         "info_link": info_link,
         "preview_link": preview_link,
         "saleability": saleability,
+        "viewability": str(access.get("viewability") or "").upper(),
+        "embeddable": bool(access.get("embeddable")),
+        "public_domain": bool(access.get("publicDomain")),
+        "web_reader_link": str(access.get("webReaderLink") or "").strip(),
+        "epub_available": bool(epub_access.get("isAvailable")),
+        "epub_download_link": str(epub_access.get("downloadLink") or "").strip(),
+        "pdf_available": bool(pdf_access.get("isAvailable")),
+        "pdf_download_link": str(pdf_access.get("downloadLink") or "").strip(),
         "matched_by": matched_by,
         "api_key_configured": bool(api_key),
     }
@@ -1120,6 +1140,169 @@ def render_compare_commerce_offers(book, offers, column_label, show_header=True,
                         f"{book_id}_{int(offer.get('offer_id'))}"
                     ),
                 )
+
+
+
+def get_active_free_ebook_sources(book_ids):
+    """Return active, verified free/open eBook sources for selected books."""
+    clean_book_ids = []
+    for book_id in book_ids or []:
+        value = str(book_id or "").strip()
+        if value and value not in clean_book_ids:
+            clean_book_ids.append(value)
+
+    if not clean_book_ids:
+        return pd.DataFrame()
+
+    placeholders = ", ".join(["?"] * len(clean_book_ids))
+    with get_user_connection() as connection:
+        return query_dataframe(
+            connection,
+            f"""
+            SELECT
+                ebook_source_id, book_id, provider_name, provider_item_id,
+                source_url, read_url, embed_url, download_url, file_format,
+                access_type, license_label, license_url, country_code,
+                is_downloadable, is_embeddable, requires_leadwise_account,
+                is_active, is_verified, last_checked_at, updated_at
+            FROM book_free_ebook_sources
+            WHERE is_active = TRUE
+              AND is_verified = TRUE
+              AND book_id IN ({placeholders})
+            ORDER BY book_id, provider_name, ebook_source_id
+            """,
+            tuple(clean_book_ids),
+        )
+
+
+def render_library_free_ebook_access(book, current_user, sources=None, context="library"):
+    """Render account-only verified free eBook access without replacing LeadWise."""
+    if not current_user:
+        return
+
+    book_id = str(book.get("book_id") or "").strip()
+    if not book_id:
+        return
+
+    if sources is None:
+        sources = get_active_free_ebook_sources([book_id])
+    elif not sources.empty:
+        sources = sources[
+            sources["book_id"].astype(str).eq(book_id)
+        ].copy()
+
+    if sources is None or sources.empty:
+        return
+
+    st.markdown("### Free eBook Access")
+    st.caption(
+        "Verified public-domain, open-access, or provider-authorized free editions. "
+        "LeadWise does not host pirated copies. Download and availability remain subject "
+        "to the provider's license and regional rules."
+    )
+
+    for _, source in sources.iterrows():
+        source_id = int(source["ebook_source_id"])
+        provider = _commerce_text(source.get("provider_name"), "Verified provider")
+        file_format = _commerce_text(source.get("file_format"), "Format not specified")
+        access_type = _commerce_text(source.get("access_type"), "Free access")
+        license_label = _commerce_text(source.get("license_label"), "License information available from provider")
+        country = _commerce_text(source.get("country_code"), "")
+        checked = _commerce_text(source.get("last_checked_at"), "Not recorded")
+        source_url = _commerce_text(source.get("source_url"), "")
+        read_url = _commerce_text(source.get("read_url"), "")
+        embed_url = _commerce_text(source.get("embed_url"), "")
+        download_url = _commerce_text(source.get("download_url"), "")
+        license_url = _commerce_text(source.get("license_url"), "")
+        is_downloadable = bool(source.get("is_downloadable")) and bool(download_url)
+        is_embeddable = bool(source.get("is_embeddable")) and bool(embed_url or read_url)
+
+        with st.container(border=True):
+            st.markdown(f"**{provider}** · {file_format}")
+            st.write(f"**Access:** {access_type}")
+            st.write(f"**License:** {license_label}")
+
+            meta = ["Verified source", f"Last checked: {checked}"]
+            if country:
+                meta.insert(1, f"Market: {country}")
+            st.caption(" · ".join(meta))
+
+            button_columns = st.columns(3)
+            with button_columns[0]:
+                if is_embeddable:
+                    if st.button(
+                        "Read in LeadWise",
+                        key=f"ebook_read_{context}_{book_id}_{source_id}",
+                        use_container_width=True,
+                    ):
+                        track_event(
+                            "free_ebook_read",
+                            page="My Library",
+                            book_id=book_id,
+                            metadata={"provider": provider, "ebook_source_id": source_id},
+                            user=current_user,
+                        )
+                        st.session_state[f"ebook_viewer_{context}_{book_id}"] = source_id
+                elif read_url:
+                    st.link_button(
+                        "Read from Provider ↗",
+                        read_url,
+                        use_container_width=True,
+                    )
+
+            with button_columns[1]:
+                if is_downloadable:
+                    if st.button(
+                        "Get Download Link",
+                        key=f"ebook_download_gate_{context}_{book_id}_{source_id}",
+                        use_container_width=True,
+                    ):
+                        track_event(
+                            "free_ebook_download_intent",
+                            page="My Library",
+                            book_id=book_id,
+                            metadata={"provider": provider, "ebook_source_id": source_id},
+                            user=current_user,
+                        )
+                        st.session_state[f"ebook_download_{context}_{book_id}_{source_id}"] = True
+                else:
+                    st.caption("Download not offered by this source")
+
+            with button_columns[2]:
+                if source_url:
+                    st.link_button(
+                        "Source Page ↗",
+                        source_url,
+                        use_container_width=True,
+                    )
+
+            if st.session_state.get(
+                f"ebook_download_{context}_{book_id}_{source_id}", False
+            ) and is_downloadable:
+                st.success(
+                    "Account access confirmed. Use the provider download button below. "
+                    "It opens the verified source while this LeadWise page remains available."
+                )
+                st.link_button(
+                    f"Download {file_format} from {provider} ↗",
+                    download_url,
+                    use_container_width=True,
+                )
+
+            if license_url:
+                st.caption(f"License details: {license_url}")
+
+            selected_viewer = st.session_state.get(
+                f"ebook_viewer_{context}_{book_id}"
+            )
+            if selected_viewer == source_id and is_embeddable:
+                viewer_url = embed_url or read_url
+                st.markdown("**LeadWise Reader View**")
+                st.caption(
+                    "The external provider is displayed inside LeadWise when embedding is permitted. "
+                    "If the provider blocks embedded viewing, use Source Page instead."
+                )
+                components.iframe(viewer_url, height=720, scrolling=True)
 
 
 def signed_in_user():
@@ -2271,7 +2454,7 @@ with get_user_connection() as _backend_check_connection:
     if ACTIVE_DATABASE_BACKEND != "postgresql":
         raise RuntimeError(
             "LeadWise Reader requires Supabase PostgreSQL. "
-            "SQLite fallback is disabled in version 18.59.0."
+            "SQLite fallback is disabled in version 18.59.1."
         )
 
 
@@ -4956,7 +5139,7 @@ DR. JAN
         st.markdown("**Guest mode**")
         st.caption(
             "Browse Home, Discover Books, and Compare Books as a guest. "
-            "Sign in to access My Library, My Messages, and Reader Insights."
+            "Sign in to access My Library, verified free eBook links, My Messages, and Reader Insights."
         )
         with st.expander("Sign In / Create Account", expanded=bool(st.session_state.get("open_auth_panel", False))):
             auth_tab_signin, auth_tab_create = st.tabs(
@@ -6460,25 +6643,41 @@ with main_col:
                         safe_display_value(detail_matches.iloc[0].get("canonical_title"), "Book Details"),
                         "Catalog evidence for a publication in your personal library.",
                     )
-                    render_book_details(detail_matches.iloc[0])
+                    detail_book = detail_matches.iloc[0]
+                    render_book_details(detail_book)
+                    render_library_free_ebook_access(
+                        detail_book,
+                        current_user,
+                        context="library_detail",
+                    )
             else:
                 library = get_user_library(current_user["user_id"])
                 if library.empty:
-                    total = want = reading = finished = reviewed = 0
+                    library_ebook_sources = pd.DataFrame()
+                    total = want = reading = finished = reviewed = free_ebook_books = 0
                 else:
+                    library_ebook_sources = get_active_free_ebook_sources(
+                        library["book_id"].astype(str).tolist()
+                    )
                     total = len(library)
                     want = int((library["reading_status"] == "Want to Read").sum())
                     reading = int((library["reading_status"] == "Currently Reading").sum())
                     finished = int((library["reading_status"] == "Finished").sum())
                     reviewed = int(library["personal_rating"].notna().sum())
+                    free_ebook_books = (
+                        int(library_ebook_sources["book_id"].astype(str).nunique())
+                        if not library_ebook_sources.empty
+                        else 0
+                    )
 
                 st.markdown(f"**{html.escape(current_user['full_name'])}'s Library**")
-                m1, m2, m3, m4, m5 = st.columns(5)
+                m1, m2, m3, m4, m5, m6 = st.columns(6)
                 m1.metric("Total Saved", total)
                 m2.metric("Want to Read", want)
                 m3.metric("Reading", reading)
                 m4.metric("Finished", finished)
                 m5.metric("Rated", reviewed)
+                m6.metric("Free eBooks", free_ebook_books)
 
                 if library.empty:
                     st.info("Your library is empty. Open a book in Discover Books and choose Save to My Library.")
@@ -6539,6 +6738,13 @@ with main_col:
                                         remove_library_book(current_user["user_id"], book_id)
                                         st.session_state["library_flash"] = "Book removed from My Library."
                                         st.rerun()
+
+                            render_library_free_ebook_access(
+                                book,
+                                current_user,
+                                sources=library_ebook_sources,
+                                context="library_card",
+                            )
 
                             # Re-read after any previous persisted change so the journal uses database state.
                             persisted_entry = get_library_entry(current_user["user_id"], book_id) or dict(lib_row)
