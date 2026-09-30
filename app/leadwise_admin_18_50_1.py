@@ -1,5 +1,5 @@
 # LeadWise Administrator Control Center
-# Version 18.59.4 — Free eBook Engagement Analytics — Administrative Governance & Internal Analytics
+# Version 18.59.5 — Free eBook Engagement Trends — Administrative Governance & Internal Analytics
 
 from pathlib import Path
 import os
@@ -3191,6 +3191,159 @@ elif section == "Usage Analytics":
     f3.metric("Download Intents", f"{free_download_intents:,}")
     f4.metric("Catalog Saves", f"{free_catalog_saves:,}")
     f5.metric("Readers Using eBooks", f"{free_readers:,}")
+
+    st.markdown("#### Free eBook activity trend")
+    st.caption(
+        "Review how free eBook searches, reading/open activity, download-link requests, "
+        "and LeadWise catalog saves change over time. Periods are grouped in UTC."
+    )
+
+    trend_control_left, trend_control_right = st.columns(2)
+    with trend_control_left:
+        ebook_trend_granularity = st.selectbox(
+            "Trend grouping",
+            ["Daily", "Weekly", "Monthly"],
+            index=0,
+            key="ebook_trend_granularity",
+        )
+    with trend_control_right:
+        ebook_trend_window = st.selectbox(
+            "Trend period",
+            ["Last 30 days", "Last 90 days", "Last 180 days", "Last 365 days", "All time"],
+            index=1,
+            key="ebook_trend_window",
+        )
+
+    trend_unit = {
+        "Daily": "day",
+        "Weekly": "week",
+        "Monthly": "month",
+    }[ebook_trend_granularity]
+
+    trend_window_condition = {
+        "Last 30 days": "AND e.created_at >= NOW() - INTERVAL '30 days'",
+        "Last 90 days": "AND e.created_at >= NOW() - INTERVAL '90 days'",
+        "Last 180 days": "AND e.created_at >= NOW() - INTERVAL '180 days'",
+        "Last 365 days": "AND e.created_at >= NOW() - INTERVAL '365 days'",
+        "All time": "",
+    }[ebook_trend_window]
+
+    ebook_trend = dataframe(f"""
+        SELECT
+            DATE_TRUNC('{trend_unit}', e.created_at) AS period,
+            COUNT(*) FILTER (
+                WHERE e.event_type='free_ebook_search'
+            ) AS searches,
+            COUNT(*) FILTER (
+                WHERE e.event_type IN (
+                    'free_ebook_live_read',
+                    'free_ebook_read',
+                    'free_ebook_external_read_intent'
+                )
+            ) AS read_open_intents,
+            COUNT(*) FILTER (
+                WHERE e.event_type='free_ebook_download_intent'
+            ) AS download_intents,
+            COUNT(*) FILTER (
+                WHERE e.event_type='free_ebook_catalog_save'
+            ) AS catalog_saves,
+            COUNT(DISTINCT e.user_id) AS readers
+        FROM leadwise_events e
+        JOIN users u ON u.user_id=e.user_id
+        WHERE e.event_type IN (
+            'free_ebook_search',
+            'free_ebook_live_read',
+            'free_ebook_read',
+            'free_ebook_external_read_intent',
+            'free_ebook_download_intent',
+            'free_ebook_catalog_save'
+        )
+          AND u.role='reader'
+          {trend_window_condition}
+        GROUP BY DATE_TRUNC('{trend_unit}', e.created_at)
+        ORDER BY period ASC
+    """)
+
+    if ebook_trend.empty:
+        st.info(
+            "No free eBook engagement events are available for the selected period yet."
+        )
+    else:
+        ebook_trend_chart = ebook_trend.copy()
+        ebook_trend_chart["period"] = pd.to_datetime(
+            ebook_trend_chart["period"],
+            errors="coerce",
+            utc=True,
+        )
+        ebook_trend_chart = ebook_trend_chart.dropna(subset=["period"])
+        ebook_trend_chart = ebook_trend_chart.rename(
+            columns={
+                "searches": "Searches",
+                "read_open_intents": "Read / Open Intents",
+                "download_intents": "Download Intents",
+                "catalog_saves": "Catalog Saves",
+                "readers": "Readers",
+            }
+        )
+
+        if ebook_trend_chart.empty:
+            st.info(
+                "Free eBook events exist, but their timestamps could not be prepared for the trend chart."
+            )
+        else:
+            st.line_chart(
+                ebook_trend_chart.set_index("period")[
+                    [
+                        "Searches",
+                        "Read / Open Intents",
+                        "Download Intents",
+                        "Catalog Saves",
+                    ]
+                ]
+            )
+
+            trend_totals = ebook_trend_chart[
+                [
+                    "Searches",
+                    "Read / Open Intents",
+                    "Download Intents",
+                    "Catalog Saves",
+                ]
+            ].sum()
+
+            t1, t2, t3, t4 = st.columns(4)
+            t1.metric(
+                f"Searches · {ebook_trend_window}",
+                f"{int(trend_totals['Searches']):,}",
+            )
+            t2.metric(
+                "Read / Open Intents",
+                f"{int(trend_totals['Read / Open Intents']):,}",
+            )
+            t3.metric(
+                "Download Intents",
+                f"{int(trend_totals['Download Intents']):,}",
+            )
+            t4.metric(
+                "Catalog Saves",
+                f"{int(trend_totals['Catalog Saves']):,}",
+            )
+
+            st.caption(
+                "Trend metrics count recorded events, not unique completed reading or download sessions. "
+                "Download Intents indicate that LeadWise revealed an official provider download route."
+            )
+
+            with st.expander("View trend data"):
+                trend_table = ebook_trend_chart.copy()
+                trend_table["period"] = trend_table["period"].dt.strftime(
+                    "%Y-%m-%d"
+                )
+                st.dataframe(
+                    trend_table,
+                    use_container_width=True,
+                    hide_index=True,
+                )
 
     ebook_left, ebook_right = st.columns(2)
 
