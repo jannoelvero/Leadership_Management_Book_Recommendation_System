@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.59.1 — Verified Free eBook Library Access
+# Version 18.59.2 — Searchable Free eBook Library
 # =========================================================
 
 import sys
@@ -765,7 +765,7 @@ def _google_books_lookup_cached(title, authors, isbn10, isbn13, api_key):
         if api_key:
             params["key"] = api_key
         url = "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(params)
-        request = urllib.request.Request(url, headers={"User-Agent": "LeadWise/18.59.1"})
+        request = urllib.request.Request(url, headers={"User-Agent": "LeadWise/18.59.2"})
 
         try:
             with urllib.request.urlopen(request, timeout=10) as response:
@@ -866,6 +866,457 @@ def google_books_lookup_for_reader(book):
         isbn13_values[0] if isbn13_values else "",
         _reader_secret("GOOGLE_BOOKS_API_KEY"),
     )
+
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def search_google_free_ebooks(query, api_key="", max_results=12):
+    """Search Google Books for full-view free eBooks."""
+    query = str(query or "").strip()
+    if not query:
+        return {"ok": False, "error": "Enter a title, author, subject, or ISBN.", "items": []}
+
+    try:
+        max_results = max(1, min(int(max_results), 20))
+    except (TypeError, ValueError):
+        max_results = 12
+
+    params = {
+        "q": query,
+        "filter": "free-ebooks",
+        "printType": "books",
+        "projection": "full",
+        "maxResults": max_results,
+    }
+    if api_key:
+        params["key"] = api_key
+
+    url = "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(params)
+    request = urllib.request.Request(
+        url,
+        headers={"User-Agent": "LeadWise/18.59.2"},
+    )
+
+    try:
+        with urllib.request.urlopen(request, timeout=12) as response:
+            payload = json.loads(response.read().decode("utf-8", errors="replace"))
+    except urllib.error.HTTPError as exc:
+        return {
+            "ok": False,
+            "error": f"Google Books returned HTTP {exc.code}.",
+            "items": [],
+        }
+    except urllib.error.URLError:
+        return {
+            "ok": False,
+            "error": "Google Books could not be reached.",
+            "items": [],
+        }
+    except Exception as exc:
+        return {
+            "ok": False,
+            "error": f"Google Books search failed: {type(exc).__name__}.",
+            "items": [],
+        }
+
+    results = []
+    for item in payload.get("items") or []:
+        info = item.get("volumeInfo") or {}
+        access = item.get("accessInfo") or {}
+        epub = access.get("epub") or {}
+        pdf = access.get("pdf") or {}
+        identifiers = info.get("industryIdentifiers") or []
+
+        isbn10 = ""
+        isbn13 = ""
+        for identifier in identifiers:
+            kind = str(identifier.get("type") or "").upper()
+            value = str(identifier.get("identifier") or "").strip()
+            if kind == "ISBN_10" and not isbn10:
+                isbn10 = value
+            elif kind == "ISBN_13" and not isbn13:
+                isbn13 = value
+
+        image_links = info.get("imageLinks") or {}
+        thumbnail = str(
+            image_links.get("thumbnail")
+            or image_links.get("smallThumbnail")
+            or ""
+        ).strip()
+        if thumbnail.startswith("http://"):
+            thumbnail = "https://" + thumbnail[len("http://"):]
+
+        volume_id = str(item.get("id") or "").strip()
+        web_reader_link = str(access.get("webReaderLink") or "").strip()
+        preview_link = str(info.get("previewLink") or "").strip()
+        info_link = str(info.get("infoLink") or "").strip()
+
+        result = {
+            "volume_id": volume_id,
+            "title": str(info.get("title") or "Untitled").strip(),
+            "authors": ", ".join(info.get("authors") or []),
+            "publisher": str(info.get("publisher") or "").strip(),
+            "published_date": str(info.get("publishedDate") or "").strip(),
+            "description": str(info.get("description") or "").strip(),
+            "categories": ", ".join(info.get("categories") or []),
+            "isbn10": isbn10,
+            "isbn13": isbn13,
+            "thumbnail": thumbnail,
+            "country_code": str(access.get("country") or "").upper(),
+            "viewability": str(access.get("viewability") or "").upper(),
+            "public_domain": bool(access.get("publicDomain")),
+            "embeddable": bool(access.get("embeddable")),
+            "web_reader_link": web_reader_link,
+            "preview_link": preview_link,
+            "info_link": info_link,
+            "epub_available": bool(epub.get("isAvailable")),
+            "epub_download_link": str(epub.get("downloadLink") or "").strip(),
+            "pdf_available": bool(pdf.get("isAvailable")),
+            "pdf_download_link": str(pdf.get("downloadLink") or "").strip(),
+        }
+
+        # The free-ebooks filter is already full-view free access. Keep only
+        # results that still expose an official reader or download route.
+        if (
+            result["web_reader_link"]
+            or result["preview_link"]
+            or result["epub_download_link"]
+            or result["pdf_download_link"]
+        ):
+            results.append(result)
+
+    return {
+        "ok": True,
+        "error": "",
+        "items": results,
+        "total_items": int(payload.get("totalItems") or 0),
+        "api_key_configured": bool(api_key),
+    }
+
+
+def _normalize_isbn_for_match(value):
+    return re.sub(r"[^0-9Xx]", "", str(value or "")).upper()
+
+
+def find_leadwise_catalog_match_for_google(result):
+    """Match a Google Books result to the LeadWise catalog using ISBN first."""
+    if not isinstance(result, dict):
+        return None
+
+    candidate_isbns = {
+        value
+        for value in (
+            _normalize_isbn_for_match(result.get("isbn10")),
+            _normalize_isbn_for_match(result.get("isbn13")),
+        )
+        if value
+    }
+
+    if candidate_isbns:
+        for _, row in app_catalog.iterrows():
+            row_isbn10, row_isbn13 = _reader_book_isbns(row)
+            row_isbns = set(row_isbn10 + row_isbn13)
+            if candidate_isbns.intersection(row_isbns):
+                return row
+
+    requested_title = _bookstore_normalize_text(result.get("title"))
+    requested_authors = set(
+        _bookstore_normalize_text(result.get("authors")).split()
+    )
+    if not requested_title:
+        return None
+
+    for _, row in app_catalog.iterrows():
+        row_title = _bookstore_normalize_text(
+            row.get("canonical_title") or row.get("title")
+        )
+        if row_title != requested_title:
+            continue
+
+        row_authors = set(
+            _bookstore_normalize_text(
+                format_list_value(row.get("authors"), fallback="")
+            ).split()
+        )
+        if not requested_authors or not row_authors or requested_authors.intersection(row_authors):
+            return row
+
+    return None
+
+
+def render_google_books_embedded_viewer(volume_id, viewer_key):
+    """Render the official Google Books Embedded Viewer inside LeadWise."""
+    volume_id = str(volume_id or "").strip()
+    if not volume_id:
+        st.warning("Google Books did not return a usable volume ID for this edition.")
+        return
+
+    safe_div_id = re.sub(r"[^A-Za-z0-9_-]", "_", f"gbooks_{viewer_key}_{volume_id}")
+    volume_js = json.dumps(volume_id)
+    html_block = f"""
+    <div id="{safe_div_id}" style="width:100%;height:720px;"></div>
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+    <script type="text/javascript">
+      google.books.load();
+      function initializeLeadWiseViewer() {{
+        var viewer = new google.books.DefaultViewer(
+          document.getElementById({json.dumps(safe_div_id)})
+        );
+        viewer.load({volume_js});
+      }}
+      google.books.setOnLoadCallback(initializeLeadWiseViewer);
+    </script>
+    """
+    components.html(html_block, height=740, scrolling=False)
+
+
+def render_free_ebook_search_result(result, current_user, index):
+    """Render one account-only Google Books free-eBook result."""
+    title = _commerce_text(result.get("title"), "Untitled")
+    authors = _commerce_text(result.get("authors"), "Author not available")
+    publisher = _commerce_text(result.get("publisher"), "")
+    published_date = _commerce_text(result.get("published_date"), "")
+    description = _commerce_text(result.get("description"), "")
+    categories = _commerce_text(result.get("categories"), "")
+    country = _commerce_text(result.get("country_code"), "")
+    public_domain = bool(result.get("public_domain"))
+    embeddable = bool(result.get("embeddable"))
+    volume_id = str(result.get("volume_id") or "").strip()
+    reader_url = str(
+        result.get("web_reader_link")
+        or result.get("preview_link")
+        or ""
+    ).strip()
+    epub_url = str(result.get("epub_download_link") or "").strip()
+    pdf_url = str(result.get("pdf_download_link") or "").strip()
+    info_url = str(result.get("info_link") or "").strip()
+
+    with st.container(border=True):
+        cover_col, info_col = st.columns([1, 3.2])
+
+        with cover_col:
+            thumbnail = str(result.get("thumbnail") or "").strip()
+            if thumbnail:
+                st.image(thumbnail, use_container_width=True)
+            else:
+                st.caption("Cover not available")
+
+        with info_col:
+            st.markdown(f"### {title}")
+            st.write(f"**Author:** {authors}")
+
+            meta_bits = []
+            if publisher:
+                meta_bits.append(publisher)
+            if published_date:
+                meta_bits.append(published_date)
+            if country:
+                meta_bits.append(f"Access market: {country}")
+            if meta_bits:
+                st.caption(" · ".join(meta_bits))
+
+            if categories:
+                st.caption(f"Subjects: {categories}")
+
+            if public_domain:
+                st.success("Google Books identifies this edition as Public Domain.")
+            else:
+                st.info(
+                    "Google Books lists this result through its free-eBooks/full-view access filter."
+                )
+
+            if description:
+                short_description = description
+                if len(short_description) > 650:
+                    short_description = short_description[:647].rstrip() + "..."
+                st.write(short_description)
+
+            formats = []
+            if result.get("epub_available"):
+                formats.append("EPUB")
+            if result.get("pdf_available"):
+                formats.append("PDF")
+            if embeddable:
+                formats.append("Embedded Reader")
+            if formats:
+                st.caption("Available access: " + " · ".join(formats))
+
+            catalog_match = find_leadwise_catalog_match_for_google(result)
+            if catalog_match is not None:
+                matched_book_id = str(catalog_match.get("book_id") or "").strip()
+                existing = get_library_entry(current_user["user_id"], matched_book_id)
+                if existing:
+                    st.caption(
+                        f"LeadWise catalog match · Already in My Library as {existing['reading_status']}."
+                    )
+                elif matched_book_id:
+                    if st.button(
+                        "Save Matching Book to My Library",
+                        key=f"free_search_save_{index}_{matched_book_id}",
+                        use_container_width=True,
+                    ):
+                        save_library_book(
+                            current_user["user_id"],
+                            matched_book_id,
+                            "Want to Read",
+                        )
+                        track_event(
+                            "free_ebook_catalog_save",
+                            page="My Library",
+                            book_id=matched_book_id,
+                            metadata={"provider": "Google Books", "volume_id": volume_id},
+                            user=current_user,
+                        )
+                        st.success("Matching LeadWise book saved to My Library.")
+                        st.rerun()
+
+        action_columns = st.columns(4)
+
+        with action_columns[0]:
+            if embeddable and volume_id:
+                if st.button(
+                    "Read in LeadWise",
+                    key=f"free_search_read_{index}_{volume_id}",
+                    use_container_width=True,
+                ):
+                    track_event(
+                        "free_ebook_live_read",
+                        page="My Library",
+                        metadata={"provider": "Google Books", "volume_id": volume_id},
+                        user=current_user,
+                    )
+                    current = st.session_state.get("free_ebook_search_viewer")
+                    st.session_state["free_ebook_search_viewer"] = (
+                        None if current == volume_id else volume_id
+                    )
+                    st.rerun()
+            elif reader_url:
+                st.link_button(
+                    "Read on Google Books ↗",
+                    reader_url,
+                    use_container_width=True,
+                )
+            else:
+                st.caption("Reader unavailable")
+
+        with action_columns[1]:
+            if epub_url:
+                st.link_button(
+                    "EPUB Download ↗",
+                    epub_url,
+                    use_container_width=True,
+                )
+            else:
+                st.caption("No EPUB download")
+
+        with action_columns[2]:
+            if pdf_url:
+                st.link_button(
+                    "PDF Download ↗",
+                    pdf_url,
+                    use_container_width=True,
+                )
+            else:
+                st.caption("No PDF download")
+
+        with action_columns[3]:
+            source_link = info_url or reader_url
+            if source_link:
+                st.link_button(
+                    "Google Books ↗",
+                    source_link,
+                    use_container_width=True,
+                )
+
+        if st.session_state.get("free_ebook_search_viewer") == volume_id:
+            st.markdown("#### LeadWise eBook Reader")
+            st.caption(
+                "This official Google Books viewer stays inside the LeadWise page. "
+                "Download links, when offered by Google Books, open the provider route "
+                "without replacing your LeadWise session."
+            )
+            render_google_books_embedded_viewer(
+                volume_id,
+                viewer_key=f"{index}_{current_user['user_id']}",
+            )
+
+
+def render_free_ebook_search(current_user):
+    """Account-only live search for legal Google Books free eBooks."""
+    st.markdown("### Search Free eBooks")
+    st.caption(
+        "Search Google Books full-view free eBooks by title, author, subject, or ISBN. "
+        "Reading stays inside LeadWise when Google permits embedding. "
+        "Downloads are shown only when Google Books provides an official download link."
+    )
+
+    with st.form("leadwise_free_ebook_search_form"):
+        search_query = st.text_input(
+            "Search free eBooks",
+            value=st.session_state.get("free_ebook_search_query", ""),
+            placeholder="Example: leadership, Peter Drucker, strategy, ISBN...",
+        )
+        result_count = st.selectbox(
+            "Results",
+            [5, 10, 15, 20],
+            index=1,
+            key="free_ebook_search_count",
+        )
+        search_clicked = st.form_submit_button(
+            "Search Legal Free eBooks",
+            use_container_width=True,
+        )
+
+    if search_clicked:
+        clean_query = str(search_query or "").strip()
+        if not clean_query:
+            st.warning("Enter a title, author, subject, or ISBN.")
+        else:
+            st.session_state["free_ebook_search_query"] = clean_query
+            with st.spinner("Searching Google Books free eBooks..."):
+                st.session_state["free_ebook_search_results"] = search_google_free_ebooks(
+                    clean_query,
+                    _reader_secret("GOOGLE_BOOKS_API_KEY"),
+                    max_results=result_count,
+                )
+            track_event(
+                "free_ebook_search",
+                page="My Library",
+                metadata={"query": clean_query, "provider": "Google Books"},
+                user=current_user,
+            )
+
+    search_payload = st.session_state.get("free_ebook_search_results")
+    if not isinstance(search_payload, dict):
+        st.info(
+            "Enter a search above to find legal free eBooks. "
+            "This search is available only to signed-in LeadWise accounts."
+        )
+        return
+
+    if not search_payload.get("ok"):
+        st.warning(search_payload.get("error") or "Free eBook search could not be completed.")
+        return
+
+    items = search_payload.get("items") or []
+    if not items:
+        st.info(
+            "No full-view free eBooks were returned for this search. "
+            "Try another title, author, subject, or ISBN."
+        )
+        return
+
+    st.caption(
+        f"{len(items):,} result(s) shown from Google Books. "
+        "Availability and download rights can vary by country."
+    )
+
+    for index, result in enumerate(items):
+        render_free_ebook_search_result(
+            result,
+            current_user,
+            index,
+        )
 
 
 def amazon_search_url_for_reader(book, marketplace="www.amazon.com"):
@@ -6679,166 +7130,174 @@ with main_col:
                 m5.metric("Rated", reviewed)
                 m6.metric("Free eBooks", free_ebook_books)
 
-                if library.empty:
-                    st.info("Your library is empty. Open a book in Discover Books and choose Save to My Library.")
-                else:
-                    filter_value = st.selectbox(
-                        "Filter by reading status", ["All"] + READING_STATUSES, key="library_status_filter"
-                    )
-                    visible = library if filter_value == "All" else library[library["reading_status"] == filter_value]
+                saved_tab, ebook_search_tab = st.tabs(
+                    ["My Saved Books", "Search Free eBooks"]
+                )
 
-                    for _, lib_row in visible.iterrows():
-                        book_id = str(lib_row["book_id"])
-                        matches = app_catalog[app_catalog["book_id"].astype(str).eq(book_id)]
-                        if matches.empty:
-                            continue
-                        book = matches.iloc[0]
-                        journal = get_reading_journal(current_user["user_id"], book_id)
+                with ebook_search_tab:
+                    render_free_ebook_search(current_user)
 
-                        with st.container(border=True):
-                            c1, c2 = st.columns([1, 3.2])
-                            with c1:
-                                render_cover(book)
-                            with c2:
-                                st.markdown(f"### {safe_display_value(book.get('canonical_title'), 'Untitled')}")
-                                st.write(f"**Author:** {format_list_value(book.get('authors'), 'Not available')}")
-                                if journal.get("personal_rating"):
-                                    st.caption(f"My rating: {'★' * int(round(float(journal['personal_rating'])))} · {float(journal['personal_rating']):.1f}/5")
-                                else:
-                                    st.caption("My rating: Not rated yet")
-                                card_publication = get_review_publication(current_user["user_id"], book_id)
-                                if bool(card_publication.get("is_published", 0)):
-                                    st.caption("Reader Insights: Published")
-                                else:
-                                    st.caption("Reader Insights: Private")
+                with saved_tab:
+                    if library.empty:
+                        st.info("Your library is empty. Open a book in Discover Books and choose Save to My Library.")
+                    else:
+                        filter_value = st.selectbox(
+                            "Filter by reading status", ["All"] + READING_STATUSES, key="library_status_filter"
+                        )
+                        visible = library if filter_value == "All" else library[library["reading_status"] == filter_value]
 
-                                current_status = lib_row["reading_status"] if lib_row["reading_status"] in READING_STATUSES else "Want to Read"
-                                with st.form(f"status_form_{book_id}"):
-                                    status = st.selectbox(
-                                        "Reading status", READING_STATUSES,
-                                        index=READING_STATUSES.index(current_status),
-                                        key=f"library_status_{book_id}",
-                                    )
-                                    update_status = st.form_submit_button("Update Status", use_container_width=True)
-                                if update_status:
-                                    persisted = update_library_status(current_user["user_id"], book_id, status)
-                                    if persisted:
-                                        st.session_state["library_flash"] = f"{safe_display_value(book.get('canonical_title'), 'Book')} updated to {persisted['reading_status']}."
+                        for _, lib_row in visible.iterrows():
+                            book_id = str(lib_row["book_id"])
+                            matches = app_catalog[app_catalog["book_id"].astype(str).eq(book_id)]
+                            if matches.empty:
+                                continue
+                            book = matches.iloc[0]
+                            journal = get_reading_journal(current_user["user_id"], book_id)
+
+                            with st.container(border=True):
+                                c1, c2 = st.columns([1, 3.2])
+                                with c1:
+                                    render_cover(book)
+                                with c2:
+                                    st.markdown(f"### {safe_display_value(book.get('canonical_title'), 'Untitled')}")
+                                    st.write(f"**Author:** {format_list_value(book.get('authors'), 'Not available')}")
+                                    if journal.get("personal_rating"):
+                                        st.caption(f"My rating: {'★' * int(round(float(journal['personal_rating'])))} · {float(journal['personal_rating']):.1f}/5")
                                     else:
-                                        st.session_state["library_flash"] = "The library record could not be updated."
-                                    st.rerun()
-
-                                a1, a2 = st.columns(2)
-                                with a1:
-                                    if st.button("View Details", key=f"library_view_{book_id}", use_container_width=True):
-                                        st.session_state["library_detail_id"] = book_id
-                                        st.rerun()
-                                with a2:
-                                    if st.button("Remove", key=f"library_remove_{book_id}", use_container_width=True):
-                                        remove_library_book(current_user["user_id"], book_id)
-                                        st.session_state["library_flash"] = "Book removed from My Library."
-                                        st.rerun()
-
-                            render_library_free_ebook_access(
-                                book,
-                                current_user,
-                                sources=library_ebook_sources,
-                                context="library_card",
-                            )
-
-                            # Re-read after any previous persisted change so the journal uses database state.
-                            persisted_entry = get_library_entry(current_user["user_id"], book_id) or dict(lib_row)
-                            persisted_status = persisted_entry.get("reading_status", current_status)
-                            with st.expander("My Reading Reflection", expanded=(persisted_status == "Finished")):
-                                st.caption(
-                                    "Your own reading record. This is separate from source ratings and LeadWise content analysis."
-                                )
-                                rating_options = ["Not rated", "1", "2", "3", "4", "5"]
-                                current_rating = journal.get("personal_rating")
-                                rating_index = 0 if not current_rating else max(1, min(5, int(round(float(current_rating)))))
-
-                                stored_finished = journal.get("date_finished")
-                                try:
-                                    finished_default = date.fromisoformat(str(stored_finished)) if stored_finished else date.today()
-                                except ValueError:
-                                    finished_default = date.today()
-
-                                with st.form(f"journal_form_{book_id}"):
-                                    rating_choice = st.selectbox(
-                                        "My rating", rating_options, index=rating_index, key=f"journal_rating_{book_id}"
-                                    )
-                                    review_text = st.text_area(
-                                        "My Review / Feedback", value=journal.get("review_text") or "",
-                                        placeholder="What did you think of the book? What worked well, and what did not?", height=120,
-                                    )
-                                    key_takeaways = st.text_area(
-                                        "Key Takeaways", value=journal.get("key_takeaways") or "",
-                                        placeholder="What leadership or management ideas do you want to remember?", height=100,
-                                    )
-                                    practical_application = st.text_area(
-                                        "How I Can Apply It", value=journal.get("practical_application") or "",
-                                        placeholder="How could you apply these ideas in your work, team, or leadership practice?", height=100,
-                                    )
-                                    private_notes = st.text_area(
-                                        "Private Notes", value=journal.get("private_notes") or "",
-                                        placeholder="Optional notes for yourself.", height=90,
-                                    )
-                                    publication = get_review_publication(current_user["user_id"], book_id)
-                                    is_published = bool(publication.get("is_published", 0))
-                                    if is_published:
-                                        st.success("Community sharing status: Published in Reader Insights")
+                                        st.caption("My rating: Not rated yet")
+                                    card_publication = get_review_publication(current_user["user_id"], book_id)
+                                    if bool(card_publication.get("is_published", 0)):
+                                        st.caption("Reader Insights: Published")
                                     else:
-                                        st.info("Community sharing status: Private — not included in Reader Insights")
-                                    st.caption(
-                                        "Publishing shares only My Rating and My Review / Feedback. "
-                                        "Key Takeaways, How I Can Apply It, Private Notes, and Date Finished remain private."
-                                    )
-                                    if persisted_status == "Finished":
-                                        date_finished_input = st.date_input(
-                                            "Date Finished", value=finished_default,
-                                            key=f"journal_finished_{book_id}",
+                                        st.caption("Reader Insights: Private")
+
+                                    current_status = lib_row["reading_status"] if lib_row["reading_status"] in READING_STATUSES else "Want to Read"
+                                    with st.form(f"status_form_{book_id}"):
+                                        status = st.selectbox(
+                                            "Reading status", READING_STATUSES,
+                                            index=READING_STATUSES.index(current_status),
+                                            key=f"library_status_{book_id}",
                                         )
-                                        st.caption("LeadWise defaults this to today when a book is first marked Finished; you can change it.")
-                                    else:
-                                        date_finished_input = None
-                                        if stored_finished:
-                                            st.caption(f"Previous completion date retained: {stored_finished}")
+                                        update_status = st.form_submit_button("Update Status", use_container_width=True)
+                                    if update_status:
+                                        persisted = update_library_status(current_user["user_id"], book_id, status)
+                                        if persisted:
+                                            st.session_state["library_flash"] = f"{safe_display_value(book.get('canonical_title'), 'Book')} updated to {persisted['reading_status']}."
                                         else:
-                                            st.caption("Date Finished becomes available when the reading status is Finished.")
-                                    b_private, b_publish = st.columns(2)
-                                    with b_private:
-                                        save_private = st.form_submit_button(
-                                            "Save Privately", use_container_width=True
-                                        )
-                                    with b_publish:
-                                        save_publish = st.form_submit_button(
-                                            "Save & Publish to Reader Insights", use_container_width=True
-                                        )
+                                            st.session_state["library_flash"] = "The library record could not be updated."
+                                        st.rerun()
 
-                                if save_private or save_publish:
-                                    rating_value = None if rating_choice == "Not rated" else float(rating_choice)
-                                    date_to_save = (
-                                        date_finished_input.isoformat() if date_finished_input is not None
-                                        else (stored_finished or None)
+                                    a1, a2 = st.columns(2)
+                                    with a1:
+                                        if st.button("View Details", key=f"library_view_{book_id}", use_container_width=True):
+                                            st.session_state["library_detail_id"] = book_id
+                                            st.rerun()
+                                    with a2:
+                                        if st.button("Remove", key=f"library_remove_{book_id}", use_container_width=True):
+                                            remove_library_book(current_user["user_id"], book_id)
+                                            st.session_state["library_flash"] = "Book removed from My Library."
+                                            st.rerun()
+
+                                render_library_free_ebook_access(
+                                    book,
+                                    current_user,
+                                    sources=library_ebook_sources,
+                                    context="library_card",
+                                )
+
+                                # Re-read after any previous persisted change so the journal uses database state.
+                                persisted_entry = get_library_entry(current_user["user_id"], book_id) or dict(lib_row)
+                                persisted_status = persisted_entry.get("reading_status", current_status)
+                                with st.expander("My Reading Reflection", expanded=(persisted_status == "Finished")):
+                                    st.caption(
+                                        "Your own reading record. This is separate from source ratings and LeadWise content analysis."
                                     )
-                                    publish_review = bool(save_publish)
-                                    published_ok, published_message, persisted_publication = save_reading_reflection_with_visibility(
-                                        current_user["user_id"], book_id, rating_value, review_text,
-                                        key_takeaways, practical_application, private_notes, date_to_save,
-                                        publish=publish_review,
-                                    )
-                                    if publish_review and not published_ok:
-                                        st.session_state["library_flash"] = published_message
-                                    elif bool(persisted_publication.get("is_published", 0)):
-                                        st.session_state["library_flash"] = (
-                                            "Reading reflection saved and published. Your rating/review now contributes "
-                                            "to Reader Insights."
+                                    rating_options = ["Not rated", "1", "2", "3", "4", "5"]
+                                    current_rating = journal.get("personal_rating")
+                                    rating_index = 0 if not current_rating else max(1, min(5, int(round(float(current_rating)))))
+
+                                    stored_finished = journal.get("date_finished")
+                                    try:
+                                        finished_default = date.fromisoformat(str(stored_finished)) if stored_finished else date.today()
+                                    except ValueError:
+                                        finished_default = date.today()
+
+                                    with st.form(f"journal_form_{book_id}"):
+                                        rating_choice = st.selectbox(
+                                            "My rating", rating_options, index=rating_index, key=f"journal_rating_{book_id}"
                                         )
-                                    else:
-                                        st.session_state["library_flash"] = (
-                                            "Reading reflection saved privately. It is not included in Reader Insights."
+                                        review_text = st.text_area(
+                                            "My Review / Feedback", value=journal.get("review_text") or "",
+                                            placeholder="What did you think of the book? What worked well, and what did not?", height=120,
                                         )
-                                    st.rerun()
+                                        key_takeaways = st.text_area(
+                                            "Key Takeaways", value=journal.get("key_takeaways") or "",
+                                            placeholder="What leadership or management ideas do you want to remember?", height=100,
+                                        )
+                                        practical_application = st.text_area(
+                                            "How I Can Apply It", value=journal.get("practical_application") or "",
+                                            placeholder="How could you apply these ideas in your work, team, or leadership practice?", height=100,
+                                        )
+                                        private_notes = st.text_area(
+                                            "Private Notes", value=journal.get("private_notes") or "",
+                                            placeholder="Optional notes for yourself.", height=90,
+                                        )
+                                        publication = get_review_publication(current_user["user_id"], book_id)
+                                        is_published = bool(publication.get("is_published", 0))
+                                        if is_published:
+                                            st.success("Community sharing status: Published in Reader Insights")
+                                        else:
+                                            st.info("Community sharing status: Private — not included in Reader Insights")
+                                        st.caption(
+                                            "Publishing shares only My Rating and My Review / Feedback. "
+                                            "Key Takeaways, How I Can Apply It, Private Notes, and Date Finished remain private."
+                                        )
+                                        if persisted_status == "Finished":
+                                            date_finished_input = st.date_input(
+                                                "Date Finished", value=finished_default,
+                                                key=f"journal_finished_{book_id}",
+                                            )
+                                            st.caption("LeadWise defaults this to today when a book is first marked Finished; you can change it.")
+                                        else:
+                                            date_finished_input = None
+                                            if stored_finished:
+                                                st.caption(f"Previous completion date retained: {stored_finished}")
+                                            else:
+                                                st.caption("Date Finished becomes available when the reading status is Finished.")
+                                        b_private, b_publish = st.columns(2)
+                                        with b_private:
+                                            save_private = st.form_submit_button(
+                                                "Save Privately", use_container_width=True
+                                            )
+                                        with b_publish:
+                                            save_publish = st.form_submit_button(
+                                                "Save & Publish to Reader Insights", use_container_width=True
+                                            )
+
+                                    if save_private or save_publish:
+                                        rating_value = None if rating_choice == "Not rated" else float(rating_choice)
+                                        date_to_save = (
+                                            date_finished_input.isoformat() if date_finished_input is not None
+                                            else (stored_finished or None)
+                                        )
+                                        publish_review = bool(save_publish)
+                                        published_ok, published_message, persisted_publication = save_reading_reflection_with_visibility(
+                                            current_user["user_id"], book_id, rating_value, review_text,
+                                            key_takeaways, practical_application, private_notes, date_to_save,
+                                            publish=publish_review,
+                                        )
+                                        if publish_review and not published_ok:
+                                            st.session_state["library_flash"] = published_message
+                                        elif bool(persisted_publication.get("is_published", 0)):
+                                            st.session_state["library_flash"] = (
+                                                "Reading reflection saved and published. Your rating/review now contributes "
+                                                "to Reader Insights."
+                                            )
+                                        else:
+                                            st.session_state["library_flash"] = (
+                                                "Reading reflection saved privately. It is not included in Reader Insights."
+                                            )
+                                        st.rerun()
 
     # =========================================================
     # MY MESSAGES
