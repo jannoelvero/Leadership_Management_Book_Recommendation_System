@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.58.8 — Supabase PostgreSQL Required Mode
+# Version 18.58.9 — Compare Books Commerce Integration
 # =========================================================
 
 import sys
@@ -78,7 +78,7 @@ DATABASE_URL = get_database_url()
 DATABASE_BACKEND = get_database_backend(DATABASE_URL)
 POSTGRES_COMPONENT_STATUS = get_postgres_component_status()
 
-# 18.58.8: operational Reader data must use the shared Supabase PostgreSQL
+# 18.58.9: operational Reader data must use the shared Supabase PostgreSQL
 # database. Silent SQLite fallback is disabled to prevent accounts, messages,
 # reviews, analytics and library activity from being written to an isolated
 # local database by mistake.
@@ -158,6 +158,14 @@ READER_REQUIRED_SCHEMA = {
         "vector_norm", "vectorizer_features", "processed_at", "processing_status",
         "processing_error", "vectorizer_version",
     },
+    "book_commerce_offers": {
+        "offer_id", "book_id", "retailer_name", "retailer_url",
+        "retailer_product_id", "isbn10", "isbn13", "format", "price",
+        "currency", "availability", "country_code", "retailer_rating",
+        "retailer_rating_count", "source_type", "is_active", "is_verified",
+        "last_checked_at", "admin_note", "created_by", "updated_by",
+        "created_at", "updated_at",
+    },
 }
 
 
@@ -168,7 +176,7 @@ def get_user_connection():
         connection.close()
         raise RuntimeError(
             "LeadWise Reader requires Supabase PostgreSQL. "
-            "SQLite fallback is disabled in version 18.58.8."
+            "SQLite fallback is disabled in version 18.58.9."
         )
     return connection
 
@@ -616,6 +624,197 @@ def track_page_once(page_name):
     if st.session_state.get("leadwise_last_page_marker") != marker:
         track_event("page_view", page=page_name)
         st.session_state["leadwise_last_page_marker"] = marker
+
+
+
+def get_active_commerce_offers(book_ids):
+    """Return active Admin-managed retailer offers for selected LeadWise books."""
+    clean_book_ids = []
+    for book_id in book_ids or []:
+        value = str(book_id or "").strip()
+        if value and value not in clean_book_ids:
+            clean_book_ids.append(value)
+
+    if not clean_book_ids:
+        return pd.DataFrame()
+
+    placeholders = ", ".join(["?"] * len(clean_book_ids))
+
+    with get_user_connection() as connection:
+        return query_dataframe(
+            connection,
+            f"""
+            SELECT
+                offer_id,
+                book_id,
+                retailer_name,
+                retailer_url,
+                retailer_product_id,
+                isbn10,
+                isbn13,
+                format,
+                price,
+                currency,
+                availability,
+                country_code,
+                retailer_rating,
+                retailer_rating_count,
+                source_type,
+                is_active,
+                is_verified,
+                last_checked_at,
+                updated_at
+            FROM book_commerce_offers
+            WHERE is_active = TRUE
+              AND book_id IN ({placeholders})
+            ORDER BY
+                book_id,
+                is_verified DESC,
+                retailer_name,
+                price NULLS LAST,
+                offer_id
+            """,
+            tuple(clean_book_ids),
+        )
+
+
+def _commerce_text(value, fallback="Not available"):
+    if value is None:
+        return fallback
+    try:
+        if pd.isna(value):
+            return fallback
+    except (TypeError, ValueError):
+        pass
+
+    text_value = str(value).strip()
+    if not text_value or text_value.lower() in {"nan", "none", "null", "<na>"}:
+        return fallback
+    return text_value
+
+
+def _commerce_price_text(price, currency):
+    try:
+        if price is None or pd.isna(price):
+            return "Price not provided"
+        amount = float(price)
+    except (TypeError, ValueError):
+        return "Price not provided"
+
+    currency_text = _commerce_text(currency, "")
+    if currency_text:
+        return f"{amount:,.2f} {currency_text}"
+    return f"{amount:,.2f}"
+
+
+def _commerce_rating_text(rating, count):
+    try:
+        if rating is None or pd.isna(rating):
+            return ""
+        rating_value = float(rating)
+    except (TypeError, ValueError):
+        return ""
+
+    try:
+        count_value = (
+            int(float(count))
+            if count is not None and not pd.isna(count)
+            else None
+        )
+    except (TypeError, ValueError):
+        count_value = None
+
+    text_value = f"{rating_value:.2f} / 5 retailer rating"
+    if count_value is not None:
+        text_value += f" · {count_value:,} ratings"
+    return text_value
+
+
+def render_compare_commerce_offers(book, offers, column_label):
+    """Render Admin-managed retailer offers for one compared book."""
+    book_id = str(book.get("book_id") or "").strip()
+    title = _commerce_text(book.get("canonical_title"), "Selected book")
+
+    st.markdown(f"**{column_label} · {title}**")
+
+    if offers is None or offers.empty:
+        st.info(
+            "No active buying options are currently available for this book."
+        )
+        return
+
+    for _, offer in offers.iterrows():
+        retailer = _commerce_text(
+            offer.get("retailer_name"),
+            "External retailer",
+        )
+        book_format = _commerce_text(
+            offer.get("format"),
+            "Format not specified",
+        )
+        availability = _commerce_text(
+            offer.get("availability"),
+            "Availability not provided",
+        )
+        country = _commerce_text(
+            offer.get("country_code"),
+            "",
+        )
+        price_text = _commerce_price_text(
+            offer.get("price"),
+            offer.get("currency"),
+        )
+        rating_text = _commerce_rating_text(
+            offer.get("retailer_rating"),
+            offer.get("retailer_rating_count"),
+        )
+        verified = bool(offer.get("is_verified"))
+        source_type = _commerce_text(
+            offer.get("source_type"),
+            "Manual",
+        )
+        checked = _commerce_text(
+            offer.get("last_checked_at"),
+            "Not recorded",
+        )
+        retailer_url = _commerce_text(
+            offer.get("retailer_url"),
+            "",
+        )
+
+        with st.container(border=True):
+            st.markdown(f"**{retailer}** · {book_format}")
+
+            price_col, availability_col = st.columns(2)
+            with price_col:
+                st.markdown(f"**Price:** {price_text}")
+            with availability_col:
+                st.markdown(f"**Availability:** {availability}")
+
+            if rating_text:
+                st.caption(rating_text)
+
+            status_bits = []
+            if verified:
+                status_bits.append("Verified by LeadWise Admin")
+            else:
+                status_bits.append("Not yet verified")
+            if country:
+                status_bits.append(f"Market: {country}")
+            status_bits.append(f"Source: {source_type}")
+            status_bits.append(f"Last checked: {checked}")
+            st.caption(" · ".join(status_bits))
+
+            if retailer_url.startswith(("https://", "http://")):
+                st.link_button(
+                    f"View / Buy on {retailer}",
+                    retailer_url,
+                    use_container_width=True,
+                    key=(
+                        f"commerce_link_{column_label}_"
+                        f"{book_id}_{int(offer.get('offer_id'))}"
+                    ),
+                )
 
 
 def signed_in_user():
@@ -1767,7 +1966,7 @@ with get_user_connection() as _backend_check_connection:
     if ACTIVE_DATABASE_BACKEND != "postgresql":
         raise RuntimeError(
             "LeadWise Reader requires Supabase PostgreSQL. "
-            "SQLite fallback is disabled in version 18.58.8."
+            "SQLite fallback is disabled in version 18.58.9."
         )
 
 
@@ -5581,7 +5780,8 @@ with main_col:
             "Compare Books",
             (
                 "Compare two publications using bibliographic metadata, "
-                "reader evidence and production-model content similarity."
+                "reader evidence, production-model content similarity, and "
+                "Admin-managed price and availability options."
             ),
         )
 
@@ -5746,12 +5946,64 @@ with main_col:
                 "Source ratings and readership counts are separate from future LeadWise community reviews."
             )
 
+            commerce_offers = get_active_commerce_offers(
+                [book_a["book_id"], book_b["book_id"]]
+            )
+
+            if commerce_offers.empty:
+                offers_a = pd.DataFrame()
+                offers_b = pd.DataFrame()
+            else:
+                offers_a = commerce_offers[
+                    commerce_offers["book_id"]
+                    .astype(str)
+                    .eq(str(book_a["book_id"]))
+                ].copy()
+                offers_b = commerce_offers[
+                    commerce_offers["book_id"]
+                    .astype(str)
+                    .eq(str(book_b["book_id"]))
+                ].copy()
+
+            st.markdown(
+                '<div class="leadwise-section-title">'
+                'Price &amp; Availability'
+                '</div>',
+                unsafe_allow_html=True,
+            )
+            st.caption(
+                "Buying options are maintained through LeadWise Admin and "
+                "come from external retailers. Prices, ratings and availability "
+                "may change after the last recorded check."
+            )
+
+            commerce_col_a, commerce_col_b = st.columns(2)
+            with commerce_col_a:
+                render_compare_commerce_offers(
+                    book_a,
+                    offers_a,
+                    "Book A",
+                )
+            with commerce_col_b:
+                render_compare_commerce_offers(
+                    book_b,
+                    offers_b,
+                    "Book B",
+                )
+
+            st.caption(
+                "Retailer prices, availability and customer ratings are "
+                "commercial metadata only. They do not affect LeadWise "
+                "textual similarity, recommendation ranking or quality assessment."
+            )
+
             comparison_rows = [
                 ("Authors", clean_compare_metadata(book_a.get("authors")), clean_compare_metadata(book_b.get("authors"))),
                 ("Publication year", format_year(book_a), format_year(book_b)),
                 ("Publisher", clean_compare_metadata(book_a.get("publisher"), clean_compare_metadata(book_a.get("publishers"))), clean_compare_metadata(book_b.get("publisher"), clean_compare_metadata(book_b.get("publishers")))),
                 ("Topic", safe_display_value(book_a.get("cluster_label")), safe_display_value(book_b.get("cluster_label"))),
                 ("Source rating", rating_a, rating_b),
+                ("Active buying options", f"{len(offers_a):,}", f"{len(offers_b):,}"),
                 ("Source rating count", f"{rating_count_a:,}" if rating_a != "Not available" else "Not available", f"{rating_count_b:,}" if rating_b != "Not available" else "Not available"),
                 ("Rating evidence", evidence_a, evidence_b),
                 ("Want to read", format_integer(book_a.get("want_to_read_count")), format_integer(book_b.get("want_to_read_count"))),
