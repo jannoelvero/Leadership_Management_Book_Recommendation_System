@@ -2,7 +2,7 @@
 # LEADWISE
 # Leadership & Management Book Intelligence
 # Streamlit Application
-# Version 18.58.9 — Compare Books Commerce Integration
+# Version 18.59.0 — Live Google Books + Amazon Compare Integration
 # =========================================================
 
 import sys
@@ -13,6 +13,9 @@ import uuid
 import ast
 import html
 import base64
+import urllib.request
+import urllib.error
+import urllib.parse
 import hashlib
 import hmac
 import secrets
@@ -78,7 +81,7 @@ DATABASE_URL = get_database_url()
 DATABASE_BACKEND = get_database_backend(DATABASE_URL)
 POSTGRES_COMPONENT_STATUS = get_postgres_component_status()
 
-# 18.58.9: operational Reader data must use the shared Supabase PostgreSQL
+# 18.59.0: operational Reader data must use the shared Supabase PostgreSQL
 # database. Silent SQLite fallback is disabled to prevent accounts, messages,
 # reviews, analytics and library activity from being written to an isolated
 # local database by mistake.
@@ -176,7 +179,7 @@ def get_user_connection():
         connection.close()
         raise RuntimeError(
             "LeadWise Reader requires Supabase PostgreSQL. "
-            "SQLite fallback is disabled in version 18.58.9."
+            "SQLite fallback is disabled in version 18.59.0."
         )
     return connection
 
@@ -627,6 +630,306 @@ def track_page_once(page_name):
 
 
 
+
+def _reader_secret(name):
+    value = ""
+    try:
+        value = st.secrets.get(name, "")
+    except Exception:
+        value = ""
+    return str(value or os.getenv(name, "")).strip()
+
+
+def _bookstore_normalize_text(value):
+    return re.sub(r"[^a-z0-9]+", " ", str(value or "").casefold()).strip()
+
+
+def _bookstore_isbn_tokens(value):
+    if value is None:
+        return []
+    if isinstance(value, (list, tuple, set)):
+        raw_values = value
+    else:
+        raw_values = re.split(r"[,;|/]", str(value))
+    tokens = []
+    for raw in raw_values:
+        token = re.sub(r"[^0-9Xx]", "", str(raw or ""))
+        if len(token) in {10, 13} and token not in tokens:
+            tokens.append(token.upper())
+    return tokens
+
+
+def _reader_book_isbns(book):
+    isbn13_values = []
+    isbn10_values = []
+    for field in ("isbn_13", "isbn13"):
+        for value in _bookstore_isbn_tokens(book.get(field)):
+            if len(value) == 13 and value not in isbn13_values:
+                isbn13_values.append(value)
+    for field in ("isbn_10", "isbn10"):
+        for value in _bookstore_isbn_tokens(book.get(field)):
+            if len(value) == 10 and value not in isbn10_values:
+                isbn10_values.append(value)
+    return isbn10_values, isbn13_values
+
+
+def _google_books_candidate_score(item, requested_title, requested_authors, requested_isbns):
+    info = item.get("volumeInfo") or {}
+    title = _bookstore_normalize_text(info.get("title"))
+    requested_title_norm = _bookstore_normalize_text(requested_title)
+    score = 0
+
+    candidate_isbns = {
+        re.sub(r"[^0-9Xx]", "", str(identifier.get("identifier") or "")).upper()
+        for identifier in (info.get("industryIdentifiers") or [])
+        if identifier.get("identifier")
+    }
+    if requested_isbns and candidate_isbns.intersection(set(requested_isbns)):
+        score += 20
+
+    if requested_title_norm and title:
+        if title == requested_title_norm:
+            score += 10
+        elif requested_title_norm in title or title in requested_title_norm:
+            score += 6
+        else:
+            requested_words = set(requested_title_norm.split())
+            title_words = set(title.split())
+            if requested_words:
+                overlap = len(requested_words & title_words) / max(1, len(requested_words))
+                score += int(round(overlap * 5))
+
+    requested_author_norm = _bookstore_normalize_text(requested_authors)
+    candidate_authors = " ".join(
+        _bookstore_normalize_text(author)
+        for author in (info.get("authors") or [])
+    )
+    if requested_author_norm and candidate_authors:
+        if set(requested_author_norm.split()) & set(candidate_authors.split()):
+            score += 4
+
+    return score
+
+
+def _google_saleability_label(value):
+    return {
+        "FOR_SALE": "Available",
+        "FREE": "Free",
+        "FOR_PREORDER": "Pre-order",
+        "NOT_FOR_SALE": "Not for sale",
+    }.get(str(value or "").upper(), str(value or "Unknown").replace("_", " ").title())
+
+
+@st.cache_data(ttl=21600, show_spinner=False)
+def _google_books_lookup_cached(title, authors, isbn10, isbn13, api_key):
+    title = str(title or "").strip()
+    authors = str(authors or "").strip()
+    isbn_tokens = _bookstore_isbn_tokens(isbn13) + [
+        value for value in _bookstore_isbn_tokens(isbn10)
+        if value not in _bookstore_isbn_tokens(isbn13)
+    ]
+
+    queries = [f"isbn:{isbn}" for isbn in isbn_tokens]
+    if title:
+        title_query = f'intitle:"{title}"'
+        if authors:
+            first_author = re.split(r"[,;|]", authors)[0].strip()
+            if first_author:
+                title_query += f' inauthor:"{first_author}"'
+        queries.append(title_query)
+
+    if not queries:
+        return {"found": False, "error": "No title or ISBN is available for lookup."}
+
+    last_error = ""
+    best_item = None
+    best_score = -1
+    matched_by = ""
+
+    for query in queries:
+        params = {
+            "q": query,
+            "maxResults": 5,
+            "printType": "books",
+            "projection": "full",
+        }
+        if api_key:
+            params["key"] = api_key
+        url = "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(params)
+        request = urllib.request.Request(url, headers={"User-Agent": "LeadWise/18.59.0"})
+
+        try:
+            with urllib.request.urlopen(request, timeout=10) as response:
+                payload = json.loads(response.read().decode("utf-8", errors="replace"))
+        except urllib.error.HTTPError as exc:
+            last_error = f"Google Books returned HTTP {exc.code}."
+            continue
+        except urllib.error.URLError:
+            last_error = "Google Books could not be reached."
+            continue
+        except Exception as exc:
+            last_error = f"Google Books lookup failed: {type(exc).__name__}."
+            continue
+
+        for item in payload.get("items") or []:
+            score = _google_books_candidate_score(item, title, authors, isbn_tokens)
+            if score > best_score:
+                best_item = item
+                best_score = score
+                matched_by = query
+
+        if best_item is not None and best_score >= 20:
+            break
+
+    if best_item is None or best_score < 2:
+        return {
+            "found": False,
+            "error": last_error or "No sufficiently matching Google Books record was found.",
+        }
+
+    info = best_item.get("volumeInfo") or {}
+    sale = best_item.get("saleInfo") or {}
+    retail_price = sale.get("retailPrice") or {}
+    list_price = sale.get("listPrice") or {}
+    price = retail_price.get("amount")
+    currency = retail_price.get("currencyCode")
+    if price is None:
+        price = list_price.get("amount")
+        currency = currency or list_price.get("currencyCode")
+
+    identifiers = info.get("industryIdentifiers") or []
+    found_isbn10 = ""
+    found_isbn13 = ""
+    for identifier in identifiers:
+        kind = str(identifier.get("type") or "").upper()
+        value = str(identifier.get("identifier") or "").strip()
+        if kind == "ISBN_10" and not found_isbn10:
+            found_isbn10 = value
+        if kind == "ISBN_13" and not found_isbn13:
+            found_isbn13 = value
+
+    saleability = str(sale.get("saleability") or "UNKNOWN").upper()
+    buy_link = str(sale.get("buyLink") or "").strip()
+    info_link = str(info.get("infoLink") or "").strip()
+    preview_link = str(info.get("previewLink") or "").strip()
+
+    return {
+        "found": True,
+        "volume_id": str(best_item.get("id") or "").strip(),
+        "title": str(info.get("title") or title).strip(),
+        "authors": ", ".join(info.get("authors") or []) or authors,
+        "isbn10": found_isbn10,
+        "isbn13": found_isbn13,
+        "format": "eBook" if bool(sale.get("isEbook")) else "Book",
+        "price": price,
+        "currency": currency,
+        "availability": _google_saleability_label(saleability),
+        "country_code": str(sale.get("country") or "").upper(),
+        "retailer_rating": info.get("averageRating"),
+        "retailer_rating_count": info.get("ratingsCount"),
+        "retailer_url": buy_link or info_link or preview_link,
+        "buy_link": buy_link,
+        "info_link": info_link,
+        "preview_link": preview_link,
+        "saleability": saleability,
+        "matched_by": matched_by,
+        "api_key_configured": bool(api_key),
+    }
+
+
+def google_books_lookup_for_reader(book):
+    isbn10_values, isbn13_values = _reader_book_isbns(book)
+    return _google_books_lookup_cached(
+        str(book.get("canonical_title") or book.get("title") or ""),
+        format_list_value(book.get("authors"), fallback=""),
+        isbn10_values[0] if isbn10_values else "",
+        isbn13_values[0] if isbn13_values else "",
+        _reader_secret("GOOGLE_BOOKS_API_KEY"),
+    )
+
+
+def amazon_search_url_for_reader(book, marketplace="www.amazon.com"):
+    isbn10_values, isbn13_values = _reader_book_isbns(book)
+    if isbn13_values:
+        search_term = isbn13_values[0]
+    elif isbn10_values:
+        search_term = isbn10_values[0]
+    else:
+        search_term = " ".join(
+            value for value in [
+                str(book.get("canonical_title") or book.get("title") or "").strip(),
+                format_list_value(book.get("authors"), fallback=""),
+            ] if value
+        )
+    if not search_term:
+        return ""
+    return f"https://{marketplace}/s?" + urllib.parse.urlencode({"k": search_term})
+
+
+def render_google_books_live_offer(lookup):
+    with st.container(border=True):
+        st.markdown("**Google Books · Live lookup**")
+        if not lookup or not lookup.get("found"):
+            st.markdown("**Price:** Not available from Google Books")
+            st.markdown("**Availability:** Not confirmed")
+            if lookup and lookup.get("error"):
+                st.caption(str(lookup.get("error")))
+            return False
+
+        price_text = _commerce_price_text(
+            lookup.get("price"),
+            lookup.get("currency"),
+        )
+        p1, p2 = st.columns(2)
+        p1.markdown(f"**Price:** {price_text}")
+        p2.markdown(
+            f"**Availability:** {_commerce_text(lookup.get('availability'), 'Unknown')}"
+        )
+        rating_text = _commerce_rating_text(
+            lookup.get("retailer_rating"),
+            lookup.get("retailer_rating_count"),
+        )
+        if rating_text:
+            st.caption(rating_text)
+        st.caption(
+            " · ".join([
+                f"Market: {_commerce_text(lookup.get('country_code'), 'Not provided')}",
+                f"Format: {_commerce_text(lookup.get('format'), 'Book')}",
+                "Source: Google Books API",
+            ])
+        )
+        link = str(lookup.get("retailer_url") or "").strip()
+        if link.startswith(("https://", "http://")):
+            label = (
+                "Buy on Google Books"
+                if lookup.get("buy_link")
+                else "View on Google Books"
+            )
+            st.link_button(label, link, use_container_width=True)
+            return True
+        return False
+
+
+def render_amazon_search_offer(book):
+    amazon_url = amazon_search_url_for_reader(book)
+    with st.container(border=True):
+        st.markdown("**Amazon · Current listing search**")
+        st.markdown("**Price:** Check on Amazon")
+        st.markdown("**Availability:** Check current Amazon listing")
+        st.caption(
+            "Amazon is currently provided as a direct ISBN/title search link. "
+            "Live Amazon pricing requires approved Creators API access."
+        )
+        if amazon_url:
+            st.link_button(
+                "Search / Buy on Amazon",
+                amazon_url,
+                use_container_width=True,
+            )
+            return True
+    return False
+
+
 def get_active_commerce_offers(book_ids):
     """Return active Admin-managed retailer offers for selected LeadWise books."""
     clean_book_ids = []
@@ -730,17 +1033,19 @@ def _commerce_rating_text(rating, count):
     return text_value
 
 
-def render_compare_commerce_offers(book, offers, column_label):
+def render_compare_commerce_offers(book, offers, column_label, show_header=True, show_empty=True):
     """Render Admin-managed retailer offers for one compared book."""
     book_id = str(book.get("book_id") or "").strip()
     title = _commerce_text(book.get("canonical_title"), "Selected book")
 
-    st.markdown(f"**{column_label} · {title}**")
+    if show_header:
+        st.markdown(f"**{column_label} · {title}**")
 
     if offers is None or offers.empty:
-        st.info(
-            "No active buying options are currently available for this book."
-        )
+        if show_empty:
+            st.info(
+                "No additional Admin-managed buying options are currently available for this book."
+            )
         return
 
     for _, offer in offers.iterrows():
@@ -1966,7 +2271,7 @@ with get_user_connection() as _backend_check_connection:
     if ACTIVE_DATABASE_BACKEND != "postgresql":
         raise RuntimeError(
             "LeadWise Reader requires Supabase PostgreSQL. "
-            "SQLite fallback is disabled in version 18.58.9."
+            "SQLite fallback is disabled in version 18.59.0."
         )
 
 
@@ -5965,6 +6270,28 @@ with main_col:
                     .eq(str(book_b["book_id"]))
                 ].copy()
 
+            with st.spinner("Checking current Google Books availability..."):
+                google_a = google_books_lookup_for_reader(book_a)
+                google_b = google_books_lookup_for_reader(book_b)
+
+            # When the live Google lookup succeeds, hide the saved Google Books
+            # copy from the additional Admin-managed list to avoid duplication.
+            def non_google_admin_offers(offers, live_google):
+                if offers is None or offers.empty:
+                    return pd.DataFrame()
+                if not live_google or not live_google.get("found"):
+                    return offers.copy()
+                return offers[
+                    ~offers["retailer_name"]
+                    .fillna("")
+                    .astype(str)
+                    .str.casefold()
+                    .eq("google books")
+                ].copy()
+
+            extra_a = non_google_admin_offers(offers_a, google_a)
+            extra_b = non_google_admin_offers(offers_b, google_b)
+
             st.markdown(
                 '<div class="leadwise-section-title">'
                 'Price &amp; Availability'
@@ -5972,29 +6299,51 @@ with main_col:
                 unsafe_allow_html=True,
             )
             st.caption(
-                "Buying options are maintained through LeadWise Admin and "
-                "come from external retailers. Prices, ratings and availability "
-                "may change after the last recorded check."
+                "Google Books information is checked live when possible. Amazon currently "
+                "opens a current ISBN/title search. Additional retailer offers can still be "
+                "maintained by LeadWise Admin in Supabase."
             )
 
             commerce_col_a, commerce_col_b = st.columns(2)
             with commerce_col_a:
-                render_compare_commerce_offers(
-                    book_a,
-                    offers_a,
-                    "Book A",
+                st.markdown(
+                    f"**Book A · {safe_display_value(book_a.get('canonical_title'), 'Selected book')}**"
                 )
+                google_link_a = render_google_books_live_offer(google_a)
+                amazon_link_a = render_amazon_search_offer(book_a)
+                if not extra_a.empty:
+                    st.caption("Additional Admin-managed offers")
+                    render_compare_commerce_offers(
+                        book_a,
+                        extra_a,
+                        "Book A",
+                        show_header=False,
+                        show_empty=False,
+                    )
+
             with commerce_col_b:
-                render_compare_commerce_offers(
-                    book_b,
-                    offers_b,
-                    "Book B",
+                st.markdown(
+                    f"**Book B · {safe_display_value(book_b.get('canonical_title'), 'Selected book')}**"
                 )
+                google_link_b = render_google_books_live_offer(google_b)
+                amazon_link_b = render_amazon_search_offer(book_b)
+                if not extra_b.empty:
+                    st.caption("Additional Admin-managed offers")
+                    render_compare_commerce_offers(
+                        book_b,
+                        extra_b,
+                        "Book B",
+                        show_header=False,
+                        show_empty=False,
+                    )
+
+            retailer_links_a = int(bool(google_link_a)) + int(bool(amazon_link_a)) + len(extra_a)
+            retailer_links_b = int(bool(google_link_b)) + int(bool(amazon_link_b)) + len(extra_b)
 
             st.caption(
-                "Retailer prices, availability and customer ratings are "
-                "commercial metadata only. They do not affect LeadWise "
-                "textual similarity, recommendation ranking or quality assessment."
+                "Google Books sale information can vary by country and may change. Amazon "
+                "prices are not imported until Creators API access is configured. Retailer "
+                "information does not affect LeadWise textual similarity or recommendation ranking."
             )
 
             comparison_rows = [
@@ -6003,7 +6352,7 @@ with main_col:
                 ("Publisher", clean_compare_metadata(book_a.get("publisher"), clean_compare_metadata(book_a.get("publishers"))), clean_compare_metadata(book_b.get("publisher"), clean_compare_metadata(book_b.get("publishers")))),
                 ("Topic", safe_display_value(book_a.get("cluster_label")), safe_display_value(book_b.get("cluster_label"))),
                 ("Source rating", rating_a, rating_b),
-                ("Active buying options", f"{len(offers_a):,}", f"{len(offers_b):,}"),
+                ("Retailer links", f"{retailer_links_a:,}", f"{retailer_links_b:,}"),
                 ("Source rating count", f"{rating_count_a:,}" if rating_a != "Not available" else "Not available", f"{rating_count_b:,}" if rating_b != "Not available" else "Not available"),
                 ("Rating evidence", evidence_a, evidence_b),
                 ("Want to read", format_integer(book_a.get("want_to_read_count")), format_integer(book_b.get("want_to_read_count"))),
